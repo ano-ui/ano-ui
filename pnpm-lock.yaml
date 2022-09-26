@@ -21,14 +21,13 @@ specifiers:
   '@dcloudio/vite-plugin-uni': 3.0.0-alpha-3060420220922001
   '@iconify-json/carbon': ^1.1.8
   '@iconify-json/mdi': ^1.1.33
-  '@types/lodash-es': ^4.17.6
-  '@types/node': ^18.7.21
+  '@types/node': ^18.7.22
   eslint: ^8.24.0
   postcss: ^8.4.16
   terser: ^5.15.0
   typescript: ^4.8.3
   unocss: ^0.45.23
-  unocss-applet: ^0.2.11
+  unocss-applet: ^0.2.12
   unplugin-auto-import: ^0.11.2
   vite: ^3.1.3
   vue: ^3.2.39
@@ -61,14 +60,13 @@ devDependencies:
   '@dcloudio/vite-plugin-uni': 3.0.0-alpha-3060420220922001_jr4wbl4igjz4ayej4qxro3hghq
   '@iconify-json/carbon': 1.1.8
   '@iconify-json/mdi': 1.1.33
-  '@types/lodash-es': 4.17.6
-  '@types/node': 18.7.21
+  '@types/node': 18.7.22
   eslint: 8.24.0
   postcss: 8.4.16
   terser: 5.15.0
   typescript: 4.8.3
   unocss: 0.45.23_vite@3.1.3
-  unocss-applet: 0.2.11
+  unocss-applet: 0.2.12
   unplugin-auto-import: 0.11.2
   vite: 3.1.3_terser@5.15.0
 
@@ -1242,24 +1240,14 @@ packages:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
     dev: true
 
-  /@types/lodash-es/4.17.6:
-    resolution: {integrity: sha512-R+zTeVUKDdfoRxpAryaQNRKk3105Rrgx2CFRClIgRGaqDTdjsm8h6IYA8ir584W3ePzkZfst5xIgDwYrlh9HLg==}
-    dependencies:
-      '@types/lodash': 4.14.185
-    dev: true
-
-  /@types/lodash/4.14.185:
-    resolution: {integrity: sha512-evMDG1bC4rgQg4ku9tKpuMh5iBNEwNa3tf9zRHdP1qlv+1WUg44xat4IxCE14gIpZRGUUWAx2VhItCZc25NfMA==}
-    dev: true
-
   /@types/mdast/3.0.10:
     resolution: {integrity: sha512-W864tg/Osz1+9f4lrGTZpCSO5/z4608eUp19tbozkq2HJK6i3z1kT0H9tlADXuYIb1YYOBByU4Jsqkk75q48qA==}
     dependencies:
       '@types/unist': 2.0.6
     dev: true
 
-  /@types/node/18.7.21:
-    resolution: {integrity: sha512-rLFzK5bhM0YPyCoTC8bolBjMk7bwnZ8qeZUBslBfjZQou2ssJdWslx9CZ8DGM+Dx7QXQiiTVZ/6QO6kwtHkZCA==}
+  /@types/node/18.7.22:
+    resolution: {integrity: sha512-TsmoXYd4zrkkKjJB0URF/mTIKPl+kVcbqClB2F/ykU7vil1BfWZVndOnpEIozPv4fURD28gyPFeIkW2G+KXOvw==}
     dev: true
 
   /@types/normalize-package-data/2.4.1:
@@ -1396,30 +1384,30 @@ packages:
       eslint-visitor-keys: 3.3.0
     dev: true
 
-  /@unocss-applet/preset-applet/0.2.11:
-    resolution: {integrity: sha512-hC3sDcDTwtfuuclfk/JVldZ41/7xEtLtASTxwpYKF0yX6tKsfR80S0pvlfT4/jE2u+Wux6lLZARbGniAXB5Z1w==}
+  /@unocss-applet/preset-applet/0.2.12:
+    resolution: {integrity: sha512-oJ6VyiSjbPSXbg9aPgdKLQyLKH+U7IijwbjFFqvCP+9gA6iHzDfj9mu9jGUWuQldUol0Z4S0TZyIUvsm+xjRiQ==}
     dependencies:
-      '@unocss/core': 0.45.22
-      '@unocss/preset-mini': 0.45.22
-      '@unocss/preset-wind': 0.45.22
+      '@unocss/core': 0.45.23
+      '@unocss/preset-mini': 0.45.23
+      '@unocss/preset-wind': 0.45.23
     dev: true
 
-  /@unocss-applet/preset-rem-to-rpx/0.2.11:
-    resolution: {integrity: sha512-AMulivLqc2Y7UThoUXYPXaHUx8j9vsneeFovuPTjPNc61x1GZrGGfJ/LRcrsPho1RU4hpPaq5TFIFDW5AnPbpw==}
+  /@unocss-applet/preset-rem-to-rpx/0.2.12:
+    resolution: {integrity: sha512-uJmiaMW/n3ZIlU9dKoFM5yqJSAjyqjTAgES/vfqansTLvEclqIwzDnz1lyrtEGOg2evwIw/5fUBms4GtE9SW7Q==}
     dependencies:
-      '@unocss/core': 0.45.22
+      '@unocss/core': 0.45.23
     dev: true
 
-  /@unocss-applet/transformer-applet/0.2.11:
-    resolution: {integrity: sha512-iP7xKnStuyAAPorfWH63/yTXSU9Pei5bmYGxmcc2vscswwx6gyk69RSEZQOTLeWdebnBuM8n6gixjmO3GGeoXw==}
+  /@unocss-applet/transformer-applet/0.2.12:
+    resolution: {integrity: sha512-qotePXxCr2cnF9msmKd1Dxu+2VbyrsLhW+qQzwATQ7ija5uoio2KmYliPdRD7y16Jc4Ua2kFdpAjo2wJDi2oWA==}
     dependencies:
-      '@unocss/core': 0.45.22
+      '@unocss/core': 0.45.23
     dev: true
 
-  /@unocss-applet/transformer-attributify/0.2.11:
-    resolution: {integrity: sha512-9rJYISnLIe/kdG41SWIaZqFmQXmCjUeUbNlPpr9ORXv0rCyJ56F/QoZEYxjJQzLXQdFSvR4FM349gABcsv2UNA==}
+  /@unocss-applet/transformer-attributify/0.2.12:
+    resolution: {integrity: sha512-jXtGNN8n47APSG0Vdg9nocvupCKsARHZT799Yg+i2ELQBotLxclTSOPWCXkoE5hOAjaETit7cAW8KVrYYPU/lw==}
     dependencies:
-      '@unocss/core': 0.45.22
+      '@unocss/core': 0.45.23
     dev: true
 
   /@unocss/astro/0.45.23_vite@3.1.3:
@@ -1461,10 +1449,6 @@ packages:
       unconfig: 0.3.6
     dev: true
 
-  /@unocss/core/0.45.22:
-    resolution: {integrity: sha512-x6t6XlVpt7VXGC31Tr/KRS8WkURcTO6n0lK2k5zS+cIvc9xpLtwQw8C0c+/NULxbDNo205qfIuB703mmPABLjw==}
-    dev: true
-
   /@unocss/core/0.45.23:
     resolution: {integrity: sha512-yQ8j7Dj4RQZvL5tOJ/p+s5HZ//7WgjpxXGRySYDRgj5yqqLcxYTE68UtTGGtONjCBOkv6jSHnPcUyEDoA/OJrw==}
     dev: true
@@ -1491,12 +1475,6 @@ packages:
       ohmyfetch: 0.4.19
     transitivePeerDependencies:
       - supports-color
-    dev: true
-
-  /@unocss/preset-mini/0.45.22:
-    resolution: {integrity: sha512-gfNmj6qxh3WqfDynOILIyH+mUAMREkNhdZFZZOx+DQ15zv8yV5HMssvisvus7rFmVuETSXFl3aCHnyeCXj8iTw==}
-    dependencies:
-      '@unocss/core': 0.45.22
     dev: true
 
   /@unocss/preset-mini/0.45.23:
@@ -1532,13 +1510,6 @@ packages:
       '@unocss/core': 0.45.23
       ohmyfetch: 0.4.19
       pathe: 0.3.8
-    dev: true
-
-  /@unocss/preset-wind/0.45.22:
-    resolution: {integrity: sha512-UC62yEazTXnX72VEjNBTzSDW/LGM5An8JvdiVo28kuHWbVJbwKR15D4sgiR+zdqKiH9TRvKr/QQYy2coODd3+A==}
-    dependencies:
-      '@unocss/core': 0.45.22
-      '@unocss/preset-mini': 0.45.22
     dev: true
 
   /@unocss/preset-wind/0.45.23:
@@ -4815,13 +4786,13 @@ packages:
     resolution: {integrity: sha512-hAZsKq7Yy11Zu1DE0OzWjw7nnLZmJZYTDZZyEFHZdUhV8FkH5MCfoU1XMaxXovpyW5nq5scPqq0ZDP9Zyl04oQ==}
     engines: {node: '>= 10.0.0'}
 
-  /unocss-applet/0.2.11:
-    resolution: {integrity: sha512-RxhmizvDNWhwJpSzI+z+yzAxKCHnq03PegXP8tYxY1/26cwuNgiRcmfgvG2t1lKdYXCsB5YnjNag20sBJ84Olg==}
+  /unocss-applet/0.2.12:
+    resolution: {integrity: sha512-/V3im+DeMXhZ2wp+Ang5yURbdOnkTowEkx0+uSPHU3T5mGyVPwiiplzZ7tyA2aV26gMoXzUXU40h/eySQQTTvQ==}
     dependencies:
-      '@unocss-applet/preset-applet': 0.2.11
-      '@unocss-applet/preset-rem-to-rpx': 0.2.11
-      '@unocss-applet/transformer-applet': 0.2.11
-      '@unocss-applet/transformer-attributify': 0.2.11
+      '@unocss-applet/preset-applet': 0.2.12
+      '@unocss-applet/preset-rem-to-rpx': 0.2.12
+      '@unocss-applet/transformer-applet': 0.2.12
+      '@unocss-applet/transformer-attributify': 0.2.12
     dev: true
 
   /unocss/0.45.23_vite@3.1.3:

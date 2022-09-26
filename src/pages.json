@@ -4,10 +4,8 @@
     "backgroundColorBottom": "@bgColorBottom",
     "backgroundColorTop": "@bgColorTop",
     "backgroundTextStyle": "@bgTxtStyle",
-    "navigationBarBackgroundColor": "#000000",
     "navigationBarTextStyle": "@navTxtStyle",
-    "navigationBarTitleText": "An Uni UI",
-    "navigationStyle": "custom"
+    "navigationBarTitleText": "An Uni UI"
   },
   "pages": [
     { "path": "pages/index/index" }
@@ -15,7 +13,7 @@
   "easycom": {
     "autoscan": true,
     "custom": {
-      "^a(.*)": "~/anuniui/a-$1/a-$1.vue"
+      "^A(.*)": "~/anuniui/components/A$1/A$1.vue"
     }
   }
 }

@@ -3,8 +3,11 @@
 </script>
 
 <template>
-  <div>Hello world</div>
+  <div>
+    <AButton>aaa</AButton>
+  </div>
 </template>
 
 <style>
+
 </style>

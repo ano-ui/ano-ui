@@ -27,10 +27,6 @@ export default defineConfig({
         'uni-app',
       ],
       dts: 'src/auto-imports.d.ts',
-      dirs: [
-        'src/composables',
-        'src/stores',
-      ],
       vueTemplate: true,
     }),
   ],
