@@ -1,0 +1,26 @@
+{
+  "cSpell.words": [
+    "antfu",
+    "anuniui",
+    "dcloudio",
+    "demi",
+    "iconify",
+    "miniprogram",
+    "Pinia",
+    "postprocess",
+    "unocss",
+    "unplugin",
+    "vite",
+    "weixin"
+  ],
+  "i18n-ally.localesPaths": [],
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/node_modules": false
+  }
+}

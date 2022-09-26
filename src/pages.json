@@ -1,0 +1,21 @@
+{
+  "globalStyle": {
+    "backgroundColor": "@bgColor",
+    "backgroundColorBottom": "@bgColorBottom",
+    "backgroundColorTop": "@bgColorTop",
+    "backgroundTextStyle": "@bgTxtStyle",
+    "navigationBarBackgroundColor": "#000000",
+    "navigationBarTextStyle": "@navTxtStyle",
+    "navigationBarTitleText": "An Uni UI",
+    "navigationStyle": "custom"
+  },
+  "pages": [
+    { "path": "pages/index/index" }
+  ],
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "^a(.*)": "~/anuniui/a-$1/a-$1.vue"
+    }
+  }
+}
