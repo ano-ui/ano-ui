@@ -1,0 +1,46 @@
+{
+  "name": "@ano-uni/components",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@7.2.1",
+  "description": "",
+  "author": "Neil Lee <zguolee@foxmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/ano-uni/ano-uni/tree/main/packages/components#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ano-uni/ano-uni.git",
+    "directory": "packages/components"
+  },
+  "bugs": "https://github.com/ano-uni/ano-uni/issues",
+  "keywords": [
+    "unocss",
+    "unocss-components",
+    "uni-app"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "esno build.ts",
+    "release": "npx bumpp --tag --commit --push"
+  },
+  "dependencies": {
+    "fs-extra": "^10.1.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.13",
+    "esno": "^0.16.3"
+  }
+}

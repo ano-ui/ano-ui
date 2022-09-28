@@ -1,0 +1,9 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "lib": ["esnext", "dom"],
+    "paths": {
+      "ano-uni": ["./packages/ano-uni/src/index.ts"]
+    }
+  }
+}

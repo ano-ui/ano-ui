@@ -1,29 +1,33 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "esModuleInterop": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "lib": [
-      "esnext",
-      "dom"
-    ],
+    "target": "es2018",
     "module": "esnext",
+    "lib": ["esnext"],
     "moduleResolution": "node",
-    "noImplicitAny": false,
-    "paths": {
-      "~/*": [
-        "src/*"
-      ]
-    },
+    "esModuleInterop": true,
+    "strict": true,
+    "strictNullChecks": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "sourceMap": true,
-    "strict": true,
-    "target": "esnext",
+    "skipDefaultLibCheck": true,
+    "jsx": "preserve",
     "types": [
-      "@dcloudio/types",
+      "node",
       "vite/client"
-    ]
-  }
+    ],
+    "paths": {
+      "@ano-uni/preset": ["./packages/preset/src/index.ts"],
+      "@ano-uni/components": ["./packages/components/index.ts"],
+      "ano-uni": ["./packages/ano-uni/src/index.ts"]
+    }
+  },
+  "exclude": [
+    "**/dist/**",
+    "**/node_modules/**",
+    "**/client/**",
+    "**/playground/**",
+    "**/examples/**",
+    "**/interactive/**",
+    "**/test/dts/**"
+  ]
 }

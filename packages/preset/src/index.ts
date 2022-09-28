@@ -1,8 +1,8 @@
 import type { Preset } from 'unocss'
 
-export function presetAnUni(): Preset {
+export function presetAno(): Preset {
   return {
-    name: '@an-uni-ui/preset-theme-default',
+    name: '@ano-uni/preset',
     theme: {
       colors: {
         primary: '#a855f7',
