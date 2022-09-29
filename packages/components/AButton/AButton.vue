@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <button class="whitespace-nowrap inline-flex justify-center items-center">
+  <button class="whitespace-nowrap inline-flex justify-center items-center bg-primary">
     <slot />
   </button>
 </template>

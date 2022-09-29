@@ -1,8 +1,6 @@
 import {
   defineConfig,
-  presetAttributify,
   presetIcons,
-  presetUno,
   transformerDirectives,
   transformerVariantGroup,
 } from 'unocss'
@@ -14,20 +12,7 @@ import {
   transformerAttributify,
 } from 'unocss-applet'
 
-const presets = []
-const transformers = []
-
-if (process.env.UNI_PLATFORM === 'h5') {
-  presets.push(presetUno())
-  presets.push(presetAttributify())
-}
-else {
-  presets.push(presetApplet())
-  presets.push(presetRemToRpx())
-
-  transformers.push(transformerAttributify())
-  transformers.push(transformerApplet())
-}
+import { presetAno } from '@ano-uni/preset'
 
 export default defineConfig({
   presets: [
@@ -39,13 +24,15 @@ export default defineConfig({
         'vertical-align': 'middle',
       },
     }),
-    ...presets,
+    presetApplet(),
+    presetRemToRpx(),
+
+    presetAno(),
   ],
   transformers: [
     transformerDirectives(),
     transformerVariantGroup(),
-    ...transformers,
+    transformerAttributify(),
+    transformerApplet(),
   ],
-  configDeps: ['../packages/ano-uni/src/presets/theme-default/index.ts'],
-  include: [/.*\/ano-uni\.js(.*)?$/, './**/*.vue', './**/*.md'],
 })

@@ -13,7 +13,7 @@
   "easycom": {
     "autoscan": true,
     "custom": {
-      "^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
+      "^A(.*)": "@ano-uni/components/A$1/A$1.vue"
     }
   }
 }

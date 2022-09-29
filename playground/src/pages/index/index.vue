@@ -4,6 +4,6 @@
 
 <template>
   <div class="text-center aaa" p="4">
-    aaa
+    <AButton>aa</AButton>
   </div>
 </template>

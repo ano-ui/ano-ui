@@ -1,4 +1,4 @@
-# ano-uni
+# @ano-uni/components
 
 ## License
 

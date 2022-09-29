@@ -14,12 +14,7 @@
     "types": [
       "node",
       "vite/client"
-    ],
-    "paths": {
-      "@ano-uni/preset": ["./packages/preset/src/index.ts"],
-      "@ano-uni/components": ["./packages/components/index.ts"],
-      "ano-uni": ["./packages/ano-uni/src/index.ts"]
-    }
+    ]
   },
   "exclude": [
     "**/dist/**",

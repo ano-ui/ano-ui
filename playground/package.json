@@ -49,13 +49,15 @@
     "vue-i18n": "^9.2.2"
   },
   "devDependencies": {
+    "@ano-uni/components": "workspace:*",
+    "@ano-uni/preset": "workspace:*",
     "@dcloudio/types": "^3.0.15",
     "@dcloudio/uni-automator": "3.0.0-alpha-3060420220922004",
     "@dcloudio/uni-cli-shared": "3.0.0-alpha-3060420220922004",
     "@dcloudio/vite-plugin-uni": "3.0.0-alpha-3060420220922004",
     "@iconify-json/carbon": "^1.1.8",
-    "ano-uni": "workspace:*",
     "postcss": "^8.4.16",
-    "sass": "^1.55.0"
+    "sass": "^1.55.0",
+    "unocss-applet": "^0.2.12"
   }
 }

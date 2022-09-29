@@ -18,29 +18,8 @@
     "unocss-components",
     "uni-app"
   ],
-  "sideEffects": false,
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.mjs"
-    }
-  },
-  "main": "./dist/index.mjs",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
-  "scripts": {
-    "build": "esno build.ts",
-    "release": "npx bumpp --tag --commit --push"
-  },
-  "dependencies": {
-    "fs-extra": "^10.1.0"
-  },
+  "scripts": { },
   "devDependencies": {
-    "@types/fs-extra": "^9.0.13",
-    "esno": "^0.16.3"
+    "vue": "^3.2.40"
   }
 }
