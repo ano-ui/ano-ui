@@ -1,18 +1,24 @@
 import type { Preset } from 'unocss'
+import rules from './rules'
+import shortcuts from './shortcuts'
+import theme from './theme'
+
+const colors = Object.keys(theme.colors!)
+const size = ['xs', 'sm', 'md', 'lg']
 
 export function presetAno(): Preset {
   return {
     name: '@ano-uni/preset',
-    theme: {
-      colors: {
-        primary: '#a855f7',
-        secondary: '#1ABCFE',
-        success: '#0ACF83',
-        warning: '#FF9F43',
-        danger: '#FF5C5C',
-        info: '#373e47',
-        placeholder: '#dcdcdc',
-      },
-    },
+    theme,
+    shortcuts,
+    rules,
+    safelist: [
+      ...colors.map(c => `bg-${c}`),
+      ...colors.map(c => `text-${c}`),
+      ...colors.map(c => `border-${c}`),
+
+      ...size.map(c => `a-button-${c}`),
+
+    ],
   }
 }
