@@ -2,11 +2,11 @@ import type { Theme } from 'unocss/preset-uno'
 
 export default {
   colors: {
-    primary: '#a855f7',
+    primary: '#A855F7',
     secondary: '#1ABCFE',
     success: '#0ACF83',
     warning: '#FF9F43',
-    error: '#FF5C5C',
+    danger: '#FF5C5C',
     info: '#373e47',
     placeholder: '#dcdcdc',
     darkBd: '#4C4D4F',
