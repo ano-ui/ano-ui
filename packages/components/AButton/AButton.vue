@@ -9,6 +9,7 @@ interface AButtonProps {
   loading?: boolean
   disabled?: boolean
   icon?: string
+  iconOnly?: boolean
 }
 
 const props = withDefaults(defineProps<AButtonProps>(), {
@@ -18,6 +19,7 @@ const props = withDefaults(defineProps<AButtonProps>(), {
   loading: false,
   disabled: false,
   icon: '',
+  iconOnly: false,
 })
 
 const isDisabled = computed(() => props.loading || props.disabled)
@@ -30,30 +32,28 @@ const btnSize = {
 }
 
 const borderStyle = {
-  solid: 'border-solid',
-  outline: 'border-solid',
-  ghost: 'border-dashed',
-  light: 'border-transparent',
+  solid: '!border-solid',
+  outline: '!border-solid',
+  ghost: '!border-dashed',
+  light: '!border-transparent',
 }
 
 const variantClass = computed(() => {
   if (props.variant === 'solid')
     return ''
-  return `bg-transparent ${borderStyle[props.variant]} text-${props.type}`
+  return `!bg-op-20 ${borderStyle[props.variant]} text-${props.type}`
 })
 </script>
 
 <template>
   <button
     class="a-button-base"
-    :class="[`bg-${type} border-${type}`, btnSize[size], variantClass, cc]"
+    :class="[`bg-${type} border-${type}`, { '!px0 aspect-square': iconOnly }, btnSize[size], variantClass, { 'a-button-disabled': isDisabled }, cc]"
     hover-class="a-button-hover"
   >
-    <div v-if="icon" :class="icon" />
+    <div v-if="loading" class="i-carbon-circle-dash animate-spin" />
+    <div v-else-if="icon" :class="icon" />
+    <slot v-else name="icon" />
     <slot />
   </button>
 </template>
-
-<style scoped>
-
-</style>

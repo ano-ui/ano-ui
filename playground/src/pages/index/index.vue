@@ -67,5 +67,36 @@
         Light
       </AButton>
     </div>
+    <div class="p-2">
+      Status
+    </div>
+    <div p-2 flex="~ gap2 wrap" items-center>
+      <AButton loading>
+        Loading
+      </AButton>
+      <AButton type="secondary" disabled>
+        Disabled
+      </AButton>
+    </div>
+    <div class="p-2">
+      Custom
+    </div>
+    <div p-2 flex="~ gap2 wrap" items-center>
+      <AButton icon="i-carbon-palm-tree" icon-only />
+      <AButton type="secondary" icon-only cc="rounded-full">
+        <template #icon>
+          <div class="i-carbon-sprout" />
+        </template>
+      </AButton>
+      <AButton type="success" cc="rounded-full">
+        Rounded-full
+      </AButton>
+      <AButton type="warning" cc="rounded-full">
+        <template #icon>
+          <div class="i-carbon-send-alt-filled" />
+        </template>
+        Send
+      </AButton>
+    </div>
   </div>
 </template>

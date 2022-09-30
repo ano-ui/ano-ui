@@ -18,7 +18,4 @@ export default {
     softBd: '#E5E6EB',
     grayBg: '#373739',
   },
-  fontFamily: {
-    sans: 'Avenir, Helvetica, Arial, sans-serif',
-  },
 } as Theme

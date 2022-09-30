@@ -57,6 +57,6 @@
     "@iconify-json/carbon": "^1.1.8",
     "postcss": "^8.4.16",
     "sass": "^1.55.0",
-    "unocss-applet": "^0.2.13"
+    "unocss-applet": "^0.2.14"
   }
 }

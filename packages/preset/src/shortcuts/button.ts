@@ -1,9 +1,10 @@
 export const buttonShortcuts: Record<string, string> = {
-  'a-button-base': `flex justify-center items-center gap-1 inline-flex rounded-lg box-border 
+  'a-button-base': `flex justify-center gap1 items-center inline-flex rounded-lg box-border 
                     text-white border border-transparent leading-none after:display-none`,
-  'a-button-hover': '!bg-op-70 !text-op-70 !border-op-70',
-  'a-button-xs': 'px-2 h-6 text-xs shadow-sm',
-  'a-button-sm': 'px-3 h-8 text-sm shadow-md',
-  'a-button-md': 'px-4 h-10 text-base shadow-lg',
-  'a-button-lg': 'px-4 h-12 text-lg shadow-xl',
+  'a-button-hover': '!op-60',
+  'a-button-xs': 'px-2 h-6 text-xs',
+  'a-button-sm': 'px-3 h-8 text-sm',
+  'a-button-md': 'px-4 h-10 text-base',
+  'a-button-lg': 'px-5 h-12 text-lg',
+  'a-button-disabled': '!op-60',
 }
