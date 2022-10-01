@@ -12,7 +12,7 @@ const emits = defineEmits(['click'])
 interface AButtonProps {
   cc?: string
   type?: 'primary' | 'success' | 'info' | 'warning' | 'danger'
-  variant?: 'solid' | 'outline' | 'ghost' | 'light'
+  variant?: 'solid' | 'outline' | 'ghost' | 'light' | 'text'
   size?: 'xs' | 'sm' | 'md' | 'lg'
   block?: boolean
   loading?: boolean
@@ -35,6 +35,7 @@ const borderStyle = {
   outline: 'border-solid',
   ghost: 'border-dashed',
   light: '!border-transparent',
+  text: '!border-transparent !bg-0',
 }
 
 const variantClass = computed(() => {
@@ -47,14 +48,20 @@ const variantClass = computed(() => {
     classes.push('bg-op-0')
   return classes.join(' ')
 })
+
+const handleClick = (e: MouseEvent) => {
+  if (isDisabled.value)
+    return
+  emits('click', e)
+}
 </script>
 
 <template>
   <button
-    class="a-button-base"
+    class="a-button-base disabled:!bg-red"
     :class="[`bg-${type} border-${type}`, { 'w-full': block }, { '!px0 aspect-square': iconOnly }, btnSize[size], variantClass, { 'a-button-disabled': isDisabled }, cc]"
-    hover-class="a-button-hover"
-    @click="emits('click', $event)"
+    :hover-class="!isDisabled ? variant === 'text' ? 'text-op-70' : 'a-button-hover' : ''"
+    @click="handleClick"
   >
     <div v-if="loading" class="i-carbon-circle-dash animate-spin" />
     <div v-else-if="icon" :class="icon" />

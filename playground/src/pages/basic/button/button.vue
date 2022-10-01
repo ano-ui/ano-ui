@@ -60,8 +60,8 @@
       <AButton type="warning" variant="light">
         Light
       </AButton>
-      <AButton type="danger" variant="light">
-        Light
+      <AButton type="danger" variant="text">
+        Text
       </AButton>
     </div>
     <div class="p-2">
