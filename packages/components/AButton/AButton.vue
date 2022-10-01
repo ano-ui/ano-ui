@@ -32,16 +32,21 @@ const btnSize = {
 }
 
 const borderStyle = {
-  solid: '!border-solid',
-  outline: '!border-solid',
-  ghost: '!border-dashed',
+  solid: 'border-solid',
+  outline: 'border-solid',
+  ghost: 'border-dashed',
   light: '!border-transparent',
 }
 
 const variantClass = computed(() => {
   if (props.variant === 'solid')
     return ''
-  return `!bg-op-20 ${borderStyle[props.variant]} text-${props.type}`
+  const classes = [`${borderStyle[props.variant]}`, `text-${props.type}`]
+  if (props.variant === 'light')
+    classes.push('bg-op-20')
+  else
+    classes.push('bg-op-0')
+  return classes.join(' ')
 })
 </script>
 
