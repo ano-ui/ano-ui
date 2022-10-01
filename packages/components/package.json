@@ -1,18 +1,18 @@
 {
-  "name": "@ano-uni/components",
+  "name": "@ano-ui/components",
   "type": "module",
   "version": "0.0.0",
   "packageManager": "pnpm@7.2.1",
   "description": "",
   "author": "Neil Lee <zguolee@foxmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/ano-uni/ano-uni/tree/main/packages/components#readme",
+  "homepage": "https://github.com/ano-ui/ano-ui/tree/main/packages/components#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ano-uni/ano-uni.git",
+    "url": "git+https://github.com/ano-ui/ano-ui.git",
     "directory": "packages/components"
   },
-  "bugs": "https://github.com/ano-uni/ano-uni/issues",
+  "bugs": "https://github.com/ano-ui/ano-ui/issues",
   "keywords": [
     "unocss",
     "unocss-components",

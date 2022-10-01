@@ -28,6 +28,12 @@ importers:
       vite: 3.1.4
       vitest: 0.23.4
 
+  packages/ano-ui:
+    specifiers:
+      '@ano-ui/preset': workspace:*
+    dependencies:
+      '@ano-ui/preset': link:../preset
+
   packages/components:
     specifiers:
       vue: ^3.2.40
@@ -39,8 +45,8 @@ importers:
 
   playground:
     specifiers:
-      '@ano-uni/components': workspace:*
-      '@ano-uni/preset': workspace:*
+      '@ano-ui/components': workspace:*
+      '@ano-ui/preset': workspace:*
       '@dcloudio/types': ^3.0.15
       '@dcloudio/uni-app': 3.0.0-alpha-3060420220922004
       '@dcloudio/uni-app-plus': 3.0.0-alpha-3060420220922004
@@ -79,8 +85,8 @@ importers:
       vue: 3.2.40
       vue-i18n: 9.2.2_vue@3.2.40
     devDependencies:
-      '@ano-uni/components': link:../packages/components
-      '@ano-uni/preset': link:../packages/preset
+      '@ano-ui/components': link:../packages/components
+      '@ano-ui/preset': link:../packages/preset
       '@dcloudio/types': 3.0.15
       '@dcloudio/uni-automator': 3.0.0-alpha-3060420220922004_postcss@8.4.16+vue@3.2.40
       '@dcloudio/uni-cli-shared': 3.0.0-alpha-3060420220922004_postcss@8.4.16+vue@3.2.40
@@ -88,7 +94,7 @@ importers:
       '@iconify-json/carbon': 1.1.8
       postcss: 8.4.16
       sass: 1.55.0
-      unocss-applet: 0.2.14
+      unocss-applet: link:../packages/ano-ui
 
 packages:
 
@@ -1541,32 +1547,6 @@ packages:
       eslint-visitor-keys: 3.3.0
     dev: true
 
-  /@unocss-applet/preset-applet/0.2.14:
-    resolution: {integrity: sha512-HCAk29O5+IbIDWYTsUGNkY9/RHsWYzJElOVI0mcdQLpSKz+FnQZxe8Vi5eYmIa7shau97VzOtxO07cYAu6IeyA==}
-    dependencies:
-      '@unocss/core': 0.45.26
-      '@unocss/preset-mini': 0.45.26
-      '@unocss/preset-wind': 0.45.26
-    dev: true
-
-  /@unocss-applet/preset-rem-to-rpx/0.2.14:
-    resolution: {integrity: sha512-UxJNvFbhvbEpkptiRTYwymWIkE5KL1OL3ltzR+zoatpl2bptj8YQLkUXLZpERWODleKFBvrBj7XB6+VFDJnUqg==}
-    dependencies:
-      '@unocss/core': 0.45.26
-    dev: true
-
-  /@unocss-applet/transformer-applet/0.2.14:
-    resolution: {integrity: sha512-KZU+LrAs7g6+H82f/r+qONx6e3AK5PfBfVdN4iz6BMgUb8qHoDY57FB4L8peCSbJ6mqypBR1hk3vdEdm8oO/Kg==}
-    dependencies:
-      '@unocss/core': 0.45.26
-    dev: true
-
-  /@unocss-applet/transformer-attributify/0.2.14:
-    resolution: {integrity: sha512-k+7k5YureCGysYCYDJ/ey2zBMshyMPIx55+pX14+6YLunvDflVESd4/KmwqXIQCzH0o8dEg/7hmq/FFZf4jRGg==}
-    dependencies:
-      '@unocss/core': 0.45.26
-    dev: true
-
   /@unocss/astro/0.45.25_vite@3.1.4:
     resolution: {integrity: sha512-TxFxESIvSZtaVIRP/cDyrwnYlHz78mG9ohhAhI0adLGi0v0yBwoGJ1krlqxAuTzhV191InTlwD/C5QevTsf86Q==}
     dependencies:
@@ -1610,10 +1590,6 @@ packages:
     resolution: {integrity: sha512-3CVIkKPW4t3x0L7SM607M0PYs8BEJM/RdTjsoY2w5uvQtv/ypmkPdCWXe6gIQlNhAAyUIVxNaOB8GIXG+IelBQ==}
     dev: true
 
-  /@unocss/core/0.45.26:
-    resolution: {integrity: sha512-V7lNAXy1Ou2+UsD8n8a0ynE7BPuMtZSn6dQtrhNvtkstEBZtBAvlGM07wnSqwZfYeKs8k/MA6Z7S0yJKQzcl1Q==}
-    dev: true
-
   /@unocss/inspector/0.45.25:
     resolution: {integrity: sha512-GeDtqt9j4oDMZ6/Pve9DRtctslBv7q0yQPcasPdQf+eXiAal5Irc908Fkk0QjFFqfq41X0vyPZNydWnxHKbkgA==}
     dependencies:
@@ -1642,12 +1618,6 @@ packages:
     resolution: {integrity: sha512-lHJ00W+4ptfcH4mXLguZvsj6GCSYmW9i1EBZ68J8xzbxKLVMI3URFkpgNJ22oHr4+EziUjIxihppMsXq5XHPfg==}
     dependencies:
       '@unocss/core': 0.45.25
-    dev: true
-
-  /@unocss/preset-mini/0.45.26:
-    resolution: {integrity: sha512-Kab6F2pZHzJudGene6NwGMYA96fuU8gNjCVouSd6oqFF1ZhEBxkQOR56TRjppyCi0MU89hciV5T6kcVZDquGUw==}
-    dependencies:
-      '@unocss/core': 0.45.26
     dev: true
 
   /@unocss/preset-tagify/0.45.25:
@@ -1685,13 +1655,6 @@ packages:
       '@unocss/core': 0.45.25
       '@unocss/preset-mini': 0.45.25
       pathe: 0.3.8
-    dev: true
-
-  /@unocss/preset-wind/0.45.26:
-    resolution: {integrity: sha512-/7YnUIXBkakeNzDpxsOzoHgVKL/nH9kyKHT1hSLj60IlAoN+YfoOwpCOn+taysovjiGmLIKdeEuOAN3HuEi1aw==}
-    dependencies:
-      '@unocss/core': 0.45.26
-      '@unocss/preset-mini': 0.45.26
     dev: true
 
   /@unocss/reset/0.45.25:
@@ -5530,15 +5493,6 @@ packages:
   /universalify/2.0.0:
     resolution: {integrity: sha512-hAZsKq7Yy11Zu1DE0OzWjw7nnLZmJZYTDZZyEFHZdUhV8FkH5MCfoU1XMaxXovpyW5nq5scPqq0ZDP9Zyl04oQ==}
     engines: {node: '>= 10.0.0'}
-
-  /unocss-applet/0.2.14:
-    resolution: {integrity: sha512-7nx7TUyUwtD/XYksZYo63QcFvdKy/8vtGvdpaTsO93QfcE0oYHcFBLt69/HwsoreLrFPUg2MDLg1UrobXYE1WQ==}
-    dependencies:
-      '@unocss-applet/preset-applet': 0.2.14
-      '@unocss-applet/preset-rem-to-rpx': 0.2.14
-      '@unocss-applet/transformer-applet': 0.2.14
-      '@unocss-applet/transformer-attributify': 0.2.14
-    dev: true
 
   /unocss/0.45.25_vite@3.1.4:
     resolution: {integrity: sha512-7qMTM0t29rXlV0i2cBO9Nh8xGVfBw2B0WHbjmvSoL8kRpX7MG6Ypy8iJuUrS3gvURcN+j6GUxah2CzJtO6ZZ9Q==}

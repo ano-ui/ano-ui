@@ -1,4 +1,4 @@
-# @ano-uni/preset
+# @ano-ui/preset
 
 ## License
 

@@ -7,7 +7,7 @@ const colors = Object.keys(theme.colors!)
 
 export function presetAno(): Preset {
   return {
-    name: '@ano-uni/preset',
+    name: '@ano-ui/preset',
     theme,
     shortcuts,
     rules,

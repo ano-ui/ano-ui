@@ -6,14 +6,14 @@
   ],
   "globalStyle": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "uni-app",
+    "navigationBarTitleText": "Ano UI",
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#F8F8F8"
   },
   "easycom": {
     "autoscan": true,
     "custom": {
-      "^A(.*)": "@ano-uni/components/A$1/A$1.vue"
+      "^A(.*)": "@ano-ui/components/A$1/A$1.vue"
     }
   }
 }

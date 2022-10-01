@@ -63,9 +63,6 @@
       <AButton type="warning" variant="light">
         Light
       </AButton>
-      <AButton type="danger" variant="light">
-        Light
-      </AButton>
     </div>
     <div class="p-2">
       Status
@@ -98,5 +95,11 @@
         Send
       </AButton>
     </div>
+    <AButton type="danger" block>
+      Block
+    </AButton>
+    <AButton mt2 block cc="bg-gradient-to-r from-indigo-500 to-pink-500 border-none">
+      Bg Gradient
+    </AButton>
   </div>
 </template>

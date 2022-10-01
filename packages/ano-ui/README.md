@@ -1,4 +1,4 @@
-# @ano-ui/components
+# ano-ui
 
 ## License
 

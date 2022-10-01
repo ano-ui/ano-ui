@@ -6,6 +6,7 @@ interface AButtonProps {
   type?: 'primary' | 'secondary' | 'success' | 'warning' | 'danger' | 'info'
   variant?: 'solid' | 'outline' | 'ghost' | 'light'
   size?: 'xs' | 'sm' | 'md' | 'lg'
+  block?: boolean
   loading?: boolean
   disabled?: boolean
   icon?: string
@@ -16,10 +17,6 @@ const props = withDefaults(defineProps<AButtonProps>(), {
   type: 'primary',
   variant: 'solid',
   size: 'md',
-  loading: false,
-  disabled: false,
-  icon: '',
-  iconOnly: false,
 })
 
 const isDisabled = computed(() => props.loading || props.disabled)
@@ -53,7 +50,7 @@ const variantClass = computed(() => {
 <template>
   <button
     class="a-button-base"
-    :class="[`bg-${type} border-${type}`, { '!px0 aspect-square': iconOnly }, btnSize[size], variantClass, { 'a-button-disabled': isDisabled }, cc]"
+    :class="[`bg-${type} border-${type}`, { 'w-full': block }, { '!px0 aspect-square': iconOnly }, btnSize[size], variantClass, { 'a-button-disabled': isDisabled }, cc]"
     hover-class="a-button-hover"
   >
     <div v-if="loading" class="i-carbon-circle-dash animate-spin" />
