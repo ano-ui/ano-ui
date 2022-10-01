@@ -1,7 +1,11 @@
 {
   "pages": [
+    { "path": "pages/index/index" },
     {
-      "path": "pages/index/index"
+      "path": "pages/basic/button/button",
+      "style": {
+        "navigationBarTitleText": "Button"
+      }
     }
   ],
   "globalStyle": {

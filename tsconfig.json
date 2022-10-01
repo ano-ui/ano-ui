@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "es2018",
     "module": "esnext",
-    "lib": ["esnext"],
+    "lib": ["esnext", "dom"],
     "moduleResolution": "node",
     "esModuleInterop": true,
     "strict": true,
@@ -13,7 +13,8 @@
     "jsx": "preserve",
     "types": [
       "node",
-      "vite/client"
+      "vite/client",
+      "@dcloudio/types"
     ]
   },
   "exclude": [

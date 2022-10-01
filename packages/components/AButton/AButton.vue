@@ -1,9 +1,17 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 
+const props = withDefaults(defineProps<AButtonProps>(), {
+  type: 'primary',
+  variant: 'solid',
+  size: 'md',
+})
+
+const emits = defineEmits(['click'])
+
 interface AButtonProps {
   cc?: string
-  type?: 'primary' | 'secondary' | 'success' | 'warning' | 'danger' | 'info'
+  type?: 'primary' | 'success' | 'info' | 'warning' | 'danger'
   variant?: 'solid' | 'outline' | 'ghost' | 'light'
   size?: 'xs' | 'sm' | 'md' | 'lg'
   block?: boolean
@@ -12,12 +20,6 @@ interface AButtonProps {
   icon?: string
   iconOnly?: boolean
 }
-
-const props = withDefaults(defineProps<AButtonProps>(), {
-  type: 'primary',
-  variant: 'solid',
-  size: 'md',
-})
 
 const isDisabled = computed(() => props.loading || props.disabled)
 
@@ -52,6 +54,7 @@ const variantClass = computed(() => {
     class="a-button-base"
     :class="[`bg-${type} border-${type}`, { 'w-full': block }, { '!px0 aspect-square': iconOnly }, btnSize[size], variantClass, { 'a-button-disabled': isDisabled }, cc]"
     hover-class="a-button-hover"
+    @click="emits('click', $event)"
   >
     <div v-if="loading" class="i-carbon-circle-dash animate-spin" />
     <div v-else-if="icon" :class="icon" />

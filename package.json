@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.27.0",
+    "@dcloudio/types": "^3.0.15",
     "@types/node": "^18.7.23",
     "bumpp": "^8.2.1",
     "eslint": "^8.24.0",
@@ -29,6 +30,7 @@
     "unbuild": "^0.8.11",
     "unocss": "^0.45.25",
     "vite": "^3.1.4",
-    "vitest": "^0.23.4"
+    "vitest": "^0.23.4",
+    "vue": "^3.2.39"
   }
 }
