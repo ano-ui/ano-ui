@@ -6,10 +6,9 @@ interface AButtonProps {
   type?: 'primary' | 'success' | 'info' | 'warning' | 'danger'
   variant?: 'solid' | 'outline' | 'ghost' | 'light' | 'text'
   size?: 'xs' | 'sm' | 'md' | 'lg'
-  openType?: string
-  block?: boolean
-  loading?: boolean
+  show?: boolean
   disabled?: boolean
+  closable?: boolean
   icon?: string
   iconOnly?: boolean
 }
@@ -18,18 +17,12 @@ const props = withDefaults(defineProps<AButtonProps>(), {
   type: 'primary',
   variant: 'solid',
   size: 'md',
+  show: true,
 })
 
-const emits = defineEmits(['click'])
+const emits = defineEmits(['click', 'close'])
 
-const isDisabled = computed(() => props.loading || props.disabled)
-
-const btnSize = {
-  xs: 'a-button-xs',
-  sm: 'a-button-sm',
-  md: 'a-button-md',
-  lg: 'a-button-lg',
-}
+const btnSize = { xs: 'a-tag-xs', sm: 'a-tag-sm', md: 'a-tag-md', lg: 'a-tag-lg' }
 
 const borderStyle = {
   solid: 'border-solid',
@@ -51,23 +44,28 @@ const variantClass = computed(() => {
 })
 
 const handleClick = (e: MouseEvent) => {
-  if (isDisabled.value)
+  if (props.disabled)
     return
   emits('click', e)
+}
+
+const handleClose = (e: Event) => {
+  if (props.disabled)
+    return
+  emits('close', e)
 }
 </script>
 
 <template>
-  <button
-    class="a-button-base"
-    :class="[`bg-${type} border-${type}`, { 'w-full': block }, { '!px0 aspect-square': iconOnly }, btnSize[size], variantClass, { 'a-disabled': isDisabled }, cc]"
-    :hover-class="!isDisabled ? variant === 'text' ? 'text-op-70' : 'a-button-hover' : ''"
-    :open-type="openType"
+  <div
+    v-if="show" class="a-tag-base"
+    :class="[`bg-${type} border-${type}`, { '!p-0.5 aspect-square': iconOnly }, btnSize[size], variantClass, { 'a-disabled': disabled }, cc]"
     @click="handleClick"
   >
-    <div v-if="loading" class="i-carbon-circle-dash animate-spin" />
-    <div v-else-if="icon" :class="icon" />
+    <div v-if="icon" :class="icon" />
     <slot v-else name="icon" />
     <slot />
-  </button>
+    <div v-if="closable" class="i-carbon-close" @click.stop="handleClose" />
+  </div>
 </template>
+

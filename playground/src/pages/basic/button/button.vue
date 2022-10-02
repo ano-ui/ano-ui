@@ -2,6 +2,7 @@
 const getInfo = () => {
   uni.getUserInfo({
     success: (res) => {
+      // eslint-disable-next-line no-console
       console.log(res)
     },
   })

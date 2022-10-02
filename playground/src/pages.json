@@ -3,9 +3,11 @@
     { "path": "pages/index/index" },
     {
       "path": "pages/basic/button/button",
-      "style": {
-        "navigationBarTitleText": "Button"
-      }
+      "style": { "navigationBarTitleText": "Button" }
+    },
+    {
+      "path": "pages/basic/tag/tag",
+      "style": { "navigationBarTitleText": "Tag" }
     }
   ],
   "globalStyle": {

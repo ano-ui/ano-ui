@@ -11,5 +11,8 @@ const goBasic = (path: string) => {
     <AButton block @click="goBasic('button')">
       Button
     </AButton>
+    <AButton block @click="goBasic('tag')">
+      Tag
+    </AButton>
   </div>
 </template>
