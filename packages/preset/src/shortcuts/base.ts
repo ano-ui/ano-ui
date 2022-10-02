@@ -11,4 +11,5 @@ export const baseShortcuts: Record<string, string> = {
   'a-text': `!shadow-transparent !bg-transparent !hover-bg-context:32 !active-bg-context:12
                    !border-transparent
                    !c-context`,
+  'a-disabled': 'op-70',
 }

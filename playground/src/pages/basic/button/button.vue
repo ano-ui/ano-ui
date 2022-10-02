@@ -1,9 +1,15 @@
 <script setup lang="ts">
-
+const getInfo = () => {
+  uni.getUserInfo({
+    success: (res) => {
+      console.log(res)
+    },
+  })
+}
 </script>
 
 <template>
-  <div class="bg-white p-2">
+  <div class="bg-white p-2 pb-safe">
     <div class="p-2">
       Type
     </div>
@@ -94,12 +100,17 @@
         </template>
         Send
       </AButton>
+      <AButton cc="bg-teal border-teal" open-type="getUserInfo" @click="getInfo">
+        OpenType
+      </AButton>
     </div>
-    <AButton type="danger" block>
-      Block
-    </AButton>
-    <AButton mt2 block cc="bg-gradient-to-r from-indigo-500 to-pink-500 border-none">
-      Bg Gradient
-    </AButton>
+    <div p-2>
+      <AButton type="danger" block>
+        Block
+      </AButton>
+      <AButton mt2 block cc="bg-gradient-to-r from-indigo-500 to-pink-500 border-none">
+        Bg Gradient
+      </AButton>
+    </div>
   </div>
 </template>

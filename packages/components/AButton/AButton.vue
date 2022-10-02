@@ -14,6 +14,7 @@ interface AButtonProps {
   type?: 'primary' | 'success' | 'info' | 'warning' | 'danger'
   variant?: 'solid' | 'outline' | 'ghost' | 'light' | 'text'
   size?: 'xs' | 'sm' | 'md' | 'lg'
+  openType?: string
   block?: boolean
   loading?: boolean
   disabled?: boolean
@@ -59,8 +60,9 @@ const handleClick = (e: MouseEvent) => {
 <template>
   <button
     class="a-button-base disabled:!bg-red"
-    :class="[`bg-${type} border-${type}`, { 'w-full': block }, { '!px0 aspect-square': iconOnly }, btnSize[size], variantClass, { 'a-button-disabled': isDisabled }, cc]"
+    :class="[`bg-${type} border-${type}`, { 'w-full': block }, { '!px0 aspect-square': iconOnly }, btnSize[size], variantClass, { 'a-disabled': isDisabled }, cc]"
     :hover-class="!isDisabled ? variant === 'text' ? 'text-op-70' : 'a-button-hover' : ''"
+    :open-type="openType"
     @click="handleClick"
   >
     <div v-if="loading" class="i-carbon-circle-dash animate-spin" />

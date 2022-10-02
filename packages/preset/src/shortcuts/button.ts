@@ -6,5 +6,4 @@ export const buttonShortcuts: Record<string, string> = {
   'a-button-sm': 'px-3 h-8 text-sm',
   'a-button-md': 'px-4 h-10 text-base',
   'a-button-lg': 'px-5 h-12 text-lg',
-  'a-button-disabled': 'op-70',
 }
