@@ -4,6 +4,7 @@ import shortcuts from './shortcuts'
 import theme from './theme'
 
 const colors = Object.keys(theme.colors!)
+const shortcutsArray = shortcuts as []
 
 export function presetAno(): Preset {
   return {
@@ -13,10 +14,10 @@ export function presetAno(): Preset {
     rules,
     safelist: [
       // common
-      ...colors.map(c => `bg-${c}`),
-      ...colors.map(c => `text-${c}`),
-      ...colors.map(c => `border-${c}`),
+      ...colors.map(c => `a-${c}`),
 
+      // shortcuts
+      ...shortcutsArray.map(s => Object.keys(s)).flat(),
     ],
   }
 }

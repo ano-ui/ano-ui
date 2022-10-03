@@ -24,32 +24,6 @@ const emits = defineEmits(['click'])
 
 const isDisabled = computed(() => props.loading || props.disabled)
 
-const btnSize = {
-  xs: 'a-button-xs',
-  sm: 'a-button-sm',
-  md: 'a-button-md',
-  lg: 'a-button-lg',
-}
-
-const borderStyle = {
-  solid: 'border-solid',
-  outline: 'border-solid',
-  ghost: 'border-dashed',
-  light: '!border-transparent',
-  text: '!border-transparent !bg-0',
-}
-
-const variantClass = computed(() => {
-  if (props.variant === 'solid')
-    return ''
-  const classes = [`${borderStyle[props.variant]}`, `text-${props.type}`]
-  if (props.variant === 'light')
-    classes.push('bg-op-20')
-  else
-    classes.push('bg-op-0')
-  return classes.join(' ')
-})
-
 const handleClick = (e: MouseEvent) => {
   if (isDisabled.value)
     return
@@ -59,11 +33,8 @@ const handleClick = (e: MouseEvent) => {
 
 <template>
   <button
-    class="a-button-base"
-    :class="[`bg-${type} border-${type}`, { 'w-full': block }, { '!px0 aspect-square': iconOnly }, btnSize[size], variantClass, { 'a-disabled': isDisabled }, cc]"
-    :hover-class="!isDisabled ? variant === 'text' ? 'text-op-70' : 'a-button-hover' : ''"
-    :open-type="openType"
-    @click="handleClick"
+    class="a-button-base" :class="[`a-${type}`, { 'w-full': block }, { '!px0 aspect-square': iconOnly }, `a-button-${size}`, `a-${variant}`, { 'a-disabled': isDisabled }, cc]"
+    :hover-class="isDisabled ? '' : (variant === 'text' ? 'a-button-text-hover' : 'a-button-hover')" :open-type="openType" @click="handleClick"
   >
     <div v-if="loading" class="i-carbon-circle-dash animate-spin" />
     <div v-else-if="icon" :class="icon" />

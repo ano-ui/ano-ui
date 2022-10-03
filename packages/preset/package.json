@@ -35,5 +35,8 @@
   "scripts": {
     "build": "unbuild",
     "stub": "unbuild --stub"
+  },
+  "dependencies": {
+    "@unocss/preset-mini": "^0.45.25"
   }
 }

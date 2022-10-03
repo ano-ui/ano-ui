@@ -22,27 +22,6 @@ const props = withDefaults(defineProps<AButtonProps>(), {
 
 const emits = defineEmits(['click', 'close'])
 
-const btnSize = { xs: 'a-tag-xs', sm: 'a-tag-sm', md: 'a-tag-md', lg: 'a-tag-lg' }
-
-const borderStyle = {
-  solid: 'border-solid',
-  outline: 'border-solid',
-  ghost: 'border-dashed',
-  light: '!border-transparent',
-  text: '!border-transparent !bg-0',
-}
-
-const variantClass = computed(() => {
-  if (props.variant === 'solid')
-    return ''
-  const classes = [`${borderStyle[props.variant]}`, `text-${props.type}`]
-  if (props.variant === 'light')
-    classes.push('bg-op-20')
-  else
-    classes.push('bg-op-0')
-  return classes.join(' ')
-})
-
 const handleClick = (e: MouseEvent) => {
   if (props.disabled)
     return
@@ -59,7 +38,7 @@ const handleClose = (e: Event) => {
 <template>
   <div
     v-if="show" class="a-tag-base"
-    :class="[`bg-${type} border-${type}`, { '!p-0.5 aspect-square': iconOnly }, btnSize[size], variantClass, { 'a-disabled': disabled }, cc]"
+    :class="[`a-${type}`, { '!p-0.5 aspect-square': iconOnly }, `a-tag-${size}`, `a-${variant}`, { 'a-disabled': disabled }, cc]"
     @click="handleClick"
   >
     <div v-if="icon" :class="icon" />

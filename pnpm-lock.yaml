@@ -45,7 +45,10 @@ importers:
       vue: 3.2.40
 
   packages/preset:
-    specifiers: {}
+    specifiers:
+      '@unocss/preset-mini': ^0.45.25
+    dependencies:
+      '@unocss/preset-mini': 0.45.26
 
   playground:
     specifiers:
@@ -1618,7 +1621,6 @@ packages:
 
   /@unocss/core/0.45.26:
     resolution: {integrity: sha512-V7lNAXy1Ou2+UsD8n8a0ynE7BPuMtZSn6dQtrhNvtkstEBZtBAvlGM07wnSqwZfYeKs8k/MA6Z7S0yJKQzcl1Q==}
-    dev: true
 
   /@unocss/inspector/0.45.25:
     resolution: {integrity: sha512-GeDtqt9j4oDMZ6/Pve9DRtctslBv7q0yQPcasPdQf+eXiAal5Irc908Fkk0QjFFqfq41X0vyPZNydWnxHKbkgA==}
@@ -1654,7 +1656,6 @@ packages:
     resolution: {integrity: sha512-Kab6F2pZHzJudGene6NwGMYA96fuU8gNjCVouSd6oqFF1ZhEBxkQOR56TRjppyCi0MU89hciV5T6kcVZDquGUw==}
     dependencies:
       '@unocss/core': 0.45.26
-    dev: true
 
   /@unocss/preset-tagify/0.45.25:
     resolution: {integrity: sha512-kJAZOC5GD3KBhk7frk0wS6PGJw2ZXowWmSH1QV3y30R8YD8EGf4ZF9qLmkTJYuPF00F2Hfkga1UkC7wBKFCwMw==}
