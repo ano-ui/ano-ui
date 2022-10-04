@@ -1,5 +1,10 @@
 import type { PropType } from 'vue'
 
+export const ccProp = {
+  type: String,
+  default: '',
+}
+
 export type ThemeType = 'primary' | 'success' | 'info' | 'warning' | 'danger'
 
 export const themeProp = {
@@ -51,4 +56,20 @@ export const iconProp = {
 export const iconOnlyProp = {
   type: Boolean,
   default: false,
+}
+
+export type PositionType = 'top' | 'right' | 'bottom' | 'left'
+
+export const positionProp = {
+  type: String as PropType<PositionType>,
+  validator: (value: string) => ['top', 'right', 'bottom', 'left'].includes(value),
+  default: 'top',
+}
+
+export type alignType = 'start' | 'center' | 'end'
+
+export const alignProp = {
+  type: String as PropType<alignType>,
+  validator: (value: string) => ['start', 'center', 'end'].includes(value),
+  default: 'start',
 }

@@ -8,6 +8,10 @@
     {
       "path": "pages/basic/tag/tag",
       "style": { "navigationBarTitleText": "Tag" }
+    },
+    {
+      "path": "pages/basic/overlay/overlay",
+      "style": { "navigationBarTitleText": "Overlay" }
     }
   ],
   "globalStyle": {

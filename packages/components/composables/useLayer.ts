@@ -1,9 +1,9 @@
 import type { ComponentObjectPropsOptions } from 'vue'
-import { themeProp, variantProp } from './useProps'
+import { ccProp, themeProp, variantProp } from './useProps'
 
 export const useBaseProps = (propOverrides?: Partial<ComponentObjectPropsOptions>) => {
   const props = {
-    cc: { type: String },
+    cc: ccProp,
     type: themeProp,
     variant: variantProp,
   }
