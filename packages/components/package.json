@@ -19,7 +19,7 @@
     "uni-app"
   ],
   "scripts": {},
-  "devDependencies": {
-    "vue": "^3.2.40"
+  "dependencies": {
+    "@ano-ui/utils": "workspace:*"
   }
 }

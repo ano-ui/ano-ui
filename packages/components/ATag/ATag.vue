@@ -1,23 +1,16 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { useBaseProps } from '../composables/useProps'
 
-interface AButtonProps {
-  cc?: string
-  type?: 'primary' | 'success' | 'info' | 'warning' | 'danger'
-  variant?: 'solid' | 'outline' | 'ghost' | 'light' | 'text'
-  size?: 'xs' | 'sm' | 'md' | 'lg'
-  show?: boolean
-  disabled?: boolean
-  closable?: boolean
-  icon?: string
-  iconOnly?: boolean
-}
-
-const props = withDefaults(defineProps<AButtonProps>(), {
-  type: 'primary',
-  variant: 'solid',
-  size: 'md',
-  show: true,
+const props = defineProps({
+  ...useBaseProps(),
+  show: {
+    type: Boolean,
+    default: true,
+  },
+  disabled: Boolean,
+  closable: Boolean,
+  icon: String,
+  iconOnly: Boolean,
 })
 
 const emits = defineEmits(['click', 'close'])

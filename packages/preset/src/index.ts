@@ -6,7 +6,7 @@ import theme from './theme'
 const colors = Object.keys(theme.colors!)
 const shortcutsArray = shortcuts as []
 
-export function presetAno(): Preset {
+const presetAno = (): Preset => {
   return {
     name: '@ano-ui/preset',
     theme,
@@ -21,3 +21,5 @@ export function presetAno(): Preset {
     ],
   }
 }
+
+export default presetAno

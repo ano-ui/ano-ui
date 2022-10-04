@@ -12,7 +12,7 @@ import {
   transformerAttributify,
 } from 'unocss-applet'
 
-import { presetAno } from '@ano-ui/preset'
+import { presetAno } from 'ano-ui'
 
 export default defineConfig({
   presets: [

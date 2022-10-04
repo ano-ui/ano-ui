@@ -1,25 +1,22 @@
 {
-  "name": "ano-ui",
+  "name": "@ano-ui/utils",
   "type": "module",
   "version": "0.0.1",
   "packageManager": "pnpm@7.2.1",
   "description": "",
   "author": "Neil Lee <zguolee@foxmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/ano-ui/ano-ui#readme",
+  "homepage": "https://github.com/ano-ui/ano-ui/tree/main/packages/utils#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ano-ui/ano-ui.git"
+    "url": "git+https://github.com/ano-ui/ano-ui.git",
+    "directory": "packages/utils"
   },
   "bugs": "https://github.com/ano-ui/ano-ui/issues",
   "keywords": [
-    "unocss",
-    "uni-app",
-    "atomic-css",
-    "atomic-css-engine",
-    "css",
-    "tailwind",
-    "windicss"
+    "ano-ui",
+    "utils",
+    "@ano-ui/utils"
   ],
   "sideEffects": false,
   "exports": {
@@ -27,16 +24,6 @@
       "types": "./dist/index.d.ts",
       "require": "./dist/index.cjs",
       "import": "./dist/index.mjs"
-    },
-    "./preset": {
-      "types": "./dist/preset.d.ts",
-      "require": "./dist/preset.cjs",
-      "import": "./dist/preset.mjs"
-    },
-    "./utils": {
-      "types": "./dist/utils.d.ts",
-      "require": "./dist/utils.cjs",
-      "import": "./dist/utils.mjs"
     }
   },
   "main": "./dist/index.mjs",
@@ -48,9 +35,5 @@
   "scripts": {
     "build": "unbuild",
     "stub": "unbuild --stub"
-  },
-  "dependencies": {
-    "@ano-ui/preset": "workspace:*",
-    "@ano-ui/utils": "workspace:*"
   }
 }

@@ -7,7 +7,7 @@
     "dev": "pnpm stub",
     "build": "rimraf packages/*/dist && pnpm -r --filter=./packages/* run build && pnpm -r run build-post",
     "play:mp-weixin": "pnpm dev && npm -C playground run dev:mp-weixin",
-    "build:mp-weixin": "npm -C playground run build:mp-weixin",
+    "build:mp-weixin": "pnpm build && npm -C playground run build:mp-weixin",
     "play:h5": "npm -C playground run dev:h5",
     "build:h5": "npm -C playground run build:h5",
     "release": "bumpp package.json packages/**/package.json",
@@ -17,6 +17,9 @@
     "lint:fix": "nr lint --fix",
     "test": "vitest",
     "test:update": "vitest -u"
+  },
+  "dependencies": {
+    "vue": "^3.2.40"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.27.0",
@@ -30,7 +33,6 @@
     "unbuild": "^0.8.11",
     "unocss": "^0.45.25",
     "vite": "^3.1.4",
-    "vitest": "^0.23.4",
-    "vue": "^3.2.39"
+    "vitest": "^0.23.4"
   }
 }
