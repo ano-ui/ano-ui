@@ -1,15 +1,18 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { useBaseProps } from '../composables/useProps'
+import { useBaseProps } from '../composables/useLayer'
+import { disabledProp, iconOnlyProp, iconProp, sizeProp, variantProp } from '../composables/useProps'
 
 const props = defineProps({
   ...useBaseProps(),
+  size: sizeProp,
+  variant: variantProp,
+  disabled: disabledProp,
+  icon: iconProp,
+  iconOnly: iconOnlyProp,
   openType: String,
   block: Boolean,
   loading: Boolean,
-  disabled: Boolean,
-  icon: String,
-  iconOnly: Boolean,
 })
 
 const emits = defineEmits(['click'])

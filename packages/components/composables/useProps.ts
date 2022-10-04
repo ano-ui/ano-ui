@@ -1,10 +1,6 @@
-import type { ComponentObjectPropsOptions, PropType } from 'vue'
+import type { PropType } from 'vue'
 
 export type ThemeType = 'primary' | 'success' | 'info' | 'warning' | 'danger'
-
-export type VariantType = 'solid' | 'outline' | 'ghost' | 'light' | 'text'
-
-export type SizeType = 'xs' | 'sm' | 'md' | 'lg'
 
 export const themeProp = {
   type: String as PropType<ThemeType>,
@@ -12,10 +8,14 @@ export const themeProp = {
   default: 'primary',
 }
 
+export type VariantType = 'solid' | 'outline' | 'ghost' | 'light' | 'text'
+
 export const variantProp = {
   type: String as PropType<VariantType>,
   default: 'solid',
 }
+
+export type SizeType = 'xs' | 'sm' | 'md' | 'lg'
 
 export const sizeProp = {
   type: String as PropType<SizeType>,
@@ -23,27 +23,32 @@ export const sizeProp = {
   default: 'md',
 }
 
-export const disabled = {
+export const disabledProp = {
   type: Boolean,
   default: false,
 }
 
-export const readonly = {
+export const readonlyProp = {
   type: Boolean,
   default: false,
 }
 
-export const useBaseProps = (propOverrides?: Partial<ComponentObjectPropsOptions>) => {
-  const props = {
-    cc: { type: String },
-    type: themeProp,
-    variant: variantProp,
-    size: sizeProp,
-  }
+export const showTrueProp = {
+  type: Boolean,
+  default: true,
+}
 
-  // Add `defaults` property in `props` if it is provided via `defaults` argument
-  if (propOverrides)
-    Object.assign(props, propOverrides)
+export const showFalseProp = {
+  type: Boolean,
+  default: false,
+}
 
-  return props
+export const iconProp = {
+  type: String,
+  default: '',
+}
+
+export const iconOnlyProp = {
+  type: Boolean,
+  default: false,
 }

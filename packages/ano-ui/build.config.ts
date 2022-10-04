@@ -14,6 +14,5 @@ export default defineBuildConfig({
   externals: [
     'unocss',
     'vue',
-    '@ano-ui/utils',
   ],
 })

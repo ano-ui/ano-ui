@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { useBaseProps } from '../composables/useProps'
+import { useBaseProps } from '../composables/useLayer'
+import { disabledProp, showTrueProp, sizeProp, variantProp } from '../composables/useProps'
 
 const props = defineProps({
   ...useBaseProps(),
-  show: {
-    type: Boolean,
-    default: true,
-  },
-  disabled: Boolean,
+  size: sizeProp,
+  variant: variantProp,
+  disabled: disabledProp,
+  show: showTrueProp,
   closable: Boolean,
   icon: String,
   iconOnly: Boolean,
