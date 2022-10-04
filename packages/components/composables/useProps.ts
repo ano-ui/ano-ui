@@ -73,3 +73,11 @@ export const alignProp = {
   validator: (value: string) => ['start', 'center', 'end'].includes(value),
   default: 'start',
 }
+
+export type NotifyPositionType = 'default' | 'top' | 'top-left' | 'top-right' | 'bottom' | 'bottom-left' | 'bottom-right'
+
+export const notifyPositionProp = {
+  type: String as PropType<NotifyPositionType>,
+  validator: (value: string) => ['default', 'top', 'top-left', 'top-right', 'bottom', 'bottom-left', 'bottom-right'].includes(value),
+  default: 'default',
+}

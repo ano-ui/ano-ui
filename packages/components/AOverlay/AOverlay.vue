@@ -27,4 +27,3 @@ const handleMove = (e: Event) => {
     <slot />
   </div>
 </template>
-

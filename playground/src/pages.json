@@ -12,6 +12,10 @@
     {
       "path": "pages/basic/overlay/overlay",
       "style": { "navigationBarTitleText": "Overlay" }
+    },
+    {
+      "path": "pages/basic/notify/notify",
+      "style": { "navigationBarTitleText": "Notify" }
     }
   ],
   "globalStyle": {

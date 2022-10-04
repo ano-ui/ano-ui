@@ -17,5 +17,8 @@ const goBasic = (path: string) => {
     <AButton block @click="goBasic('overlay')">
       Overlay
     </AButton>
+    <AButton block @click="goBasic('notify')">
+      Notify
+    </AButton>
   </div>
 </template>
