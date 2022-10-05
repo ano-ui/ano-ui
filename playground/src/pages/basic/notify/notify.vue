@@ -98,7 +98,10 @@ const showNotify3 = (options: NotifyOptions) => {
       <AButton type="info" @click="showNotify2({ type: 'info', position: 'top' })">
         Slot
       </AButton>
-      <AButton type="warning" @click="showNotify3({ type: 'warning', position: 'top', content: 'Bg Gradient' })">
+      <AButton
+        cc="bg-gradient-to-r from-indigo-500 to-pink-500 border-none" type="warning"
+        @click="showNotify3({ type: 'warning', position: 'top', content: 'Bg Gradient' })"
+      >
         Bg Gradient
       </AButton>
     </div>

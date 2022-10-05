@@ -16,6 +16,10 @@
     {
       "path": "pages/basic/notify/notify",
       "style": { "navigationBarTitleText": "Notify" }
+    },
+    {
+      "path": "pages/basic/notice-bar/notice-bar",
+      "style": { "navigationBarTitleText": "Notice Bar" }
     }
   ],
   "globalStyle": {

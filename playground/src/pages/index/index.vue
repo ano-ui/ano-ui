@@ -20,5 +20,8 @@ const goBasic = (path: string) => {
     <AButton block @click="goBasic('notify')">
       Notify
     </AButton>
+    <AButton block @click="goBasic('notice-bar')">
+      NoticeBar
+    </AButton>
   </div>
 </template>

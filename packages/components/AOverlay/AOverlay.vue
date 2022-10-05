@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { alignProp, ccProp, showFalseProp } from '../composables/useProps'
+import { alignProp, ccProp, defaultFalseProp } from '../composables/useProps'
 
 defineProps({
   cc: ccProp,
-  show: showFalseProp,
+  show: defaultFalseProp,
   align: alignProp,
 })
 

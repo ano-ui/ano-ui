@@ -38,12 +38,12 @@ export const readonlyProp = {
   default: false,
 }
 
-export const showTrueProp = {
+export const defaultTrueProp = {
   type: Boolean,
   default: true,
 }
 
-export const showFalseProp = {
+export const defaultFalseProp = {
   type: Boolean,
   default: false,
 }
@@ -80,4 +80,9 @@ export const notifyPositionProp = {
   type: String as PropType<NotifyPositionType>,
   validator: (value: string) => ['default', 'top', 'top-left', 'top-right', 'bottom', 'bottom-left', 'bottom-right'].includes(value),
   default: 'default',
+}
+
+export const showCloseProp = {
+  type: Boolean,
+  default: false,
 }
