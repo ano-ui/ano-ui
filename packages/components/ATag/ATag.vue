@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useBaseProps } from '../composables/useLayer'
-import { disabledProp, defaultTrueProp, sizeProp, variantProp } from '../composables/useProps'
+import { defaultTrueProp, disabledProp, sizeProp, variantProp } from '../composables/useProps'
 
 const props = defineProps({
   ...useBaseProps(),
