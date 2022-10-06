@@ -1,11 +1,10 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
+    "target": "esnext",
     "baseUrl": ".",
-    "paths": {
-      "~/*": ["src/*"]
-    }
-  },
-  "exclude": ["**/dist/**"],
-  "include": ["**/*.ts", "**/*.d.ts", "**/*.vue", "**/*.tsx"]
+    "isolatedModules": true,
+    "noImplicitAny": false,
+    "sourceMap": true
+  }
 }

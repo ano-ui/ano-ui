@@ -22,14 +22,5 @@
       "@ano-uni/utils": ["./packages/utils/src/index.ts"],
       "ano-uni": ["./packages/ano-uni/src/index.ts"]
     }
-  },
-  "exclude": [
-    "**/dist/**",
-    "**/node_modules/**",
-    "**/client/**",
-    "**/playground/**",
-    "**/examples/**",
-    "**/interactive/**",
-    "**/test/dts/**"
-  ]
+  }
 }

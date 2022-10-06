@@ -8,8 +8,6 @@
     "build": "rimraf packages/*/dist && pnpm -r --filter=./packages/* run build && pnpm -r run build-post",
     "play:mp-weixin": "pnpm dev && npm -C playground run dev:mp-weixin",
     "build:mp-weixin": "pnpm build && npm -C playground run build:mp-weixin",
-    "play:h5": "npm -C playground run dev:h5",
-    "build:h5": "npm -C playground run build:h5",
     "release": "bumpp package.json packages/**/package.json",
     "stub": "pnpm -r --filter=./packages/* --parallel run stub",
     "typecheck": "tsc --noEmit",
@@ -24,14 +22,14 @@
   "devDependencies": {
     "@antfu/eslint-config": "^0.27.0",
     "@dcloudio/types": "^3.0.15",
-    "@types/node": "^18.7.23",
+    "@types/node": "^18.8.2",
     "bumpp": "^8.2.1",
     "eslint": "^8.24.0",
     "esno": "^0.16.3",
     "rimraf": "^3.0.2",
     "typescript": "^4.8.4",
     "unbuild": "^0.8.11",
-    "unocss": "^0.45.25",
+    "unocss": "^0.45.26",
     "vite": "^3.1.4",
     "vitest": "^0.23.4"
   }
