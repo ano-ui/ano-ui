@@ -1,5 +1,6 @@
 import {
   defineConfig,
+  presetAttributify,
   presetIcons,
   transformerDirectives,
   transformerVariantGroup,
@@ -28,6 +29,7 @@ export default defineConfig({
     presetRemToRpx(),
 
     presetAno(),
+    presetAttributify(),
   ],
   transformers: [
     transformerDirectives(),

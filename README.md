@@ -1,25 +1,16 @@
-<br>
-<h2 align="center">An Uni UI(WIP)</h2>
-<br>
+<p align="center">
+<img src="./public/logo.svg" style="width:100px;" />
+<h1 align="center">Ano-UI (WIP)</h1>
+<p align="center">An UniApp UI components with UnoCSS.</p>
+</p>
+<p align="center">
+<a href="https://www.npmjs.com/package/ano-ui"><img src="https://img.shields.io/npm/v/ano-ui?color=c95f8b&amp;label=" alt="NPM version"></a></p>
 
+## Acknowledgement
 
-## Git Contribution submission specification
-
-> reference [vue](https://github.com/vuejs/vue/blob/dev/.github/COMMIT_CONVENTION.md) specification ([Angular](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-angular))
-
-- `feat` Add new features
-- `fix` Fix the problem/BUG
-- `style` The code style is related and does not affect the running result
-- `perf` Optimization/performance improvement
-- `refactor` Refactor
-- `revert` Undo edit
-- `test` Test related
-- `docs` Documentation/notes
-- `chore` Dependency update/scaffolding configuration modification etc.
-- `workflow` Workflow improvements
-- `ci` Continuous integration
-- `types` Type definition file changes
-- `wip` In development
+- [UnoCSS](https://github.com/unocss/unocss)
+- [onu-ui](https://github.com/onu-ui/onu-ui)
+- [anu](https://github.com/jd-solanki/anu)
 
 ## License
 

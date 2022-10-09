@@ -2,7 +2,7 @@
 import { useBaseProps } from '../composables/useLayer'
 import { defaultFalseProp, defaultTrueProp, iconProp, showCloseProp, variantProp } from '../composables/useProps'
 
-const props = defineProps({
+defineProps({
   ...useBaseProps(),
   variant: variantProp,
   show: defaultTrueProp,
