@@ -4,6 +4,12 @@ const goBasic = (path: string) => {
     url: `/pages/basic/${path}/${path}`,
   })
 }
+
+const goForm = (path: string) => {
+  uni.navigateTo({
+    url: `/pages/form/${path}/${path}`,
+  })
+}
 </script>
 
 <template>
@@ -22,6 +28,9 @@ const goBasic = (path: string) => {
     </AButton>
     <AButton block @click="goBasic('notice-bar')">
       NoticeBar
+    </AButton>
+    <AButton block @click="goForm('input')">
+      Input
     </AButton>
   </div>
 </template>

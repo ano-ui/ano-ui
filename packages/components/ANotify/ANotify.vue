@@ -10,7 +10,7 @@ defineProps({
 
 const emits = defineEmits(['close'])
 
-const timer = ref<number | null>(null)
+const timer = ref()
 
 const show = ref(false)
 
