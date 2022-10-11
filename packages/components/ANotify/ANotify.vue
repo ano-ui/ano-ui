@@ -10,12 +10,12 @@ defineProps({
 
 const emits = defineEmits(['close'])
 
-const timer = ref<number | null>(null)
+const timer = ref()
 
 const show = ref(false)
 
 const notifyStatus = ref<NotifyOptions>({
-  type: 'primary',
+  color: 'primary',
   position: 'default',
   content: '',
   duration: 3000,
@@ -25,10 +25,10 @@ const notifyStatus = ref<NotifyOptions>({
 })
 
 const showNotify = (options?: NotifyOptions) => {
-  const { type, position, duration, content, showIcon, customIcon, showClose } = options || {}
+  const { color, position, duration, content, showIcon, customIcon, showClose } = options || {}
   show.value = true
   notifyStatus.value = {
-    type: type || 'primary',
+    color: color || 'primary',
     position: position || 'default',
     duration: duration || 3000,
     content: content || '',
@@ -64,18 +64,18 @@ const handleClose = (e: Event) => {
 <template>
   <div
     v-if="show" class="a-notify-base"
-    :class="[`a-${notifyStatus.type}`, `a-${variant}`, { 'justify-start': notifyStatus.showIcon }, `a-notify-position-${notifyStatus.position}`, cc]"
+    :class="[`a-${notifyStatus.color}`, `a-${variant}`, { 'justify-start': notifyStatus.showIcon }, `a-notify-position-${notifyStatus.position}`, cc]"
   >
     <template v-if="notifyStatus.customIcon">
       <slot name="icon" />
     </template>
 
     <template v-else-if="notifyStatus.showIcon">
-      <div v-if="notifyStatus.type === 'primary'" class="i-carbon-notification-filled" />
-      <div v-else-if="notifyStatus.type === 'success'" class="i-carbon-checkmark-filled" />
-      <div v-else-if="notifyStatus.type === 'info'" class="i-carbon-information-filled" />
-      <div v-else-if="notifyStatus.type === 'warning'" class="i-carbon-warning-filled" />
-      <div v-else-if="notifyStatus.type === 'danger'" class="i-carbon-error-filled" />
+      <div v-if="notifyStatus.color === 'primary'" class="i-carbon-notification-filled" />
+      <div v-else-if="notifyStatus.color === 'success'" class="i-carbon-checkmark-filled" />
+      <div v-else-if="notifyStatus.color === 'info'" class="i-carbon-information-filled" />
+      <div v-else-if="notifyStatus.color === 'warning'" class="i-carbon-warning-filled" />
+      <div v-else-if="notifyStatus.color === 'danger'" class="i-carbon-error-filled" />
     </template>
     <div class="flex-1" :class="{ 'text-center': !notifyStatus.showIcon && !notifyStatus.customIcon }">
       <template v-if="notifyStatus.content">

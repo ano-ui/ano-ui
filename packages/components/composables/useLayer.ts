@@ -1,10 +1,10 @@
 import type { ComponentObjectPropsOptions } from 'vue'
-import { ccProp, themeProp } from './useProps'
+import { ccProp, colorProp } from './useProps'
 
 export const useBaseProps = (propOverrides?: Partial<ComponentObjectPropsOptions>) => {
   const props = {
     cc: ccProp,
-    type: themeProp,
+    color: colorProp,
   }
 
   // Add `defaults` property in `props` if it is provided via `defaults` argument
