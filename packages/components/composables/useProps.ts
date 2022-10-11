@@ -5,10 +5,10 @@ export const ccProp = {
   default: '',
 }
 
-export type ThemeType = 'primary' | 'success' | 'info' | 'warning' | 'danger'
+export type ColorType = 'primary' | 'success' | 'info' | 'warning' | 'danger'
 
-export const themeProp = {
-  type: String as PropType<ThemeType>,
+export const colorProp = {
+  type: String as PropType<ColorType>,
   validator: (value: string) => ['primary', 'success', 'info', 'warning', 'danger'].includes(value),
   default: 'primary',
 }

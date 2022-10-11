@@ -1,7 +1,7 @@
-import type { NotifyPositionType, ThemeType } from '../composables/useProps'
+import type { ColorType, NotifyPositionType } from '../composables/useProps'
 
 export interface NotifyOptions {
-  type?: ThemeType
+  color?: ColorType
   position?: NotifyPositionType
   content?: string
   showIcon?: boolean

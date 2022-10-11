@@ -1,13 +1,13 @@
 import type { ComponentObjectPropsOptions, PropType } from 'vue'
 
-export type ThemeType = 'primary' | 'success' | 'info' | 'warning' | 'danger'
+export type ColorType = 'primary' | 'success' | 'info' | 'warning' | 'danger'
 
 export type VariantType = 'solid' | 'outline' | 'ghost' | 'light' | 'text'
 
 export type SizeType = 'xs' | 'sm' | 'md' | 'lg'
 
-export const themeProp = {
-  type: String as PropType<ThemeType>,
+export const colorProp = {
+  type: String as PropType<ColorType>,
   validator: (value: string) => ['primary', 'success', 'info', 'warning', 'danger'].includes(value),
   default: 'primary',
 }
@@ -36,7 +36,7 @@ export const readonly = {
 export const useBaseProps = (propOverrides?: Partial<ComponentObjectPropsOptions>) => {
   const props = {
     cc: { type: String },
-    type: themeProp,
+    type: colorProp,
     variant: variantProp,
     size: sizeProp,
   }

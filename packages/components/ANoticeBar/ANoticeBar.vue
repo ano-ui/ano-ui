@@ -19,7 +19,7 @@ const handleClose = (e: Event) => {
 </script>
 
 <template>
-  <div v-if="show" class="a-notice-bar-base" :class="[`a-${type}`, `a-${variant}`, cc]">
+  <div v-if="show" class="a-notice-bar-base" :class="[`a-${color}`, `a-${variant}`, cc]">
     <div class="i-carbon-notification-filled" />
     <div v-if="icon" :class="icon" />
     <slot v-else name="icon" />

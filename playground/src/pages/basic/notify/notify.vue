@@ -35,7 +35,7 @@ const showNotify3 = (options: NotifyOptions) => {
       Notify
     </div>
     <div p-2 flex="~ gap2 wrap">
-      <AButton @click="showNotify({ type: 'primary', position: 'default', content: 'Notify' })">
+      <AButton @click="showNotify({ color: 'primary', position: 'default', content: 'Notify' })">
         Show Notify
       </AButton>
     </div>
@@ -43,25 +43,25 @@ const showNotify3 = (options: NotifyOptions) => {
       Position
     </div>
     <div p-2 flex="~ gap2 wrap">
-      <AButton type="primary" @click="showNotify({ position: 'default', content: 'Default' })">
+      <AButton color="primary" @click="showNotify({ position: 'default', content: 'Default' })">
         Default
       </AButton>
-      <AButton type="success" @click="showNotify({ position: 'top', content: 'Top' })">
+      <AButton color="success" @click="showNotify({ position: 'top', content: 'Top' })">
         Top
       </AButton>
-      <AButton type="info" @click="showNotify({ position: 'top-left', content: 'Top Left' })">
+      <AButton color="info" @click="showNotify({ position: 'top-left', content: 'Top Left' })">
         Top Left
       </AButton>
-      <AButton type="warning" @click="showNotify({ position: 'top-right', content: 'Top Right' })">
+      <AButton color="warning" @click="showNotify({ position: 'top-right', content: 'Top Right' })">
         Top Right
       </AButton>
-      <AButton type="danger" @click="showNotify({ position: 'bottom', content: 'Bottom' })">
+      <AButton color="danger" @click="showNotify({ position: 'bottom', content: 'Bottom' })">
         Bottom
       </AButton>
-      <AButton type="primary" @click="showNotify({ position: 'bottom-left', content: 'Bottom Left' })">
+      <AButton color="primary" @click="showNotify({ position: 'bottom-left', content: 'Bottom Left' })">
         Bottom Left
       </AButton>
-      <AButton type="success" @click="showNotify({ position: 'bottom-right', content: 'Bottom Left' })">
+      <AButton color="success" @click="showNotify({ position: 'bottom-right', content: 'Bottom Left' })">
         Bottom Right
       </AButton>
     </div>
@@ -69,19 +69,19 @@ const showNotify3 = (options: NotifyOptions) => {
       Type Icon
     </div>
     <div p-2 flex="~ gap2 wrap">
-      <AButton type="primary" @click="showNotify({ type: 'primary', position: 'top', showIcon: true, content: 'Primary Icon' })">
+      <AButton color="primary" @click="showNotify({ color: 'primary', position: 'top', showIcon: true, content: 'Primary Icon' })">
         Primary
       </AButton>
-      <AButton type="success" @click="showNotify({ type: 'success', position: 'top', showIcon: true, content: 'Success Icon' })">
+      <AButton color="success" @click="showNotify({ color: 'success', position: 'top', showIcon: true, content: 'Success Icon' })">
         Success
       </AButton>
-      <AButton type="info" @click="showNotify({ type: 'info', position: 'top', showIcon: true, content: 'Info Icon' })">
+      <AButton color="info" @click="showNotify({ color: 'info', position: 'top', showIcon: true, content: 'Info Icon' })">
         Info
       </AButton>
-      <AButton type="warning" @click="showNotify({ type: 'warning', position: 'top', showIcon: true, content: 'Warning Icon' })">
+      <AButton color="warning" @click="showNotify({ color: 'warning', position: 'top', showIcon: true, content: 'Warning Icon' })">
         Warning
       </AButton>
-      <AButton type="danger" @click="showNotify({ type: 'danger', position: 'top', showIcon: true, content: 'Danger Icon' })">
+      <AButton color="danger" @click="showNotify({ color: 'danger', position: 'top', showIcon: true, content: 'Danger Icon' })">
         Danger
       </AButton>
     </div>
@@ -89,18 +89,18 @@ const showNotify3 = (options: NotifyOptions) => {
       Custom
     </div>
     <div p-2 flex="~ gap2 wrap">
-      <AButton type="primary" @click="showNotify2({ type: 'primary', position: 'top', content: 'Custom Icon', customIcon: true })">
+      <AButton color="primary" @click="showNotify2({ color: 'primary', position: 'top', content: 'Custom Icon', customIcon: true })">
         Icon
       </AButton>
-      <AButton type="success" @click="showNotify2({ type: 'success', position: 'top', content: 'Show Close', showClose: true })">
+      <AButton color="success" @click="showNotify2({ color: 'success', position: 'top', content: 'Show Close', showClose: true })">
         Show Close
       </AButton>
-      <AButton type="info" @click="showNotify2({ type: 'info', position: 'top' })">
+      <AButton color="info" @click="showNotify2({ color: 'info', position: 'top' })">
         Slot
       </AButton>
       <AButton
-        cc="bg-gradient-to-r from-indigo-500 to-pink-500 border-none" type="warning"
-        @click="showNotify3({ type: 'warning', position: 'top', content: 'Bg Gradient' })"
+        cc="bg-gradient-to-r from-indigo-500 to-pink-500 border-none" color="warning"
+        @click="showNotify3({ color: 'warning', position: 'top', content: 'Bg Gradient' })"
       >
         Bg Gradient
       </AButton>

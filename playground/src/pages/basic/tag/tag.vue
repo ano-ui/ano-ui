@@ -6,22 +6,22 @@ const show = ref(true)
 <template>
   <div class="bg-white p-2 pb-safe">
     <div class="p-2">
-      Type
+      Color
     </div>
     <div p-2 flex="~ gap2 wrap">
       <ATag>
         Primary
       </ATag>
-      <ATag type="success">
+      <ATag color="success">
         Success
       </ATag>
-      <ATag type="info">
+      <ATag color="info">
         Info
       </ATag>
-      <ATag type="warning">
+      <ATag color="warning">
         Warning
       </ATag>
-      <ATag type="danger">
+      <ATag color="danger">
         Danger
       </ATag>
     </div>
@@ -32,16 +32,16 @@ const show = ref(true)
       <ATag>
         Medium
       </ATag>
-      <ATag type="success" size="xs">
+      <ATag color="success" size="xs">
         Mini
       </ATag>
-      <ATag type="info" size="sm">
+      <ATag color="info" size="sm">
         Small
       </ATag>
-      <ATag type="warning" size="md">
+      <ATag color="warning" size="md">
         Medium
       </ATag>
-      <ATag type="danger" size="lg">
+      <ATag color="danger" size="lg">
         Large
       </ATag>
     </div>
@@ -52,16 +52,16 @@ const show = ref(true)
       <ATag variant="solid">
         Solid
       </ATag>
-      <ATag type="success" variant="outline">
+      <ATag color="success" variant="outline">
         Outline
       </ATag>
-      <ATag type="info" variant="ghost">
+      <ATag color="info" variant="ghost">
         Ghost
       </ATag>
-      <ATag type="warning" variant="light">
+      <ATag color="warning" variant="light">
         Light
       </ATag>
-      <ATag type="danger" variant="text">
+      <ATag color="danger" variant="text">
         Text
       </ATag>
     </div>
@@ -73,7 +73,7 @@ const show = ref(true)
       <ATag closable :show="show" @close="show = !show">
         Closable
       </ATag>
-      <ATag type="success" disabled>
+      <ATag color="success" disabled>
         Disabled
       </ATag>
     </div>
@@ -82,15 +82,15 @@ const show = ref(true)
     </div>
     <div p-2 flex="~ gap2 wrap" items-center>
       <ATag icon="i-carbon-palm-tree" icon-only />
-      <ATag type="success" icon-only cc="rounded-full">
+      <ATag color="success" icon-only cc="rounded-full">
         <template #icon>
           <div class="i-carbon-sprout" />
         </template>
       </ATag>
-      <ATag type="info" variant="ghost" cc="rounded-md">
+      <ATag color="info" variant="ghost" cc="rounded-md">
         Rounded
       </ATag>
-      <ATag type="warning">
+      <ATag color="warning">
         <template #icon>
           <div class="i-carbon-send-alt-filled" />
         </template>
