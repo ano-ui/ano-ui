@@ -1,19 +1,13 @@
 <script setup lang="ts">
-import type { PropType } from 'vue'
 import { computed, ref } from 'vue'
 import { useBaseProps } from '../composables/useLayer'
-import { defaultFalseProp, disabledProp, iconProp, sizeProp } from '../composables/useProps'
-
-type InputType = 'text' | 'number' | 'digit' | 'password' | 'textarea'
+import { InputTypeProp, defaultFalseProp, disabledProp, iconProp, sizeProp } from '../composables/useProps'
 
 const props = defineProps({
   ...useBaseProps(),
   // custom class for input/textarea
   ccc: String,
-  type: {
-    type: String as PropType<InputType>,
-    default: 'text',
-  },
+  type: InputTypeProp,
   size: sizeProp,
   disabled: disabledProp,
   focus: defaultFalseProp,
@@ -22,7 +16,7 @@ const props = defineProps({
   modelValue: String,
 })
 
-const emits = defineEmits(['focus', 'blur', 'confirm', 'input', 'update:modelValue', 'clear', 'search', 'keyboardheightchange', 'click'])
+const emits = defineEmits(['focus', 'blur', 'confirm', 'input', 'update:modelValue', 'clear', 'search', 'click'])
 
 const _value = ref(props.modelValue)
 
@@ -36,7 +30,7 @@ const clickHandler = (e: MouseEvent) => {
   isClick.value = true
 }
 
-const blur = () => {
+const blurHandler = () => {
   isClick.value = false
   emits('blur')
 }
@@ -46,9 +40,9 @@ const inputHandler = (e: Event) => {
   _value.value = _e.detail.value
   emits('input', _e.detail.value)
   emits('update:modelValue', _e.detail.value)
-
-  return _e.detail.value
 }
+
+const showPasswordText = ref(props.type !== 'password')
 </script>
 
 <template>
@@ -60,14 +54,19 @@ const inputHandler = (e: Event) => {
     <slot v-else name="icon" />
     <textarea
       v-if="type === 'textarea'" class="a-input-content-base h-12" :class="[{ 'a-disabled': disabled }, ccc]"
-      :value="_value" :placeholder="placeholder" :focus="_focus" placeholder-style="color:#DCDCDC"
-      @click="clickHandler" @blur="blur" @input="inputHandler"
+      :value="_value" :placeholder="placeholder" :focus="_focus" placeholder-style="color:#DCDCDC" @click="clickHandler"
+      @blur="blurHandler" @input="inputHandler"
     />
     <input
-      v-else class="a-input-content-base" :type="type" :class="[{ 'a-disabled': disabled }, ccc]"
-      :value="_value" :placeholder="placeholder" :focus="_focus" placeholder-style="color:#DCDCDC"
-      @click="clickHandler" @blur="blur" @input="inputHandler"
+      v-else class="a-input-content-base" :type="showPasswordText ? '' : type"
+      :class="[{ 'a-disabled': disabled }, ccc]" :value="_value" :placeholder="placeholder" :focus="_focus"
+      placeholder-style="color:#DCDCDC" @click="clickHandler" @blur="blurHandler" @input="inputHandler"
     >
+    <div
+      v-if="type === 'password'" class="a-transition"
+      :class="showPasswordText ? 'i-carbon-view' : 'i-carbon-view-off'"
+      @click.stop="showPasswordText = !showPasswordText"
+    />
   </div>
 </template>
 

@@ -86,3 +86,10 @@ export const showCloseProp = {
   type: Boolean,
   default: false,
 }
+
+export type InputType = 'text' | 'number' | 'digit' | 'password' | 'textarea'
+
+export const InputTypeProp = {
+  type: String as PropType<InputType>,
+  default: 'text',
+}
