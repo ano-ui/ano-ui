@@ -36,7 +36,7 @@ const getInfo = () => {
     </div>
     <div p-2 flex="~ gap2 wrap" items-center>
       <AButton>
-        Medium
+        Default
       </AButton>
       <AButton color="success" size="xs">
         Mini

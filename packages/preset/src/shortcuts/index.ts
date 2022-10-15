@@ -7,6 +7,7 @@ import { tagShortcuts } from './tag'
 import { overlayShortcuts } from './overlay'
 import { notifyShortcuts } from './notify'
 import { noticeBarShortcuts } from './noticeBar'
+import { inputShortcuts } from './input'
 
 export default [
   baseShortcuts,
@@ -15,4 +16,5 @@ export default [
   overlayShortcuts,
   notifyShortcuts,
   noticeBarShortcuts,
+  inputShortcuts,
 ] as UserShortcuts<Theme>

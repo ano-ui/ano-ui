@@ -30,7 +30,7 @@ const show = ref(true)
     </div>
     <div p-2 flex="~ gap2 wrap" items-center>
       <ATag>
-        Medium
+        Default
       </ATag>
       <ATag color="success" size="xs">
         Mini

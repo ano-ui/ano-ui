@@ -20,6 +20,10 @@
     {
       "path": "pages/basic/notice-bar/notice-bar",
       "style": { "navigationBarTitleText": "Notice Bar" }
+    },
+    {
+      "path": "pages/form/input/input",
+      "style": { "navigationBarTitleText": "Input" }
     }
   ],
   "globalStyle": {
