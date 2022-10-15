@@ -12,8 +12,15 @@ const props = defineProps({
   disabled: disabledProp,
   focus: defaultFalseProp,
   icon: iconProp,
+  suffixIcon: iconProp,
+  showClear: defaultFalseProp,
   placeholder: String,
   modelValue: String,
+  maxlength: {
+    type: Number,
+    default: -1,
+  },
+  showWordLimit: defaultFalseProp,
 })
 
 const emits = defineEmits(['focus', 'blur', 'confirm', 'input', 'update:modelValue', 'clear', 'search', 'click'])
@@ -25,9 +32,8 @@ const _focus = computed(() => (props.focus && !props.disabled) || isClick.value)
 
 const clickHandler = (e: MouseEvent) => {
   e.stopPropagation()
-  if (props.disabled)
-    return
-  isClick.value = true
+  if (!props.disabled)
+    isClick.value = true
 }
 
 const blurHandler = () => {
@@ -42,31 +48,45 @@ const inputHandler = (e: Event) => {
   emits('update:modelValue', _e.detail.value)
 }
 
-const showPasswordText = ref(props.type !== 'password')
+const clearHandler = () => {
+  _value.value = ''
+  emits('input', '')
+  emits('update:modelValue', '')
+}
+
+const showPasswordText = ref(false)
 </script>
 
 <template>
   <div
     class="a-input-base w-full text-darkText"
-    :class="[`a-${color}`, `a-input-${size}`, isClick ? 'b-context' : 'border-placeholder', cc]" @click.stop=""
+    :class="[`a-${color}`, `a-input-${size}`, { 'a-disabled': disabled }, isClick ? 'b-context' : 'border-placeholder', cc]"
   >
     <div v-if="icon" :class="icon" />
     <slot v-else name="icon" />
-    <textarea
-      v-if="type === 'textarea'" class="a-input-content-base h-12" :class="[{ 'a-disabled': disabled }, ccc]"
-      :value="_value" :placeholder="placeholder" :focus="_focus" placeholder-style="color:#DCDCDC" @click="clickHandler"
-      @blur="blurHandler" @input="inputHandler"
-    />
+    <slot name="prefix" />
     <input
-      v-else class="a-input-content-base" :type="showPasswordText ? '' : type"
-      :class="[{ 'a-disabled': disabled }, ccc]" :value="_value" :placeholder="placeholder" :focus="_focus"
+      v-if="type !== 'textarea'" class="a-input-content-base" :type="type !== 'password' ? type : 'text'"
+      :class="[ccc]" :value="_value" :placeholder="placeholder" :maxlength="maxlength" :focus="_focus"
+      :disabled="disabled" :password="type === 'password' ? !showPasswordText : 'false'"
       placeholder-style="color:#DCDCDC" @click="clickHandler" @blur="blurHandler" @input="inputHandler"
     >
+    <textarea
+      v-else class="a-input-content-base h-12" :class="[ccc]" :value="_value" :placeholder="placeholder"
+      :maxlength="maxlength" :focus="_focus" :disabled="disabled" placeholder-style="color:#DCDCDC"
+      @click="clickHandler" @blur="blurHandler" @input="inputHandler"
+    />
+    <div v-if="showClear && _value" class="i-carbon-close-filled" @click="clearHandler" />
     <div
       v-if="type === 'password'" class="a-transition"
-      :class="showPasswordText ? 'i-carbon-view' : 'i-carbon-view-off'"
+      :class="showPasswordText ? 'i-carbon-view-filled' : 'i-carbon-view-off-filled'"
       @click.stop="showPasswordText = !showPasswordText"
     />
+    <div v-if="suffixIcon" :class="suffixIcon" />
+    <slot name="suffix" />
+    <div v-if="showWordLimit && _value" class="a-input-word-limit text-caption">
+      {{ _value.length }}/{{ maxlength }}
+    </div>
   </div>
 </template>
 
