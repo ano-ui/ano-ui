@@ -10,108 +10,110 @@ const getInfo = () => {
 </script>
 
 <template>
-  <div class="bg-white p-2 pb-safe">
-    <div class="p-2">
-      Color
+  <UBasePage>
+    <div class="p-2 pb-safe">
+      <div class="p-2">
+        Color
+      </div>
+      <div p-2 flex="~ gap2 wrap">
+        <AButton>
+          Primary
+        </AButton>
+        <AButton color="success">
+          Success
+        </AButton>
+        <AButton color="info">
+          Info
+        </AButton>
+        <AButton color="warning">
+          Warning
+        </AButton>
+        <AButton color="danger">
+          Danger
+        </AButton>
+      </div>
+      <div class="p-2">
+        Size
+      </div>
+      <div p-2 flex="~ gap2 wrap" items-center>
+        <AButton>
+          Default
+        </AButton>
+        <AButton color="success" size="xs">
+          Mini
+        </AButton>
+        <AButton color="info" size="sm">
+          Small
+        </AButton>
+        <AButton color="warning" size="md">
+          Medium
+        </AButton>
+        <AButton color="danger" size="lg">
+          Large
+        </AButton>
+      </div>
+      <div class="p-2">
+        Variant
+      </div>
+      <div p-2 flex="~ gap2 wrap" items-center>
+        <AButton variant="solid">
+          Solid
+        </AButton>
+        <AButton color="success" variant="outline">
+          Outline
+        </AButton>
+        <AButton color="info" variant="ghost">
+          Ghost
+        </AButton>
+        <AButton color="warning" variant="light">
+          Light
+        </AButton>
+        <AButton color="danger" variant="text">
+          Text
+        </AButton>
+      </div>
+      <div class="p-2">
+        Status
+      </div>
+      <div p-2 flex="~ gap2 wrap" items-center>
+        <AButton loading>
+          Loading
+        </AButton>
+        <AButton color="success" disabled>
+          Disabled
+        </AButton>
+      </div>
+      <div class="p-2">
+        Custom
+      </div>
+      <div p-2 flex="~ gap2 wrap" items-center>
+        <AButton icon="i-carbon-palm-tree" icon-only />
+        <AButton color="success" icon-only cc="rounded-full">
+          <template #icon>
+            <div class="i-carbon-sprout" />
+          </template>
+        </AButton>
+        <AButton color="info" cc="rounded-full">
+          Rounded
+        </AButton>
+        <AButton color="warning">
+          <template #icon>
+            <div class="i-carbon-send-alt-filled" />
+          </template>
+          Send
+        </AButton>
+        <AButton cc="bg-teal border-teal" open-type="getUserInfo" @click="getInfo">
+          OpenType
+        </AButton>
+      </div>
+      <div p-2>
+        <AButton color="danger" block>
+          Block
+        </AButton>
+        <AButton mt2 block cc="bg-gradient-to-r from-indigo-500 to-pink-500 border-none">
+          Bg Gradient
+        </AButton>
+      </div>
     </div>
-    <div p-2 flex="~ gap2 wrap">
-      <AButton>
-        Primary
-      </AButton>
-      <AButton color="success">
-        Success
-      </AButton>
-      <AButton color="info">
-        Info
-      </AButton>
-      <AButton color="warning">
-        Warning
-      </AButton>
-      <AButton color="danger">
-        Danger
-      </AButton>
-    </div>
-    <div class="p-2">
-      Size
-    </div>
-    <div p-2 flex="~ gap2 wrap" items-center>
-      <AButton>
-        Default
-      </AButton>
-      <AButton color="success" size="xs">
-        Mini
-      </AButton>
-      <AButton color="info" size="sm">
-        Small
-      </AButton>
-      <AButton color="warning" size="md">
-        Medium
-      </AButton>
-      <AButton color="danger" size="lg">
-        Large
-      </AButton>
-    </div>
-    <div class="p-2">
-      Variant
-    </div>
-    <div p-2 flex="~ gap2 wrap" items-center>
-      <AButton variant="solid">
-        Solid
-      </AButton>
-      <AButton color="success" variant="outline">
-        Outline
-      </AButton>
-      <AButton color="info" variant="ghost">
-        Ghost
-      </AButton>
-      <AButton color="warning" variant="light">
-        Light
-      </AButton>
-      <AButton color="danger" variant="text">
-        Text
-      </AButton>
-    </div>
-    <div class="p-2">
-      Status
-    </div>
-    <div p-2 flex="~ gap2 wrap" items-center>
-      <AButton loading>
-        Loading
-      </AButton>
-      <AButton color="success" disabled>
-        Disabled
-      </AButton>
-    </div>
-    <div class="p-2">
-      Custom
-    </div>
-    <div p-2 flex="~ gap2 wrap" items-center>
-      <AButton icon="i-carbon-palm-tree" icon-only />
-      <AButton color="success" icon-only cc="rounded-full">
-        <template #icon>
-          <div class="i-carbon-sprout" />
-        </template>
-      </AButton>
-      <AButton color="info" cc="rounded-full">
-        Rounded
-      </AButton>
-      <AButton color="warning">
-        <template #icon>
-          <div class="i-carbon-send-alt-filled" />
-        </template>
-        Send
-      </AButton>
-      <AButton cc="bg-teal border-teal" open-type="getUserInfo" @click="getInfo">
-        OpenType
-      </AButton>
-    </div>
-    <div p-2>
-      <AButton color="danger" block>
-        Block
-      </AButton>
-      <AButton mt2 block cc="bg-gradient-to-r from-indigo-500 to-pink-500 border-none">
-        Bg Gradient
-      </AButton>
-    </div>
-  </div>
+  </UBasePage>
 </template>

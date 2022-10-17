@@ -5,6 +5,9 @@
     "baseUrl": ".",
     "isolatedModules": true,
     "noImplicitAny": false,
-    "sourceMap": true
+    "sourceMap": true,
+    "paths": {
+      "~/*": ["src/*"]
+    }
   }
 }

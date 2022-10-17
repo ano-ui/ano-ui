@@ -1,4 +1,13 @@
 {
+  "globalStyle": {
+    "navigationBarBackgroundColor": "@navBgColor",
+    "navigationBarTextStyle": "@navTxtStyle",
+    "navigationBarTitleText": "Ano UI",
+    "backgroundColor": "@bgColor",
+    "backgroundTextStyle": "@bgTxtStyle",
+    "backgroundColorTop": "@bgColorTop",
+    "backgroundColorBottom": "@bgColorBottom"
+  },
   "pages": [
     { "path": "pages/index/index" },
     {
@@ -26,16 +35,11 @@
       "style": { "navigationBarTitleText": "Input" }
     }
   ],
-  "globalStyle": {
-    "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "Ano UI",
-    "navigationBarBackgroundColor": "#F8F8F8",
-    "backgroundColor": "#F8F8F8"
-  },
   "easycom": {
     "autoscan": true,
     "custom": {
-      "^A(.*)": "@ano-ui/components/A$1/A$1.vue"
+      "^A(.*)": "@ano-ui/components/A$1/A$1.vue",
+      "^U(.*)": "~/components/UnoUI/U$1/U$1.vue"
     }
   }
 }
