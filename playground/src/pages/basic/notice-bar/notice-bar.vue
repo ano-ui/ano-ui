@@ -5,7 +5,7 @@ const show = ref(true)
 
 <template>
   <UBasePage>
-    <div class="bg-white p-2 pb-safe">
+    <div class="p-2 pb-safe">
       <div class="p-2">
         Type
       </div>

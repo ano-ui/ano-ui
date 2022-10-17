@@ -22,7 +22,7 @@ const showNotify3 = (options: NotifyOptions) => {
 
 <template>
   <UBasePage>
-    <div class="bg-white p-2 pb-safe">
+    <div class="p-2 pb-safe">
       <ANotify ref="notify" />
       <ANotify ref="notify2">
         <template #icon>

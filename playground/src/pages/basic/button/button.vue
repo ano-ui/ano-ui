@@ -11,7 +11,7 @@ const getInfo = () => {
 
 <template>
   <UBasePage>
-    <div class="bg-white p-2 pb-safe">
+    <div class="p-2 pb-safe">
       <div class="p-2">
         Color
       </div>

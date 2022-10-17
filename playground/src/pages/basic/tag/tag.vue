@@ -5,7 +5,7 @@ const show = ref(true)
 
 <template>
   <UBasePage>
-    <div class="bg-white p-2 pb-safe">
+    <div class="p-2 pb-safe">
       <div class="p-2">
         Color
       </div>
@@ -97,7 +97,7 @@ const show = ref(true)
           </template>
           Send
         </ATag>
-        <ATag cc="bg-gradient-to-r from-indigo-500 to-pink-500 border-none">
+        <ATag cc="bg-gradient-to-r from-indigo-500 to-pink-500 border-white">
           Bg Gradient
         </ATag>
       </div>

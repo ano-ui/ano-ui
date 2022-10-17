@@ -7,7 +7,7 @@ const align = ref('center')
 
 <template>
   <UBasePage>
-    <div class="bg-white p-2 pb-safe">
+    <div class="p-2 pb-safe">
       <AOverlay :show="show" :align="align" @close="show = false">
         <div class="text-primary">
           Overlay

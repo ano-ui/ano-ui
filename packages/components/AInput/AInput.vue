@@ -60,7 +60,7 @@ const showPasswordText = ref(false)
 <template>
   <div
     class="a-input-base w-full text-darkText"
-    :class="[`a-${color}`, `a-input-${size}`, { 'a-disabled': disabled }, isClick ? 'b-context' : 'border-placeholder', cc]"
+    :class="[`a-${color}`, `a-input-${size}`, { 'a-disabled': disabled }, isClick ? 'border-context dark:border-op80' : 'a-border-base', cc]"
   >
     <div v-if="icon" :class="icon" />
     <slot v-else name="icon" />

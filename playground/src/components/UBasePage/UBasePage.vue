@@ -4,6 +4,8 @@ const { darkMode, customBarHeight, statusBarHeight } = storeToRefs(useAppStore()
 
 <template>
   <div :class="darkMode ? 'dark' : ''">
-    <slot />
+    <div class="a-bg-base">
+      <slot />
+    </div>
   </div>
 </template>
