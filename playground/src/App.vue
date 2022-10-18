@@ -25,4 +25,13 @@ onHide(() => {
 })
 </script>
 
-<style></style>
+<style>
+page {
+  background-color: #f3f4f6;
+}
+@media (prefers-color-scheme: dark) {
+  page {
+    background-color: #222222;
+  }
+}
+</style>

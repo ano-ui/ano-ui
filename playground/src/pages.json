@@ -27,6 +27,10 @@
       "style": { "navigationBarTitleText": "Notify" }
     },
     {
+      "path": "pages/basic/cell/cell",
+      "style": { "navigationBarTitleText": "Cell" }
+    },
+    {
       "path": "pages/basic/notice-bar/notice-bar",
       "style": { "navigationBarTitleText": "Notice Bar" }
     },

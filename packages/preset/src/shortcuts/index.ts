@@ -8,6 +8,7 @@ import { overlayShortcuts } from './overlay'
 import { notifyShortcuts } from './notify'
 import { noticeBarShortcuts } from './noticeBar'
 import { inputShortcuts } from './input'
+import { cellShortcuts } from './cell'
 
 export default [
   baseShortcuts,
@@ -17,4 +18,5 @@ export default [
   notifyShortcuts,
   noticeBarShortcuts,
   inputShortcuts,
+  cellShortcuts,
 ] as UserShortcuts<Theme>

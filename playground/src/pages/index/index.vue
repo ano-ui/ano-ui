@@ -30,6 +30,9 @@ const goForm = (path: string) => {
       <AButton block @click="goBasic('notice-bar')">
         NoticeBar
       </AButton>
+      <AButton block @click="goBasic('cell')">
+        Cell
+      </AButton>
       <AButton block @click="goForm('input')">
         Input
       </AButton>
