@@ -6,24 +6,33 @@ const props = defineProps({
   title: StringProp,
   content: StringProp,
   description: StringProp,
-  variant: variantProp,
   disabled: disabledProp,
-  closable: Boolean,
   icon: StringProp,
   arrow: defaultFalseProp,
 })
+
+const emits = defineEmits(['click'])
+
+const handleClick = (e: MouseEvent) => {
+  if (props.disabled)
+    return
+  emits('click', e)
+}
 </script>
 
 <template>
-  <div class="a-bg-base-second a-cell-base" :class="[{ 'a-disabled': disabled }, cc]">
+  <div
+    class="a-bg-base-second a-cell-base"
+    :class="[{ 'a-cell-disabled': disabled }, cc]"
+    hover-class="a-cell-hover"
+    @click="handleClick"
+  >
     <div class="flex justify-center items-center gap1">
       <div class="flex items-center gap1">
         <div v-if="icon" :class="icon" />
         <slot v-else name="icon" />
         <template v-if="title">
-          <AText>
-            {{ title }}
-          </AText>
+          {{ title }}
         </template>
         <slot v-else name="title" />
       </div>

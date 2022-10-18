@@ -4,6 +4,7 @@ import { defaultTrueProp, disabledProp, sizeProp, variantProp } from '../composa
 
 const props = defineProps({
   ...useBaseProps(),
+  label: String,
   size: sizeProp,
   variant: variantProp,
   disabled: disabledProp,
@@ -36,7 +37,10 @@ const handleClose = (e: Event) => {
   >
     <div v-if="icon" :class="icon" />
     <slot v-else name="icon" />
-    <slot />
+    <div v-if="label">
+      {{ label }}
+    </div>
+    <slot name="label" />
     <div v-if="closable" class="i-carbon-close" @click.stop="handleClose" />
   </div>
 </template>
