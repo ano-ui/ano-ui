@@ -10,73 +10,39 @@ const show = ref(true)
         Color
       </div>
       <div p-2 flex="~ gap2 wrap">
-        <ATag>
-          Primary
-        </ATag>
-        <ATag color="success">
-          Success
-        </ATag>
-        <ATag color="info">
-          Info
-        </ATag>
-        <ATag color="warning">
-          Warning
-        </ATag>
-        <ATag color="danger">
-          Danger
-        </ATag>
+        <ATag label="Primary" />
+        <ATag label="Success" color="success" />
+        <ATag label="Info" color="info" />
+        <ATag label="Warning" color="warning" />
+        <ATag label="Danger" color="danger" />
       </div>
       <div class="p-2">
         Size
       </div>
       <div p-2 flex="~ gap2 wrap" items-center>
-        <ATag>
-          Default
-        </ATag>
-        <ATag color="success" size="xs">
-          Mini
-        </ATag>
-        <ATag color="info" size="sm">
-          Small
-        </ATag>
-        <ATag color="warning" size="md">
-          Medium
-        </ATag>
-        <ATag color="danger" size="lg">
-          Large
-        </ATag>
+        <ATag label="Default" />
+        <ATag label="Mini" color="success" size="xs" />
+        <ATag label="Small" color="info" size="sm" />
+        <ATag label="Medium" color="warning" size="md" />
+        <ATag label="Large" color="danger" size="lg" />
       </div>
       <div class="p-2">
         Variant
       </div>
       <div p-2 flex="~ gap2 wrap" items-center>
-        <ATag variant="solid">
-          Solid
-        </ATag>
-        <ATag color="success" variant="outline">
-          Outline
-        </ATag>
-        <ATag color="info" variant="ghost">
-          Ghost
-        </ATag>
-        <ATag color="warning" variant="light">
-          Light
-        </ATag>
-        <ATag color="danger" variant="text">
-          Text
-        </ATag>
+        <ATag label="Solid" variant="solid" />
+        <ATag label="Outline" color="success" variant="outline" />
+        <ATag label="Ghost" color="info" variant="ghost" />
+        <ATag label="Light" color="warning" variant="light" />
+        <ATag label="Text" color="danger" variant="text" />
       </div>
       <div class="p-2">
         Status
       </div>
       <div p-2 flex="~ gap2 wrap" items-center>
         <!-- TODO: close will remain an <a-tag> but 0x0 -->
-        <ATag closable :show="show" @close="show = !show">
-          Closable
-        </ATag>
-        <ATag color="success" disabled>
-          Disabled
-        </ATag>
+        <ATag label="Closable" closable :show="show" @close="show = !show" />
+        <ATag label="Disabled" color="success" disabled />
       </div>
       <div class="p-2">
         Custom
@@ -88,18 +54,13 @@ const show = ref(true)
             <div class="i-carbon-sprout" />
           </template>
         </ATag>
-        <ATag color="info" variant="ghost" cc="rounded-md">
-          Rounded
-        </ATag>
-        <ATag color="warning">
+        <ATag label="Rounded" color="info" variant="ghost" cc="rounded-md" />
+        <ATag label="Send" color="warning">
           <template #icon>
             <div class="i-carbon-send-alt-filled" />
           </template>
-          Send
         </ATag>
-        <ATag cc="bg-gradient-to-r from-indigo-500 to-pink-500 border-white">
-          Bg Gradient
-        </ATag>
+        <ATag label="Bg Gradient" cc="bg-gradient-to-r from-indigo-500 to-pink-500 border-white" />
       </div>
     </div>
   </UBasePage>

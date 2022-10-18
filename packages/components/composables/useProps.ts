@@ -1,9 +1,11 @@
 import type { PropType } from 'vue'
 
-export const ccProp = {
-  type: String,
+export const StringProp = {
+  type: String as PropType<string>,
   default: '',
 }
+
+export const ccProp = StringProp
 
 export type ColorType = 'primary' | 'success' | 'info' | 'warning' | 'danger'
 

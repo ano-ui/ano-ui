@@ -98,7 +98,7 @@ const getInfo = () => {
         </AButton>
         <AButton color="warning">
           <template #icon>
-            <div class="i-carbon-send-alt-filled" />
+            <div class="i-carbon-send-alt" />
           </template>
           Send
         </AButton>

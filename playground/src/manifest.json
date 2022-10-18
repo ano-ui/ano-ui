@@ -14,7 +14,8 @@
       "postcss": true
     },
     "usingComponents": true,
-    "darkmode": true
+    "darkmode": true,
+    "themeLocation": "theme.json"
   },
   "uniStatistics": {
     "enable": false
