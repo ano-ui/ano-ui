@@ -10,32 +10,46 @@ const goForm = (path: string) => {
     url: `/pages/form/${path}/${path}`,
   })
 }
+
+const goAction = (path: string) => {
+  uni.navigateTo({
+    url: `/pages/action/${path}/${path}`,
+  })
+}
 </script>
 
 <template>
   <UBasePage>
-    <div class="p4" grid="~ cols-3 gap-4">
-      <AButton block @click="goBasic('button')">
-        Button
-      </AButton>
-      <AButton block @click="goBasic('tag')">
-        Tag
-      </AButton>
-      <AButton block @click="goBasic('overlay')">
-        Overlay
-      </AButton>
-      <AButton block @click="goBasic('notify')">
-        Notify
-      </AButton>
-      <AButton block @click="goBasic('notice-bar')">
-        NoticeBar
-      </AButton>
-      <AButton block @click="goBasic('cell')">
-        Cell
-      </AButton>
-      <AButton block @click="goForm('input')">
-        Input
-      </AButton>
+    <div class="p4 pb-safe">
+      <div class="text-center" flex="~ col gap1">
+        <div class="text-xl">
+          Ano UI
+        </div>
+        <div>An UniApp UI components with UnoCSS</div>
+        <div>一个使用 UnoCSS 的 UniApp 组件</div>
+      </div>
+      <div class="px2 py4">
+        Basic 基础组件
+      </div>
+      <ACellGroup>
+        <ACell title="Button 按钮" arrow @click="goBasic('button')" />
+        <ACell title="Cell 单元格" arrow @click="goBasic('cell')" />
+        <ACell title="Tag 标签" arrow @click="goBasic('tag')" />
+      </ACellGroup>
+      <div class="px2 py4">
+        Form 表单组件
+      </div>
+      <ACellGroup>
+        <ACell title="Input 输入" arrow @click="goForm('input')" />
+      </ACellGroup>
+      <div class="px2 py4">
+        Action 反馈组件
+      </div>
+      <ACellGroup>
+        <ACell title="Notify 消息" arrow @click="goAction('notify')" />
+        <ACell title="NoticeBar 消息栏" arrow @click="goAction('notice-bar')" />
+        <ACell title="Overlay 遮罩层" arrow @click="goAction('overlay')" />
+      </ACellGroup>
     </div>
   </UBasePage>
 </template>
