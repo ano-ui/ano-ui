@@ -37,20 +37,28 @@
       "types": "./dist/utils.d.ts",
       "require": "./dist/utils.cjs",
       "import": "./dist/utils.mjs"
-    }
+    },
+    "./*": "./*"
   },
   "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "*.d.ts"
   ],
   "scripts": {
-    "build": "unbuild",
-    "stub": "unbuild --stub"
+    "build": "esno scripts/components.ts && unbuild",
+    "stub": "esno scripts/components.ts && unbuild --stub"
   },
   "dependencies": {
+    "@ano-ui/components": "workspace:*",
     "@ano-ui/preset": "workspace:*",
     "@ano-ui/utils": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.13",
+    "esno": "^0.16.3",
+    "fs-extra": "^10.1.0"
   }
 }

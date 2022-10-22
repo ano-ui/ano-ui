@@ -42,7 +42,7 @@
   "easycom": {
     "autoscan": true,
     "custom": {
-      "^A(.*)": "@ano-ui/components/A$1/A$1.vue",
+      "^A(.*)": "ano-ui/components/A$1/A$1.vue",
       "^U(.*)": "~/components/UnoUI/U$1/U$1.vue"
     }
   }

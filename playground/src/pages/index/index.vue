@@ -20,6 +20,8 @@ const goAction = (path: string) => {
 
 <template>
   <UBasePage>
+    <BButton>BButton</BButton>
+    <CButton>CButton</CButton>
     <div class="p4 pb-safe">
       <div class="text-center" flex="~ col gap1">
         <div class="text-xl">
