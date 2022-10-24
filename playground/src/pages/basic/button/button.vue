@@ -15,7 +15,7 @@ const getInfo = () => {
       <div class="p-2">
         Color
       </div>
-      <div p-2 flex="~ gap2 wrap">
+      <div p-2 flex="~ gap2 wrap" items-center>
         <AButton>
           Primary
         </AButton>
@@ -88,7 +88,7 @@ const getInfo = () => {
       </div>
       <div p-2 flex="~ gap2 wrap" items-center>
         <AButton icon="i-carbon-palm-tree" icon-only />
-        <AButton color="success" icon-only cc="rounded-full">
+        <AButton color="success" size="xs" icon-only cc="rounded-full">
           <template #icon>
             <div class="i-carbon-sprout" />
           </template>

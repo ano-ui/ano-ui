@@ -55,7 +55,7 @@
     "ano-ui": "workspace:*",
     "postcss": "^8.4.18",
     "sass": "^1.55.0",
-    "unocss-applet": "^0.2.15",
+    "unocss-applet": "^0.2.16",
     "unplugin-auto-import": "^0.11.2"
   }
 }

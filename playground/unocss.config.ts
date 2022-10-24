@@ -15,6 +15,8 @@ import {
 
 import { presetAno } from 'ano-ui'
 
+const isMP = process.env.UNI_PLATFORM?.startsWith('mp-')
+
 export default defineConfig({
   presets: [
     presetIcons({
@@ -27,14 +29,14 @@ export default defineConfig({
     }),
     presetApplet(),
     presetRemToRpx(),
+    presetAttributify(),
 
     presetAno(),
-    presetAttributify(),
   ],
   transformers: [
     transformerDirectives(),
     transformerVariantGroup(),
-    transformerAttributify(),
+    transformerAttributify({ enable: isMP }),
     transformerApplet(),
   ],
 })
