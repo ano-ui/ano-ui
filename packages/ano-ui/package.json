@@ -45,7 +45,7 @@
   "types": "./dist/index.d.ts",
   "files": [
     "dist",
-    "*.d.ts"
+    "components"
   ],
   "scripts": {
     "build": "esno scripts/components.ts && unbuild",
