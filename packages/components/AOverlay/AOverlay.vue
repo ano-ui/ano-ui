@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { AlignProp, BooleanProp, CCProp, CSProp } from '../composables/useProps'
+import { AlignProp, BooleanProp, CustomClassProp, CustomStyleProp } from '../composables/useProps'
 
 defineProps({
-  cc: CCProp,
-  cs: CSProp,
+  cc: CustomClassProp,
+  cs: CustomStyleProp,
   show: BooleanProp,
   align: AlignProp,
 })

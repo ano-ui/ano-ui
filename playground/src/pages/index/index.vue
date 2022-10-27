@@ -21,7 +21,7 @@ const goAction = (path: string) => {
 <template>
   <UBasePage>
     <div class="p4 pb-safe">
-      <div class="text-center" flex="~ col gap1">
+      <div class="text-center a-color-base" flex="~ col gap1">
         <div class="text-xl">
           Ano UI
         </div>

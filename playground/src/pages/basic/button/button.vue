@@ -110,7 +110,7 @@ const getInfo = () => {
         <AButton color="danger" block>
           Block
         </AButton>
-        <AButton mt2 block cc="bg-gradient-to-r from-indigo-500 to-pink-500 border-none">
+        <AButton size="lg" mt2 block :cc="['bg-gradient-to-r', 'from-indigo-500', 'to-pink-500', 'border-none']">
           Bg Gradient
         </AButton>
       </div>

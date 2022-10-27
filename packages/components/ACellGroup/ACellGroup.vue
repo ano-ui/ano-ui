@@ -1,9 +1,9 @@
 <script setup lang='ts'>
-import { BooleanProp, BooleanTrueProp, CCProp, CSProp } from '../composables/useProps'
+import { BooleanProp, BooleanTrueProp, CustomClassProp, CustomStyleProp } from '../composables/useProps'
 
 defineProps({
-  cc: CCProp,
-  cs: CSProp,
+  cc: CustomClassProp,
+  cs: CustomStyleProp,
   divider: BooleanProp,
   card: BooleanTrueProp,
 })

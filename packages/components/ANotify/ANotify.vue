@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { CCProp, CSProp, VariantProp } from '../composables/useProps'
+import { CustomClassProp, CustomStyleProp, VariantProp } from '../composables/useProps'
 import type { NotifyOptions } from './types'
 
 defineProps({
-  cc: CCProp,
-  cs: CSProp,
+  cc: CustomClassProp,
+  cs: CustomStyleProp,
   variant: VariantProp,
 })
 

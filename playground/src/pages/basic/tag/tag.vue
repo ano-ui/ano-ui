@@ -57,7 +57,7 @@ const show = ref(true)
         <ATag label="Rounded" color="info" variant="ghost" cc="rounded-md" />
         <ATag label="Send" color="warning">
           <template #icon>
-            <div class="i-carbon-send-alt-filled" />
+            <div class="i-carbon-send-alt" />
           </template>
         </ATag>
         <ATag label="Bg Gradient" cc="bg-gradient-to-r from-indigo-500 to-pink-500 border-white" />

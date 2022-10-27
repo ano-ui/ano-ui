@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { BooleanProp, CCProp, CSProp, StringProp } from '../composables/useProps'
+import { BooleanProp, CustomClassProp, CustomStyleProp, StringProp } from '../composables/useProps'
 
 const props = defineProps({
-  cc: CCProp,
-  cs: CSProp,
+  cc: CustomClassProp,
+  cs: CustomStyleProp,
   title: StringProp,
   content: StringProp,
   description: StringProp,
@@ -23,8 +23,7 @@ const handleClick = (e: MouseEvent) => {
 
 <template>
   <div
-    class="a-bg-base-second a-cell-base"
-    :class="[{ 'a-cell-disabled': disabled }, cc]" hover-class="a-cell-hover"
+    class="a-bg-base-second a-cell-base" :class="[{ 'a-cell-disabled': disabled }, cc]" hover-class="a-cell-hover"
     :style="cs" @click="handleClick"
   >
     <div class="flex justify-center items-center gap1">

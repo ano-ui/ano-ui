@@ -32,10 +32,10 @@ const handleClose = (e: Event) => {
 <template>
   <div
     v-if="show" class="a-tag-base"
-    :class="[`a-${color}`, { '!p-0.5 aspect-square': iconOnly }, `a-tag-${size}`, `a-${variant}`, { 'a-disabled': disabled }, cc]"
+    :class="[`a-${color}`, `a-tag-${size}`, { '!p-0.5 aspect-square': iconOnly }, `a-${variant}`, { 'a-disabled': disabled }, cc]"
     :style="cs" @click="handleClick"
   >
-    <div v-if="icon" :class="icon" />
+    <div v-if="icon" class="text-base" :class="icon" />
     <slot v-else name="icon" />
     <div v-if="label">
       {{ label }}

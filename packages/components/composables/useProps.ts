@@ -1,4 +1,4 @@
-import type { PropType } from 'vue'
+import type { PropType, StyleValue } from 'vue'
 
 export const StringProp = {
   type: String as PropType<string>,
@@ -25,32 +25,16 @@ export const ArrayProp = {
   default: () => [],
 }
 
-export const ClassType = [String, Object, Array] as PropType<unknown>
+export type ClassType = String | Object | Array<ClassType>
 
-// custom class prop
-export const CCProp = {
-  type: ClassType,
-  default: () => [],
+export const CustomClassProp = {
+  type: [String, Object, Array] as PropType<ClassType>,
+  default: '',
 }
 
-// custom child class prop
-export const CCCProp = {
-  type: ClassType,
-  default: () => [],
-}
-
-export const StyleType = [String, Object] as PropType<unknown>
-
-// custom style prop
-export const CSProp = {
-  type: StyleType,
-  default: () => ({}),
-}
-
-// custom child style prop
-export const CCSProp = {
-  type: StyleType,
-  default: () => ({}),
+export const CustomStyleProp = {
+  type: [String, Object, Array] as PropType<StyleValue>,
+  default: '',
 }
 
 export type ColorType = 'primary' | 'success' | 'info' | 'warning' | 'danger'

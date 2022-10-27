@@ -1,9 +1,9 @@
 <script setup lang='ts'>
-import { CCProp } from '../composables/useProps'
+import { CustomClassProp } from '../composables/useProps'
 
 // WIP
 const props = defineProps({
-  cc: CCProp,
+  cc: CustomClassProp,
 })
 </script>
 

@@ -20,14 +20,13 @@ const isMP = process.env.UNI_PLATFORM?.startsWith('mp-')
 export default defineConfig({
   presets: [
     presetIcons({
-      scale: 1.2,
       warn: true,
       extraProperties: {
         'display': 'inline-block',
         'vertical-align': 'middle',
       },
     }),
-    presetApplet(),
+    presetApplet({ enable: isMP }),
     presetRemToRpx(),
     presetAttributify(),
 
@@ -37,6 +36,6 @@ export default defineConfig({
     transformerDirectives(),
     transformerVariantGroup(),
     transformerAttributify({ enable: isMP }),
-    transformerApplet(),
+    transformerApplet({ enable: isMP }),
   ],
 })

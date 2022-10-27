@@ -1,12 +1,16 @@
 import type { ComponentObjectPropsOptions } from 'vue'
-import { CCCProp, CCProp, CCSProp, CSProp, ColorProp } from './useProps'
+import { ColorProp, CustomClassProp, CustomStyleProp } from './useProps'
 
 export const useBaseProps = (propOverrides?: Partial<ComponentObjectPropsOptions>) => {
   const props = {
-    cc: CCProp,
-    ccc: CCCProp,
-    cs: CSProp,
-    ccs: CCSProp,
+    // custom class prop
+    cc: CustomClassProp,
+    // custom child class prop
+    ccc: CustomClassProp,
+    // custom style prop
+    cs: CustomStyleProp,
+    // custom child style prop
+    ccs: CustomStyleProp,
     color: ColorProp,
   }
 
