@@ -1,18 +1,19 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { ccProp, variantProp } from '../composables/useProps'
+import { CCProp, CSProp, VariantProp } from '../composables/useProps'
 import type { NotifyOptions } from './types'
 
 defineProps({
-  cc: ccProp,
-  variant: variantProp,
+  cc: CCProp,
+  cs: CSProp,
+  variant: VariantProp,
 })
 
 const emits = defineEmits(['close'])
 
 const timer = ref()
 
-const show = ref(false)
+const _show = ref(false)
 
 const notifyStatus = ref<NotifyOptions>({
   color: 'primary',
@@ -26,7 +27,7 @@ const notifyStatus = ref<NotifyOptions>({
 
 const showNotify = (options?: NotifyOptions) => {
   const { color, position, duration, content, showIcon, customIcon, showClose } = options || {}
-  show.value = true
+  _show.value = true
   notifyStatus.value = {
     color: color || 'primary',
     position: position || 'default',
@@ -45,14 +46,12 @@ const showNotify = (options?: NotifyOptions) => {
   }, notifyStatus.value.duration)
 }
 
-defineExpose({
-  showNotify,
-})
+defineExpose({ showNotify })
 
 function closeNotify() {
   if (timer.value)
     clearTimeout(timer.value)
-  show.value = false
+  _show.value = false
 }
 
 const handleClose = (e: Event) => {
@@ -63,8 +62,9 @@ const handleClose = (e: Event) => {
 
 <template>
   <div
-    v-if="show" class="a-notify-base"
+    v-if="_show" class="a-notify-base"
     :class="[`a-${notifyStatus.color}`, `a-${variant}`, { 'justify-start': notifyStatus.showIcon }, `a-notify-position-${notifyStatus.position}`, cc]"
+    :style="cs"
   >
     <template v-if="notifyStatus.customIcon">
       <slot name="icon" />

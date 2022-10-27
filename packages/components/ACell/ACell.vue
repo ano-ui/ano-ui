@@ -1,14 +1,15 @@
 <script setup lang="ts">
-import { StringProp, ccProp, defaultFalseProp, disabledProp, variantProp } from '../composables/useProps'
+import { BooleanProp, CCProp, CSProp, StringProp } from '../composables/useProps'
 
 const props = defineProps({
-  cc: ccProp,
+  cc: CCProp,
+  cs: CSProp,
   title: StringProp,
   content: StringProp,
   description: StringProp,
-  disabled: disabledProp,
+  disabled: BooleanProp,
   icon: StringProp,
-  arrow: defaultFalseProp,
+  arrow: BooleanProp,
 })
 
 const emits = defineEmits(['click'])
@@ -23,9 +24,8 @@ const handleClick = (e: MouseEvent) => {
 <template>
   <div
     class="a-bg-base-second a-cell-base"
-    :class="[{ 'a-cell-disabled': disabled }, cc]"
-    hover-class="a-cell-hover"
-    @click="handleClick"
+    :class="[{ 'a-cell-disabled': disabled }, cc]" hover-class="a-cell-hover"
+    :style="cs" @click="handleClick"
   >
     <div class="flex justify-center items-center gap1">
       <div class="flex items-center gap1">

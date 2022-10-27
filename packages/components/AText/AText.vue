@@ -1,9 +1,9 @@
 <script setup lang='ts'>
-import { ccProp } from '../composables/useProps'
+import { CCProp } from '../composables/useProps'
 
 // WIP
 const props = defineProps({
-  cc: ccProp,
+  cc: CCProp,
 })
 </script>
 

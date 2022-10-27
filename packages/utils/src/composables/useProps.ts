@@ -6,18 +6,18 @@ export type VariantType = 'solid' | 'outline' | 'ghost' | 'light' | 'text'
 
 export type SizeType = 'xs' | 'sm' | 'md' | 'lg'
 
-export const colorProp = {
+export const ColorProp = {
   type: String as PropType<ColorType>,
   validator: (value: string) => ['primary', 'success', 'info', 'warning', 'danger'].includes(value),
   default: 'primary',
 }
 
-export const variantProp = {
+export const VariantProp = {
   type: String as PropType<VariantType>,
   default: 'solid',
 }
 
-export const sizeProp = {
+export const SizeProp = {
   type: String as PropType<SizeType>,
   validator: (value: string) => ['xs', 'sm', 'md', 'lg'].includes(value),
   default: 'md',
@@ -36,9 +36,9 @@ export const readonly = {
 export const useBaseProps = (propOverrides?: Partial<ComponentObjectPropsOptions>) => {
   const props = {
     cc: { type: String },
-    type: colorProp,
-    variant: variantProp,
-    size: sizeProp,
+    type: ColorProp,
+    variant: VariantProp,
+    size: SizeProp,
   }
 
   // Add `defaults` property in `props` if it is provided via `defaults` argument

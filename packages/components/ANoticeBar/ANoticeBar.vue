@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import { useBaseProps } from '../composables/useLayer'
-import { defaultFalseProp, defaultTrueProp, iconProp, showCloseProp, variantProp } from '../composables/useProps'
+import { BooleanProp, BooleanTrueProp, StringProp, VariantProp } from '../composables/useProps'
 
 defineProps({
   ...useBaseProps(),
-  variant: variantProp,
-  show: defaultTrueProp,
-  loop: defaultFalseProp,
-  icon: iconProp,
-  showClose: showCloseProp,
+  variant: VariantProp,
+  show: BooleanTrueProp,
+  loop: BooleanProp,
+  icon: StringProp,
+  showClose: BooleanProp,
 })
 
 const emits = defineEmits(['close'])
@@ -19,11 +19,11 @@ const handleClose = (e: Event) => {
 </script>
 
 <template>
-  <div v-if="show" class="a-notice-bar-base" :class="[`a-${color}`, `a-${variant}`, cc]">
+  <div v-if="show" class="a-notice-bar-base" :class="[`a-${color}`, `a-${variant}`, cc]" :style="cs">
     <div class="i-carbon-notification-filled" />
     <div v-if="icon" :class="icon" />
     <slot v-else name="icon" />
-    <div class="flex-1 relative overflow-hidden" :class="loop ? '' : 'truncate' ">
+    <div class="flex-1 relative overflow-hidden" :class="loop ? '' : 'truncate'">
       <template v-if="loop">
         <div class="text-transparent">
           blank

@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import { alignProp, ccProp, defaultFalseProp } from '../composables/useProps'
+import { AlignProp, BooleanProp, CCProp, CSProp } from '../composables/useProps'
 
 defineProps({
-  cc: ccProp,
-  show: defaultFalseProp,
-  align: alignProp,
+  cc: CCProp,
+  cs: CSProp,
+  show: BooleanProp,
+  align: AlignProp,
 })
 
 const emits = defineEmits(['close'])
@@ -20,9 +21,8 @@ const handleMove = (e: Event) => {
 
 <template>
   <div
-    v-if="show" class="a-overlay-base"
-    :class="[`a-overlay-flex-${align}`, cc]" @touchmove.stop.prevent="handleMove"
-    @click="handleClose"
+    v-if="show" class="a-overlay-base" :class="[`a-overlay-flex-${align}`, cc]" :style="cs"
+    @touchmove.stop.prevent="handleMove" @click="handleClose"
   >
     <slot />
   </div>

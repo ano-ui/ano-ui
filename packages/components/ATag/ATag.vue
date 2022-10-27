@@ -1,17 +1,17 @@
 <script setup lang="ts">
 import { useBaseProps } from '../composables/useLayer'
-import { defaultTrueProp, disabledProp, sizeProp, variantProp } from '../composables/useProps'
+import { BooleanProp, BooleanTrueProp, SizeProp, StringProp, VariantProp } from '../composables/useProps'
 
 const props = defineProps({
   ...useBaseProps(),
-  label: String,
-  size: sizeProp,
-  variant: variantProp,
-  disabled: disabledProp,
-  show: defaultTrueProp,
-  closable: Boolean,
-  icon: String,
-  iconOnly: Boolean,
+  label: StringProp,
+  size: SizeProp,
+  variant: VariantProp,
+  disabled: BooleanProp,
+  show: BooleanTrueProp,
+  closable: BooleanProp,
+  icon: StringProp,
+  iconOnly: BooleanProp,
 })
 
 const emits = defineEmits(['click', 'close'])
@@ -33,7 +33,7 @@ const handleClose = (e: Event) => {
   <div
     v-if="show" class="a-tag-base"
     :class="[`a-${color}`, { '!p-0.5 aspect-square': iconOnly }, `a-tag-${size}`, `a-${variant}`, { 'a-disabled': disabled }, cc]"
-    @click="handleClick"
+    :style="cs" @click="handleClick"
   >
     <div v-if="icon" :class="icon" />
     <slot v-else name="icon" />
