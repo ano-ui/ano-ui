@@ -57,8 +57,8 @@ const showPasswordText = ref(false)
 
 <template>
   <div
-    class="a-input-base w-full text-darkText"
-    :class="[`a-${color}`, `a-input-${size}`, { 'a-disabled': disabled }, isClick ? 'border-context dark:border-op80' : 'a-border-base', cc]"
+    class="a-input-base a-bg-base-second w-full a-color-base"
+    :class="[`a-${color}`, `a-input-${size}`, { 'a-disabled': disabled }, isClick ? 'border-context' : 'a-border-base', cc]"
     :style="cs"
   >
     <div v-if="icon" :class="icon" />
@@ -68,12 +68,12 @@ const showPasswordText = ref(false)
       v-if="type !== 'textarea'" class="a-input-content-base" :type="type !== 'password' ? type : 'text'"
       :class="[ccc]" :style="ccs" :value="_value" :placeholder="placeholder" :maxlength="maxlength" :focus="_focus"
       :disabled="disabled" :password="type === 'password' ? !showPasswordText : 'false'"
-      placeholder-style="color:#DCDCDC" @click="clickHandler" @blur="blurHandler" @input="inputHandler"
+      placeholder-style="color: #d1d5db" @click="clickHandler" @blur="blurHandler" @input="inputHandler"
     >
     <textarea
       v-else class="a-input-content-base h-12" :class="[ccc]" :style="ccs" :value="_value"
       :placeholder="placeholder" :maxlength="maxlength" :focus="_focus" :disabled="disabled"
-      placeholder-style="color:#DCDCDC" @click="clickHandler" @blur="blurHandler" @input="inputHandler"
+      placeholder-style="color: #d1d5db" @click="clickHandler" @blur="blurHandler" @input="inputHandler"
     />
     <div v-if="showClear && _value" class="i-carbon-close-filled" @click="clearHandler" />
     <div

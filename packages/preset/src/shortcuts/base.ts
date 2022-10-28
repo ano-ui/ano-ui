@@ -3,7 +3,7 @@ export const baseShortcuts: Record<string, string> = {
   'a-bg-base-second': 'bg-white dark:bg-dark-100',
   'a-color-base': 'text-gray-700 dark:text-light-2',
   'a-color-base-second': 'text-gray-400 dark:text-gray-500/60',
-  'a-border-base': 'border-gray-400/50',
+  'a-border-base': 'border-gray-400/80',
   'a-border-300': 'border-gray-400/40',
   'a-border-200': 'border-gray-400/25',
   'a-transition': 'transition-all duration-200',

@@ -65,7 +65,7 @@ watch(pwd, (val) => {
             </AButton>
           </template>
         </AInput>
-        <AInput cc="rounded-full" placeholder="Custom Rounded" />
+        <AInput cc="rounded-full px4" placeholder="Custom Rounded" />
         <AInput ccc="text-red" placeholder="Custom Input Style" />
         <AInput :maxlength="10" show-word-limit placeholder="Word Limit" />
       </div>
