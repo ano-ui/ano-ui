@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { CustomClassProp, CustomStyleProp, VariantProp } from '../composables/useProps'
-import type { NotifyOptions } from './types'
+import { CustomClassProp, CustomStyleProp, VariantProp } from '@ano-ui/utils'
+import type { NotifyOptions } from '@ano-ui/utils'
 
 defineProps({
   cc: CustomClassProp,

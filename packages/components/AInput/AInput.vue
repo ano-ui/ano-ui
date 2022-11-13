@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
-import { useBaseProps } from '../composables/useLayer'
-import { BooleanProp, InputTypeProp, SizeProp, StringProp } from '../composables/useProps'
+import { BooleanProp, InputTypeProp, SizeProp, StringProp, useBaseProps } from '@ano-ui/utils'
 
 const props = defineProps({
   ...useBaseProps(),

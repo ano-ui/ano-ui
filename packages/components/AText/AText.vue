@@ -1,5 +1,5 @@
 <script setup lang='ts'>
-import { CustomClassProp } from '../composables/useProps'
+import { CustomClassProp } from '@ano-ui/utils'
 
 // WIP
 const props = defineProps({

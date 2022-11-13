@@ -6,9 +6,9 @@
   "scripts": {
     "dev": "pnpm stub",
     "build": "rimraf packages/*/dist && pnpm -r --filter=./packages/* run build && pnpm -r run build-post",
-    "play:mp-weixin": "pnpm dev && npm -C playground run dev:mp-weixin",
+    "play:mp-weixin": "npm -C playground run dev:mp-weixin",
     "build:mp-weixin": "pnpm build && npm -C playground run build:mp-weixin",
-    "play:h5": "pnpm dev && npm -C playground run dev:h5",
+    "play:h5": "npm -C playground run dev:h5",
     "build:h5": "pnpm build && npm -C playground run build:h5",
     "release": "bumpp package.json packages/**/package.json",
     "stub": "pnpm -r --filter=./packages/* --parallel run stub",
@@ -19,20 +19,20 @@
     "test:update": "vitest -u"
   },
   "dependencies": {
-    "vue": "^3.2.41"
+    "vue": "^3.2.45"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.27.0",
-    "@dcloudio/types": "^3.0.15",
-    "@types/node": "^18.11.3",
+    "@antfu/eslint-config": "^0.30.1",
+    "@dcloudio/types": "^3.0.19",
+    "@types/node": "^18.11.9",
     "bumpp": "^8.2.1",
-    "eslint": "^8.26.0",
+    "eslint": "^8.27.0",
     "esno": "^0.16.3",
     "rimraf": "^3.0.2",
     "typescript": "^4.8.4",
     "unbuild": "^0.9.4",
-    "unocss": "^0.45.30",
-    "vite": "^3.1.8",
-    "vitest": "^0.24.3"
+    "unocss": "^0.46.5",
+    "vite": "^3.2.3",
+    "vitest": "^0.25.1"
   }
 }

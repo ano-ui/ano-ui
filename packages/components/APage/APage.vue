@@ -1,5 +1,5 @@
 <script setup lang='ts'>
-import { BooleanProp } from '../composables/useProps'
+import { BooleanProp } from '@ano-ui/utils'
 
 defineProps({
   dark: BooleanProp,

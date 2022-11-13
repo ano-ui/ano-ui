@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import type { NotifyOptions } from '@ano-ui/components/ANotify/types'
+import type { NotifyOptions } from 'ano-ui'
 
 const notify = ref<{ showNotify: (options?: NotifyOptions) => {} }>()
 

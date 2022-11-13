@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { useBaseProps } from '../composables/useLayer'
-import { BooleanProp, BooleanTrueProp, StringProp, VariantProp } from '../composables/useProps'
+import { BooleanProp, BooleanTrueProp, StringProp, VariantProp, useBaseProps } from '@ano-ui/utils'
 
 defineProps({
   ...useBaseProps(),

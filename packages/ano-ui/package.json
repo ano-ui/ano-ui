@@ -51,6 +51,9 @@
     "build": "esno scripts/components.ts && unbuild",
     "stub": "esno scripts/components.ts && unbuild --stub"
   },
+  "peerDependencies": {
+    "vue": "^3.2.0"
+  },
   "dependencies": {
     "@ano-ui/components": "workspace:*",
     "@ano-ui/preset": "workspace:*",
