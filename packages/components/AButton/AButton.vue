@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { BooleanProp, SizeProp, StringProp, VariantProp, useBaseProps } from '@ano-ui/utils'
+import { BooleanProp, SizeProp, StringProp, VariantProp, useBaseProps } from '../composables'
 
 const props = defineProps({
   ...useBaseProps(),

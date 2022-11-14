@@ -52,6 +52,8 @@
     "stub": "esno scripts/components.ts && unbuild --stub"
   },
   "peerDependencies": {
+    "@ano-ui/preset": "^0.0.10",
+    "@ano-ui/utils": "^0.0.10",
     "vue": "^3.2.0"
   },
   "dependencies": {

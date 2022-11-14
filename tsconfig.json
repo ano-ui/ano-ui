@@ -15,12 +15,6 @@
       "node",
       "vite/client",
       "@dcloudio/types"
-    ],
-    "paths": {
-      "@ano-uni/preset": ["./packages/preset/src/index.ts"],
-      "@ano-uni/components": ["./packages/components/src/index.ts"],
-      "@ano-uni/utils": ["./packages/utils/src/index.ts"],
-      "ano-uni": ["./packages/ano-uni/src/index.ts"]
-    }
+    ]
   }
 }

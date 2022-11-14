@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { AlignProp, BooleanProp, CustomClassProp, CustomStyleProp } from '@ano-ui/utils'
+import { AlignProp, BooleanProp, CustomClassProp, CustomStyleProp } from '../composables'
 
 defineProps({
   cc: CustomClassProp,
