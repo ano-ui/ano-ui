@@ -10,11 +10,6 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
-    "jsx": "preserve",
-    "types": [
-      "node",
-      "vite/client",
-      "@dcloudio/types"
-    ]
+    "jsx": "preserve"
   }
 }

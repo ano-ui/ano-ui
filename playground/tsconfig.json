@@ -8,6 +8,10 @@
     "sourceMap": true,
     "paths": {
       "~/*": ["src/*"]
-    }
+    },
+    "types": [
+      "vite/client",
+      "@dcloudio/types"
+    ]
   }
 }
