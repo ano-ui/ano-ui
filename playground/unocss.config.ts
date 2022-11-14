@@ -27,7 +27,7 @@ export default defineConfig({
       },
     }),
     presetApplet({ enable: isMP }),
-    presetRemToRpx(),
+    presetRemToRpx({ enable: isMP }),
     presetAttributify(),
 
     presetAno(),

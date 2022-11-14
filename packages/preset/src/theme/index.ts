@@ -1,4 +1,4 @@
-import type { Theme } from 'unocss/preset-uno'
+import type { Theme } from '@unocss/preset-mini'
 
 export default {
   colors: {
