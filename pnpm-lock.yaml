@@ -37,33 +37,25 @@ importers:
     specifiers:
       '@ano-ui/components': workspace:*
       '@ano-ui/preset': workspace:*
-      '@ano-ui/utils': workspace:*
       '@types/fs-extra': ^9.0.13
       esno: ^0.16.3
       fs-extra: ^10.1.0
     dependencies:
       '@ano-ui/components': link:../components
       '@ano-ui/preset': link:../preset
-      '@ano-ui/utils': link:../utils
     devDependencies:
       '@types/fs-extra': 9.0.13
       esno: 0.16.3
       fs-extra: 10.1.0
 
   packages/components:
-    specifiers:
-      '@ano-ui/utils': workspace:*
-    dependencies:
-      '@ano-ui/utils': link:../utils
+    specifiers: {}
 
   packages/preset:
     specifiers:
       '@unocss/preset-mini': ^0.46.5
     dependencies:
       '@unocss/preset-mini': 0.46.5
-
-  packages/utils:
-    specifiers: {}
 
   playground:
     specifiers:

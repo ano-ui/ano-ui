@@ -21,8 +21,5 @@
   "scripts": {},
   "peerDependencies": {
     "vue": "^3.2.0"
-  },
-  "dependencies": {
-    "@ano-ui/utils": "workspace:*"
   }
 }

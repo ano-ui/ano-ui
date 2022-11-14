@@ -53,13 +53,11 @@
   },
   "peerDependencies": {
     "@ano-ui/preset": "^0.0.10",
-    "@ano-ui/utils": "^0.0.10",
     "vue": "^3.2.0"
   },
   "dependencies": {
     "@ano-ui/components": "workspace:*",
-    "@ano-ui/preset": "workspace:*",
-    "@ano-ui/utils": "workspace:*"
+    "@ano-ui/preset": "workspace:*"
   },
   "devDependencies": {
     "@types/fs-extra": "^9.0.13",
