@@ -1,12 +1,13 @@
 <script setup lang="ts">
 const checked = ref(false)
+const checked2 = ref(0)
 </script>
 
 <template>
   <UBasePage>
     <div class="p-2 pb-safe">
       <div class="p-2">
-        Type
+        Color
       </div>
       <div p-2 flex="~ gap2 wrap" items-center>
         <ASwitch v-model="checked" />
@@ -20,7 +21,7 @@ const checked = ref(false)
         Size
       </div>
       <div p-2 flex="~ gap2 wrap" items-center>
-        <ASwitch>
+        <ASwitch v-model="checked2" :active-value="1" :inactive-value="0">
           Default
         </ASwitch>
         <ASwitch color="success" size="xs">
@@ -37,10 +38,32 @@ const checked = ref(false)
         </ASwitch>
       </div>
       <div class="p-2">
+        Variant
+      </div>
+      <div p-2 flex="~ gap2 wrap" items-center>
+        <ASwitch variant="solid" />
+        <ASwitch color="success" variant="outline" />
+        <ASwitch color="info" variant="ghost" />
+        <ASwitch color="warning" variant="light" />
+        <ASwitch color="danger" variant="text" />
+      </div>
+      <div class="p-2">
+        Status
+      </div>
+      <div p-2 flex="~ gap2 wrap" items-center>
+        <ASwitch loading />
+        <ASwitch color="success" disabled />
+      </div>
+      <div class="p-2">
         Custom
       </div>
       <div p-2 flex="~ gap2 wrap" items-center>
         <ASwitch icon="i-carbon-palm-tree" />
+        <ASwitch custom-icon>
+          <template #icon>
+            <div class="i-carbon-send-alt" />
+          </template>
+        </ASwitch>
       </div>
     </div>
   </UBasePage>
