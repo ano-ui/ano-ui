@@ -27,6 +27,10 @@
       "style": { "navigationBarTitleText": "Input" }
     },
     {
+      "path": "pages/form/switch/switch",
+      "style": { "navigationBarTitleText": "Switch" }
+    },
+    {
       "path": "pages/action/overlay/overlay",
       "style": { "navigationBarTitleText": "Overlay" }
     },
