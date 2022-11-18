@@ -28,12 +28,12 @@ const handleClick = (e: MouseEvent) => {
 <template>
   <button
     class="a-button-base"
-    :class="[`a-${color}`, { 'w-full': block }, `a-button-${size}`, { 'p1 aspect-square': iconOnly }, `a-${variant}`, { 'a-disabled': isDisabled }, cc]"
+    :class="[`a-${color}`, { 'w-full': block }, `a-button-${size}`, { 'a-button-icon': iconOnly }, `a-${variant}`, { 'a-disabled': isDisabled }, cc]"
     :hover-class="isDisabled ? '' : (variant === 'text' ? 'a-button-text-hover' : 'a-button-hover')"
     :open-type="openType" :style="cs" @click="handleClick"
   >
     <div v-if="loading" class="i-carbon-circle-dash animate-spin" />
-    <div v-else-if="icon" :class="icon" />
+    <div v-else-if="icon" :class="[icon]" />
     <slot v-else name="icon" />
     <slot />
   </button>

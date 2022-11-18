@@ -27,11 +27,11 @@ watch(pwd, (val) => {
         Size
       </div>
       <div p-2 flex="~ col gap2">
-        <AInput placeholder="Default" />
-        <AInput placeholder="Mini" size="xs" />
-        <AInput placeholder="Small" size="sm" />
-        <AInput placeholder="Medium" size="md" />
-        <AInput placeholder="Large" size="lg" />
+        <AInput placeholder="Extra Mini" size="xs" />
+        <AInput placeholder="Mini" size="sm" />
+        <AInput placeholder="Small" size="md" />
+        <AInput placeholder="Medium" size="lg" />
+        <AInput placeholder="Large" size="xl" />
       </div>
 
       <div class="p-2">
@@ -45,6 +45,7 @@ watch(pwd, (val) => {
         Custom
       </div>
       <div p-2 flex="~ col gap2">
+        <AInput placeholder="Border None" :border="false" />
         <AInput show-clear placeholder="Clear Icon" />
         <AInput icon="i-carbon-palm-tree" placeholder="Prefix Icon" />
         <AInput placeholder="Prefix Slot Icon">

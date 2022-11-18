@@ -22,19 +22,19 @@ const checked3 = ref('yes')
         Size
       </div>
       <div p-2 flex="~ gap2 wrap" items-center>
-        <ASwitch v-model="checked">
-          Default
+        <ASwitch v-model="checked" color="primary" size="xs">
+          Extra Mini
         </ASwitch>
-        <ASwitch v-model="checked" color="success" size="xs">
+        <ASwitch v-model="checked" color="success" size="sm">
           Mini
         </ASwitch>
-        <ASwitch v-model="checked" color="info" size="sm">
+        <ASwitch v-model="checked" color="info" size="md">
           Small
         </ASwitch>
-        <ASwitch v-model="checked" color="warning" size="md">
+        <ASwitch v-model="checked" color="warning" size="lg">
           Medium
         </ASwitch>
-        <ASwitch v-model="checked" color="danger" size="lg">
+        <ASwitch v-model="checked" color="danger" size="xl">
           Large
         </ASwitch>
       </div>

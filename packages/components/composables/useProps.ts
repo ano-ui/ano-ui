@@ -41,7 +41,8 @@ export type ColorType = 'primary' | 'success' | 'info' | 'warning' | 'danger'
 
 export const ColorProp = {
   type: String as PropType<ColorType>,
-  validator: (value: string) => ['primary', 'success', 'info', 'warning', 'danger'].includes(value),
+  validator: (value: string) =>
+    ['primary', 'success', 'info', 'warning', 'danger'].includes(value),
   default: 'primary',
 }
 
@@ -52,12 +53,12 @@ export const VariantProp = {
   default: 'solid',
 }
 
-export type SizeType = 'xs' | 'sm' | 'md' | 'lg'
+export type SizeType = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
 
 export const SizeProp = {
   type: String as PropType<SizeType>,
-  validator: (value: string) => ['xs', 'sm', 'md', 'lg'].includes(value),
-  default: 'md',
+  validator: (value: string) => ['xs', 'sm', 'md', 'lg', 'xl'].includes(value),
+  default: 'lg',
 }
 
 export type AlignType = 'start' | 'center' | 'end'

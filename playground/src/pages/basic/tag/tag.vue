@@ -20,11 +20,11 @@ const show = ref(true)
         Size
       </div>
       <div p-2 flex="~ gap2 wrap" items-center>
-        <ATag label="Default" />
-        <ATag label="Mini" color="success" size="xs" />
-        <ATag label="Small" color="info" size="sm" />
-        <ATag label="Medium" color="warning" size="md" />
-        <ATag label="Large" color="danger" size="lg" />
+        <ATag label="Extra Mini" color="primary" size="xs" />
+        <ATag label="Mini" color="success" size="sm" />
+        <ATag label="Small" color="info" size="md" />
+        <ATag label="Medium" color="warning" size="lg" />
+        <ATag label="Large" color="danger" size="xl" />
       </div>
       <div class="p-2">
         Variant

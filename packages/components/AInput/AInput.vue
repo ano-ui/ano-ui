@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
-import { BooleanProp, InputTypeProp, SizeProp, StringProp, useBaseProps } from '../composables'
+import { BooleanProp, BooleanTrueProp, InputTypeProp, SizeProp, StringProp, useBaseProps } from '../composables'
 
 const props = defineProps({
   ...useBaseProps(),
@@ -56,8 +56,8 @@ const showPasswordText = ref(false)
 
 <template>
   <div
-    class="a-input-base a-bg-base-second w-full a-color-base"
-    :class="[`a-${color}`, `a-input-${size}`, { 'a-disabled': disabled }, isClick ? 'border-context' : 'a-border-base', cc]"
+    class="a-input-base a-input-border a-bg-base-second w-full a-color-base"
+    :class="[`a-${color}`, `a-input-${size}`, { 'a-disabled': disabled }, isClick ? 'border-context' : '', cc]"
     :style="cs"
   >
     <div v-if="icon" :class="icon" />
@@ -66,7 +66,7 @@ const showPasswordText = ref(false)
     <input
       v-if="type !== 'textarea'" class="a-input-content-base" :type="type !== 'password' ? type : 'text'"
       :class="[ccc]" :style="ccs" :value="_value" :placeholder="placeholder" :maxlength="maxlength" :focus="_focus"
-      :disabled="disabled" :password="type === 'password' ? !showPasswordText : 'false'"
+      :disabled="disabled" :password="type === 'password' ? !showPasswordText : false"
       placeholder-style="color: #d1d5db" @click="clickHandler" @blur="blurHandler" @input="inputHandler"
     >
     <textarea
@@ -76,8 +76,7 @@ const showPasswordText = ref(false)
     />
     <div v-if="showClear && _value" class="i-carbon-close-filled" @click="clearHandler" />
     <div
-      v-if="type === 'password'" class="a-transition"
-      :class="showPasswordText ? 'i-carbon-view-filled' : 'i-carbon-view-off-filled'"
+      v-if="type === 'password'" :class="showPasswordText ? 'i-carbon-view-filled' : 'i-carbon-view-off-filled'"
       @click.stop="showPasswordText = !showPasswordText"
     />
     <div v-if="suffixIcon" :class="suffixIcon" />
