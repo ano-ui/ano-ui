@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const checked = ref(false)
 const checked2 = ref(0)
+const checked3 = ref('yes')
 </script>
 
 <template>
@@ -21,19 +22,19 @@ const checked2 = ref(0)
         Size
       </div>
       <div p-2 flex="~ gap2 wrap" items-center>
-        <ASwitch v-model="checked2" :active-value="1" :inactive-value="0">
+        <ASwitch v-model="checked">
           Default
         </ASwitch>
-        <ASwitch color="success" size="xs">
+        <ASwitch v-model="checked" color="success" size="xs">
           Mini
         </ASwitch>
-        <ASwitch color="info" size="sm">
+        <ASwitch v-model="checked" color="info" size="sm">
           Small
         </ASwitch>
-        <ASwitch color="warning" size="md">
+        <ASwitch v-model="checked" color="warning" size="md">
           Medium
         </ASwitch>
-        <ASwitch color="danger" size="lg">
+        <ASwitch v-model="checked" color="danger" size="lg">
           Large
         </ASwitch>
       </div>
@@ -41,25 +42,27 @@ const checked2 = ref(0)
         Variant
       </div>
       <div p-2 flex="~ gap2 wrap" items-center>
-        <ASwitch variant="solid" />
-        <ASwitch color="success" variant="outline" />
-        <ASwitch color="info" variant="ghost" />
-        <ASwitch color="warning" variant="light" />
-        <ASwitch color="danger" variant="text" />
+        <ASwitch v-model="checked" variant="solid" />
+        <ASwitch v-model="checked" color="success" variant="outline" />
+        <ASwitch v-model="checked" color="info" variant="ghost" />
+        <ASwitch v-model="checked" color="warning" variant="light" />
+        <ASwitch v-model="checked" color="danger" variant="text" />
       </div>
       <div class="p-2">
         Status
       </div>
       <div p-2 flex="~ gap2 wrap" items-center>
-        <ASwitch loading />
-        <ASwitch color="success" disabled />
+        <ASwitch v-model="checked" loading />
+        <ASwitch v-model="checked" color="success" disabled />
       </div>
       <div class="p-2">
         Custom
       </div>
       <div p-2 flex="~ gap2 wrap" items-center>
-        <ASwitch icon="i-carbon-palm-tree" />
-        <ASwitch custom-icon>
+        <ASwitch v-model="checked2" :active-value="1" active-label="1" :inactive-value="0" inactive-label="0" />
+        <ASwitch v-model="checked3" active-value="yes" active-label="yes" inactive-value="no" inactive-label="no" />
+        <ASwitch v-model="checked" icon="i-carbon-palm-tree" />
+        <ASwitch v-model="checked" custom-icon>
           <template #icon>
             <div class="i-carbon-send-alt" />
           </template>

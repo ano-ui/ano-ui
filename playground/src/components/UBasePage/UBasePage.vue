@@ -3,7 +3,7 @@ const { darkMode, customBarHeight, statusBarHeight } = storeToRefs(useAppStore()
 </script>
 
 <template>
-  <APage :dark="darkMode">
+  <APage class="font-sans" :dark="darkMode">
     <slot />
   </APage>
 </template>

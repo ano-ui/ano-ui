@@ -1,5 +1,5 @@
 <script setup lang='ts'>
-import { computed, ref, watch } from 'vue'
+import { computed, ref } from 'vue'
 import { BooleanProp, SizeProp, StringProp, VariantProp, useBaseProps } from '../composables'
 
 const props = defineProps({
@@ -15,10 +15,12 @@ const props = defineProps({
     type: [Boolean, String, Number],
     default: true,
   },
+  activeLabel: StringProp,
   inactiveValue: {
     type: [Boolean, String, Number],
     default: false,
   },
+  inactiveLabel: StringProp,
   icon: StringProp,
   loading: BooleanProp,
   customIcon: BooleanProp,
@@ -45,15 +47,24 @@ const clickHandler = (e: MouseEvent) => {
 <template>
   <div
     class="a-switch-base"
-    :class="[`a-switch-${size}`, `a-${variant}`, _checked ? `a-${color}` : '', { 'a-disabled': isDisabled }, cc]" :style="cs"
-    @click="clickHandler"
+    :class="[`a-switch-${size}`, `a-${variant}`, _checked ? `a-${color}` : '', { 'a-disabled': isDisabled }, cc]"
+    :style="cs" @click="clickHandler"
   >
-    <div class="a-switch-dot" :class="[`a-switch-dot-${size}`, variant === 'solid' ? 'bg-white text-context' : 'bg-context text-white', { 'a-switch-dot-checked': _checked }]">
+    <div
+      class="a-switch-dot"
+      :class="[`a-switch-dot-${size}`, variant === 'solid' ? 'bg-white text-context' : 'bg-context text-white', { 'a-switch-dot-checked': _checked }]"
+    >
       <template v-if="_checked">
         <div v-if="loading" class="i-carbon-circle-dash animate-spin" />
         <slot v-else-if="customIcon" name="icon" />
         <div v-else class="i-carbon-checkmark animate-zoom-in animate-duration-200" :class="[icon]" />
       </template>
+    </div>
+    <div v-if="!_checked && inactiveLabel" class="a-switch-inactive-label" :class="[`a-switch-dot-${size}`]">
+      {{ inactiveLabel }}
+    </div>
+    <div v-if="_checked && activeLabel" class="a-switch-active-label" :class="[`a-switch-dot-${size}`]">
+      {{ activeLabel }}
     </div>
   </div>
 </template>
