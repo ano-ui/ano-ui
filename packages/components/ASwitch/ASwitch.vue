@@ -1,6 +1,6 @@
 <script setup lang='ts'>
 import { computed, ref } from 'vue'
-import { BooleanProp, SizeProp, StringProp, VariantProp, useBaseProps } from '../composables'
+import { BooleanProp, BooleanTrueProp, SizeProp, StringProp, VariantProp, useBaseProps } from '../composables'
 
 const props = defineProps({
   ...useBaseProps(),
@@ -21,6 +21,7 @@ const props = defineProps({
     default: false,
   },
   inactiveLabel: StringProp,
+  showIcon: BooleanTrueProp,
   icon: StringProp,
   loading: BooleanProp,
   customIcon: BooleanProp,
@@ -36,7 +37,7 @@ const _checked = computed(() => props.modelValue === props.activeValue)
 
 const clickHandler = (e: MouseEvent) => {
   e.stopPropagation()
-  if (props.disabled)
+  if (isDisabled.value)
     return
   _value.value = _value.value === props.activeValue ? props.inactiveValue : props.activeValue
   emits('update:modelValue', _value.value)
@@ -56,15 +57,27 @@ const clickHandler = (e: MouseEvent) => {
     >
       <template v-if="_checked">
         <div v-if="loading" class="i-carbon-circle-dash animate-spin" />
-        <slot v-else-if="customIcon" name="icon" />
-        <div v-else class="i-carbon-checkmark animate-zoom-in animate-duration-200" :class="[icon]" />
+        <template v-else-if="showIcon">
+          <slot v-if="customIcon" name="icon" />
+          <div v-else class="i-carbon-checkmark animate-zoom-in animate-duration-200" :class="[icon]" />
+        </template>
       </template>
     </div>
-    <div v-if="!_checked && inactiveLabel" class="a-switch-inactive-label" :class="[`a-switch-dot-${size}`]">
-      {{ inactiveLabel }}
-    </div>
-    <div v-if="_checked && activeLabel" class="a-switch-active-label" :class="[`a-switch-dot-${size}`]">
-      {{ activeLabel }}
-    </div>
+    <template v-if="_checked">
+      <div class="a-switch-active-label" :class="[`a-switch-dot-${size}`]">
+        <template v-if="activeLabel">
+          {{ activeLabel }}
+        </template>
+        <slot v-else name="active" />
+      </div>
+    </template>
+    <template v-else>
+      <div class="a-switch-inactive-label" :class="[`a-switch-dot-${size}`]">
+        <template v-if="inactiveLabel">
+          {{ inactiveLabel }}
+        </template>
+        <slot v-else name="inactive" />
+      </div>
+    </template>
   </div>
 </template>
