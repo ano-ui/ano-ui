@@ -1,7 +1,9 @@
 <script setup lang="ts">
 const checked = ref(false)
-const checked2 = ref(0)
-const checked3 = ref('yes')
+const statusChecked1 = ref(false)
+const statusChecked2 = ref(true)
+const checked2 = ref(true)
+const checked3 = ref(false)
 </script>
 
 <template>
@@ -22,21 +24,11 @@ const checked3 = ref('yes')
         Size
       </div>
       <div p-2 flex="~ gap2 wrap" items-center>
-        <ACheckbox v-model="checked" color="primary" size="xs">
-          Extra Mini
-        </ACheckbox>
-        <ACheckbox v-model="checked" color="success" size="sm">
-          Mini
-        </ACheckbox>
-        <ACheckbox v-model="checked" color="info" size="md">
-          Small
-        </ACheckbox>
-        <ACheckbox v-model="checked" color="warning" size="lg">
-          Medium
-        </ACheckbox>
-        <ACheckbox v-model="checked" color="danger" size="xl">
-          Large
-        </ACheckbox>
+        <ACheckbox v-model="checked" color="primary" size="xs" label="Extra Mini" />
+        <ACheckbox v-model="checked" color="success" size="sm" label="Mini" />
+        <ACheckbox v-model="checked" color="info" size="md" label="Small" />
+        <ACheckbox v-model="checked" color="warning" size="lg" label="Medium" />
+        <ACheckbox v-model="checked" color="danger" size="xl" label="Large" />
       </div>
       <div class="p-2">
         Variant
@@ -52,18 +44,21 @@ const checked3 = ref('yes')
         Status
       </div>
       <div p-2 flex="~ gap2 wrap" items-center>
-        <ACheckbox :model-value="true" loading />
-        <ACheckbox v-model="checked" color="success" disabled />
+        <ACheckbox v-model="statusChecked1" loading />
+        <ACheckbox v-model="statusChecked2" color="success" disabled />
       </div>
       <div class="p-2">
         Custom
       </div>
       <div p-2 flex="~ gap2 wrap" items-center>
-        <ACheckbox v-model="checked2" :active-value="1" active-label="1" :inactive-value="0" inactive-label="0" />
-        <ACheckbox v-model="checked2" cc="rounded-full" :active-value="1" active-label="1" :inactive-value="0" inactive-label="0" />
-        <ACheckbox v-model="checked3" active-value="yes" active-label="yes" inactive-value="no" inactive-label="no" />
-        <ACheckbox v-model="checked" custom-icon>
+        <ACheckbox v-model="checked2" :value="1" />
+        <ACheckbox v-model="checked3" custom-icon value="yes">
           <template #icon>
+            <div class="i-carbon-send-alt" />
+          </template>
+        </ACheckbox>
+        <ACheckbox v-model="checked3">
+          <template #label>
             <div class="i-carbon-send-alt" />
           </template>
         </ACheckbox>
