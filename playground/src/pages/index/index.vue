@@ -42,6 +42,7 @@ const goAction = (path: string) => {
       <ACellGroup>
         <ACell title="Input 输入" arrow @click="goForm('input')" />
         <ACell title="Switch 开关选择器" arrow @click="goForm('switch')" />
+        <ACell title="Checkbox 复选框" arrow @click="goForm('checkbox')" />
       </ACellGroup>
       <div class="px2 py4">
         Action 反馈组件

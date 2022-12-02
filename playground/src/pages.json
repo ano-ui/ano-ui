@@ -31,6 +31,10 @@
       "style": { "navigationBarTitleText": "Switch" }
     },
     {
+      "path": "pages/form/checkbox/checkbox",
+      "style": { "navigationBarTitleText": "Checkbox" }
+    },
+    {
       "path": "pages/action/overlay/overlay",
       "style": { "navigationBarTitleText": "Overlay" }
     },
