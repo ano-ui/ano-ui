@@ -4,6 +4,8 @@ const statusChecked1 = ref(false)
 const statusChecked2 = ref(true)
 const checked2 = ref(true)
 const checked3 = ref(false)
+const groupChecked = ref(['a', 'b'])
+const groupChecked2 = ref(['a', 'b'])
 </script>
 
 <template>
@@ -62,6 +64,27 @@ const checked3 = ref(false)
             <div class="i-carbon-send-alt" />
           </template>
         </ACheckbox>
+      </div>
+      <div class="p-2">
+        Checkbox Group{{ groupChecked }}
+      </div>
+      <div p-2>
+        <ACheckboxGroup v-model="groupChecked">
+          <ACheckbox value="a" label="A" />
+          <ACheckbox value="b" label="B" />
+          <ACheckbox value="c" label="C" />
+        </ACheckboxGroup>
+      </div>
+
+      <div class="p-2">
+        Checkbox Group Min Max{{ groupChecked2 }}
+      </div>
+      <div p-2>
+        <ACheckboxGroup v-model="groupChecked2" :min="1" :max="2">
+          <ACheckbox value="a" label="A" />
+          <ACheckbox value="b" label="B" />
+          <ACheckbox value="c" label="C" />
+        </ACheckboxGroup>
       </div>
     </div>
   </UBasePage>

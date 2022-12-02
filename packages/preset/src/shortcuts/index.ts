@@ -10,6 +10,7 @@ import { noticeBarShortcuts } from './noticeBar'
 import { inputShortcuts } from './input'
 import { switchShortcuts } from './switch'
 import { checkboxShortcuts } from './checkbox'
+import { checkboxGroupShortcuts } from './checkboxGroup'
 import { cellShortcuts } from './cell'
 import { cellGroupShortcuts } from './cellGroup'
 
@@ -23,6 +24,7 @@ export default [
   inputShortcuts,
   switchShortcuts,
   checkboxShortcuts,
+  checkboxGroupShortcuts,
   cellShortcuts,
   cellGroupShortcuts,
 ] as UserShortcuts<Theme>
