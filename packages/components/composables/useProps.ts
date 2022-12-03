@@ -1,27 +1,27 @@
 import type { PropType, StyleValue } from 'vue'
 
 export const StringProp = {
-  type: String as PropType<string>,
+  type: String,
   default: '',
 }
 
 export const NumberProp = {
-  type: Number as PropType<number>,
+  type: Number,
   default: 0,
 }
 
 export const BooleanProp = {
-  type: Boolean as PropType<boolean>,
+  type: Boolean,
   default: false,
 }
 
 export const BooleanTrueProp = {
-  type: Boolean as PropType<boolean>,
+  type: Boolean,
   default: true,
 }
 
 export const ArrayProp = {
-  type: Array as PropType<any[]>,
+  type: Array,
   default: () => [],
 }
 

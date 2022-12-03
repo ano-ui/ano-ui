@@ -40,9 +40,10 @@ const goAction = (path: string) => {
         Form 表单组件
       </div>
       <ACellGroup>
-        <ACell title="Input 输入" arrow @click="goForm('input')" />
-        <ACell title="Switch 开关选择器" arrow @click="goForm('switch')" />
         <ACell title="Checkbox 复选框" arrow @click="goForm('checkbox')" />
+        <ACell title="Input 输入" arrow @click="goForm('input')" />
+        <ACell title="Radio 单选框" arrow @click="goForm('radio')" />
+        <ACell title="Switch 开关选择器" arrow @click="goForm('switch')" />
       </ACellGroup>
       <div class="px2 py4">
         Action 反馈组件

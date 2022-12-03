@@ -1,0 +1,15 @@
+export const radioShortcuts: Record<string, string> = {
+  'a-radio-base': 'inline-flex justify-start items-center a-transition !leading-none',
+  'a-radio-xs': 'text-xs gap0.5',
+  'a-radio-sm': 'text-sm gap1',
+  'a-radio-md': 'text-base gap1.5',
+  'a-radio-lg': 'text-lg gap2',
+  'a-radio-xl': 'text-xl gap2.5',
+  'a-radio-radio-base': 'border rounded-full a-transition dark:border-op80 dark:bg-op80 a-softBg relative',
+  'a-radio-radio-icon': 'absolute inset-0 flex justify-center items-center',
+  'a-radio-radio-xs': 'h4 w4',
+  'a-radio-radio-sm': 'h5 w5',
+  'a-radio-radio-md': 'h6 w6',
+  'a-radio-radio-lg': 'h7 w7',
+  'a-radio-radio-xl': 'h8 w8',
+}
