@@ -12,12 +12,12 @@ const props = defineProps({
   arrow: BooleanProp,
 })
 
-const emits = defineEmits(['click'])
+const emit = defineEmits(['click'])
 
 const handleClick = (e: MouseEvent) => {
   if (props.disabled)
     return
-  emits('click', e)
+  emit('click', e)
 }
 </script>
 

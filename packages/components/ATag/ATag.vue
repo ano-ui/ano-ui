@@ -13,18 +13,18 @@ const props = defineProps({
   iconOnly: BooleanProp,
 })
 
-const emits = defineEmits(['click', 'close'])
+const emit = defineEmits(['click', 'close'])
 
 const handleClick = (e: MouseEvent) => {
   if (props.disabled)
     return
-  emits('click', e)
+  emit('click', e)
 }
 
 const handleClose = (e: Event) => {
   if (props.disabled)
     return
-  emits('close', e)
+  emit('close', e)
 }
 </script>
 

@@ -8,10 +8,10 @@ defineProps({
   align: AlignProp,
 })
 
-const emits = defineEmits(['close'])
+const emit = defineEmits(['close'])
 
 const handleClose = (e: Event) => {
-  emits('close', e)
+  emit('close', e)
 }
 
 const handleMove = (e: Event) => {

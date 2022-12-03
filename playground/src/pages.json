@@ -35,6 +35,10 @@
       "style": { "navigationBarTitleText": "Checkbox" }
     },
     {
+      "path": "pages/form/radio/radio",
+      "style": { "navigationBarTitleText": "Radio" }
+    },
+    {
       "path": "pages/action/overlay/overlay",
       "style": { "navigationBarTitleText": "Overlay" }
     },

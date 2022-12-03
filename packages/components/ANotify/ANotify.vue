@@ -9,7 +9,7 @@ defineProps({
   variant: VariantProp,
 })
 
-const emits = defineEmits(['close'])
+const emit = defineEmits(['close'])
 
 const timer = ref()
 
@@ -56,7 +56,7 @@ function closeNotify() {
 
 const handleClose = (e: Event) => {
   closeNotify()
-  emits('close', e)
+  emit('close', e)
 }
 </script>
 
