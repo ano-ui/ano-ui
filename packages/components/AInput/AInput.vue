@@ -20,7 +20,7 @@ const props = defineProps({
   showWordLimit: BooleanProp,
 })
 
-const emits = defineEmits(['focus', 'blur', 'confirm', 'input', 'update:modelValue', 'clear', 'search', 'click'])
+const emit = defineEmits(['focus', 'blur', 'confirm', 'input', 'update:modelValue', 'clear', 'search', 'click'])
 
 const _value = ref(props.modelValue)
 
@@ -35,20 +35,20 @@ const clickHandler = (e: MouseEvent) => {
 
 const blurHandler = () => {
   isClick.value = false
-  emits('blur')
+  emit('blur')
 }
 
 const inputHandler = (e: Event) => {
   const _e = e as CustomEvent
   _value.value = _e.detail.value
-  emits('input', _e.detail.value)
-  emits('update:modelValue', _e.detail.value)
+  emit('input', _e.detail.value)
+  emit('update:modelValue', _e.detail.value)
 }
 
 const clearHandler = () => {
   _value.value = ''
-  emits('input', '')
-  emits('update:modelValue', '')
+  emit('input', '')
+  emit('update:modelValue', '')
 }
 
 const showPasswordText = ref(false)

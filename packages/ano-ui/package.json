@@ -58,6 +58,7 @@
   "dependencies": {
     "@ano-ui/components": "workspace:*",
     "@ano-ui/preset": "workspace:*"
+
   },
   "devDependencies": {
     "@types/fs-extra": "^9.0.13",

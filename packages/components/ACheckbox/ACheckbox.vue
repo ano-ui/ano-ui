@@ -21,7 +21,7 @@ const props = defineProps({
   customIcon: BooleanProp,
 })
 
-const emits = defineEmits(['update:modelValue', 'click'])
+const emit = defineEmits(['update:modelValue', 'click'])
 
 const { isGroup, groupValue, size: _groupSize, min, max, disabled: _disabled } = inject<CheckboxGroupContext>(checkboxGroupContextKey, {
   isGroup: false,
@@ -80,8 +80,8 @@ const clickHandler = (e: MouseEvent) => {
   }
 
   _checked.value = !_checked.value
-  emits('update:modelValue', _checked.value)
-  emits('click', e)
+  emit('update:modelValue', _checked.value)
+  emit('click', e)
 }
 </script>
 

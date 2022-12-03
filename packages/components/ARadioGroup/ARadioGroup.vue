@@ -1,20 +1,16 @@
 <script setup lang='ts'>
-import { computed, nextTick, provide, reactive, toRefs } from 'vue'
-import { CustomClassProp, CustomStyleProp } from '../composables'
-import type { RadioGroupProps } from '../composables/radio'
-import { radioGroupKey, radioGroupProps } from '../composables/radio'
+import { nextTick, provide, reactive, toRefs } from 'vue'
+import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '../constants'
+import { radioGroupKey } from '../tokens'
+import type { RadioGroupProps } from './radio-group'
+import { radioGroupEmits, radioGroupProps } from './radio-group'
 
-const props = defineProps({
-  cc: CustomClassProp,
-  cs: CustomStyleProp,
-  ...radioGroupProps,
-})
-
-const emits = defineEmits(['update:modelValue', 'change'])
+const props = defineProps(radioGroupProps)
+const emit = defineEmits(radioGroupEmits)
 
 const changeEvent = (value: RadioGroupProps['modelValue']) => {
-  emits('update:modelValue', value)
-  nextTick(() => emits('change', value))
+  emit(UPDATE_MODEL_EVENT, value)
+  nextTick(() => emit(CHANGE_EVENT, value))
 }
 
 provide(radioGroupKey,

@@ -10,10 +10,10 @@ defineProps({
   showClose: BooleanProp,
 })
 
-const emits = defineEmits(['close'])
+const emit = defineEmits(['close'])
 
 const handleClose = (e: Event) => {
-  emits('close', e)
+  emit('close', e)
 }
 </script>
 

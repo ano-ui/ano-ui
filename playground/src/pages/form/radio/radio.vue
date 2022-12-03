@@ -65,7 +65,7 @@ const groupChecked = ref('a')
         </ARadio>
       </div>
       <div class="p-2">
-        Radio Group{{ groupChecked }}
+        Radio Group: {{ groupChecked }}
       </div>
       <div p-2>
         <ARadioGroup v-model="groupChecked">

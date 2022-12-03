@@ -27,7 +27,7 @@ const props = defineProps({
   customIcon: BooleanProp,
 })
 
-const emits = defineEmits(['update:modelValue', 'click'])
+const emit = defineEmits(['update:modelValue', 'click'])
 
 const isDisabled = computed(() => props.loading || props.disabled)
 
@@ -40,8 +40,8 @@ const clickHandler = (e: MouseEvent) => {
   if (isDisabled.value)
     return
   _value.value = _value.value === props.activeValue ? props.inactiveValue : props.activeValue
-  emits('update:modelValue', _value.value)
-  emits('click', e)
+  emit('update:modelValue', _value.value)
+  emit('click', e)
 }
 </script>
 

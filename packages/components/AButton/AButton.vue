@@ -14,14 +14,14 @@ const props = defineProps({
   loading: BooleanProp,
 })
 
-const emits = defineEmits(['click'])
+const emit = defineEmits(['click'])
 
 const isDisabled = computed(() => props.loading || props.disabled)
 
 const handleClick = (e: MouseEvent) => {
   if (isDisabled.value)
     return
-  emits('click', e)
+  emit('click', e)
 }
 </script>
 
