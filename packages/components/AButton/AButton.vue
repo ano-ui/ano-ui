@@ -1,36 +1,19 @@
 <script setup lang="ts">
-import { computed } from 'vue'
-import { BooleanProp, SizeProp, StringProp, VariantProp, useBaseProps } from '../composables'
+import { buttonEmits, buttonProps } from './button'
+import { useButton } from './use-button'
 
-const props = defineProps({
-  ...useBaseProps(),
-  size: SizeProp,
-  variant: VariantProp,
-  disabled: BooleanProp,
-  icon: StringProp,
-  iconOnly: BooleanProp,
-  openType: StringProp,
-  block: BooleanProp,
-  loading: BooleanProp,
-})
+const props = defineProps(buttonProps)
+const emit = defineEmits(buttonEmits)
 
-const emit = defineEmits(['click'])
-
-const isDisabled = computed(() => props.loading || props.disabled)
-
-const handleClick = (e: MouseEvent) => {
-  if (isDisabled.value)
-    return
-  emit('click', e)
-}
+const { disabled, handleClick } = useButton(props, emit)
 </script>
 
 <template>
   <button
     class="a-button-base"
-    :class="[`a-${color}`, { 'w-full': block }, `a-button-${size}`, { 'a-button-icon': iconOnly }, `a-${variant}`, { 'a-disabled': isDisabled }, cc]"
-    :hover-class="isDisabled ? '' : (variant === 'text' ? 'a-button-text-hover' : 'a-button-hover')"
-    :open-type="openType" :style="cs" @click="handleClick"
+    :class="[`a-${color}`, { 'w-full': block }, `a-button-${size}`, { 'a-button-icon': iconOnly }, `a-${variant}`, { 'a-disabled': disabled }, cc]"
+    :hover-class="disabled ? '' : (variant === 'text' ? 'a-button-text-hover' : 'a-button-hover')" :open-type="openType"
+    :style="cs" @click="handleClick"
   >
     <div v-if="loading" class="i-carbon-circle-dash animate-spin" />
     <div v-else-if="icon" :class="[icon]" />
