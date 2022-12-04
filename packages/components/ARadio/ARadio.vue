@@ -3,9 +3,9 @@ import { radioEmits, radioProps } from './radio'
 import { useRadio } from './use-radio'
 
 const props = defineProps(radioProps)
-
 const emit = defineEmits(radioEmits)
-const { disabled, isChecked, toggle } = useRadio(props, emit)
+
+const { disabled, size, isChecked, toggle } = useRadio(props, emit)
 </script>
 
 <template>

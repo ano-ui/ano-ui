@@ -1,6 +1,6 @@
 import type { ExtractPropTypes } from 'vue'
 import { radioEmits } from '../ARadio/radio'
-import { BooleanProp, CustomClassProp, CustomStyleProp, SizeProp } from '../composables'
+import { CustomClassProp, CustomStyleProp, SizeProp } from '../composables'
 
 export const radioGroupProps = {
   cc: CustomClassProp,
@@ -10,7 +10,15 @@ export const radioGroupProps = {
     default: '',
   },
   size: SizeProp,
-  disabled: BooleanProp,
+  min: {
+    type: Number,
+    default: -1,
+  },
+  max: {
+    type: Number,
+    default: -1,
+  },
+  disabled: Boolean,
 }
 
 export type RadioGroupProps = ExtractPropTypes<typeof radioGroupProps>

@@ -3,14 +3,17 @@ import { SizeProp, VariantProp, useBaseProps } from '../composables'
 import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '../constants'
 import { isBoolean, isNumber, isString } from '../utils'
 
-export type RadioValueType = string | number | boolean
+export type CheckboxValueType = string | number | boolean
 
-export const radioProps = {
+export const checkboxProps = {
   ...useBaseProps(),
   size: SizeProp,
   variant: VariantProp,
   disabled: Boolean,
-  modelValue: Boolean,
+  modelValue: {
+    type: [Number, String, Boolean],
+    default: undefined,
+  },
   value: {
     type: [String, Number, Boolean],
     default: '',
@@ -20,12 +23,12 @@ export const radioProps = {
   customIcon: Boolean,
 }
 
-export const radioEmits = {
-  [UPDATE_MODEL_EVENT]: (val: RadioValueType) =>
+export const checkboxEmits = {
+  [UPDATE_MODEL_EVENT]: (val: CheckboxValueType) =>
     isString(val) || isNumber(val) || isBoolean(val),
-  [CHANGE_EVENT]: (val: RadioValueType) =>
+  [CHANGE_EVENT]: (val: CheckboxValueType) =>
     isString(val) || isNumber(val) || isBoolean(val),
 }
 
-export type RadioProps = ExtractPropTypes<typeof radioProps>
-export type RadioEmits = typeof radioEmits
+export type CheckboxProps = ExtractPropTypes<typeof checkboxProps>
+export type CheckboxEmits = typeof checkboxEmits

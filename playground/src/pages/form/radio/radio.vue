@@ -45,7 +45,6 @@ const groupChecked = ref('a')
         Status
       </div>
       <div p-2 flex="~ gap2 wrap" items-center>
-        <ARadio v-model="statusChecked1" loading />
         <ARadio v-model="statusChecked2" color="success" disabled />
       </div>
       <div class="p-2">

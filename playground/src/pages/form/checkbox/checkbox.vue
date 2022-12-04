@@ -46,7 +46,6 @@ const groupChecked2 = ref(['a', 'b'])
         Status
       </div>
       <div p-2 flex="~ gap2 wrap" items-center>
-        <ACheckbox v-model="statusChecked1" loading />
         <ACheckbox v-model="statusChecked2" color="success" disabled />
       </div>
       <div class="p-2">
