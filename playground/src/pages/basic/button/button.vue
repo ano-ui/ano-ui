@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const handleSuccess = () => {
+const handleSuccess = (e: MouseEvent) => {
   // eslint-disable-next-line no-console
   console.log('success')
 }
