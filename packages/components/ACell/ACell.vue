@@ -1,24 +1,11 @@
 <script setup lang="ts">
-import { BooleanProp, CustomClassProp, CustomStyleProp, StringProp } from '../composables'
+import { cellEmits, cellProps } from './cell'
+import { useCell } from './use-cell'
 
-const props = defineProps({
-  cc: CustomClassProp,
-  cs: CustomStyleProp,
-  title: StringProp,
-  content: StringProp,
-  description: StringProp,
-  disabled: BooleanProp,
-  icon: StringProp,
-  arrow: BooleanProp,
-})
+const props = defineProps(cellProps)
+const emit = defineEmits(cellEmits)
 
-const emit = defineEmits(['click'])
-
-const handleClick = (e: MouseEvent) => {
-  if (props.disabled)
-    return
-  emit('click', e)
-}
+const { disabled, handleClick } = useCell(props, emit)
 </script>
 
 <template>

@@ -1,31 +1,11 @@
 <script setup lang="ts">
-import { BooleanProp, BooleanTrueProp, SizeProp, StringProp, VariantProp, useBaseProps } from '../composables'
+import { tagEmits, tagProps } from './tag'
+import { useTag } from './use-tag'
 
-const props = defineProps({
-  ...useBaseProps(),
-  label: StringProp,
-  size: SizeProp,
-  variant: VariantProp,
-  disabled: BooleanProp,
-  show: BooleanTrueProp,
-  closable: BooleanProp,
-  icon: StringProp,
-  iconOnly: BooleanProp,
-})
+const props = defineProps(tagProps)
+const emit = defineEmits(tagEmits)
 
-const emit = defineEmits(['click', 'close'])
-
-const handleClick = (e: MouseEvent) => {
-  if (props.disabled)
-    return
-  emit('click', e)
-}
-
-const handleClose = (e: Event) => {
-  if (props.disabled)
-    return
-  emit('close', e)
-}
+const { disabled, handleClick, handleClose } = useTag(props, emit)
 </script>
 
 <template>

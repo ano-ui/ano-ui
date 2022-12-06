@@ -1,4 +1,8 @@
 <script setup lang="ts">
+const handleSuccess = (e: MouseEvent) => {
+  // eslint-disable-next-line no-console
+  console.log('success')
+}
 const getInfo = () => {
   uni.getUserInfo({
     success: (res) => {
@@ -19,7 +23,7 @@ const getInfo = () => {
         <AButton>
           Primary
         </AButton>
-        <AButton color="success">
+        <AButton color="success" @click="handleSuccess">
           Success
         </AButton>
         <AButton color="info">

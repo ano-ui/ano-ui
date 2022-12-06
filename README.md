@@ -24,13 +24,13 @@ import { presetApplet, presetRemToRpx, transformerApplet } from 'unocss-applet'
 import { presetAno } from 'ano-ui'
 
 // UniApp
-const isMP = process.env.UNI_PLATFORM !== 'h5'
+const isApplet = process.env?.UNI_PLATFORM?.startWith('mp-')
 
 export default defineConfig({
   presets: [
-    presetApplet({ enable: isMP }),
-    presetAttributify(),
-    presetRemToRpx({ enable: isMP }),
+    presetApplet({ enable: isApplet }),
+    presetAttributify({ enable: isApplet }),
+    presetRemToRpx({ enable: isApplet }),
     presetIcons({
       scale: 1.2,
       extraProperties: {
@@ -41,7 +41,7 @@ export default defineConfig({
     presetAno(),
   ],
   transformers: [
-    transformerApplet(),
+    transformerApplet({ enable: isApplet }),
   ],
 })
 ```
@@ -92,9 +92,10 @@ Then import the project(`xx/ano-ui/playground/dev/mp-weixin`) into WeChat DevToo
 
 ## Acknowledgement
 
+- [anu](https://github.com/jd-solanki/anu)
+- [Element Plus](https://github.com/element-plus/element-plus)
 - [UnoCSS](https://github.com/unocss/unocss)
 - [onu-ui](https://github.com/onu-ui/onu-ui)
-- [anu](https://github.com/jd-solanki/anu)
 - [tm-ui](https://gitee.com/LYTB/tmui-design)
 - [uView](https://github.com/umicro/uView2.0)
 
