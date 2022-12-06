@@ -20,6 +20,7 @@ export const useRadio = (
     e.stopPropagation()
     if (disabled.value)
       return
+
     const newValue = typeof modelValue.value === 'string' ? props.value : !modelValue.value
     if (isGroup.value)
       radioGroup!.changeEvent(newValue)
