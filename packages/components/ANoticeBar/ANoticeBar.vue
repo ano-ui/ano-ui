@@ -1,20 +1,12 @@
 <script setup lang="ts">
 import { BooleanProp, BooleanTrueProp, StringProp, VariantProp, useBaseProps } from '../composables'
+import { noticeBarEmits, noticeBarProps } from './notice-bar'
+import { useTag } from './use-notice-bar'
 
-defineProps({
-  ...useBaseProps(),
-  variant: VariantProp,
-  show: BooleanTrueProp,
-  loop: BooleanProp,
-  icon: StringProp,
-  showClose: BooleanProp,
-})
+const props = defineProps(noticeBarProps)
+const emit = defineEmits(noticeBarEmits)
 
-const emit = defineEmits(['close'])
-
-const handleClose = (e: Event) => {
-  emit('close', e)
-}
+const { handleClose } = useTag(props, emit)
 </script>
 
 <template>
