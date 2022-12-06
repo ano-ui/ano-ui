@@ -1,12 +1,15 @@
 <script setup lang='ts'>
-import { BooleanProp, BooleanTrueProp, CustomClassProp, CustomStyleProp } from '../composables'
+import { provide, reactive, toRefs } from 'vue'
+import { cellGroupKey } from '../tokens'
+import { cellGroupProps } from './cell-group'
 
-defineProps({
-  cc: CustomClassProp,
-  cs: CustomStyleProp,
-  divider: BooleanProp,
-  card: BooleanTrueProp,
-})
+const props = defineProps(cellGroupProps)
+
+provide(cellGroupKey,
+  reactive({
+    ...toRefs(props),
+  }),
+)
 </script>
 
 <template>
