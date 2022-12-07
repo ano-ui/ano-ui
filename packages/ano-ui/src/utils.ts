@@ -1,2 +1,2 @@
 export * from '../../components/composables'
-export * from '../../components/types'
+export * from '../../components'
