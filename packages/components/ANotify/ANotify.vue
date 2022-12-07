@@ -1,68 +1,17 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import { CustomClassProp, CustomStyleProp, VariantProp } from '../composables'
-import type { NotifyOptions } from '../types'
+import { notifyEmits, notifyProps } from './notify'
+import { useNotify } from './use-notify'
 
-defineProps({
-  cc: CustomClassProp,
-  cs: CustomStyleProp,
-  variant: VariantProp,
-})
+const props = defineProps(notifyProps)
+const emit = defineEmits(notifyEmits)
 
-const emit = defineEmits(['close'])
-
-const timer = ref()
-
-const _show = ref(false)
-
-const notifyStatus = ref<NotifyOptions>({
-  color: 'primary',
-  position: 'default',
-  content: '',
-  duration: 3000,
-  showIcon: false,
-  customIcon: false,
-  showClose: false,
-})
-
-const showNotify = (options?: NotifyOptions) => {
-  const { color, position, duration, content, showIcon, customIcon, showClose } = options || {}
-  _show.value = true
-  notifyStatus.value = {
-    color: color || 'primary',
-    position: position || 'default',
-    duration: duration || 3000,
-    content: content || '',
-    showIcon: showIcon || false,
-    customIcon: customIcon || false,
-    showClose: showClose || false,
-  }
-
-  if (timer.value)
-    clearTimeout(timer.value)
-
-  timer.value = setTimeout(() => {
-    closeNotify()
-  }, notifyStatus.value.duration)
-}
-
+const { show, notifyStatus, showNotify, handleClose } = useNotify(props, emit)
 defineExpose({ showNotify })
-
-function closeNotify() {
-  if (timer.value)
-    clearTimeout(timer.value)
-  _show.value = false
-}
-
-const handleClose = (e: Event) => {
-  closeNotify()
-  emit('close', e)
-}
 </script>
 
 <template>
   <div
-    v-if="_show" class="a-notify-base"
+    v-if="show" class="a-notify-base"
     :class="[`a-${notifyStatus.color}`, `a-${variant}`, { 'justify-start': notifyStatus.showIcon }, `a-notify-position-${notifyStatus.position}`, cc]"
     :style="cs"
   >
