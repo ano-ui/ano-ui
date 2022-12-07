@@ -7,8 +7,8 @@ export const useTag = (
   props: NoticeBarProps,
   emit: SetupContext<NoticeBarEmits>['emit'],
 ) => {
-  const handleClose = (etv: MouseEvent) => {
-    emit(CLOSE_EVENT, etv)
+  const handleClose = (evt: MouseEvent) => {
+    emit(CLOSE_EVENT, evt)
   }
 
   return {

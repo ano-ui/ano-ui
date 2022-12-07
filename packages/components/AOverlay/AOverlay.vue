@@ -1,28 +1,17 @@
 <script setup lang="ts">
-import { AlignProp, BooleanProp, CustomClassProp, CustomStyleProp } from '../composables'
+import { overlayEmits, overlayProps } from './overlay'
+import { useOverlay } from './use-overlay'
 
-defineProps({
-  cc: CustomClassProp,
-  cs: CustomStyleProp,
-  show: BooleanProp,
-  align: AlignProp,
-})
+const props = defineProps(overlayProps)
+const emit = defineEmits(overlayEmits)
 
-const emit = defineEmits(['close'])
-
-const handleClose = (e: Event) => {
-  emit('close', e)
-}
-
-const handleMove = (e: Event) => {
-  e.stopPropagation()
-}
+const { closeHandler, moveHandler } = useOverlay(props, emit)
 </script>
 
 <template>
   <div
     v-if="show" class="a-overlay-base" :class="[`a-overlay-flex-${align}`, cc]" :style="cs"
-    @touchmove.stop.prevent="handleMove" @click="handleClose"
+    @touchmove.stop.prevent="moveHandler" @click="closeHandler"
   >
     <slot />
   </div>
