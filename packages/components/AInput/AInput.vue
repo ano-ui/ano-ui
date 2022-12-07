@@ -1,57 +1,11 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
-import { BooleanProp, BooleanTrueProp, InputTypeProp, SizeProp, StringProp, useBaseProps } from '../composables'
+import { inputEmits, inputProps } from './input'
+import { useInput } from './use-input'
 
-const props = defineProps({
-  ...useBaseProps(),
-  type: InputTypeProp,
-  size: SizeProp,
-  disabled: BooleanProp,
-  focus: BooleanProp,
-  icon: StringProp,
-  suffixIcon: StringProp,
-  showClear: BooleanProp,
-  placeholder: StringProp,
-  modelValue: StringProp,
-  maxlength: {
-    type: Number,
-    default: -1,
-  },
-  showWordLimit: BooleanProp,
-})
+const props = defineProps(inputProps)
+const emit = defineEmits(inputEmits)
 
-const emit = defineEmits(['focus', 'blur', 'confirm', 'input', 'update:modelValue', 'clear', 'search', 'click'])
-
-const _value = ref(props.modelValue)
-
-const isClick = ref(false)
-const _focus = computed(() => (props.focus && !props.disabled) || isClick.value)
-
-const clickHandler = (e: MouseEvent) => {
-  e.stopPropagation()
-  if (!props.disabled)
-    isClick.value = true
-}
-
-const blurHandler = () => {
-  isClick.value = false
-  emit('blur')
-}
-
-const inputHandler = (e: Event) => {
-  const _e = e as CustomEvent
-  _value.value = _e.detail.value
-  emit('input', _e.detail.value)
-  emit('update:modelValue', _e.detail.value)
-}
-
-const clearHandler = () => {
-  _value.value = ''
-  emit('input', '')
-  emit('update:modelValue', '')
-}
-
-const showPasswordText = ref(false)
+const { disabled, modelValue, isClick, showPasswordText, focus, focusHandler, clickHandler, blurHandler, inputHandler, clearHandler } = useInput(props, emit)
 </script>
 
 <template>
@@ -65,24 +19,24 @@ const showPasswordText = ref(false)
     <slot name="prefix" />
     <input
       v-if="type !== 'textarea'" class="a-input-content-base" :type="type !== 'password' ? type : 'text'"
-      :class="[ccc]" :style="ccs" :value="_value" :placeholder="placeholder" :maxlength="maxlength" :focus="_focus"
+      :class="[ccc]" :style="ccs" :value="modelValue" :placeholder="placeholder" :maxlength="maxlength" :focus="focus"
       :disabled="disabled" :password="type === 'password' ? !showPasswordText : false"
-      placeholder-style="color: #d1d5db" @click="clickHandler" @blur="blurHandler" @input="inputHandler"
+      placeholder-style="color: #d1d5db" @click="clickHandler" @blur="blurHandler" @input="inputHandler" @focus="focusHandler"
     >
     <textarea
-      v-else class="a-input-content-base h-12" :class="[ccc]" :style="ccs" :value="_value"
-      :placeholder="placeholder" :maxlength="maxlength" :focus="_focus" :disabled="disabled"
-      placeholder-style="color: #d1d5db" @click="clickHandler" @blur="blurHandler" @input="inputHandler"
+      v-else class="a-input-content-base h-12" :class="[ccc]" :style="ccs" :value="modelValue"
+      :placeholder="placeholder" :maxlength="maxlength" :focus="focus" :disabled="disabled"
+      placeholder-style="color: #d1d5db" @click="clickHandler" @blur="blurHandler" @input="inputHandler" @focus="focusHandler"
     />
-    <div v-if="showClear && _value" class="i-carbon-close-filled" @click="clearHandler" />
+    <div v-if="showClear && modelValue" class="i-carbon-close-filled" @click="clearHandler" />
     <div
       v-if="type === 'password'" :class="showPasswordText ? 'i-carbon-view-filled' : 'i-carbon-view-off-filled'"
       @click.stop="showPasswordText = !showPasswordText"
     />
     <div v-if="suffixIcon" :class="suffixIcon" />
     <slot name="suffix" />
-    <div v-if="showWordLimit && _value" class="a-input-word-limit text-caption">
-      {{ _value.length }}/{{ maxlength }}
+    <div v-if="showWordLimit && modelValue" class="a-input-word-limit text-caption">
+      {{ modelValue.length }}/{{ maxlength }}
     </div>
   </div>
 </template>
