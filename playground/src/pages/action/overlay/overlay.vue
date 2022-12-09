@@ -8,22 +8,17 @@ const showValue = ref(false)
 const handleShow = (align: AlignType) => {
   overlayRef.value?.show({ align })
 }
-
-const handleClose = () => {
-  // eslint-disable-next-line no-console
-  console.log('close')
-}
 </script>
 
 <template>
   <UBasePage>
     <div class="p-2 pb-safe">
-      <AOverlay v-model:show="showValue">
+      <AOverlay :show="showValue" @click="showValue = false">
         <div class="text-primary">
           Overlay
         </div>
       </AOverlay>
-      <AOverlay ref="overlayRef" @close="handleClose">
+      <AOverlay ref="overlayRef">
         <div class="text-primary">
           Overlay
         </div>

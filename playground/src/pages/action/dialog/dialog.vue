@@ -1,47 +1,38 @@
 <script setup lang="ts">
-import type { AlignType, OverlayRef } from 'ano-ui'
+import type { DialogOptions, DialogRef } from 'ano-ui'
 import { ref } from 'vue'
 
-const overlayRef = ref<OverlayRef>()
+const dialogRef = ref<DialogRef>()
+const dialogOptions = ref<DialogOptions>({
+  title: 'Dialog Title',
+  message: 'Dialog Message',
+})
 
-const handleShow = (align: AlignType) => {
-  overlayRef.value?.show({ align })
+const handleShow = () => {
+  dialogRef.value?.show(dialogOptions.value)
 }
 
-const handleClose = () => {
+const handleConfirm = () => {
   // eslint-disable-next-line no-console
-  console.log('close')
+  console.log('confirm')
+}
+
+const handleCancel = () => {
+  // eslint-disable-next-line no-console
+  console.log('cancel')
 }
 </script>
 
 <template>
   <UBasePage>
     <div class="p-2 pb-safe">
-      <ADialog ref="overlayRef" @close="handleClose">
-        <div class="text-primary">
-          Overlay
-        </div>
-      </ADialog>
+      <ADialog ref="dialogRef" @confirm="handleConfirm" @cancel="handleCancel" />
       <div class="p-2">
-        Overlay
+        Dialog
       </div>
       <div p-2 flex="~ gap2 wrap">
         <AButton @click="handleShow">
-          Show Overlay
-        </AButton>
-      </div>
-      <div class="p-2">
-        Flex Align
-      </div>
-      <div p-2 flex="~ gap2 wrap">
-        <AButton @click="handleShow('start')">
-          Align Start
-        </AButton>
-        <AButton @click="handleShow('center')">
-          Align Center
-        </AButton>
-        <AButton @click="handleShow('end')">
-          Align End
+          Show Dialog
         </AButton>
       </div>
     </div>

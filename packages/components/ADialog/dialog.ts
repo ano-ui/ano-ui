@@ -1,6 +1,6 @@
 import type { ExtractPropTypes } from 'vue'
 import { CustomClassProp, CustomStyleProp } from '../composables'
-import { isBoolean } from '../utils'
+import { CANCEL_EVENT, CONFIRM_EVENT } from '../constants'
 
 export const dialogProps = {
   cc: CustomClassProp,
@@ -8,14 +8,15 @@ export const dialogProps = {
   show: Boolean,
   title: String,
   message: String,
-  confirmText: String,
-  cancelText: String,
+  showConfirmButton: Boolean,
+  showCancelButton: Boolean,
+  confirmButtonText: String,
+  cancelButtonText: String,
 }
 
 export const dialogEmits = {
-  'confirm': () => true,
-  'cancel': () => true,
-  'update:show': (value: boolean) => isBoolean(value),
+  [CONFIRM_EVENT]: (evt: MouseEvent) => evt instanceof MouseEvent,
+  [CANCEL_EVENT]: (evt: MouseEvent) => evt instanceof MouseEvent,
 }
 
 export type DialogProps = ExtractPropTypes<typeof dialogProps>
