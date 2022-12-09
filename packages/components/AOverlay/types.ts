@@ -6,5 +6,5 @@ export interface OverlayOptions {
 
 export interface OverlayRef {
   show: (options: OverlayOptions) => void
-  close: () => void
+  close: (evt: MouseEvent) => void
 }

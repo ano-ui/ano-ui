@@ -12,7 +12,7 @@ export const useRadio = (
   const isGroup = computed(() => !!radioGroup)
   const size = computed(() => radioGroup?.size ?? props.size)
   const disabled = computed(() => radioGroup?.disabled ?? props.disabled)
-  const modelValue = computed(() => isGroup.value ? radioGroup!.modelValue : props.modelValue)
+  const modelValue = computed<RadioProps['modelValue']>(() => isGroup.value ? radioGroup!.modelValue : props.modelValue)
 
   const isChecked = computed(() => isGroup.value ? radioGroup!.modelValue === props.value : props.modelValue)
 

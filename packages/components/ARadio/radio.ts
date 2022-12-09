@@ -10,7 +10,10 @@ export const radioProps = {
   size: SizeProp,
   variant: VariantProp,
   disabled: Boolean,
-  modelValue: Boolean,
+  modelValue: {
+    type: [String, Number, Boolean],
+    default: '',
+  },
   value: {
     type: [String, Number, Boolean],
     default: '',

@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { BooleanProp, BooleanTrueProp, StringProp, VariantProp, useBaseProps } from '../composables'
 import { noticeBarEmits, noticeBarProps } from './notice-bar'
-import { useTag } from './use-notice-bar'
+import { useNoticeBar } from './use-notice-bar'
 
 const props = defineProps(noticeBarProps)
 const emit = defineEmits(noticeBarEmits)
 
-const { handleClose } = useTag(props, emit)
+const { handleClose } = useNoticeBar(props, emit)
 </script>
 
 <template>

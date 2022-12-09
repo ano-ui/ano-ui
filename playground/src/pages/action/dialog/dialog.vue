@@ -3,7 +3,6 @@ import type { AlignType, OverlayRef } from 'ano-ui'
 import { ref } from 'vue'
 
 const overlayRef = ref<OverlayRef>()
-const showValue = ref(false)
 
 const handleShow = (align: AlignType) => {
   overlayRef.value?.show({ align })
@@ -18,21 +17,16 @@ const handleClose = () => {
 <template>
   <UBasePage>
     <div class="p-2 pb-safe">
-      <AOverlay v-model:show="showValue">
+      <ADialog ref="overlayRef" @close="handleClose">
         <div class="text-primary">
           Overlay
         </div>
-      </AOverlay>
-      <AOverlay ref="overlayRef" @close="handleClose">
-        <div class="text-primary">
-          Overlay
-        </div>
-      </AOverlay>
+      </ADialog>
       <div class="p-2">
         Overlay
       </div>
       <div p-2 flex="~ gap2 wrap">
-        <AButton @click="showValue = true">
+        <AButton @click="handleShow">
           Show Overlay
         </AButton>
       </div>

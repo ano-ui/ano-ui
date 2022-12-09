@@ -41,15 +41,16 @@ const goAction = (path: string) => {
       </div>
       <ACellGroup>
         <ACell title="Checkbox 复选框" arrow @click="goForm('checkbox')" />
-        <ACell title="Input 输入" arrow @click="goForm('input')" />
+        <ACell title="Input 输入框" arrow @click="goForm('input')" />
         <ACell title="Radio 单选框" arrow @click="goForm('radio')" />
-        <ACell title="Switch 开关选择器" arrow @click="goForm('switch')" />
+        <ACell title="Switch 开关" arrow @click="goForm('switch')" />
       </ACellGroup>
       <div class="px2 py4">
         Action 反馈组件
       </div>
       <ACellGroup>
-        <ACell title="Notify 消息" arrow @click="goAction('notify')" />
+        <ACell title="Dialog 弹出框" arrow @click="goAction('dialog')" />
+        <ACell title="Notify 消息通知" arrow @click="goAction('notify')" />
         <ACell title="NoticeBar 消息栏" arrow @click="goAction('notice-bar')" />
         <ACell title="Overlay 遮罩层" arrow @click="goAction('overlay')" />
       </ACellGroup>
