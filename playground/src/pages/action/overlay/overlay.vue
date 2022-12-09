@@ -1,14 +1,23 @@
 <script setup lang="ts">
+import type { AlignType, OverlayRef } from 'ano-ui'
 import { ref } from 'vue'
 
-const show = ref(false)
-const align = ref('center')
+const overlayRef = ref<OverlayRef>()
+
+const handleShow = (align: AlignType) => {
+  overlayRef.value?.show({ align })
+}
+
+const handleClose = () => {
+  // eslint-disable-next-line no-console
+  console.log('close')
+}
 </script>
 
 <template>
   <UBasePage>
     <div class="p-2 pb-safe">
-      <AOverlay :show="show" :align="align" @close="show = false">
+      <AOverlay ref="overlayRef" @close="handleClose">
         <div class="text-primary">
           Overlay
         </div>
@@ -17,7 +26,7 @@ const align = ref('center')
         Overlay
       </div>
       <div p-2 flex="~ gap2 wrap">
-        <AButton @click="show = true">
+        <AButton @click="handleShow">
           Show Overlay
         </AButton>
       </div>
@@ -25,13 +34,13 @@ const align = ref('center')
         Flex Align
       </div>
       <div p-2 flex="~ gap2 wrap">
-        <AButton @click="show = true;align = 'start'">
+        <AButton @click="handleShow('start')">
           Align Start
         </AButton>
-        <AButton @click="show = true;align = 'center'">
+        <AButton @click="handleShow('center')">
           Align Center
         </AButton>
-        <AButton @click="show = true;align = 'end'">
+        <AButton @click="handleShow('end')">
           Align End
         </AButton>
       </div>

@@ -5,13 +5,15 @@ import { useOverlay } from './use-overlay'
 const props = defineProps(overlayProps)
 const emit = defineEmits(overlayEmits)
 
-const { closeHandler, moveHandler } = useOverlay(props, emit)
+const { _show, _align, show, close } = useOverlay(props, emit)
+
+defineExpose({ show, close })
 </script>
 
 <template>
   <div
-    v-if="show" class="a-overlay-base" :class="[`a-overlay-flex-${align}`, cc]" :style="cs"
-    @touchmove.stop.prevent="moveHandler" @click="closeHandler"
+    v-if="_show" class="a-overlay-base" :class="[`a-overlay-flex-${_align}`, cc]" :style="cs"
+    @touchmove.stop.prevent="$event.stopPropagation()" @click="close"
   >
     <slot />
   </div>
