@@ -1,6 +1,4 @@
 <script setup lang='ts'>
-import { ref } from 'vue'
-import type { OverlayRef } from '../AOverlay'
 import AButton from '../AButton/AButton.vue'
 import AOverlay from '../AOverlay/AOverlay.vue'
 import { dialogEmits, dialogProps } from './dialog'
@@ -20,11 +18,16 @@ defineExpose({ show: handleShowDialog })
 
 <template>
   <AOverlay :show="showValue">
-    <div class="bg-green w-68% rounded-lg">
-      <template v-if="dialogStatus?.title">
-        {{ dialogStatus.title }}
-      </template>
-      <div class="flex justify-center items-center">
+    <div class="a-dialog-base" :class="[cc]" :style="cs">
+      <div class="p6">
+        <div v-if="dialogStatus?.title" class="pb2 text-xl">
+          {{ dialogStatus.title }}
+        </div>
+        <div v-if="dialogStatus?.message" class="text-darkText">
+          {{ dialogStatus.message }}
+        </div>
+      </div>
+      <div class="a-dialog-action-base">
         <template v-if="dialogStatus?.showCancelButton">
           <AButton class="flex-1" color="danger" variant="text" @click="onCancel">
             {{ dialogStatus.cancelButtonText || 'Cancel' }}

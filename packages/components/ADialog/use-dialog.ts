@@ -11,22 +11,20 @@ export const useDialog = (
   const show = ref(props.show || false)
   const showValue = computed(() => props.show || show.value)
 
-  const dialogStatus = ref<DialogOptions>()
+  const DEFAULT_OPTIONS: DialogOptions = {
+    title: props.title || '',
+    message: props?.message || '',
+    showConfirmButton: props?.showConfirmButton || true,
+    showCancelButton: props?.showCancelButton || true,
+    confirmButtonText: props?.cancelButtonText || '',
+    cancelButtonText: props?.cancelButtonText || '',
+  }
+
+  const dialogStatus = ref<DialogOptions>({ ...DEFAULT_OPTIONS })
 
   const showDialog = (options: DialogOptions) => {
-    const {
-      title, message, showConfirmButton, showCancelButton, confirmButtonText, cancelButtonText,
-    } = options
     show.value = true
-    dialogStatus.value = {
-      title: props.title,
-      message: props?.message || '',
-      showConfirmButton: props?.showConfirmButton || true,
-      showCancelButton: props?.showCancelButton || true,
-      confirmButtonText: props?.cancelButtonText || '',
-      cancelButtonText: props?.cancelButtonText || '',
-    }
-    console.log('showDialog', dialogStatus.value)
+    Object.assign(dialogStatus.value, DEFAULT_OPTIONS, options)
   }
 
   const onConfirm = (evt: MouseEvent) => {

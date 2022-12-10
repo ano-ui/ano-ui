@@ -17,6 +17,7 @@ import { radioGroupShortcuts } from './radioGroup'
 import { switchShortcuts } from './switch'
 
 // action
+import { dialogShortcuts } from './dialog'
 import { overlayShortcuts } from './overlay'
 import { notifyShortcuts } from './notify'
 import { noticeBarShortcuts } from './noticeBar'
@@ -35,6 +36,7 @@ export default [
   radioGroupShortcuts,
   switchShortcuts,
 
+  dialogShortcuts,
   overlayShortcuts,
   notifyShortcuts,
   noticeBarShortcuts,
