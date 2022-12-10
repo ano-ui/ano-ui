@@ -1,21 +1,34 @@
 import type { SetupContext } from 'vue'
-import { CLOSE_EVENT } from '../constants'
+import { computed, ref } from 'vue'
+import type { AlignType } from '../composables'
+import { CLICK_EVENT } from '../constants'
 import type { OverlayEmits, OverlayProps } from './overlay'
+import type { OverlayOptions } from './types'
 
 export const useOverlay = (
   props: OverlayProps,
   emit: SetupContext<OverlayEmits>['emit'],
 ) => {
-  const closeHandler = (evt: MouseEvent) => {
-    emit(CLOSE_EVENT, evt)
+  const show = ref(props.show || false)
+  const showValue = computed(() => props.show || show.value)
+
+  const align = ref<AlignType>('center')
+
+  const showOverlay = (options: OverlayOptions) => {
+    align.value = options?.align || 'center'
+    show.value = true
   }
 
-  const moveHandler = (evt: TouchEvent) => {
-    evt.stopPropagation()
+  const closeOverlay = (evt: MouseEvent) => {
+    show.value = false
+    emit(CLICK_EVENT, evt)
   }
 
   return {
-    closeHandler,
-    moveHandler,
+    showValue,
+    align,
+
+    showOverlay,
+    closeOverlay,
   }
 }

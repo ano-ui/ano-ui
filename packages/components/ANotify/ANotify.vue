@@ -6,6 +6,7 @@ const props = defineProps(notifyProps)
 const emit = defineEmits(notifyEmits)
 
 const { show, notifyStatus, showNotify, handleClose } = useNotify(props, emit)
+
 defineExpose({ showNotify })
 </script>
 

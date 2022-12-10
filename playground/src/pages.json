@@ -12,43 +12,49 @@
     { "path": "pages/index/index" },
     {
       "path": "pages/basic/button/button",
-      "style": { "navigationBarTitleText": "Button" }
-    },
-    {
-      "path": "pages/basic/tag/tag",
-      "style": { "navigationBarTitleText": "Tag" }
+      "style": { "navigationBarTitleText": "Button 按钮" }
     },
     {
       "path": "pages/basic/cell/cell",
-      "style": { "navigationBarTitleText": "Cell" }
+      "style": { "navigationBarTitleText": "Cell 单元格" }
+    },
+    {
+      "path": "pages/basic/tag/tag",
+      "style": { "navigationBarTitleText": "Tag 标签" }
+    },
+
+    {
+      "path": "pages/form/checkbox/checkbox",
+      "style": { "navigationBarTitleText": "Checkbox 复选框" }
     },
     {
       "path": "pages/form/input/input",
-      "style": { "navigationBarTitleText": "Input" }
-    },
-    {
-      "path": "pages/form/switch/switch",
-      "style": { "navigationBarTitleText": "Switch" }
-    },
-    {
-      "path": "pages/form/checkbox/checkbox",
-      "style": { "navigationBarTitleText": "Checkbox" }
+      "style": { "navigationBarTitleText": "Input 输入框" }
     },
     {
       "path": "pages/form/radio/radio",
-      "style": { "navigationBarTitleText": "Radio" }
+      "style": { "navigationBarTitleText": "Radio 单选框" }
     },
     {
-      "path": "pages/action/overlay/overlay",
-      "style": { "navigationBarTitleText": "Overlay" }
+      "path": "pages/form/switch/switch",
+      "style": { "navigationBarTitleText": "Switch 开关" }
+    },
+
+    {
+      "path": "pages/action/dialog/dialog",
+      "style": { "navigationBarTitleText": "Dialog 弹出框" }
     },
     {
       "path": "pages/action/notify/notify",
-      "style": { "navigationBarTitleText": "Notify" }
+      "style": { "navigationBarTitleText": "Notify 消息通知" }
     },
     {
       "path": "pages/action/notice-bar/notice-bar",
-      "style": { "navigationBarTitleText": "Notice Bar" }
+      "style": { "navigationBarTitleText": "Notice Bar 通知栏" }
+    },
+    {
+      "path": "pages/action/overlay/overlay",
+      "style": { "navigationBarTitleText": "Overlay 遮罩层" }
     }
   ],
   "easycom": {
