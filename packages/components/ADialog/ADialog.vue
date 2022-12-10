@@ -9,9 +9,7 @@ const props = defineProps(dialogProps)
 const emit = defineEmits(dialogEmits)
 const { showValue, dialogStatus, showDialog, onConfirm, onCancel } = useDialog(props, emit)
 
-const handleShowDialog = (options: DialogOptions) => {
-  showDialog(options)
-}
+const handleShowDialog = (options: DialogOptions) => showDialog(options)
 
 defineExpose({ show: handleShowDialog })
 </script>
