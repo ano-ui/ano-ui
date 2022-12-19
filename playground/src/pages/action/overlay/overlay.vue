@@ -5,22 +5,20 @@ import { ref } from 'vue'
 const overlayRef = ref<OverlayRef>()
 const showValue = ref(false)
 
-const handleShow = (align: AlignType) => {
-  overlayRef.value?.show({ align })
+const handleShow = () => {
+  overlayRef.value?.show()
 }
 </script>
 
 <template>
   <UBasePage>
     <div class="p-2 pb-safe">
-      <AOverlay :show="showValue" @click="showValue = false">
-        <div class="text-primary">
-          Overlay
-        </div>
-      </AOverlay>
+      <AOverlay v-model:show="showValue" />
       <AOverlay ref="overlayRef">
-        <div class="text-primary">
-          Overlay
+        <div class="flex justify-center items-center h-full">
+          <div class="text-primary ma w-20 h-20 bg-white">
+            OverlayRef
+          </div>
         </div>
       </AOverlay>
       <div class="p-2">
@@ -32,17 +30,11 @@ const handleShow = (align: AlignType) => {
         </AButton>
       </div>
       <div class="p-2">
-        Flex Align
+        Embedded Content
       </div>
       <div p-2 flex="~ gap2 wrap">
-        <AButton @click="handleShow('start')">
-          Align Start
-        </AButton>
-        <AButton @click="handleShow('center')">
-          Align Center
-        </AButton>
-        <AButton @click="handleShow('end')">
-          Align End
+        <AButton @click="handleShow()">
+          Embedded Content
         </AButton>
       </div>
     </div>

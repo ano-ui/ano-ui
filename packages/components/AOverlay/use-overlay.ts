@@ -1,7 +1,6 @@
 import type { SetupContext } from 'vue'
 import { computed, ref } from 'vue'
-import type { AlignType } from '../composables'
-import { CLICK_EVENT } from '../constants'
+import { CLOSE_EVENT, OPEN_EVENT, UPDATE_SHOW_EVENT } from '../constants'
 import type { OverlayEmits, OverlayProps } from './overlay'
 import type { OverlayOptions } from './types'
 
@@ -10,23 +9,29 @@ export const useOverlay = (
   emit: SetupContext<OverlayEmits>['emit'],
 ) => {
   const show = ref(props.show || false)
-  const showValue = computed(() => props.show || show.value)
+  const showValue = computed<OverlayProps['show']>({
+    get: () => props.show || show.value,
+    set(val) {
+      if (val)
+        emit(OPEN_EVENT)
+      else
+        emit(CLOSE_EVENT)
+      show.value = val
+      emit(UPDATE_SHOW_EVENT, val)
+    },
+  })
 
-  const align = ref<AlignType>('center')
-
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const showOverlay = (options: OverlayOptions) => {
-    align.value = options?.align || 'center'
-    show.value = true
+    showValue.value = true
   }
 
-  const closeOverlay = (evt: MouseEvent) => {
-    show.value = false
-    emit(CLICK_EVENT, evt)
+  const closeOverlay = () => {
+    showValue.value = false
   }
 
   return {
     showValue,
-    align,
 
     showOverlay,
     closeOverlay,

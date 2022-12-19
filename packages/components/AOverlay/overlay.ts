@@ -1,6 +1,7 @@
 import type { ExtractPropTypes } from 'vue'
 import { CustomClassProp, CustomStyleProp } from '../composables'
-import { CLICK_EVENT } from '../constants'
+import { CLOSE_EVENT, OPEN_EVENT, UPDATE_SHOW_EVENT } from '../constants'
+import { isBoolean } from '../utils'
 
 export const overlayProps = {
   cc: CustomClassProp,
@@ -9,7 +10,9 @@ export const overlayProps = {
 }
 
 export const overlayEmits = {
-  [CLICK_EVENT]: (evt: MouseEvent) => evt instanceof MouseEvent,
+  [UPDATE_SHOW_EVENT]: (value: boolean) => isBoolean(value),
+  [OPEN_EVENT]: () => true,
+  [CLOSE_EVENT]: () => true,
 }
 
 export type OverlayProps = ExtractPropTypes<typeof overlayProps>
