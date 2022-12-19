@@ -66,7 +66,16 @@ export type AlignType = 'start' | 'center' | 'end'
 export const AlignProp = {
   type: String as PropType<AlignType>,
   validator: (value: string) => ['start', 'center', 'end'].includes(value),
-  default: 'start',
+  default: 'center',
+}
+
+export type PositionType = 'top' | 'bottom' | 'left' | 'right' | 'center'
+
+export const PositionProp = {
+  type: String as PropType<PositionType>,
+  validator: (value: string) =>
+    ['top', 'bottom', 'left', 'right', 'center'].includes(value),
+  default: 'center',
 }
 
 export type InputType = 'text' | 'number' | 'digit' | 'password' | 'textarea'

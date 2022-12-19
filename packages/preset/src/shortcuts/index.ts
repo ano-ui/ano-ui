@@ -6,6 +6,7 @@ import { baseShortcuts } from './base'
 import { buttonShortcuts } from './button'
 import { cellShortcuts } from './cell'
 import { cellGroupShortcuts } from './cellGroup'
+import { popupShortcuts } from './popup'
 import { tagShortcuts } from './tag'
 
 // form
@@ -27,6 +28,7 @@ export default [
   buttonShortcuts,
   cellShortcuts,
   cellGroupShortcuts,
+  popupShortcuts,
   tagShortcuts,
 
   checkboxShortcuts,

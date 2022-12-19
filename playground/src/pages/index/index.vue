@@ -34,6 +34,7 @@ const goAction = (path: string) => {
       <ACellGroup>
         <ACell title="Button 按钮" arrow @click="goBasic('button')" />
         <ACell title="Cell 单元格" arrow @click="goBasic('cell')" />
+        <ACell title="Popup 弹出层" arrow @click="goBasic('popup')" />
         <ACell title="Tag 标签" arrow @click="goBasic('tag')" />
       </ACellGroup>
       <div class="px2 py4">
