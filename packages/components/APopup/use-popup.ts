@@ -1,43 +1,27 @@
 import type { SetupContext } from 'vue'
 import { computed, ref } from 'vue'
-import { CLOSE_EVENT, OPEN_EVENT } from '../constants'
+import { CLOSE_EVENT, OPEN_EVENT, UPDATE_SHOW_EVENT } from '../constants'
 import type { PopupEmits, PopupProps } from './popup'
-import type { PopupOptions } from './types'
+// import type { PopupOptions } from './types'
 
 export const usePopup = (
   props: PopupProps,
   emit: SetupContext<PopupEmits>['emit'],
 ) => {
   const show = ref(props.show || false)
-  const showValue = computed(() => props.show || show.value)
-
-  const DEFAULT_OPTIONS: PopupOptions = {
-    position: props?.position ?? 'center',
-  }
-
-  const popupStatus = ref<PopupOptions>({ ...DEFAULT_OPTIONS })
-
-  const onOpen = () => {
-    show.value = true
-    emit(OPEN_EVENT)
-  }
-
-  const showPopup = (options: PopupOptions) => {
-    Object.assign(popupStatus.value, DEFAULT_OPTIONS, options)
-    onOpen()
-  }
-
-  const onClose = () => {
-    show.value = false
-    emit(CLOSE_EVENT)
-  }
+  const showValue = computed<PopupProps['show']>({
+    get: () => props.show || show.value,
+    set(val) {
+      if (val)
+        emit(OPEN_EVENT)
+      else
+        emit(CLOSE_EVENT)
+      show.value = val
+      emit(UPDATE_SHOW_EVENT, val)
+    },
+  })
 
   return {
     showValue,
-    popupStatus,
-
-    onOpen,
-    showPopup,
-    onClose,
   }
 }
