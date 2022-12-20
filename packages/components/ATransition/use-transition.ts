@@ -15,14 +15,12 @@ export const useTransition = (
       return
     display.value = true
     emit('beforeEnter')
-    setTimeout(() => {
-      classes.value = `a-transition-${name.value}-enter`
-      nextTick(() => {
-        emit('enter')
-        emit('afterEnter')
-        classes.value = `a-transition-${name.value}-enter-to`
-      })
-    }, 20)
+    classes.value = `a-transition-${name.value}-enter`
+    nextTick(() => {
+      emit('enter')
+      emit('afterEnter')
+      classes.value = `a-transition-${name.value}-enter-to`
+    })
   }
 
   const leave = () => {

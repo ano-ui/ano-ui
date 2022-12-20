@@ -9,7 +9,7 @@ const { display, classes } = useTransition(props, emit)
 
 <template>
   <div
-    v-show="display" class="transition-all" :class="[classes, cc]"
+    v-if="display" class="transition-all" :class="[classes, cc]"
     :style="[{ 'transition-duration': `${duration}ms` }, cs]"
   >
     <slot />
