@@ -26,6 +26,10 @@
       "path": "pages/basic/tag/tag",
       "style": { "navigationBarTitleText": "Tag 标签" }
     },
+    {
+      "path": "pages/basic/transition/transition",
+      "style": { "navigationBarTitleText": "Transition 过渡" }
+    },
 
     {
       "path": "pages/form/checkbox/checkbox",
