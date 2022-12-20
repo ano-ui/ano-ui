@@ -1,5 +1,5 @@
 <p align="center">
-<img src="../../public/logo.svg" style="width:100px;" />
+<img src="https://github.com/ano-ui/ano-ui/raw/main/public/logo.svg" style="width:100px;" />
 <h1 align="center">Ano-UI (WIP)</h1>
 <p align="center">An UniApp UI components with UnoCSS.</p>
 </p>
@@ -24,13 +24,13 @@ import { presetApplet, presetRemToRpx, transformerApplet } from 'unocss-applet'
 import { presetAno } from 'ano-ui'
 
 // UniApp
-const isMP = process.env.UNI_PLATFORM !== 'h5'
+const isApplet = process.env?.UNI_PLATFORM?.startsWith('mp-')
 
 export default defineConfig({
   presets: [
-    presetApplet({ enable: isMP }),
-    presetAttributify(),
-    presetRemToRpx({ enable: isMP }),
+    presetApplet({ enable: isApplet }),
+    presetAttributify({ enable: isApplet }),
+    presetRemToRpx({ enable: isApplet }),
     presetIcons({
       scale: 1.2,
       extraProperties: {
@@ -41,7 +41,7 @@ export default defineConfig({
     presetAno(),
   ],
   transformers: [
-    transformerApplet(),
+    transformerApplet({ enable: isApplet }),
   ],
 })
 ```
@@ -72,7 +72,7 @@ And then enjoy it. Just use a button component like this:
 
 > Probably not the latest version.
 
-<img src="../../public/applet-code.png" style="width:120px;" />
+<img src="./public/applet-code.png" style="width:120px;" />
 
 ### WeChat DevTools(Recommended)
 
@@ -88,16 +88,17 @@ Run playground to see the result.
 pnpm play:mp-weixin
 ```
 
-Then you can import the project(`xx/ano-ui/playground/dev/mp-weixin`) into WeChat DevTools.
+Then import the project(`xx/ano-ui/playground/dev/mp-weixin`) into WeChat DevTools.
 
 ## Acknowledgement
 
+- [anu](https://github.com/jd-solanki/anu)
+- [Element Plus](https://github.com/element-plus/element-plus)
 - [UnoCSS](https://github.com/unocss/unocss)
 - [onu-ui](https://github.com/onu-ui/onu-ui)
-- [anu](https://github.com/jd-solanki/anu)
 - [tm-ui](https://gitee.com/LYTB/tmui-design)
 - [uView](https://github.com/umicro/uView2.0)
 
 ## License
 
-[MIT](./LICENSE) License &copy; 2022-PRESENT [Neil Lee](https://github.com/zguolee)
+[MIT](https://github.com/ano-ui/ano-ui/blob/main/LICENSE) License &copy; 2022-PRESENT [Neil Lee](https://github.com/zguolee)

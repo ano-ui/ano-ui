@@ -1,5 +1,5 @@
 <p align="center">
-<img src="./public/logo.svg" style="width:100px;" />
+<img src="https://github.com/ano-ui/ano-ui/raw/main/public/logo.svg" style="width:100px;" />
 <h1 align="center">Ano-UI (WIP)</h1>
 <p align="center">An UniApp UI components with UnoCSS.</p>
 </p>
@@ -24,7 +24,7 @@ import { presetApplet, presetRemToRpx, transformerApplet } from 'unocss-applet'
 import { presetAno } from 'ano-ui'
 
 // UniApp
-const isApplet = process.env?.UNI_PLATFORM?.startWith('mp-')
+const isApplet = process.env?.UNI_PLATFORM?.startsWith('mp-')
 
 export default defineConfig({
   presets: [
@@ -101,4 +101,4 @@ Then import the project(`xx/ano-ui/playground/dev/mp-weixin`) into WeChat DevToo
 
 ## License
 
-[MIT](./LICENSE) License &copy; 2022-PRESENT [Neil Lee](https://github.com/zguolee)
+[MIT](https://github.com/ano-ui/ano-ui/blob/main/LICENSE) License &copy; 2022-PRESENT [Neil Lee](https://github.com/zguolee)
