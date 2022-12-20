@@ -5,7 +5,7 @@
   <UBasePage>
     <div class="p-2 pb-safe">
       <div class="p-2">
-        Base
+        Basic
       </div>
       <div p-2 flex="~ col gap2">
         <ACell title="Title" content="Content" />

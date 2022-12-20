@@ -15,27 +15,29 @@ defineExpose({ show: handleShowDialog })
 </script>
 
 <template>
-  <AOverlay :show="showValue">
-    <div class="a-dialog-base" :class="[cc]" :style="cs">
-      <div class="p6">
-        <div v-if="dialogStatus?.title" class="pb2 text-xl">
-          {{ dialogStatus.title }}
+  <AOverlay v-model:show="showValue">
+    <div class="h-full flex justify-center items-center">
+      <div class="a-dialog-base" :class="[cc]" :style="cs">
+        <div class="p6">
+          <div v-if="dialogStatus?.title" class="pb2 text-xl">
+            {{ dialogStatus.title }}
+          </div>
+          <div v-if="dialogStatus?.message" class="text-darkText">
+            {{ dialogStatus.message }}
+          </div>
         </div>
-        <div v-if="dialogStatus?.message" class="text-darkText">
-          {{ dialogStatus.message }}
+        <div class="a-dialog-action-base">
+          <template v-if="dialogStatus?.showCancelButton">
+            <AButton class="flex-1" color="danger" variant="text" @click.stop="onCancel">
+              {{ dialogStatus.cancelButtonText || 'Cancel' }}
+            </AButton>
+          </template>
+          <template v-if="dialogStatus?.showConfirmButton">
+            <AButton class="flex-1" variant="text" @click.stop="onConfirm">
+              {{ dialogStatus.confirmButtonText || 'Confirm' }}
+            </AButton>
+          </template>
         </div>
-      </div>
-      <div class="a-dialog-action-base">
-        <template v-if="dialogStatus?.showCancelButton">
-          <AButton class="flex-1" color="danger" variant="text" @click="onCancel">
-            {{ dialogStatus.cancelButtonText || 'Cancel' }}
-          </AButton>
-        </template>
-        <template v-if="dialogStatus?.showConfirmButton">
-          <AButton class="flex-1" variant="text" @click="onConfirm">
-            {{ dialogStatus.confirmButtonText || 'Confirm' }}
-          </AButton>
-        </template>
       </div>
     </div>
   </AOverlay>

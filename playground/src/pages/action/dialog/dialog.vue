@@ -28,11 +28,11 @@ const handleCancel = () => {
       <div p-2>
         <ACellGroup>
           <ACell
-            title="Base" arrow
+            title="Basic" arrow
             @click="handleShow({ title: 'Dialog Title', message: 'Dialog Message Dialog Message' })"
           />
           <ACell
-            title="Base No Title" arrow
+            title="Basic No Title" arrow
             @click="handleShow({ message: 'Dialog Message Dialog Message' })"
           />
         </ACellGroup>
