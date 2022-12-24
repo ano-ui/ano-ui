@@ -10,6 +10,10 @@ export const transitionProps = {
     type: Number,
     default: 300,
   },
+  timingFunction: {
+    type: String,
+    default: 'ease',
+  },
 
   enterFromClass: String,
   enterActiveClass: String,
