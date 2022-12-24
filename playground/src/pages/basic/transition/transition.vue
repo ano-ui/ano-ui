@@ -19,12 +19,12 @@ const log = (msg: string) => console.log(`[${transitionName.value}] ${msg}`)
   <UBasePage>
     <div class="p-2 pb-safe">
       <ATransition
-        :show="showValue" :name="transitionName"
-        cc="fixed top-20 bottom-20 left-20 right-20 z-200 flex justify-center items-center"
+        :show="showValue" :name="transitionName" :duration="1000" timing-function="ease-in-out"
+        cc="fixed top-50 bottom-50 left-20 right-20 h-50 z-200 bg-primary rounded-lg flex items-center justify-center"
         @before-enter="log('before-enter')" @enter="log('enter')" @after-enter="log('after-enter')"
         @before-leave="log('before-leave')" @leave="log('leave')" @after-leave="log('after-leave')"
       >
-        <div class="flex justify-center items-center h-20 w-40 bg-primary text-white rounded-lg">
+        <div class="text-center text-white">
           Content
         </div>
       </ATransition>
