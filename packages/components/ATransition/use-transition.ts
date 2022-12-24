@@ -13,13 +13,15 @@ export const useTransition = (
   const enter = () => {
     if (display.value)
       return
-    display.value = true
     emit('beforeEnter')
+    display.value = true
     classes.value = `a-transition-${name.value}-enter`
     nextTick(() => {
       emit('enter')
+      setTimeout(() => {
+        classes.value = `a-transition-${name.value}-enter-to`
+      }, 50)
       emit('afterEnter')
-      classes.value = `a-transition-${name.value}-enter-to`
     })
   }
 
@@ -33,8 +35,8 @@ export const useTransition = (
       setTimeout(() => {
         if (!props.show && display.value)
           display.value = false
+        emit('afterLeave')
       }, props.duration)
-      emit('afterLeave')
       classes.value = `a-transition-${name.value}-leave-to`
     })
   }
