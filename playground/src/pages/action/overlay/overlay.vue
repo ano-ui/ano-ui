@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { AlignType, OverlayRef } from 'ano-ui'
+import type { OverlayRef } from 'ano-ui'
 import { ref } from 'vue'
 
 const overlayRef = ref<OverlayRef>()
@@ -13,7 +13,7 @@ const handleShow = () => {
 <template>
   <UBasePage>
     <div class="p-2 pb-safe">
-      <AOverlay v-model:show="showValue" />
+      <AOverlay v-model:show="showValue" :duration="300" />
       <AOverlay ref="overlayRef">
         <div class="flex justify-center items-center h-full">
           <div class="text-primary ma w-20 h-20 bg-white">

@@ -7,6 +7,10 @@ export const overlayProps = {
   cc: CustomClassProp,
   cs: CustomStyleProp,
   show: Boolean,
+  duration: {
+    type: Number,
+    default: 200,
+  },
 }
 
 export const overlayEmits = {
