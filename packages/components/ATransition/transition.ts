@@ -8,7 +8,7 @@ export const transitionProps = {
   show: Boolean,
   duration: {
     type: Number,
-    default: 300,
+    default: 200,
   },
   timingFunction: {
     type: String,
@@ -37,4 +37,3 @@ export const transitionEmits = {
 
 export type TransitionProps = ExtractPropTypes<typeof transitionProps>
 export type TransitionEmits = typeof transitionEmits
-

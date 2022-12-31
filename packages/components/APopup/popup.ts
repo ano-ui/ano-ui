@@ -6,8 +6,14 @@ import { isBoolean } from '../utils'
 export const popupProps = {
   cc: CustomClassProp,
   cs: CustomStyleProp,
+  ccc: CustomClassProp,
+  ccs: CustomStyleProp,
   show: Boolean,
   position: PositionProp,
+  duration: {
+    type: Number,
+    default: 200,
+  },
 }
 
 export const popupEmits = {

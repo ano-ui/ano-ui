@@ -1,5 +1,6 @@
 <script setup lang='ts'>
 import AOverlay from '../AOverlay/AOverlay.vue'
+import ATransition from '../ATransition/ATransition.vue'
 import { popupEmits, popupProps } from './popup'
 import { usePopup } from './use-popup'
 import type { PopupOptions } from './types'
@@ -7,18 +8,27 @@ import type { PopupOptions } from './types'
 const props = defineProps(popupProps)
 const emit = defineEmits(popupEmits)
 const { showValue } = usePopup(props, emit)
+
+const animationName = {
+  center: 'fade',
+  top: 'slide-down',
+  bottom: 'slide-up',
+  left: 'slide-left',
+  right: 'slide-right',
+}
 </script>
 
 <template>
-  <AOverlay v-model:show="showValue">
-    <div v-if="showValue" class="a-popup-wrapper" :class="[`a-popup-wrapper-${position}`]">
-      <div class="a-popup-base" :class="[`a-popup-position-${position}`, cc]" :style="cs" @click.stop>
-        <slot />
-      </div>
+  <AOverlay v-model:show="showValue" :duration="duration" />
+  <ATransition
+    :show="showValue" :name="animationName[position]" :duration="duration"
+    :cc="['a-popup-wrapper-base', `a-popup-wrapper-position-${position}`, cc]" :style="cs" @click.stop
+  >
+    <div class="a-popup-content-base" :class="ccc" :style="ccs">
+      <slot />
     </div>
-  </AOverlay>
+  </ATransition>
 </template>
 
 <style scoped>
-
 </style>

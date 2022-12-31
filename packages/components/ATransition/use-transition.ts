@@ -32,12 +32,12 @@ export const useTransition = (
     classes.value = `a-transition-${name.value}-leave`
     nextTick(() => {
       emit('leave')
+      classes.value = `a-transition-${name.value}-leave-to`
       setTimeout(() => {
         if (!props.show && display.value)
           display.value = false
         emit('afterLeave')
       }, props.duration)
-      classes.value = `a-transition-${name.value}-leave-to`
     })
   }
 
