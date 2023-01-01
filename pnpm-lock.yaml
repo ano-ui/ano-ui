@@ -37,6 +37,7 @@ importers:
       esno: ^0.16.3
       fs-extra: ^11.1.0
       unocss: ^0.48.0
+      unplugin-vue-components: ^0.22.12
       vite: ^4.0.3
       vue: ^3.2.45
     dependencies:
@@ -49,6 +50,7 @@ importers:
       esno: 0.16.3
       fs-extra: 11.1.0
       unocss: 0.48.0_vite@4.0.3
+      unplugin-vue-components: 0.22.12_vue@3.2.45
       vite: 4.0.3_@types+node@18.11.18
       vue: 3.2.45
 

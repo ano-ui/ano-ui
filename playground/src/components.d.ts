@@ -7,6 +7,23 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    AButton: typeof import('ano-ui/components/AButton/AButton.vue')['AButton']
+    ACell: typeof import('ano-ui/components/ACell/ACell.vue')['ACell']
+    ACellGroup: typeof import('ano-ui/components/ACellGroup/ACellGroup.vue')['ACellGroup']
+    ACheckbox: typeof import('ano-ui/components/ACheckbox/ACheckbox.vue')['ACheckbox']
+    ACheckboxGroup: typeof import('ano-ui/components/ACheckboxGroup/ACheckboxGroup.vue')['ACheckboxGroup']
+    ADialog: typeof import('ano-ui/components/ADialog/ADialog.vue')['ADialog']
+    AInput: typeof import('ano-ui/components/AInput/AInput.vue')['AInput']
+    ANoticeBar: typeof import('ano-ui/components/ANoticeBar/ANoticeBar.vue')['ANoticeBar']
+    ANotify: typeof import('ano-ui/components/ANotify/ANotify.vue')['ANotify']
+    AOverlay: typeof import('ano-ui/components/AOverlay/AOverlay.vue')['AOverlay']
+    APage: typeof import('ano-ui/components/APage/APage.vue')['APage']
+    APopup: typeof import('ano-ui/components/APopup/APopup.vue')['APopup']
+    ARadio: typeof import('ano-ui/components/ARadio/ARadio.vue')['ARadio']
+    ARadioGroup: typeof import('ano-ui/components/ARadioGroup/ARadioGroup.vue')['ARadioGroup']
+    ASwitch: typeof import('ano-ui/components/ASwitch/ASwitch.vue')['ASwitch']
+    ATag: typeof import('ano-ui/components/ATag/ATag.vue')['ATag']
+    ATransition: typeof import('ano-ui/components/ATransition/ATransition.vue')['ATransition']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     UBasePage: typeof import('./components/UBasePage/UBasePage.vue')['default']
