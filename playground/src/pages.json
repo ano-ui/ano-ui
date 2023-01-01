@@ -64,5 +64,11 @@
       "path": "pages/action/overlay/overlay",
       "style": { "navigationBarTitleText": "Overlay 遮罩层" }
     }
-  ]
+  ],
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "^A(.*)": "ano-ui/components/A$1/A$1.vue"
+    }
+  }
 }

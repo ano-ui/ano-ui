@@ -4,7 +4,7 @@ import Uni from '@dcloudio/vite-plugin-uni'
 import UnoCSS from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
-import { AnoResolver } from 'ano-ui'
+// import { AnoResolver } from 'ano-ui'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -18,7 +18,7 @@ export default defineConfig({
     Components({
       include: [/\.vue$/, /\.vue\?vue/],
       dts: 'src/components.d.ts',
-      resolvers: [AnoResolver()],
+      // resolvers: [AnoResolver({ platform: process.env.UNI_PLATFORM?.startsWith('mp-') ? 'mp' : 'h5' })],
     }),
     Uni(),
 
