@@ -7,8 +7,8 @@ export default defineConfig({
   build: {
     emptyOutDir: false,
     lib: {
-      entry: resolve(__dirname, 'index.ts'),
-      name: '@ano-ui/components',
+      entry: resolve(__dirname, 'src/index.ts'),
+      name: 'ano-ui',
     },
     outDir: 'dist',
     rollupOptions: {

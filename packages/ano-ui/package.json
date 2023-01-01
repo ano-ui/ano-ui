@@ -24,32 +24,22 @@
   "sideEffects": false,
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.mjs"
-    },
-    "./preset": {
-      "types": "./dist/preset.d.ts",
-      "require": "./dist/preset.cjs",
-      "import": "./dist/preset.mjs"
-    },
-    "./components": {
-      "types": "./dist/components.d.ts",
-      "require": "./dist/components.cjs",
-      "import": "./dist/components.mjs"
+      "types": "./dist/src/index.d.ts",
+      "require": "./dist/ano-ui.umd.cjs",
+      "import": "./dist/ano-ui.mjs"
     },
     "./*": "./*"
   },
-  "main": "./dist/index.mjs",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "main": "./dist/ano-ui.umd.mjs",
+  "module": "./dist/ano-ui.js",
+  "types": "./dist/src/index.d.ts",
   "files": [
     "dist",
     "components"
   ],
   "scripts": {
-    "build": "esno scripts/components.ts && unbuild",
-    "stub": "esno scripts/components.ts && unbuild --stub"
+    "build": "esno scripts/components.ts && vue-tsc --declaration --emitDeclarationOnly --skipLibCheck && vite build",
+    "stub": "esno scripts/components.ts && vue-tsc --declaration --emitDeclarationOnly --skipLibCheck && vite build --watch"
   },
   "peerDependencies": {
     "@ano-ui/preset": "^0.0.10",
@@ -61,7 +51,12 @@
   },
   "devDependencies": {
     "@types/fs-extra": "^9.0.13",
+    "@types/node": "18.11.18",
+    "@vitejs/plugin-vue": "^4.0.0",
     "esno": "^0.16.3",
-    "fs-extra": "^11.1.0"
+    "fs-extra": "^11.1.0",
+    "unocss": "^0.48.0",
+    "vite": "^4.0.3",
+    "vue": "^3.2.45"
   }
 }
