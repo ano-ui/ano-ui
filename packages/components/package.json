@@ -33,8 +33,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "vite build",
-    "stub": "vite build"
+    "build": "vue-tsc --declaration --emitDeclarationOnly --skipLibCheck && vite build",
+    "stub": "vue-tsc --declaration --emitDeclarationOnly --skipLibCheck && vite build"
   },
   "peerDependencies": {
     "vue": "^3.2.0"
