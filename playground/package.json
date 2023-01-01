@@ -64,6 +64,7 @@
     "unocss": "^0.48.0",
     "unocss-applet": "^0.2.20",
     "unplugin-auto-import": "^0.12.1",
+    "unplugin-vue-components": "^0.22.12",
     "vite": "^4.0.3"
   }
 }

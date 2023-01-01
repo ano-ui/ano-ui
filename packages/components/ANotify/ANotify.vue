@@ -36,4 +36,3 @@ defineExpose({ showNotify })
     <div v-if="notifyStatus.showIcon || notifyStatus.showClose" class="i-carbon-close" @click.stop="handleClose" />
   </div>
 </template>
-
