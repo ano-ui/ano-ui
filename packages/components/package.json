@@ -18,8 +18,35 @@
     "unocss-components",
     "uni-app"
   ],
-  "scripts": {},
+  "exports": {
+    ".": {
+      "types": "./dist/components/index.d.ts",
+      "require": "./dist/components.umd.cjs",
+      "import": "./dist/components.js"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
+  "main": "./dist/components.umd.cjs",
+  "module": "./dist/components.js",
+  "types": "./dist/components/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "stub": "vite build"
+  },
   "peerDependencies": {
     "vue": "^3.2.0"
+  },
+  "dependencies": {
+    "@ano-ui/preset": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "18.11.18",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "unocss": "^0.48.0",
+    "vite": "^4.0.3",
+    "vue": "^3.2.45"
   }
 }

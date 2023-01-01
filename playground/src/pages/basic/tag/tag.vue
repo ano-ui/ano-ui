@@ -65,4 +65,3 @@ const show = ref(true)
     </div>
   </UBasePage>
 </template>
-

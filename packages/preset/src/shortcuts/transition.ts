@@ -56,4 +56,3 @@ export const transitionShortcuts: Record<string, string> = {
   'a-transition-fade-zoom-leave': 'op-100 scale-100',
   'a-transition-fade-zoom-leave-to': 'op-0 scale-95',
 }
-

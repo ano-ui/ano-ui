@@ -23,4 +23,3 @@ const { disabled, handleClick, handleClose } = useTag(props, emit)
     <div v-if="closable" class="i-carbon-close" @click.stop="handleClose" />
   </div>
 </template>
-

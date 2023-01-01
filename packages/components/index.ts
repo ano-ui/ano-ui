@@ -1,20 +1,22 @@
-// Basic
-export * from './AButton'
-export * from './ACell'
-export * from './APopup'
-export * from './ATag'
+import 'uno.css'
+import type { App } from 'vue'
 
-// Form
-export * from './ACheckbox'
-export * from './ACheckboxGroup'
-export * from './AInput'
-export * from './ARadio'
-export * from './ARadioGroup'
-export * from './ASwitch'
+import * as components from './components'
 
-// Action
-export * from './ADialog'
-export * from './ANoticeBar'
-export * from './ANotify'
-export * from './AOverlay'
+export interface PluginOptions {
+  registerComponents: boolean
+}
 
+const plugin = {
+  install(app: App) {
+    for (const prop in components) {
+      // @ts-expect-error: I want to index import using string
+      const component = components[prop]
+      app.component(component.name, component)
+    }
+  },
+}
+
+export * from './composables'
+
+export { plugin as ano }

@@ -6,10 +6,10 @@
   "scripts": {
     "dev": "pnpm stub",
     "build": "rimraf packages/*/dist && pnpm -r --filter=./packages/* run build && pnpm -r run build-post",
-    "play:mp-weixin": "pnpm dev && npm -C playground run dev:mp-weixin",
-    "build:mp-weixin": "pnpm build && npm -C playground run build:mp-weixin",
-    "play:h5": "pnpm dev && npm -C playground run dev:h5",
-    "build:h5": "pnpm build && npm -C playground run build:h5",
+    "play:mp-weixin": "npm -C playground run dev:mp-weixin",
+    "build:mp-weixin": "npm -C playground run build:mp-weixin",
+    "play:h5": "npm -C playground run dev:h5",
+    "build:h5": "npm -C playground run build:h5",
     "release": "bumpp package.json packages/**/package.json",
     "stub": "pnpm -r --filter=./packages/* --parallel run stub",
     "typecheck": "tsc --noEmit",
@@ -24,11 +24,12 @@
   "devDependencies": {
     "@antfu/eslint-config": "^0.34.0",
     "bumpp": "^8.2.1",
-    "eslint": "^8.30.0",
+    "eslint": "^8.31.0",
     "esno": "^0.16.3",
     "rimraf": "^3.0.2",
     "typescript": "^4.9.4",
     "unbuild": "^1.0.2",
-    "vitest": "^0.26.2"
+    "vitest": "^0.26.2",
+    "vue-tsc": "^1.0.8"
   }
 }

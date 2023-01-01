@@ -38,4 +38,3 @@ const { disabled, handleClick } = useCell(props, emit)
     <slot v-else name="description" />
   </div>
 </template>
-

@@ -33,10 +33,10 @@
       "require": "./dist/preset.cjs",
       "import": "./dist/preset.mjs"
     },
-    "./utils": {
-      "types": "./dist/utils.d.ts",
-      "require": "./dist/utils.cjs",
-      "import": "./dist/utils.mjs"
+    "./components": {
+      "types": "./dist/components.d.ts",
+      "require": "./dist/components.cjs",
+      "import": "./dist/components.mjs"
     },
     "./*": "./*"
   },
