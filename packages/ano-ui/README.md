@@ -60,9 +60,10 @@ Update `pages.json` file like below:
 ```
 
 And then enjoy it. Just use a button component like this:
+
 ```html
 <template>
-  <AButton>Button</ABtn>
+  <AButton>Button</AButton>
 </template>
 ```
 
