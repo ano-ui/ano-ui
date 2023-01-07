@@ -3,10 +3,10 @@ import rules from './rules'
 import shortcuts from './shortcuts'
 import theme from './theme'
 
-const colors = Object.keys(theme.colors!)
-const shortcutsArray = shortcuts as []
+export const colors = Object.keys(theme.colors!)
+export const shortcutsArray = shortcuts as []
 
-const presetAno = (): Preset => {
+export function presetAno(): Preset {
   return {
     name: '@ano-ui/preset',
     theme,
@@ -21,5 +21,3 @@ const presetAno = (): Preset => {
     ],
   }
 }
-
-export default presetAno

@@ -23,8 +23,6 @@ import AOverlay from '../components/AOverlay/AOverlay.vue'
 // Layout
 import APage from '../components/APage/APage.vue'
 
-export * from '@ano-ui/components'
-
 // Basic
 export { default as AButton } from '../components/AButton/AButton.vue'
 export { default as ACell } from '../components/ACell/ACell.vue'
