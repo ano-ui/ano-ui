@@ -54,7 +54,7 @@ const show = ref(true)
             <div class="i-carbon-sprout" />
           </template>
         </ATag>
-        <ATag label="Rounded" color="info" variant="ghost" cc="rounded-md" />
+        <ATag label="Rounded" color="info" variant="ghost" cc="rounded-full" />
         <ATag label="Send" color="warning">
           <template #icon>
             <div class="i-carbon-send-alt" />

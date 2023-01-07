@@ -1,5 +1,5 @@
 export const notifyShortcuts: Record<string, string> = {
-  'a-notify-base': `justify-center gap2 items-center inline-flex box-border py2 px3
+  'a-notify-base': `justify-center gap2 items-center inline-flex py2 px3
   absolute z-500 a-transition rounded-lg !animate-duration-200
   dark:bg-op80 dark:text-op80`,
   'a-notify-position-default': 'top-0 left-0 right-0 rounded-none animate-slide-in-down',

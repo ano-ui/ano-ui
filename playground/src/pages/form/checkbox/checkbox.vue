@@ -65,7 +65,7 @@ const groupChecked2 = ref(['a', 'b'])
         </ACheckbox>
       </div>
       <div class="p-2">
-        Checkbox Group{{ groupChecked }}
+        Checkbox Group: {{ groupChecked }}
       </div>
       <div p-2>
         <ACheckboxGroup v-model="groupChecked">
@@ -76,7 +76,7 @@ const groupChecked2 = ref(['a', 'b'])
       </div>
 
       <div class="p-2">
-        Checkbox Group Min Max{{ groupChecked2 }}
+        Checkbox Group Min Max[1-2]: {{ groupChecked2 }}
       </div>
       <div p-2>
         <ACheckboxGroup v-model="groupChecked2" :min="1" :max="2">

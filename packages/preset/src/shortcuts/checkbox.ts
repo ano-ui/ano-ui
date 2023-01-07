@@ -5,7 +5,7 @@ export const checkboxShortcuts: Record<string, string> = {
   'a-checkbox-md': 'text-base gap1.5',
   'a-checkbox-lg': 'text-lg gap2',
   'a-checkbox-xl': 'text-xl gap2.5',
-  'a-checkbox-checkbox-base': 'border rounded-lg a-transition dark:border-op80 dark:bg-op80 a-softBg relative',
+  'a-checkbox-checkbox-base': 'border border-solid rounded-lg a-transition dark:border-op80 dark:bg-op80 a-softBg relative',
   'a-checkbox-checkbox-icon': 'absolute inset-0 flex justify-center items-center',
   'a-checkbox-checkbox-xs': 'h4 w4',
   'a-checkbox-checkbox-sm': 'h5 w5',

@@ -1,6 +1,6 @@
 export const buttonShortcuts: Record<string, string> = {
   'a-button-base':
-    `inline-flex justify-center gap1 items-center m0 rounded-lg box-border border after:display-none a-transition
+    `inline-flex justify-center gap1 items-center m0 rounded-lg border border-solid after:display-none a-transition
      dark:bg-op80 dark:border-op80 dark:text-op80 !leading-none`,
   'a-button-hover': '!bg-op70 !border-op0 op70',
   'a-button-text-hover': '!text-op70',

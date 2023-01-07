@@ -1,5 +1,5 @@
 export const switchShortcuts: Record<string, string> = {
-  'a-switch-base': 'inline-flex border rounded-full a-transition dark:border-op80 relative a-softBg',
+  'a-switch-base': 'inline-flex border border-solid rounded-full a-transition dark:border-op80 relative a-softBg',
   'a-switch-xs': 'min-w7 h4 text-xs',
   'a-switch-sm': 'min-w9 h5 text-sm',
   'a-switch-md': 'min-w11 h6 text-base',
