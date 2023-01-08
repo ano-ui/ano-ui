@@ -1,5 +1,6 @@
 import type { SetupContext } from 'vue'
 import { computed, nextTick, ref, watch } from 'vue'
+import { CLICK_EVENT } from '../constants'
 import type { TransitionEmits, TransitionProps } from './transition'
 
 export const useTransition = (
@@ -49,8 +50,15 @@ export const useTransition = (
     { immediate: true },
   )
 
+  const clickHandler = (evt: MouseEvent) => {
+    evt.stopPropagation()
+    emit(CLICK_EVENT, evt)
+  }
+
   return {
     display,
     classes,
+
+    clickHandler,
   }
 }

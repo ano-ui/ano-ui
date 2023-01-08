@@ -9,14 +9,14 @@ export const useTag = (
 ) => {
   const disabled = computed(() => props.disabled)
 
-  const handleClick = (evt: MouseEvent) => {
+  const clickHandler = (evt: MouseEvent) => {
     if (disabled.value)
       return
 
     emit(CLICK_EVENT, evt)
   }
 
-  const handleClose = (evt: MouseEvent) => {
+  const closeHandler = (evt: MouseEvent) => {
     if (props.disabled)
       return
 
@@ -26,7 +26,7 @@ export const useTag = (
   return {
     disabled,
 
-    handleClick,
-    handleClose,
+    clickHandler,
+    closeHandler,
   }
 }

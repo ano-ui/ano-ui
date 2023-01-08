@@ -6,15 +6,13 @@ import { useOverlay } from './use-overlay'
 const props = defineProps(overlayProps)
 const emit = defineEmits(overlayEmits)
 
-const { showValue, showOverlay, closeOverlay } = useOverlay(props, emit)
-
-defineExpose({ show: showOverlay, close: closeOverlay })
+const { showValue, clickHandler } = useOverlay(props, emit)
 </script>
 
 <template>
   <ATransition
     :show="showValue" name="fade" :cc="['a-overlay-base', cc]" :cs="cs" :duration="duration"
-    @touchmove="$event.stopPropagation()" @click="closeOverlay"
+    @touchmove="$event.stopPropagation()" @click="clickHandler"
   >
     <slot />
   </ATransition>

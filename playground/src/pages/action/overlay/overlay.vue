@@ -1,31 +1,24 @@
 <script setup lang="ts">
-import type { OverlayRef } from 'ano-ui'
 import { ref } from 'vue'
 
-const overlayRef = ref<OverlayRef>()
-const showValue = ref(false)
-
-const handleShow = () => {
-  overlayRef.value?.show()
-}
+const showValue1 = ref(false)
+const showValue2 = ref(false)
 </script>
 
 <template>
   <UBasePage>
     <div class="p-2 pb-safe">
-      <AOverlay v-model:show="showValue" :duration="300" />
-      <AOverlay ref="overlayRef">
+      <AOverlay :show="showValue1" :duration="300" @click="showValue1 = false" />
+      <AOverlay :show="showValue2" :duration="300" @click="showValue2 = false">
         <div class="flex justify-center items-center h-full">
-          <div class="text-primary ma w-20 h-20 bg-white">
-            OverlayRef
-          </div>
+          <div class="w-20 h-20 bg-white" @click.stop />
         </div>
       </AOverlay>
       <div class="p-2">
         Overlay
       </div>
       <div p-2 flex="~ gap2 wrap">
-        <AButton @click="showValue = true">
+        <AButton @click="showValue1 = true">
           Show Overlay
         </AButton>
       </div>
@@ -33,7 +26,7 @@ const handleShow = () => {
         Embedded Content
       </div>
       <div p-2 flex="~ gap2 wrap">
-        <AButton @click="handleShow()">
+        <AButton @click="showValue2 = true">
           Embedded Content
         </AButton>
       </div>

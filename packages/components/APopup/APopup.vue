@@ -3,7 +3,6 @@ import AOverlay from '../AOverlay/AOverlay.vue'
 import ATransition from '../ATransition/ATransition.vue'
 import { popupEmits, popupProps } from './popup'
 import { usePopup } from './use-popup'
-import type { PopupOptions } from './types'
 
 const props = defineProps(popupProps)
 const emit = defineEmits(popupEmits)
@@ -19,7 +18,7 @@ const animationName = {
 </script>
 
 <template>
-  <AOverlay v-model:show="showValue" :duration="duration" />
+  <AOverlay :show="showValue" :duration="duration" @click="showValue = false" />
   <ATransition
     :show="showValue" :name="animationName[position]" :duration="duration"
     :cc="['a-popup-wrapper-base', `a-popup-wrapper-position-${position}`, cc]" :style="cs" @click.stop

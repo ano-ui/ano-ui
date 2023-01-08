@@ -5,13 +5,13 @@ import { useCell } from './use-cell'
 const props = defineProps(cellProps)
 const emit = defineEmits(cellEmits)
 
-const { disabled, handleClick } = useCell(props, emit)
+const { disabled, clickHandler } = useCell(props, emit)
 </script>
 
 <template>
   <div
     class="a-bg-base-second a-cell-base" :class="[{ 'a-cell-disabled': disabled }, cc]" hover-class="a-cell-hover"
-    :style="cs" @click="handleClick"
+    :style="cs" @click="clickHandler"
   >
     <div class="flex justify-center items-center gap1">
       <div class="flex items-center gap1">

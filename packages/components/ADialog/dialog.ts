@@ -15,8 +15,8 @@ export const dialogProps = {
 }
 
 export const dialogEmits = {
-  [CONFIRM_EVENT]: (evt: MouseEvent) => evt instanceof MouseEvent,
-  [CANCEL_EVENT]: (evt: MouseEvent) => evt instanceof MouseEvent,
+  [CONFIRM_EVENT]: () => true,
+  [CANCEL_EVENT]: () => true,
 }
 
 export type DialogProps = ExtractPropTypes<typeof dialogProps>

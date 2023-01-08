@@ -1,5 +1,5 @@
 export const inputShortcuts: Record<string, string> = {
-  'a-input-base': 'flex justify-center gap1 items-center inline-flex rounded-lg a-transition !leading-none',
+  'a-input-base': 'flex justify-center gap1 items-center rounded-lg a-transition !leading-none',
   'a-input-border': 'border border-solid border-gray-300 border-op70 dark:border-op80',
   'a-input-content-base': 'flex-1 bg-transparent outline-none text-size-inherit leading-inherit',
   'a-input-xs': 'px1 py0.5 text-xs',

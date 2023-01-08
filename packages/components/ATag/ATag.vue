@@ -5,14 +5,14 @@ import { useTag } from './use-tag'
 const props = defineProps(tagProps)
 const emit = defineEmits(tagEmits)
 
-const { disabled, handleClick, handleClose } = useTag(props, emit)
+const { disabled, clickHandler, closeHandler } = useTag(props, emit)
 </script>
 
 <template>
   <div
     v-if="show" class="a-tag-base"
     :class="[`a-${color}`, `a-tag-${size}`, { '!p-0.5 aspect-square': iconOnly }, `a-${variant}`, { 'a-disabled': disabled }, cc]"
-    :style="cs" @click="handleClick"
+    :style="cs" @click="clickHandler"
   >
     <div v-if="icon" class="text-base" :class="icon" />
     <slot v-else name="icon" />
@@ -20,6 +20,6 @@ const { disabled, handleClick, handleClose } = useTag(props, emit)
       {{ label }}
     </div>
     <slot name="label" />
-    <div v-if="closable" class="i-carbon-close" @click.stop="handleClose" />
+    <div v-if="closable" class="i-carbon-close" @click.stop="closeHandler" />
   </div>
 </template>

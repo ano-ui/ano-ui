@@ -7,8 +7,8 @@ export const useNoticeBar = (
   props: NoticeBarProps,
   emit: SetupContext<NoticeBarEmits>['emit'],
 ) => {
-  const handleClose = (evt: MouseEvent) => {
-    emit(CLOSE_EVENT, evt)
+  const handleClose = () => {
+    emit(CLOSE_EVENT)
   }
 
   return {

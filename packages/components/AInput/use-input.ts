@@ -19,14 +19,14 @@ export const useInput = (
       isClick.value = true
   }
 
-  const focusHandler = (evt: FocusEvent) => {
+  const focusHandler = () => {
     if (!props.disabled)
-      emit(FOCUS_EVENT, evt)
+      emit(FOCUS_EVENT)
   }
 
-  const blurHandler = (evt: FocusEvent) => {
+  const blurHandler = () => {
     isClick.value = false
-    emit(BLUR_EVENT, evt)
+    emit(BLUR_EVENT)
   }
 
   const inputHandler = (e: Event) => {

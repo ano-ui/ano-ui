@@ -1,12 +1,11 @@
 export const notifyShortcuts: Record<string, string> = {
-  'a-notify-base': `justify-center gap2 items-center inline-flex py2 px3
-  absolute z-500 a-transition rounded-lg !animate-duration-200
-  dark:bg-op80 dark:text-op80`,
-  'a-notify-position-default': 'top-0 left-0 right-0 rounded-none animate-slide-in-down',
-  'a-notify-position-top': 'top-5 left-5 right-5 animate-slide-in-down',
-  'a-notify-position-top-left': 'top-5 left-5 animate-slide-in-left',
-  'a-notify-position-top-right': 'top-5 right-5 animate-slide-in-right',
-  'a-notify-position-bottom': 'bottom-5 left-5 right-5 animate-slide-in-up mb-safe',
-  'a-notify-position-bottom-left': 'bottom-5 left-5 animate-slide-in-left mb-safe',
-  'a-notify-position-bottom-right': 'bottom-5 right-5 animate-slide-in-right mb-safe',
+  'a-notify-base': 'absolute z-500',
+  'a-notify-position-default': 'top-0 left-0 right-0',
+  'a-notify-position-top': 'top-0 left-5 right-5 pt-5',
+  'a-notify-position-top-left': 'top-5 left-0 pl-5',
+  'a-notify-position-top-right': 'top-5 right-0 pr-5',
+  'a-notify-position-bottom': 'left-5 right-5 mb-safe pb-5',
+  'a-notify-position-bottom-left': 'bottom-5 left-5 mb-safe pl-5',
+  'a-notify-position-bottom-right': 'bottom-5 right-5 mb-safe pr-5',
+  'a-notify-content-base': 'flex justify-center gap2 items-center py2 px3 rounded-lg dark:bg-op80 dark:text-op80 a-transition',
 }

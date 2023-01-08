@@ -9,7 +9,7 @@ export const useButton = (
 ) => {
   const disabled = computed(() => props.disabled || props.loading)
 
-  const handleClick = (evt: MouseEvent) => {
+  const clickHandler = (evt: MouseEvent) => {
     if (disabled.value)
       return
 
@@ -19,6 +19,6 @@ export const useButton = (
   return {
     disabled,
 
-    handleClick,
+    clickHandler,
   }
 }
