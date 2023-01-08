@@ -1,7 +1,7 @@
 import type { SetupContext } from 'vue'
 import { ref } from 'vue'
 import { CLOSE_EVENT } from '../constants'
-import type { NotifyOptions } from './types'
+import type { NotifyOptions, Options } from './types'
 import type { NotifyEmits, NotifyProps } from './notify'
 
 export const useNotify = (
@@ -11,14 +11,11 @@ export const useNotify = (
   const timer = ref()
   const show = ref(false)
 
-  const notifyStatus = ref<NotifyOptions>({
+  const notifyStatus = ref<Options>({
     color: 'primary',
     position: 'default',
-    content: '',
     duration: 3000,
-    showIcon: false,
-    customIcon: false,
-    showClose: false,
+    content: '',
   })
 
   const closeNotify = () => {
@@ -27,17 +24,27 @@ export const useNotify = (
     show.value = false
   }
 
-  const showNotify = (options?: NotifyOptions) => {
-    const { color, position, duration, content, showIcon, customIcon, showClose } = options || {}
+  const showNotify = (options: NotifyOptions = {}) => {
+    const {
+      color = 'primary',
+      position = 'default',
+      duration = 3000,
+      content = '',
+      showIcon = false,
+      customIcon = false,
+      showClose = false,
+    } = options
+
     show.value = true
+
     notifyStatus.value = {
-      color: color || 'primary',
-      position: position || 'default',
-      duration: duration || 3000,
-      content: content || '',
-      showIcon: showIcon || false,
-      customIcon: customIcon || false,
-      showClose: showClose || false,
+      color,
+      position,
+      duration,
+      content,
+      showIcon,
+      customIcon,
+      showClose,
     }
 
     if (timer.value)
