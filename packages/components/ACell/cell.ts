@@ -14,7 +14,7 @@ export const cellProps = {
 }
 
 export const cellEmits = {
-  [CLICK_EVENT]: () => true,
+  [CLICK_EVENT]: (evt: MouseEvent) => evt instanceof Object,
 }
 
 export type CellProps = ExtractPropTypes<typeof cellProps>

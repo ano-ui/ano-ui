@@ -5,7 +5,7 @@ import { useButton } from './use-button'
 const props = defineProps(buttonProps)
 const emit = defineEmits(buttonEmits)
 
-const { disabled, handleClick } = useButton(props, emit)
+const { disabled, clickHandler } = useButton(props, emit)
 </script>
 
 <template>
@@ -13,7 +13,7 @@ const { disabled, handleClick } = useButton(props, emit)
     class="a-button-base"
     :class="[`a-${color}`, { 'w-full': block }, `a-button-${size}`, { 'a-button-icon': iconOnly }, `a-${variant}`, { 'a-disabled': disabled }, cc]"
     :hover-class="disabled ? '' : (variant === 'text' ? 'a-button-text-hover' : 'a-button-hover')" :open-type="openType"
-    :style="cs" @click="handleClick"
+    :style="cs" @click="clickHandler"
   >
     <div v-if="loading" class="i-carbon-circle-dash animate-spin" />
     <div v-else-if="icon" :class="[icon]" />

@@ -11,16 +11,16 @@ export const useCell = (
   const cellGroup = inject(cellGroupKey, undefined)
   const disabled = computed(() => cellGroup?.disabled ?? props.disabled)
 
-  const handleClick = () => {
+  const clickHandler = (evt: MouseEvent) => {
     if (disabled.value)
       return
 
-    emit(CLICK_EVENT)
+    emit(CLICK_EVENT, evt)
   }
 
   return {
     disabled,
 
-    handleClick,
+    clickHandler,
   }
 }

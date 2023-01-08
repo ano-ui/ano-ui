@@ -1,5 +1,6 @@
 import type { ExtractPropTypes } from 'vue'
 import { useBaseProps } from '../composables'
+import { CLICK_EVENT } from '../constants'
 
 export const transitionProps = {
   ...useBaseProps(),
@@ -33,6 +34,7 @@ export const transitionEmits = {
   beforeLeave: () => true,
   leave: () => true,
   afterLeave: () => true,
+  [CLICK_EVENT]: (evt: MouseEvent) => evt instanceof Object,
 }
 
 export type TransitionProps = ExtractPropTypes<typeof transitionProps>
