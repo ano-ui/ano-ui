@@ -27,14 +27,14 @@ export const useDialog = (
     Object.assign(dialogStatus.value, DEFAULT_OPTIONS, options)
   }
 
-  const onConfirm = (evt: MouseEvent) => {
+  const onConfirm = () => {
     show.value = false
-    emit(CONFIRM_EVENT, evt)
+    emit(CONFIRM_EVENT)
   }
 
-  const onCancel = (evt: MouseEvent) => {
+  const onCancel = () => {
     show.value = false
-    emit(CANCEL_EVENT, evt)
+    emit(CANCEL_EVENT)
   }
 
   return {

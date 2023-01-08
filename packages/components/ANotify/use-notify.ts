@@ -48,9 +48,9 @@ export const useNotify = (
     }, notifyStatus.value.duration)
   }
 
-  const handleClose = (evt: MouseEvent) => {
+  const handleClose = () => {
     closeNotify()
-    emit(CLOSE_EVENT, evt)
+    emit(CLOSE_EVENT)
   }
 
   return {

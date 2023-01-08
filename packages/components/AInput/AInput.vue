@@ -10,7 +10,7 @@ const { disabled, modelValue, isClick, showPasswordText, focus, focusHandler, cl
 
 <template>
   <div
-    class="a-input-base a-input-border a-bg-base-second w-full a-color-base"
+    class="a-input-base a-input-border a-bg-base-second a-color-base"
     :class="[`a-${color}`, `a-input-${size}`, { 'a-disabled': disabled }, isClick ? 'border-context' : '', cc]"
     :style="cs"
   >

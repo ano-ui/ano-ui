@@ -23,9 +23,9 @@ export const inputProps = {
 
 export const inputEmits = {
   [UPDATE_MODEL_EVENT]: (value: string) => isString(value),
-  [CLICK_EVENT]: (evt: MouseEvent) => evt instanceof MouseEvent,
-  [FOCUS_EVENT]: (evt: FocusEvent) => evt instanceof FocusEvent,
-  [BLUR_EVENT]: (evt: FocusEvent) => evt instanceof FocusEvent,
+  [CLICK_EVENT]: () => true,
+  [FOCUS_EVENT]: () => true,
+  [BLUR_EVENT]: () => true,
   [INPUT_EVENT]: (value: string) => isString(value),
   [CHANGE_EVENT]: (value: string) => isString(value),
   [CLEAR_EVENT]: () => true,

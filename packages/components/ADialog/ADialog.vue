@@ -1,6 +1,7 @@
 <script setup lang='ts'>
 import AButton from '../AButton/AButton.vue'
 import AOverlay from '../AOverlay/AOverlay.vue'
+import APopup from '../APopup/APopup.vue'
 import { dialogEmits, dialogProps } from './dialog'
 import { useDialog } from './use-dialog'
 import type { DialogOptions } from './types'
@@ -15,7 +16,31 @@ defineExpose({ show: handleShowDialog })
 </script>
 
 <template>
-  <AOverlay v-model:show="showValue">
+  <APopup v-model:show="showValue" cc="w-80% rounded-lg">
+    <div class="a-dialog-base" :class="[cc]" :style="cs">
+      <div class="p6">
+        <div v-if="dialogStatus?.title" class="pb2 text-xl">
+          {{ dialogStatus.title }}
+        </div>
+        <div v-if="dialogStatus?.message" class="text-darkText">
+          {{ dialogStatus.message }}
+        </div>
+      </div>
+      <div class="a-dialog-action-base">
+        <template v-if="dialogStatus?.showCancelButton">
+          <AButton class="flex-1" color="danger" variant="text" @click.stop="onCancel">
+            {{ dialogStatus.cancelButtonText || 'Cancel' }}
+          </AButton>
+        </template>
+        <template v-if="dialogStatus?.showConfirmButton">
+          <AButton class="flex-1" variant="text" @click.stop="onConfirm">
+            {{ dialogStatus.confirmButtonText || 'Confirm' }}
+          </AButton>
+        </template>
+      </div>
+    </div>
+  </APopup>
+  <!-- <AOverlay v-model:show="showValue">
     <div class="h-full flex justify-center items-center">
       <div class="a-dialog-base" :class="[cc]" :style="cs">
         <div class="p6">
@@ -40,7 +65,7 @@ defineExpose({ show: handleShowDialog })
         </div>
       </div>
     </div>
-  </AOverlay>
+  </AOverlay> -->
 </template>
 
 <style scoped></style>

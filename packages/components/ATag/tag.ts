@@ -18,8 +18,8 @@ export const tagProps = {
 }
 
 export const tagEmits = {
-  [CLICK_EVENT]: (evt: MouseEvent) => evt instanceof MouseEvent,
-  [CLOSE_EVENT]: (evt: MouseEvent) => evt instanceof MouseEvent,
+  [CLICK_EVENT]: () => true,
+  [CLOSE_EVENT]: () => true,
 }
 
 export type TagProps = ExtractPropTypes<typeof tagProps>

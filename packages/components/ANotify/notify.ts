@@ -9,7 +9,7 @@ export const notifyProps = {
 }
 
 export const notifyEmits = {
-  [CLOSE_EVENT]: (evt: MouseEvent) => evt instanceof MouseEvent,
+  [CLOSE_EVENT]: () => true,
 }
 
 export type NotifyProps = ExtractPropTypes<typeof notifyProps>

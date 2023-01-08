@@ -15,7 +15,7 @@ export const noticeBarProps = {
 }
 
 export const noticeBarEmits = {
-  [CLOSE_EVENT]: (evt: MouseEvent) => evt instanceof MouseEvent,
+  [CLOSE_EVENT]: () => true,
 }
 
 export type NoticeBarProps = ExtractPropTypes<typeof noticeBarProps>
