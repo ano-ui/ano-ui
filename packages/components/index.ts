@@ -3,6 +3,7 @@ export * from './AButton'
 export * from './ACell'
 export * from './APopup'
 export * from './ATag'
+export * from './AToast'
 
 // Form
 export * from './ACheckbox'
