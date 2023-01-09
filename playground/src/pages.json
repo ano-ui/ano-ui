@@ -27,6 +27,10 @@
       "style": { "navigationBarTitleText": "Tag 标签" }
     },
     {
+      "path": "pages/basic/toast/toast",
+      "style": { "navigationBarTitleText": "Toast 轻提示" }
+    },
+    {
       "path": "pages/basic/transition/transition",
       "style": { "navigationBarTitleText": "Transition 过渡" }
     },

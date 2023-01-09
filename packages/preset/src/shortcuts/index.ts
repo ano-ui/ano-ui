@@ -8,6 +8,7 @@ import { cellShortcuts } from './cell'
 import { cellGroupShortcuts } from './cellGroup'
 import { popupShortcuts } from './popup'
 import { tagShortcuts } from './tag'
+import { toastShortcuts } from './toast'
 import { transitionShortcuts } from './transition'
 
 // form
@@ -31,6 +32,7 @@ export default [
   cellGroupShortcuts,
   popupShortcuts,
   tagShortcuts,
+  toastShortcuts,
   transitionShortcuts,
 
   checkboxShortcuts,
