@@ -25,11 +25,12 @@ const animationName = {
 <template>
   <ATransition
     :show="show" :name="animationName[notifyStatus.position]" :duration="300"
-    :cc="['a-notify-base', `a-notify-position-${notifyStatus.position}`, cc]" :cs="cs"
+    :cc="['a-notify-base', `a-notify-position-${notifyStatus.position}`]"
   >
     <div
       class="a-notify-content-base"
-      :class="[`a-${notifyStatus.color}`, `a-${variant}`, { 'rounded-none': notifyStatus.position === 'default' }, { 'justify-start': notifyStatus.showIcon }]"
+      :class="[`a-${notifyStatus.color}`, `a-${variant}`, { 'rounded-none': notifyStatus.position === 'default' }, { 'justify-start': notifyStatus.showIcon }, cc]"
+      :style="cs"
     >
       <template v-if="notifyStatus.customIcon">
         <slot name="icon" />
