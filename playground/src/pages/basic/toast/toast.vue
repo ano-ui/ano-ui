@@ -26,13 +26,13 @@ const showToast = (options: ToastOptions) => {
         Position
       </div>
       <div p-2 flex="~ gap2 wrap">
-        <AButton color="primary" @click="showToast({ position: 'default', message: 'Default' })">
+        <AButton type="primary" @click="showToast({ position: 'default', message: 'Default' })">
           Default
         </AButton>
-        <AButton color="success" @click="showToast({ position: 'top', message: 'Top' })">
+        <AButton type="success" @click="showToast({ position: 'top', message: 'Top' })">
           Top
         </AButton>
-        <AButton color="info" @click="showToast({ position: 'bottom', message: 'Bottom' })">
+        <AButton type="info" @click="showToast({ position: 'bottom', message: 'Bottom' })">
           Bottom
         </AButton>
       </div>

@@ -12,7 +12,7 @@ const { disabled, size, isChecked, toggle } = useCheckbox(props, emit)
   <div class="a-checkbox-base" :class="[`a-checkbox-${size}`, cc]" :style="cs">
     <div
       class="a-checkbox-checkbox-base"
-      :class="[`a-checkbox-checkbox-${size}`, `a-${variant}`, isChecked ? `a-${color}` : '', { 'a-disabled': disabled }, ccc]"
+      :class="[`a-checkbox-checkbox-${size}`, `a-${variant}`, isChecked ? `a-${type}` : '', { 'a-disabled': disabled }, ccc]"
       :style="ccs" @click="toggle"
     >
       <div class="a-checkbox-checkbox-icon">

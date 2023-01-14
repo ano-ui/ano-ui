@@ -12,7 +12,7 @@ const { disabled, size, isChecked, toggle } = useRadio(props, emit)
   <div class="a-radio-base" :class="[`a-radio-${size}`, cc]" :style="cs">
     <div
       class="a-radio-radio-base"
-      :class="[`a-radio-radio-${size}`, `a-${variant}`, isChecked ? `a-${color}` : '', { 'a-disabled': disabled }, ccc]"
+      :class="[`a-radio-radio-${size}`, `a-${variant}`, isChecked ? `a-${type}` : '', { 'a-disabled': disabled }, ccc]"
       :style="ccs" @click="toggle"
     >
       <div class="a-radio-radio-icon">

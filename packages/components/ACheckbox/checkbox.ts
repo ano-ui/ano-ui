@@ -1,12 +1,16 @@
 import type { ExtractPropTypes } from 'vue'
-import { SizeProp, VariantProp, useBaseProps } from '../composables'
+import { CustomClassProp, CustomStyleProp, SizeProp, TypeProp, VariantProp } from '../composables'
 import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '../constants'
 import { isBoolean, isNumber, isString } from '../utils'
 
 export type CheckboxValueType = string | number | boolean
 
 export const checkboxProps = {
-  ...useBaseProps(),
+  cc: CustomClassProp,
+  ccc: CustomClassProp,
+  cs: CustomStyleProp,
+  ccs: CustomStyleProp,
+  type: TypeProp,
   size: SizeProp,
   variant: VariantProp,
   disabled: Boolean,

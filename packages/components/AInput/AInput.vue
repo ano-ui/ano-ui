@@ -11,7 +11,7 @@ const { disabled, modelValue, isClick, showPasswordText, focus, focusHandler, cl
 <template>
   <div
     class="a-input-base a-input-border a-bg-base-second a-color-base"
-    :class="[`a-${color}`, `a-input-${size}`, { 'a-disabled': disabled }, isClick ? 'border-context' : '', cc]"
+    :class="[`a-input-${size}`, { 'a-disabled': disabled }, isClick ? 'border-context' : '', cc]"
     :style="cs"
   >
     <div v-if="icon" :class="icon" />

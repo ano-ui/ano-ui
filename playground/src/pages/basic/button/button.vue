@@ -23,16 +23,16 @@ const getInfo = () => {
         <AButton>
           Primary
         </AButton>
-        <AButton color="success" @click="handleSuccess">
+        <AButton type="success" @click="handleSuccess">
           Success
         </AButton>
-        <AButton color="info">
+        <AButton type="info">
           Info
         </AButton>
-        <AButton color="warning">
+        <AButton type="warning">
           Warning
         </AButton>
-        <AButton color="danger">
+        <AButton type="danger">
           Danger
         </AButton>
       </div>
@@ -40,19 +40,19 @@ const getInfo = () => {
         Size
       </div>
       <div p-2 flex="~ gap2 wrap" items-center>
-        <AButton color="primary" size="xs">
+        <AButton type="primary" size="xs">
           Extra Mini
         </AButton>
-        <AButton color="success" size="sm">
+        <AButton type="success" size="sm">
           Mini
         </AButton>
-        <AButton color="info" size="md">
+        <AButton type="info" size="md">
           Small
         </AButton>
-        <AButton color="warning" size="lg">
+        <AButton type="warning" size="lg">
           Medium
         </AButton>
-        <AButton color="danger" size="xl">
+        <AButton type="danger" size="xl">
           Large
         </AButton>
       </div>
@@ -63,16 +63,16 @@ const getInfo = () => {
         <AButton variant="solid">
           Solid
         </AButton>
-        <AButton color="success" variant="outline">
+        <AButton type="success" variant="outline">
           Outline
         </AButton>
-        <AButton color="info" variant="ghost">
+        <AButton type="info" variant="ghost">
           Ghost
         </AButton>
-        <AButton color="warning" variant="light">
+        <AButton type="warning" variant="light">
           Light
         </AButton>
-        <AButton color="danger" variant="text">
+        <AButton type="danger" variant="text">
           Text
         </AButton>
       </div>
@@ -83,7 +83,7 @@ const getInfo = () => {
         <AButton loading>
           Loading
         </AButton>
-        <AButton color="success" disabled>
+        <AButton type="success" disabled>
           Disabled
         </AButton>
       </div>
@@ -92,15 +92,15 @@ const getInfo = () => {
       </div>
       <div p-2 flex="~ gap2 wrap" items-center>
         <AButton icon="i-carbon-palm-tree" icon-only />
-        <AButton color="success" icon-only cc="rounded-full">
+        <AButton type="success" icon-only cc="rounded-full">
           <template #icon>
             <div class="i-carbon-sprout" />
           </template>
         </AButton>
-        <AButton color="info" cc="rounded-full">
+        <AButton type="info" cc="rounded-full">
           Rounded
         </AButton>
-        <AButton color="warning">
+        <AButton type="warning">
           <template #icon>
             <div class="i-carbon-send-alt" />
           </template>
@@ -111,7 +111,7 @@ const getInfo = () => {
         </AButton>
       </div>
       <div p-2>
-        <AButton color="danger" block>
+        <AButton type="danger" block>
           Block
         </AButton>
         <AButton size="lg" mt2 block :cc="['bg-gradient-to-r', 'from-indigo-500', 'to-pink-500', 'border-none']">

@@ -11,30 +11,30 @@ const show = ref(true)
       </div>
       <div p-2 flex="~ gap2 wrap">
         <ATag label="Primary" />
-        <ATag label="Success" color="success" />
-        <ATag label="Info" color="info" />
-        <ATag label="Warning" color="warning" />
-        <ATag label="Danger" color="danger" />
+        <ATag label="Success" type="success" />
+        <ATag label="Info" type="info" />
+        <ATag label="Warning" type="warning" />
+        <ATag label="Danger" type="danger" />
       </div>
       <div class="p-2">
         Size
       </div>
       <div p-2 flex="~ gap2 wrap" items-center>
-        <ATag label="Extra Mini" color="primary" size="xs" />
-        <ATag label="Mini" color="success" size="sm" />
-        <ATag label="Small" color="info" size="md" />
-        <ATag label="Medium" color="warning" size="lg" />
-        <ATag label="Large" color="danger" size="xl" />
+        <ATag label="Extra Mini" type="primary" size="xs" />
+        <ATag label="Mini" type="success" size="sm" />
+        <ATag label="Small" type="info" size="md" />
+        <ATag label="Medium" type="warning" size="lg" />
+        <ATag label="Large" type="danger" size="xl" />
       </div>
       <div class="p-2">
         Variant
       </div>
       <div p-2 flex="~ gap2 wrap" items-center>
         <ATag label="Solid" variant="solid" />
-        <ATag label="Outline" color="success" variant="outline" />
-        <ATag label="Ghost" color="info" variant="ghost" />
-        <ATag label="Light" color="warning" variant="light" />
-        <ATag label="Text" color="danger" variant="text" />
+        <ATag label="Outline" type="success" variant="outline" />
+        <ATag label="Ghost" type="info" variant="ghost" />
+        <ATag label="Light" type="warning" variant="light" />
+        <ATag label="Text" type="danger" variant="text" />
       </div>
       <div class="p-2">
         Status
@@ -42,20 +42,20 @@ const show = ref(true)
       <div p-2 flex="~ gap2 wrap" items-center>
         <!-- TODO: close will remain an <a-tag> but 0x0 -->
         <ATag label="Closable" closable :show="show" @close="show = !show" />
-        <ATag label="Disabled" color="success" disabled />
+        <ATag label="Disabled" type="success" disabled />
       </div>
       <div class="p-2">
         Custom
       </div>
       <div p-2 flex="~ gap2 wrap" items-center>
         <ATag icon="i-carbon-palm-tree" icon-only />
-        <ATag color="success" icon-only cc="rounded-full">
+        <ATag type="success" icon-only cc="rounded-full">
           <template #icon>
             <div class="i-carbon-sprout" />
           </template>
         </ATag>
-        <ATag label="Rounded" color="info" variant="ghost" cc="rounded-full" />
-        <ATag label="Send" color="warning">
+        <ATag label="Rounded" type="info" variant="ghost" cc="rounded-full" />
+        <ATag label="Send" type="warning">
           <template #icon>
             <div class="i-carbon-send-alt" />
           </template>

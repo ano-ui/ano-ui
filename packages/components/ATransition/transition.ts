@@ -1,9 +1,10 @@
 import type { ExtractPropTypes } from 'vue'
-import { useBaseProps } from '../composables'
+import { CustomClassProp, CustomStyleProp } from '../composables'
 import { CLICK_EVENT } from '../constants'
 
 export const transitionProps = {
-  ...useBaseProps(),
+  cc: CustomClassProp,
+  cs: CustomStyleProp,
   name: String,
   mode: String,
   show: Boolean,

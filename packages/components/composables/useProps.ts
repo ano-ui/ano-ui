@@ -37,10 +37,10 @@ export const CustomStyleProp = {
   default: '',
 }
 
-export type ColorType = 'primary' | 'success' | 'info' | 'warning' | 'danger'
+export type Type = 'primary' | 'success' | 'info' | 'warning' | 'danger'
 
-export const ColorProp = {
-  type: String as PropType<ColorType>,
+export const TypeProp = {
+  type: String as PropType<Type>,
   validator: (value: string) =>
     ['primary', 'success', 'info', 'warning', 'danger'].includes(value),
   default: 'primary',
@@ -76,11 +76,4 @@ export const PositionProp = {
   validator: (value: string) =>
     ['top', 'bottom', 'left', 'right', 'center'].includes(value),
   default: 'center',
-}
-
-export type InputType = 'text' | 'number' | 'digit' | 'password' | 'textarea'
-
-export const InputTypeProp = {
-  type: String as PropType<InputType>,
-  default: 'text',
 }
