@@ -23,10 +23,6 @@
       "style": { "navigationBarTitleText": "Popup 弹出层" }
     },
     {
-      "path": "pages/basic/tag/tag",
-      "style": { "navigationBarTitleText": "Tag 标签" }
-    },
-    {
       "path": "pages/basic/toast/toast",
       "style": { "navigationBarTitleText": "Toast 轻提示" }
     },
@@ -61,12 +57,16 @@
       "style": { "navigationBarTitleText": "Notify 消息通知" }
     },
     {
-      "path": "pages/action/notice-bar/notice-bar",
+      "path": "pages/action/overlay/overlay",
+      "style": { "navigationBarTitleText": "Overlay 遮罩层" }
+    },
+    {
+      "path": "pages/display/notice-bar/notice-bar",
       "style": { "navigationBarTitleText": "Notice Bar 通知栏" }
     },
     {
-      "path": "pages/action/overlay/overlay",
-      "style": { "navigationBarTitleText": "Overlay 遮罩层" }
+      "path": "pages/display/tag/tag",
+      "style": { "navigationBarTitleText": "Tag 标签" }
     }
   ],
   "easycom": {

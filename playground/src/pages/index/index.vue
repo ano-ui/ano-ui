@@ -16,6 +16,12 @@ const goAction = (path: string) => {
     url: `/pages/action/${path}/${path}`,
   })
 }
+
+const goDisplay = (path: string) => {
+  uni.navigateTo({
+    url: `/pages/display/${path}/${path}`,
+  })
+}
 </script>
 
 <template>
@@ -35,7 +41,6 @@ const goAction = (path: string) => {
         <ACell title="Button 按钮" arrow @click="goBasic('button')" />
         <ACell title="Cell 单元格" arrow @click="goBasic('cell')" />
         <ACell title="Popup 弹出层" arrow @click="goBasic('popup')" />
-        <ACell title="Tag 标签" arrow @click="goBasic('tag')" />
         <ACell title="Toast 轻提示" arrow @click="goBasic('toast')" />
         <ACell title="Transition 过渡" arrow @click="goBasic('transition')" />
       </ACellGroup>
@@ -54,8 +59,14 @@ const goAction = (path: string) => {
       <ACellGroup>
         <ACell title="Dialog 弹出框" arrow @click="goAction('dialog')" />
         <ACell title="Notify 消息通知" arrow @click="goAction('notify')" />
-        <ACell title="NoticeBar 消息栏" arrow @click="goAction('notice-bar')" />
         <ACell title="Overlay 遮罩层" arrow @click="goAction('overlay')" />
+      </ACellGroup>
+      <div class="px2 py4">
+        Display 展示组件
+      </div>
+      <ACellGroup>
+        <ACell title="NoticeBar 消息栏" arrow @click="goDisplay('notice-bar')" />
+        <ACell title="Tag 标签" arrow @click="goDisplay('tag')" />
       </ACellGroup>
     </div>
   </UBasePage>
