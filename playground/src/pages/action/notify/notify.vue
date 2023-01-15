@@ -34,13 +34,13 @@ const topStyle = computed(() => {
   <UBasePage>
     <div class="p-2 pb-safe">
       <ANotify ref="notify" :cs="topStyle" />
-      <ANotify ref="notify2">
+      <ANotify ref="notify2" :cs="topStyle">
         <template #icon>
           <div class="i-carbon-send-alt-filled" />
         </template>
         Slot
       </ANotify>
-      <ANotify ref="notify3" ccc="bg-gradient-to-r from-indigo-500 to-pink-500" />
+      <ANotify ref="notify3" :cs="topStyle" ccc="bg-gradient-to-r from-indigo-500 to-pink-500" />
 
       <div class="p-2">
         Notify
