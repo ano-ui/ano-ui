@@ -33,9 +33,7 @@
             </AButton>
           </template>
           <template #label>
-            <ATag size="sm" variant="ghost">
-              Label
-            </ATag>
+            <ATag size="sm" variant="ghost" label="Label" />
           </template>
         </ACell>
       </div>

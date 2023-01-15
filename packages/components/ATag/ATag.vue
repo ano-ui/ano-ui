@@ -11,12 +11,15 @@ const { disabled, clickHandler, closeHandler } = useTag(props, emit)
 <template>
   <div
     v-if="show" class="a-tag-base"
-    :class="[`a-${type}`, `a-tag-${size}`, { '!p-1 aspect-square': iconOnly }, `a-${variant}`, { 'a-disabled': disabled }, cc]"
+    :class="[`a-${type}`, `a-tag-${size}`, { '!p-0.5 aspect-square': iconOnly }, `a-${variant}`, { 'a-disabled': disabled }, cc]"
     :style="cs" @click="clickHandler"
   >
     <div v-if="icon" class="text-base" :class="icon" />
     <slot v-else name="icon" />
-    <slot />
+    <div v-if="label">
+      {{ label }}
+    </div>
+    <slot name="label" />
     <div v-if="closable" class="i-carbon-close" @click.stop="closeHandler" />
   </div>
 </template>
