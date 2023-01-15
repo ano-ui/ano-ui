@@ -23,18 +23,18 @@ const { disabled, clickHandler } = useCell(props, emit)
         <slot v-else name="title" />
       </div>
       <div class="flex-1 text-right text-darkText text-sm">
-        <div v-if="content">
-          {{ content }}
+        <div v-if="value">
+          {{ value }}
         </div>
-        <slot v-else name="content" />
+        <slot v-else name="value" />
       </div>
       <div v-if="arrow" class="i-carbon-chevron-right" />
       <slot name="right" />
     </div>
-    <div v-if="description" class="text-darkText text-sm">
-      {{ description }}
+    <div v-if="label" class="text-darkText text-sm">
+      {{ label }}
     </div>
 
-    <slot v-else name="description" />
+    <slot v-else name="label" />
   </div>
 </template>

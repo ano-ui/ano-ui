@@ -8,32 +8,32 @@
         Basic
       </div>
       <div p-2 flex="~ col gap2">
-        <ACell title="Title" content="Content" />
-        <ACell icon="i-carbon-palm-tree" title="Title" content="Content" description="Description" />
+        <ACell title="Title" value="Value" />
+        <ACell icon="i-carbon-palm-tree" title="Title" value="Value" label="Label" />
       </div>
       <div class="p-2">
         Status
       </div>
       <div p-2 flex="~ col gap2">
-        <ACell title="Title" content="Content" disabled />
+        <ACell title="Title" value="Value" disabled />
       </div>
       <div class="p-2">
         Custom
       </div>
       <div p-2 flex="~ col gap2">
-        <ACell title="Title" content="Content" cc="rounded-none" />
-        <ACell icon="i-carbon-palm-tree" title="Title" content="Content" description="Description" arrow />
+        <ACell title="Title" value="Value" cc="rounded-none" />
+        <ACell icon="i-carbon-palm-tree" title="Title" value="Value" label="Label" arrow />
         <ACell title="Custom">
           <template #icon>
             <i class="i-carbon-send-alt" />
           </template>
-          <template #content>
+          <template #value>
             <AButton size="xs">
-              Content
+              Value
             </AButton>
           </template>
-          <template #description>
-            <ATag variant="ghost" label="Description" />
+          <template #label>
+            <ATag size="sm" variant="ghost" label="Label" />
           </template>
         </ACell>
       </div>
@@ -42,9 +42,9 @@
       </div>
       <div p-2>
         <ACellGroup>
-          <ACell title="Title" content="Content" />
-          <ACell title="Title" content="Content" />
-          <ACell title="Title" content="Content" />
+          <ACell title="Title" value="Value" />
+          <ACell title="Title" value="Value" />
+          <ACell title="Title" value="Value" />
         </ACellGroup>
       </div>
       <div class="p-2">
@@ -52,9 +52,9 @@
       </div>
       <div p-2>
         <ACellGroup divider :card="false">
-          <ACell title="Title" content="Content" />
-          <ACell title="Title" content="Content" />
-          <ACell title="Title" content="Content" />
+          <ACell title="Title" value="Value" />
+          <ACell title="Title" value="Value" />
+          <ACell title="Title" value="Value" />
         </ACellGroup>
       </div>
     </div>
