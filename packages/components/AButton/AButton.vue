@@ -11,7 +11,7 @@ const { disabled, clickHandler } = useButton(props, emit)
 <template>
   <button
     class="a-button-base"
-    :class="[`a-${color}`, { 'w-full': block }, `a-button-${size}`, { 'a-button-icon': iconOnly }, `a-${variant}`, { 'a-disabled': disabled }, cc]"
+    :class="[`a-${type}`, { 'w-full': block }, `a-button-${size}`, { 'a-button-icon': iconOnly }, `a-${variant}`, { 'a-disabled': disabled }, cc]"
     :hover-class="disabled ? '' : (variant === 'text' ? 'a-button-text-hover' : 'a-button-hover')" :open-type="openType"
     :style="cs" @click="clickHandler"
   >

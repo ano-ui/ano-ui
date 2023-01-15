@@ -15,37 +15,37 @@ const groupChecked = ref('a')
       </div>
       <div p-2 flex="~ gap2 wrap" items-center>
         <ARadio v-model="checked" />
-        <ARadio v-model="checked" color="success" />
-        <ARadio v-model="checked" color="info" />
-        <ARadio v-model="checked" color="warning" />
-        <ARadio v-model="checked" color="danger" />
+        <ARadio v-model="checked" type="success" />
+        <ARadio v-model="checked" type="info" />
+        <ARadio v-model="checked" type="warning" />
+        <ARadio v-model="checked" type="danger" />
       </div>
 
       <div class="p-2">
         Size
       </div>
       <div p-2 flex="~ gap2 wrap" items-center>
-        <ARadio v-model="checked" color="primary" size="xs" label="Extra Mini" />
-        <ARadio v-model="checked" color="success" size="sm" label="Mini" />
-        <ARadio v-model="checked" color="info" size="md" label="Small" />
-        <ARadio v-model="checked" color="warning" size="lg" label="Medium" />
-        <ARadio v-model="checked" color="danger" size="xl" label="Large" />
+        <ARadio v-model="checked" type="primary" size="xs" label="Extra Mini" />
+        <ARadio v-model="checked" type="success" size="sm" label="Mini" />
+        <ARadio v-model="checked" type="info" size="md" label="Small" />
+        <ARadio v-model="checked" type="warning" size="lg" label="Medium" />
+        <ARadio v-model="checked" type="danger" size="xl" label="Large" />
       </div>
       <div class="p-2">
         Variant
       </div>
       <div p-2 flex="~ gap2 wrap" items-center>
         <ARadio v-model="checked" variant="solid" />
-        <ARadio v-model="checked" color="success" variant="outline" />
-        <ARadio v-model="checked" color="info" variant="ghost" />
-        <ARadio v-model="checked" color="warning" variant="light" />
-        <ARadio v-model="checked" color="danger" variant="text" />
+        <ARadio v-model="checked" type="success" variant="outline" />
+        <ARadio v-model="checked" type="info" variant="ghost" />
+        <ARadio v-model="checked" type="warning" variant="light" />
+        <ARadio v-model="checked" type="danger" variant="text" />
       </div>
       <div class="p-2">
         Status
       </div>
       <div p-2 flex="~ gap2 wrap" items-center>
-        <ARadio v-model="statusChecked2" color="success" disabled />
+        <ARadio v-model="statusChecked2" type="success" disabled />
       </div>
       <div class="p-2">
         Custom
@@ -58,9 +58,7 @@ const groupChecked = ref('a')
           </template>
         </ARadio>
         <ARadio v-model="checked3">
-          <template #label>
-            <div class="i-carbon-send-alt" />
-          </template>
+          <div class="i-carbon-send-alt" />
         </ARadio>
       </div>
       <div class="p-2">

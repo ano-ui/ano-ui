@@ -1,17 +1,17 @@
 import type { ExtractPropTypes } from 'vue'
 import type { CheckboxValueType } from '../ACheckbox/checkbox'
-import { CustomClassProp, CustomStyleProp, SizeProp } from '../composables'
+import { useCustomClassProp, useCustomStyleProp, useSizeProp } from '../composables'
 import { UPDATE_MODEL_EVENT } from '../constants'
 import { isArray } from '../utils'
 
 export const checkboxGroupProps = {
-  cc: CustomClassProp,
-  cs: CustomStyleProp,
+  cc: useCustomClassProp,
+  cs: useCustomStyleProp,
   modelValue: {
     type: Array<CheckboxValueType>,
     default: () => [],
   },
-  size: SizeProp,
+  size: useSizeProp,
   min: {
     type: Number,
     default: -1,

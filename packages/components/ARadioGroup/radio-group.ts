@@ -1,15 +1,15 @@
 import type { ExtractPropTypes } from 'vue'
 import { radioEmits } from '../ARadio/radio'
-import { CustomClassProp, CustomStyleProp, SizeProp } from '../composables'
+import { useCustomClassProp, useCustomStyleProp, useSizeProp } from '../composables'
 
 export const radioGroupProps = {
-  cc: CustomClassProp,
-  cs: CustomStyleProp,
+  cc: useCustomClassProp,
+  cs: useCustomStyleProp,
   modelValue: {
     type: [String, Number, Boolean],
     default: '',
   },
-  size: SizeProp,
+  size: useSizeProp,
   min: {
     type: Number,
     default: -1,

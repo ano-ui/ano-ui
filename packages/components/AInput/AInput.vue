@@ -5,13 +5,16 @@ import { useInput } from './use-input'
 const props = defineProps(inputProps)
 const emit = defineEmits(inputEmits)
 
-const { disabled, modelValue, isClick, showPasswordText, focus, focusHandler, clickHandler, blurHandler, inputHandler, clearHandler } = useInput(props, emit)
+const {
+  disabled, modelValue, placeholderText, isClick, showPasswordText, focus,
+  focusHandler, clickHandler, blurHandler, inputHandler, clearHandler,
+} = useInput(props, emit)
 </script>
 
 <template>
   <div
     class="a-input-base a-input-border a-bg-base-second a-color-base"
-    :class="[`a-${color}`, `a-input-${size}`, { 'a-disabled': disabled }, isClick ? 'border-context' : '', cc]"
+    :class="[`a-input-${size}`, { 'a-disabled': disabled }, isClick ? 'border-context' : '', cc]"
     :style="cs"
   >
     <div v-if="icon" :class="icon" />
@@ -19,13 +22,13 @@ const { disabled, modelValue, isClick, showPasswordText, focus, focusHandler, cl
     <slot name="prefix" />
     <input
       v-if="type !== 'textarea'" class="a-input-content-base" :type="type !== 'password' ? type : 'text'"
-      :class="[ccc]" :style="ccs" :value="modelValue" :placeholder="placeholder" :maxlength="maxlength" :focus="focus"
+      :class="[ccc]" :style="ccs" :value="modelValue" :placeholder="placeholderText" :maxlength="maxlength" :focus="focus"
       :disabled="disabled" :password="type === 'password' ? !showPasswordText : false"
       placeholder-style="color: #d1d5db" @click="clickHandler" @blur="blurHandler" @input="inputHandler" @focus="focusHandler"
     >
     <textarea
       v-else class="a-input-content-base h-12" :class="[ccc]" :style="ccs" :value="modelValue"
-      :placeholder="placeholder" :maxlength="maxlength" :focus="focus" :disabled="disabled"
+      :placeholder="placeholderText" :maxlength="maxlength" :focus="focus" :disabled="disabled"
       placeholder-style="color: #d1d5db" @click="clickHandler" @blur="blurHandler" @input="inputHandler" @focus="focusHandler"
     />
     <div v-if="showClear && modelValue" class="i-carbon-close-filled" @click="clearHandler" />

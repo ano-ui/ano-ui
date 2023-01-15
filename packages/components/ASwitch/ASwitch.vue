@@ -12,7 +12,7 @@ const { disabled, isChecked, toggle } = useSwitch(props, emit)
 <template>
   <div
     class="a-switch-base"
-    :class="[`a-switch-${size}`, `a-${variant}`, isChecked ? `a-${color}` : '', { 'a-disabled': disabled }, cc]"
+    :class="[`a-switch-${size}`, `a-${variant}`, isChecked ? `a-${type}` : '', { 'a-disabled': disabled }, cc]"
     :style="cs" @click="toggle"
   >
     <div

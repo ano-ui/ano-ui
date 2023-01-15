@@ -1,12 +1,22 @@
-import type { ExtractPropTypes } from 'vue'
-import { InputTypeProp, SizeProp, useBaseProps } from '../composables'
+import type { ExtractPropTypes, PropType } from 'vue'
+import { useCustomClassProp, useCustomStyleProp, useSizeProp } from '../composables'
 import { BLUR_EVENT, CHANGE_EVENT, CLEAR_EVENT, CLICK_EVENT, FOCUS_EVENT, INPUT_EVENT, UPDATE_MODEL_EVENT } from '../constants'
 import { isString } from '../utils'
 
+export type InputType = 'text' | 'number' | 'digit' | 'password' | 'textarea'
+
+export const InputTypeProp = {
+  type: String as PropType<InputType>,
+  default: 'text',
+}
+
 export const inputProps = {
-  ...useBaseProps(),
+  cc: useCustomClassProp,
+  ccc: useCustomClassProp,
+  cs: useCustomStyleProp,
+  ccs: useCustomStyleProp,
   type: InputTypeProp,
-  size: SizeProp,
+  size: useSizeProp,
   disabled: Boolean,
   focus: Boolean,
   icon: String,

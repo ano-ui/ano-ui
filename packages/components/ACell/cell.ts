@@ -1,13 +1,13 @@
 import type { ExtractPropTypes } from 'vue'
-import { CustomClassProp, CustomStyleProp } from '../composables'
+import { useCustomClassProp, useCustomStyleProp } from '../composables'
 import { CLICK_EVENT } from '../constants'
 
 export const cellProps = {
-  cc: CustomClassProp,
-  cs: CustomStyleProp,
+  cc: useCustomClassProp,
+  cs: useCustomStyleProp,
   title: String,
-  content: String,
-  description: String,
+  value: String,
+  label: String,
   disabled: Boolean,
   icon: String,
   arrow: Boolean,

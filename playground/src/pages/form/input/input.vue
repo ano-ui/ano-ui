@@ -17,10 +17,10 @@ watch(pwd, (val) => {
       </div>
       <div p-2 flex="~ col gap2">
         <AInput placeholder="Text" />
-        <AInput type="number" color="success" placeholder="Number" />
-        <AInput type="digit" color="info" placeholder="Digit" />
-        <AInput v-model="pwd" type="password" color="warning" placeholder="Password" />
-        <AInput type="textarea" color="danger" show-clear placeholder="Textarea" />
+        <AInput type="number" placeholder="Number" />
+        <AInput type="digit" placeholder="Digit" />
+        <AInput v-model="pwd" type="password" placeholder="Password" />
+        <AInput type="textarea" show-clear placeholder="Textarea" />
       </div>
 
       <div class="p-2">

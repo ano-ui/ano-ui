@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { BooleanProp, BooleanTrueProp, StringProp, VariantProp, useBaseProps } from '../composables'
 import { noticeBarEmits, noticeBarProps } from './notice-bar'
 import { useNoticeBar } from './use-notice-bar'
 
@@ -10,7 +9,7 @@ const { handleClose } = useNoticeBar(props, emit)
 </script>
 
 <template>
-  <div v-if="show" class="a-notice-bar-base" :class="[`a-${color}`, `a-${variant}`, cc]" :style="cs">
+  <div v-if="show" class="a-notice-bar-base" :class="[`a-${type}`, `a-${variant}`, cc]" :style="cs">
     <div class="i-carbon-notification-filled" />
     <div v-if="icon" :class="icon" />
     <slot v-else name="icon" />

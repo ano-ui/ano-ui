@@ -16,37 +16,37 @@ const groupChecked2 = ref(['a', 'b'])
       </div>
       <div p-2 flex="~ gap2 wrap" items-center>
         <ACheckbox v-model="checked" />
-        <ACheckbox v-model="checked" color="success" />
-        <ACheckbox v-model="checked" color="info" />
-        <ACheckbox v-model="checked" color="warning" />
-        <ACheckbox v-model="checked" color="danger" />
+        <ACheckbox v-model="checked" type="success" />
+        <ACheckbox v-model="checked" type="info" />
+        <ACheckbox v-model="checked" type="warning" />
+        <ACheckbox v-model="checked" type="danger" />
       </div>
 
       <div class="p-2">
         Size
       </div>
       <div p-2 flex="~ gap2 wrap" items-center>
-        <ACheckbox v-model="checked" color="primary" size="xs" label="Extra Mini" />
-        <ACheckbox v-model="checked" color="success" size="sm" label="Mini" />
-        <ACheckbox v-model="checked" color="info" size="md" label="Small" />
-        <ACheckbox v-model="checked" color="warning" size="lg" label="Medium" />
-        <ACheckbox v-model="checked" color="danger" size="xl" label="Large" />
+        <ACheckbox v-model="checked" type="primary" size="xs" label="Extra Mini" />
+        <ACheckbox v-model="checked" type="success" size="sm" label="Mini" />
+        <ACheckbox v-model="checked" type="info" size="md" label="Small" />
+        <ACheckbox v-model="checked" type="warning" size="lg" label="Medium" />
+        <ACheckbox v-model="checked" type="danger" size="xl" label="Large" />
       </div>
       <div class="p-2">
         Variant
       </div>
       <div p-2 flex="~ gap2 wrap" items-center>
         <ACheckbox v-model="checked" variant="solid" />
-        <ACheckbox v-model="checked" color="success" variant="outline" />
-        <ACheckbox v-model="checked" color="info" variant="ghost" />
-        <ACheckbox v-model="checked" color="warning" variant="light" />
-        <ACheckbox v-model="checked" color="danger" variant="text" />
+        <ACheckbox v-model="checked" type="success" variant="outline" />
+        <ACheckbox v-model="checked" type="info" variant="ghost" />
+        <ACheckbox v-model="checked" type="warning" variant="light" />
+        <ACheckbox v-model="checked" type="danger" variant="text" />
       </div>
       <div class="p-2">
         Status
       </div>
       <div p-2 flex="~ gap2 wrap" items-center>
-        <ACheckbox v-model="statusChecked2" color="success" disabled />
+        <ACheckbox v-model="statusChecked2" type="success" disabled />
       </div>
       <div class="p-2">
         Custom
@@ -59,9 +59,7 @@ const groupChecked2 = ref(['a', 'b'])
           </template>
         </ACheckbox>
         <ACheckbox v-model="checked3">
-          <template #label>
-            <div class="i-carbon-send-alt" />
-          </template>
+          <div class="i-carbon-send-alt" />
         </ACheckbox>
       </div>
       <div class="p-2">

@@ -12,29 +12,29 @@ const checked3 = ref('yes')
       </div>
       <div p-2 flex="~ gap2 wrap" items-center>
         <ASwitch v-model="checked" />
-        <ASwitch v-model="checked" color="success" />
-        <ASwitch v-model="checked" color="info" />
-        <ASwitch v-model="checked" color="warning" />
-        <ASwitch v-model="checked" color="danger" />
+        <ASwitch v-model="checked" type="success" />
+        <ASwitch v-model="checked" type="info" />
+        <ASwitch v-model="checked" type="warning" />
+        <ASwitch v-model="checked" type="danger" />
       </div>
 
       <div class="p-2">
         Size
       </div>
       <div p-2 flex="~ gap2 wrap" items-center>
-        <ASwitch v-model="checked" color="primary" size="xs">
+        <ASwitch v-model="checked" type="primary" size="xs">
           Extra Mini
         </ASwitch>
-        <ASwitch v-model="checked" color="success" size="sm">
+        <ASwitch v-model="checked" type="success" size="sm">
           Mini
         </ASwitch>
-        <ASwitch v-model="checked" color="info" size="md">
+        <ASwitch v-model="checked" type="info" size="md">
           Small
         </ASwitch>
-        <ASwitch v-model="checked" color="warning" size="lg">
+        <ASwitch v-model="checked" type="warning" size="lg">
           Medium
         </ASwitch>
-        <ASwitch v-model="checked" color="danger" size="xl">
+        <ASwitch v-model="checked" type="danger" size="xl">
           Large
         </ASwitch>
       </div>
@@ -43,17 +43,17 @@ const checked3 = ref('yes')
       </div>
       <div p-2 flex="~ gap2 wrap" items-center>
         <ASwitch v-model="checked" variant="solid" />
-        <ASwitch v-model="checked" color="success" variant="outline" />
-        <ASwitch v-model="checked" color="info" variant="ghost" />
-        <ASwitch v-model="checked" color="warning" variant="light" />
-        <ASwitch v-model="checked" color="danger" variant="text" />
+        <ASwitch v-model="checked" type="success" variant="outline" />
+        <ASwitch v-model="checked" type="info" variant="ghost" />
+        <ASwitch v-model="checked" type="warning" variant="light" />
+        <ASwitch v-model="checked" type="danger" variant="text" />
       </div>
       <div class="p-2">
         Status
       </div>
       <div p-2 flex="~ gap2 wrap" items-center>
         <ASwitch :model-value="true" loading />
-        <ASwitch v-model="checked" color="success" disabled />
+        <ASwitch v-model="checked" type="success" disabled />
       </div>
       <div class="p-2">
         Custom

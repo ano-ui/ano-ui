@@ -2,7 +2,6 @@
 export * from './AButton'
 export * from './ACell'
 export * from './APopup'
-export * from './ATag'
 export * from './AToast'
 
 // Form
@@ -15,9 +14,12 @@ export * from './ASwitch'
 
 // Action
 export * from './ADialog'
-export * from './ANoticeBar'
 export * from './ANotify'
 export * from './AOverlay'
+
+// Display
+export * from './ANoticeBar'
+export * from './ATag'
 
 export * from './composables'
 export * from './tokens'

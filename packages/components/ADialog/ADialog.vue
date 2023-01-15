@@ -5,15 +5,12 @@ import AButton from '../AButton/AButton.vue'
 
 import { dialogEmits, dialogProps } from './dialog'
 import { useDialog } from './use-dialog'
-import type { DialogOptions } from './types'
 
 const props = defineProps(dialogProps)
 const emit = defineEmits(dialogEmits)
 const { showValue, dialogStatus, showDialog, onConfirm, onCancel } = useDialog(props, emit)
 
-const handleShowDialog = (options: DialogOptions) => showDialog(options)
-
-defineExpose({ show: handleShowDialog })
+defineExpose({ showDialog })
 </script>
 
 <template>
@@ -30,7 +27,7 @@ defineExpose({ show: handleShowDialog })
       </div>
       <div class="a-dialog-action-base">
         <template v-if="dialogStatus?.showCancelButton">
-          <AButton class="flex-1" color="danger" variant="text" @click.stop="onCancel">
+          <AButton class="flex-1" type="danger" variant="text" @click.stop="onCancel">
             {{ dialogStatus.cancelButtonText || 'Cancel' }}
           </AButton>
         </template>

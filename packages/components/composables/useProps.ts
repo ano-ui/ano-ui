@@ -27,20 +27,20 @@ export const ArrayProp = {
 
 export type ClassType = String | Object | Array<ClassType>
 
-export const CustomClassProp = {
+export const useCustomClassProp = {
   type: [String, Object, Array] as PropType<ClassType>,
   default: '',
 }
 
-export const CustomStyleProp = {
+export const useCustomStyleProp = {
   type: [String, Object, Array] as PropType<StyleValue>,
   default: '',
 }
 
-export type ColorType = 'primary' | 'success' | 'info' | 'warning' | 'danger'
+export type Type = 'primary' | 'success' | 'info' | 'warning' | 'danger'
 
-export const ColorProp = {
-  type: String as PropType<ColorType>,
+export const TypeProp = {
+  type: String as PropType<Type>,
   validator: (value: string) =>
     ['primary', 'success', 'info', 'warning', 'danger'].includes(value),
   default: 'primary',
@@ -48,14 +48,14 @@ export const ColorProp = {
 
 export type VariantType = 'solid' | 'outline' | 'ghost' | 'light' | 'text'
 
-export const VariantProp = {
+export const useVariantProp = {
   type: String as PropType<VariantType>,
   default: 'solid',
 }
 
 export type SizeType = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
 
-export const SizeProp = {
+export const useSizeProp = {
   type: String as PropType<SizeType>,
   validator: (value: string) => ['xs', 'sm', 'md', 'lg', 'xl'].includes(value),
   default: 'lg',
@@ -76,11 +76,4 @@ export const PositionProp = {
   validator: (value: string) =>
     ['top', 'bottom', 'left', 'right', 'center'].includes(value),
   default: 'center',
-}
-
-export type InputType = 'text' | 'number' | 'digit' | 'password' | 'textarea'
-
-export const InputTypeProp = {
-  type: String as PropType<InputType>,
-  default: 'text',
 }

@@ -1,5 +1,5 @@
 export const toastShortcuts: Record<string, string> = {
-  'a-toast-base': 'absolute z-500',
+  'a-toast-base': 'fixed z-500',
   'a-toast-position-default': 'left-50% top-50% -translate-50%',
   'a-toast-position-top': 'left-50% top-20% -translate-50%',
   'a-toast-position-bottom': 'left-50% top-80% -translate-50%',

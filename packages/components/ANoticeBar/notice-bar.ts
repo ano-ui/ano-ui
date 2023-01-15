@@ -1,10 +1,12 @@
 import type { ExtractPropTypes } from 'vue'
-import { VariantProp, useBaseProps } from '../composables'
+import { TypeProp, useCustomClassProp, useCustomStyleProp, useVariantProp } from '../composables'
 import { CLOSE_EVENT } from '../constants'
 
 export const noticeBarProps = {
-  ...useBaseProps(),
-  variant: VariantProp,
+  cc: useCustomClassProp,
+  cs: useCustomStyleProp,
+  type: TypeProp,
+  variant: useVariantProp,
   show: {
     type: Boolean,
     default: true,
