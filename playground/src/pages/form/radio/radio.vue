@@ -58,9 +58,7 @@ const groupChecked = ref('a')
           </template>
         </ARadio>
         <ARadio v-model="checked3">
-          <template #label>
-            <div class="i-carbon-send-alt" />
-          </template>
+          <div class="i-carbon-send-alt" />
         </ARadio>
       </div>
       <div class="p-2">
