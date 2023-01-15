@@ -4,7 +4,7 @@ import { ref } from 'vue'
 
 const dialogRef = ref<DialogRef>()
 const handleShow = (options: DialogOptions) => {
-  dialogRef.value?.show(options)
+  dialogRef.value?.showDialog(options)
 }
 
 const handleConfirm = () => {
@@ -34,6 +34,10 @@ const handleCancel = () => {
           <ACell
             title="Basic No Title" arrow
             @click="handleShow({ message: 'Dialog Message Dialog Message' })"
+          />
+          <ACell
+            title="Confirm" arrow
+            @click="handleShow({ title: 'Dialog Title', message: 'Dialog Message Dialog Message', showCancelButton: true, showConfirmButton: true })"
           />
         </ACellGroup>
       </div>

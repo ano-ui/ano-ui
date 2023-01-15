@@ -5,15 +5,12 @@ import AButton from '../AButton/AButton.vue'
 
 import { dialogEmits, dialogProps } from './dialog'
 import { useDialog } from './use-dialog'
-import type { DialogOptions } from './types'
 
 const props = defineProps(dialogProps)
 const emit = defineEmits(dialogEmits)
 const { showValue, dialogStatus, showDialog, onConfirm, onCancel } = useDialog(props, emit)
 
-const handleShowDialog = (options: DialogOptions) => showDialog(options)
-
-defineExpose({ show: handleShowDialog })
+defineExpose({ showDialog })
 </script>
 
 <template>

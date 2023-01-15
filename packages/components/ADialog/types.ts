@@ -1,6 +1,6 @@
 export interface DialogOptions {
   title?: string
-  message: string
+  message?: string
   showConfirmButton?: boolean
   showCancelButton?: boolean
   confirmButtonText?: string
@@ -8,7 +8,7 @@ export interface DialogOptions {
 }
 
 export interface DialogRef {
-  show: (options: DialogOptions) => void
+  showDialog: (options: DialogOptions) => void
   confirm: () => void
   cancel: () => void
 }

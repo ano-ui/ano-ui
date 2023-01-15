@@ -8,7 +8,10 @@ export const dialogProps = {
   show: Boolean,
   title: String,
   message: String,
-  showConfirmButton: Boolean,
+  showConfirmButton: {
+    type: Boolean,
+    default: true,
+  },
   showCancelButton: Boolean,
   confirmButtonText: String,
   cancelButtonText: String,
