@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ref } from 'vue'
 import type { NotifyOptions } from 'ano-ui'
 
 const notify = ref<{ showNotify: (options?: NotifyOptions) => {} }>()
@@ -18,19 +17,30 @@ const notify3 = ref<{ showNotify: (options?: NotifyOptions) => {} }>()
 const showNotify3 = (options: NotifyOptions) => {
   notify3.value!.showNotify(options)
 }
+
+const topStyle = computed(() => {
+  let top = '0px'
+  // #ifdef H5
+  // H5默认导航栏高度为44px
+  top = '44px'
+  // #endif
+  return {
+    top,
+  }
+})
 </script>
 
 <template>
   <UBasePage>
     <div class="p-2 pb-safe">
-      <ANotify ref="notify" />
+      <ANotify ref="notify" :cs="topStyle" />
       <ANotify ref="notify2">
         <template #icon>
           <div class="i-carbon-send-alt-filled" />
         </template>
         Slot
       </ANotify>
-      <ANotify ref="notify3" cc="bg-gradient-to-r from-indigo-500 to-pink-500" />
+      <ANotify ref="notify3" ccc="bg-gradient-to-r from-indigo-500 to-pink-500" />
 
       <div class="p-2">
         Notify
