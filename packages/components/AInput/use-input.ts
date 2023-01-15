@@ -9,6 +9,7 @@ export const useInput = (
 ) => {
   const disabled = computed(() => props.disabled ?? false)
   const modelValue = computed(() => props.modelValue || '')
+  const placeholderText = computed(() => props.placeholder || '')
   const isClick = ref(false)
   const showPasswordText = ref(false)
   const focus = computed(() => (props.focus && !props.disabled) || isClick.value)
@@ -46,6 +47,7 @@ export const useInput = (
   return {
     disabled,
     modelValue,
+    placeholderText,
     isClick,
     showPasswordText,
     focus,
