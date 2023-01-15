@@ -1,14 +1,22 @@
-import type { ExtractPropTypes } from 'vue'
-import { TypeProp, useCustomClassProp, useCustomStyleProp, useSizeProp, useVariantProp } from '../composables'
+import type { ExtractPropTypes, PropType } from 'vue'
+import { useCustomClassProp, useCustomStyleProp, useSizeProp, useVariantProp } from '../composables'
 import { CLICK_EVENT, CLOSE_EVENT } from '../constants'
+
+export type TagType = 'primary' | 'success' | 'info' | 'warning' | 'danger'
+
+export const useTagTypeProp = {
+  type: String as PropType<TagType>,
+  validator: (value: string) =>
+    ['primary', 'success', 'info', 'warning', 'danger'].includes(value),
+  default: 'primary',
+}
 
 export const tagProps = {
   cc: useCustomClassProp,
   cs: useCustomStyleProp,
-  type: TypeProp,
+  type: useTagTypeProp,
   size: useSizeProp,
   variant: useVariantProp,
-  label: String,
   disabled: Boolean,
   show: {
     type: Boolean,
