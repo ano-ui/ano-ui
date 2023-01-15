@@ -17,18 +17,11 @@ const showValue2 = ref(false)
       <div class="p-2">
         Overlay
       </div>
-      <div p-2 flex="~ gap2 wrap">
-        <AButton @click="showValue1 = true">
-          Show Overlay
-        </AButton>
-      </div>
-      <div class="p-2">
-        Embedded Content
-      </div>
-      <div p-2 flex="~ gap2 wrap">
-        <AButton @click="showValue2 = true">
-          Embedded Content
-        </AButton>
+      <div p-2>
+        <ACellGroup>
+          <ACell arrow title="Show" @click="showValue1 = true" />
+          <ACell arrow title="Embedded Content" @click="showValue2 = true" />
+        </ACellGroup>
       </div>
     </div>
   </UBasePage>
