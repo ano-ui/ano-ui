@@ -1,9 +1,9 @@
-import type { ColorType } from '../composables/useProps'
+import type { Type } from '../composables/useProps'
 
 export type NotifyPositionType = 'default' | 'top' | 'top-left' | 'top-right' | 'bottom' | 'bottom-left' | 'bottom-right'
 
 export interface Options {
-  color: ColorType
+  color: Type
   position: NotifyPositionType
   content: string
   duration: number
