@@ -9,43 +9,24 @@ export const useNotify = (
   emit: SetupContext<NotifyEmits>['emit'],
 ) => {
   const timer = ref()
-  const show = ref(false)
+  const showValue = ref(false)
 
   const notifyStatus = ref<Options>({
-    color: 'primary',
-    position: 'default',
+    type: props.type,
+    position: props.position,
     duration: 3000,
-    content: '',
   })
 
   const closeNotify = () => {
     if (timer.value)
       clearTimeout(timer.value)
-    show.value = false
+    showValue.value = false
+    emit(CLOSE_EVENT)
   }
 
   const showNotify = (options: NotifyOptions = {}) => {
-    const {
-      color = 'primary',
-      position = 'default',
-      duration = 3000,
-      content = '',
-      showIcon = false,
-      customIcon = false,
-      showClose = false,
-    } = options
-
-    show.value = true
-
-    notifyStatus.value = {
-      color,
-      position,
-      duration,
-      content,
-      showIcon,
-      customIcon,
-      showClose,
-    }
+    Object.assign(notifyStatus.value, options)
+    showValue.value = true
 
     if (timer.value)
       clearTimeout(timer.value)
@@ -55,17 +36,11 @@ export const useNotify = (
     }, notifyStatus.value.duration)
   }
 
-  const handleClose = () => {
-    closeNotify()
-    emit(CLOSE_EVENT)
-  }
-
   return {
-    show,
+    showValue,
     notifyStatus,
 
     showNotify,
     closeNotify,
-    handleClose,
   }
 }
