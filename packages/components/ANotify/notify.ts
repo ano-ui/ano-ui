@@ -1,11 +1,11 @@
 import type { ExtractPropTypes } from 'vue'
-import { CustomClassProp, CustomStyleProp, VariantProp } from '../composables'
+import { useCustomClassProp, useCustomStyleProp, useVariantProp } from '../composables'
 import { CLOSE_EVENT } from '../constants'
 
 export const notifyProps = {
-  cc: CustomClassProp,
-  cs: CustomStyleProp,
-  variant: VariantProp,
+  cc: useCustomClassProp,
+  cs: useCustomStyleProp,
+  variant: useVariantProp,
 }
 
 export const notifyEmits = {

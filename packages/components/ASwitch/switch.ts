@@ -1,16 +1,16 @@
 import type { ExtractPropTypes } from 'vue'
-import { CustomClassProp, CustomStyleProp, SizeProp, TypeProp, VariantProp } from '../composables'
+import { TypeProp, useCustomClassProp, useCustomStyleProp, useSizeProp, useVariantProp } from '../composables'
 import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '../constants'
 import { isBoolean, isNumber, isString } from '../utils'
 
 export type SwitchValueType = string | number | boolean
 
 export const switchProps = {
-  cc: CustomClassProp,
-  cs: CustomStyleProp,
+  cc: useCustomClassProp,
+  cs: useCustomStyleProp,
   type: TypeProp,
-  size: SizeProp,
-  variant: VariantProp,
+  size: useSizeProp,
+  variant: useVariantProp,
   disabled: Boolean,
   modelValue: {
     type: [String, Number, Boolean],

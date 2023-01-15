@@ -1,9 +1,9 @@
 import type { ExtractPropTypes } from 'vue'
-import { CustomClassProp, CustomStyleProp } from '../composables'
+import { useCustomClassProp, useCustomStyleProp } from '../composables'
 
 export const cellGroupProps = {
-  cc: CustomClassProp,
-  cs: CustomStyleProp,
+  cc: useCustomClassProp,
+  cs: useCustomStyleProp,
   divider: Boolean,
   card: {
     type: Boolean,

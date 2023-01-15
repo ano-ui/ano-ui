@@ -1,10 +1,10 @@
 import type { ExtractPropTypes } from 'vue'
-import { CustomClassProp, CustomStyleProp } from '../composables'
+import { useCustomClassProp, useCustomStyleProp } from '../composables'
 import { CLOSE_EVENT } from '../constants'
 
 export const toastProps = {
-  cc: CustomClassProp,
-  cs: CustomStyleProp,
+  cc: useCustomClassProp,
+  cs: useCustomStyleProp,
 }
 
 export const toastEmits = {

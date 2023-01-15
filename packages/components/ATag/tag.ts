@@ -1,13 +1,13 @@
 import type { ExtractPropTypes } from 'vue'
-import { CustomClassProp, CustomStyleProp, SizeProp, TypeProp, VariantProp } from '../composables'
+import { TypeProp, useCustomClassProp, useCustomStyleProp, useSizeProp, useVariantProp } from '../composables'
 import { CLICK_EVENT, CLOSE_EVENT } from '../constants'
 
 export const tagProps = {
-  cc: CustomClassProp,
-  cs: CustomStyleProp,
+  cc: useCustomClassProp,
+  cs: useCustomStyleProp,
   type: TypeProp,
-  size: SizeProp,
-  variant: VariantProp,
+  size: useSizeProp,
+  variant: useVariantProp,
   label: String,
   disabled: Boolean,
   show: {

@@ -1,18 +1,18 @@
 import type { ExtractPropTypes } from 'vue'
-import { CustomClassProp, CustomStyleProp, SizeProp, TypeProp, VariantProp } from '../composables'
+import { TypeProp, useCustomClassProp, useCustomStyleProp, useSizeProp, useVariantProp } from '../composables'
 import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '../constants'
 import { isBoolean, isNumber, isString } from '../utils'
 
 export type RadioValueType = string | number | boolean
 
 export const radioProps = {
-  cc: CustomClassProp,
-  ccc: CustomClassProp,
-  cs: CustomStyleProp,
-  ccs: CustomStyleProp,
+  cc: useCustomClassProp,
+  ccc: useCustomClassProp,
+  cs: useCustomStyleProp,
+  ccs: useCustomStyleProp,
   type: TypeProp,
-  size: SizeProp,
-  variant: VariantProp,
+  size: useSizeProp,
+  variant: useVariantProp,
   disabled: Boolean,
   modelValue: {
     type: [String, Number, Boolean],

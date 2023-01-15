@@ -27,12 +27,12 @@ export const ArrayProp = {
 
 export type ClassType = String | Object | Array<ClassType>
 
-export const CustomClassProp = {
+export const useCustomClassProp = {
   type: [String, Object, Array] as PropType<ClassType>,
   default: '',
 }
 
-export const CustomStyleProp = {
+export const useCustomStyleProp = {
   type: [String, Object, Array] as PropType<StyleValue>,
   default: '',
 }
@@ -48,14 +48,14 @@ export const TypeProp = {
 
 export type VariantType = 'solid' | 'outline' | 'ghost' | 'light' | 'text'
 
-export const VariantProp = {
+export const useVariantProp = {
   type: String as PropType<VariantType>,
   default: 'solid',
 }
 
 export type SizeType = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
 
-export const SizeProp = {
+export const useSizeProp = {
   type: String as PropType<SizeType>,
   validator: (value: string) => ['xs', 'sm', 'md', 'lg', 'xl'].includes(value),
   default: 'lg',

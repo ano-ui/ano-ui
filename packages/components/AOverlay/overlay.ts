@@ -1,10 +1,10 @@
 import type { ExtractPropTypes } from 'vue'
-import { CustomClassProp, CustomStyleProp } from '../composables'
+import { useCustomClassProp, useCustomStyleProp } from '../composables'
 import { CLICK_EVENT } from '../constants'
 
 export const overlayProps = {
-  cc: CustomClassProp,
-  cs: CustomStyleProp,
+  cc: useCustomClassProp,
+  cs: useCustomStyleProp,
   show: Boolean,
   duration: {
     type: Number,

@@ -1,5 +1,5 @@
 import type { ExtractPropTypes, PropType } from 'vue'
-import { CustomClassProp, CustomStyleProp, SizeProp } from '../composables'
+import { useCustomClassProp, useCustomStyleProp, useSizeProp } from '../composables'
 import { BLUR_EVENT, CHANGE_EVENT, CLEAR_EVENT, CLICK_EVENT, FOCUS_EVENT, INPUT_EVENT, UPDATE_MODEL_EVENT } from '../constants'
 import { isString } from '../utils'
 
@@ -11,12 +11,12 @@ export const InputTypeProp = {
 }
 
 export const inputProps = {
-  cc: CustomClassProp,
-  ccc: CustomClassProp,
-  cs: CustomStyleProp,
-  ccs: CustomStyleProp,
+  cc: useCustomClassProp,
+  ccc: useCustomClassProp,
+  cs: useCustomStyleProp,
+  ccs: useCustomStyleProp,
   type: InputTypeProp,
-  size: SizeProp,
+  size: useSizeProp,
   disabled: Boolean,
   focus: Boolean,
   icon: String,

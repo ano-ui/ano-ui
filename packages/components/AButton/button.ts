@@ -1,13 +1,22 @@
-import type { ExtractPropTypes } from 'vue'
-import { CustomClassProp, CustomStyleProp, SizeProp, TypeProp, VariantProp } from '../composables'
+import type { ExtractPropTypes, PropType } from 'vue'
+import { useCustomClassProp, useCustomStyleProp, useSizeProp, useVariantProp } from '../composables'
 import { CLICK_EVENT } from '../constants'
 
+export type ButtonType = 'primary' | 'success' | 'info' | 'warning' | 'danger'
+
+export const useButtonProp = {
+  type: String as PropType<ButtonType>,
+  validator: (value: string) =>
+    ['primary', 'success', 'info', 'warning', 'danger'].includes(value),
+  default: 'primary',
+}
+
 export const buttonProps = {
-  cc: CustomClassProp,
-  cs: CustomStyleProp,
-  type: TypeProp,
-  size: SizeProp,
-  variant: VariantProp,
+  cc: useCustomClassProp,
+  cs: useCustomStyleProp,
+  type: useButtonProp,
+  size: useSizeProp,
+  variant: useVariantProp,
   disabled: Boolean,
   icon: String,
   iconOnly: Boolean,

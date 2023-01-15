@@ -1,8 +1,4 @@
 <script setup lang="ts">
-const handleSuccess = (e: MouseEvent) => {
-  // eslint-disable-next-line no-console
-  console.log('success')
-}
 const getInfo = () => {
   uni.getUserInfo({
     success: (res) => {
@@ -23,7 +19,7 @@ const getInfo = () => {
         <AButton>
           Primary
         </AButton>
-        <AButton type="success" @click="handleSuccess">
+        <AButton type="success">
           Success
         </AButton>
         <AButton type="info">
@@ -91,7 +87,7 @@ const getInfo = () => {
         Custom
       </div>
       <div p-2 flex="~ gap2 wrap" items-center>
-        <AButton icon="i-carbon-palm-tree" icon-only />
+        <AButton icon="i-carbon-palm-tree" />
         <AButton type="success" icon-only cc="rounded-full">
           <template #icon>
             <div class="i-carbon-sprout" />
@@ -100,22 +96,19 @@ const getInfo = () => {
         <AButton type="info" cc="rounded-full">
           Rounded
         </AButton>
-        <AButton type="warning">
-          <template #icon>
-            <div class="i-carbon-send-alt" />
-          </template>
+        <AButton type="warning" icon="i-carbon-send-alt">
           Send
         </AButton>
         <AButton cc="bg-teal border-teal" open-type="getUserInfo" @click="getInfo">
           OpenType
         </AButton>
+        <AButton size="lg" :cc="['bg-gradient-to-r', 'from-indigo-500', 'to-pink-500', 'border-none']">
+          Bg Gradient
+        </AButton>
       </div>
       <div p-2>
         <AButton type="danger" block>
           Block
-        </AButton>
-        <AButton size="lg" mt2 block :cc="['bg-gradient-to-r', 'from-indigo-500', 'to-pink-500', 'border-none']">
-          Bg Gradient
         </AButton>
       </div>
     </div>

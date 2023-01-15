@@ -1,13 +1,13 @@
 import type { ExtractPropTypes } from 'vue'
-import { CustomClassProp, CustomStyleProp, PositionProp } from '../composables'
+import { PositionProp, useCustomClassProp, useCustomStyleProp } from '../composables'
 import { CLOSED_EVENT, CLOSE_EVENT, OPENED_EVENT, OPEN_EVENT, UPDATE_SHOW_EVENT } from '../constants'
 import { isBoolean } from '../utils'
 
 export const popupProps = {
-  cc: CustomClassProp,
-  cs: CustomStyleProp,
-  ccc: CustomClassProp,
-  ccs: CustomStyleProp,
+  cc: useCustomClassProp,
+  cs: useCustomStyleProp,
+  ccc: useCustomClassProp,
+  ccs: useCustomStyleProp,
   show: Boolean,
   position: PositionProp,
   duration: {
