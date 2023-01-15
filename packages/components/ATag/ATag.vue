@@ -19,7 +19,7 @@ const { disabled, clickHandler, closeHandler } = useTag(props, emit)
     <div v-if="label">
       {{ label }}
     </div>
-    <slot name="label" />
+    <slot v-else />
     <div v-if="closable" class="i-carbon-close" @click.stop="closeHandler" />
   </div>
 </template>
