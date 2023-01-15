@@ -1,5 +1,5 @@
 export const notifyShortcuts: Record<string, string> = {
-  'a-notify-base': 'absolute z-500',
+  'a-notify-base': 'fixed z-500',
   'a-notify-position-default': 'top-0 left-0 right-0',
   'a-notify-position-top': 'top-0 left-5 right-5 pt-5',
   'a-notify-position-top-left': 'top-5 left-0 pl-5',

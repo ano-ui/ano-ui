@@ -2,14 +2,12 @@ export type NotifyPositionType = 'default' | 'top' | 'top-left' | 'top-right' | 
 
 export type NotifyType = 'primary' | 'success' | 'info' | 'warning' | 'danger'
 
-export interface Options {
-  type: NotifyType
-  position: NotifyPositionType
+export interface NotifyOptions {
+  type?: NotifyType
+  position?: NotifyPositionType
   message?: string
-  duration: number
+  duration?: number
   showIcon?: boolean
   customIcon?: boolean
   showClose?: boolean
 }
-
-export type NotifyOptions = Partial<Options>

@@ -35,76 +35,47 @@ const showNotify3 = (options: NotifyOptions) => {
       <div class="p-2">
         Notify
       </div>
-      <div p-2 flex="~ gap2 wrap">
-        <AButton @click="showNotify({ type: 'primary', position: 'default', message: 'Notify' })">
-          Show Notify
-        </AButton>
+      <div p-2>
+        <ACellGroup>
+          <ACell title="Show" arrow @click="showNotify({ type: 'primary', position: 'default', message: 'Notify' })" />
+        </ACellGroup>
       </div>
       <div class="p-2">
         Position
       </div>
-      <div p-2 flex="~ gap2 wrap">
-        <AButton type="primary" @click="showNotify({ position: 'default', message: 'Default' })">
-          Default
-        </AButton>
-        <AButton type="success" @click="showNotify({ position: 'top', message: 'Top' })">
-          Top
-        </AButton>
-        <AButton type="info" @click="showNotify({ position: 'top-left', message: 'Top Left' })">
-          Top Left
-        </AButton>
-        <AButton type="warning" @click="showNotify({ position: 'top-right', message: 'Top Right' })">
-          Top Right
-        </AButton>
-        <AButton type="danger" @click="showNotify({ position: 'bottom', message: 'Bottom' })">
-          Bottom
-        </AButton>
-        <AButton type="primary" @click="showNotify({ position: 'bottom-left', message: 'Bottom Left' })">
-          Bottom Left
-        </AButton>
-        <AButton type="success" @click="showNotify({ position: 'bottom-right', message: 'Bottom Left' })">
-          Bottom Right
-        </AButton>
+      <div p-2>
+        <ACellGroup>
+          <ACell title="Default" arrow @click="showNotify({ position: 'default', message: 'Default' })" />
+          <ACell title="Top" arrow @click="showNotify({ position: 'top', message: 'Top' })" />
+          <ACell title="Top Left" arrow @click="showNotify({ position: 'top-left', message: 'Top Left' })" />
+          <ACell title="Top Right" arrow @click="showNotify({ position: 'top-right', message: 'Top Right' })" />
+          <ACell title="Bottom" arrow @click="showNotify({ position: 'bottom', message: 'Bottom' })" />
+          <ACell title="Bottom Left" arrow @click="showNotify({ position: 'bottom-left', message: 'Bottom Left' })" />
+          <ACell title="Bottom Right" arrow @click="showNotify({ position: 'bottom-right', message: 'Bottom Right' })" />
+        </ACellGroup>
       </div>
       <div class="p-2">
         Type Icon
       </div>
-      <div p-2 flex="~ gap2 wrap">
-        <AButton type="primary" @click="showNotify({ type: 'primary', position: 'top', showIcon: true, message: 'Primary Icon' })">
-          Primary
-        </AButton>
-        <AButton type="success" @click="showNotify({ type: 'success', position: 'top', showIcon: true, message: 'Success Icon' })">
-          Success
-        </AButton>
-        <AButton type="info" @click="showNotify({ type: 'info', position: 'top', showIcon: true, message: 'Info Icon' })">
-          Info
-        </AButton>
-        <AButton type="warning" @click="showNotify({ type: 'warning', position: 'top', showIcon: true, message: 'Warning Icon' })">
-          Warning
-        </AButton>
-        <AButton type="danger" @click="showNotify({ type: 'danger', position: 'top', showIcon: true, message: 'Danger Icon' })">
-          Danger
-        </AButton>
+      <div p-2>
+        <ACellGroup>
+          <ACell title="Primary" arrow @click="showNotify({ type: 'primary', showIcon: true, message: 'Primary Icon' })" />
+          <ACell title="Success" arrow @click="showNotify({ type: 'success', showIcon: true, message: 'Success Icon' })" />
+          <ACell title="Info" arrow @click="showNotify({ type: 'info', showIcon: true, message: 'Info Icon' })" />
+          <ACell title="Warning" arrow @click="showNotify({ type: 'warning', showIcon: true, message: 'Warning Icon' })" />
+          <ACell title="Danger" arrow @click="showNotify({ type: 'danger', showIcon: true, message: 'Danger Icon' })" />
+        </ACellGroup>
       </div>
       <div class="p-2">
         Custom
       </div>
-      <div p-2 flex="~ gap2 wrap">
-        <AButton type="primary" @click="showNotify2({ type: 'primary', position: 'top', message: 'Custom Icon', customIcon: true })">
-          Icon
-        </AButton>
-        <AButton type="success" @click="showNotify2({ type: 'success', position: 'top', message: 'Show Close', showClose: true })">
-          Show Close
-        </AButton>
-        <AButton type="info" @click="showNotify2({ type: 'info', position: 'top' })">
-          Slot
-        </AButton>
-        <AButton
-          cc="bg-gradient-to-r from-indigo-500 to-pink-500 border-none" type="warning"
-          @click="showNotify3({ type: 'warning', position: 'top', message: 'Bg Gradient' })"
-        >
-          Bg Gradient
-        </AButton>
+      <div p-2>
+        <ACellGroup>
+          <ACell title="Custom Icon" arrow @click="showNotify2({ type: 'primary', position: 'top', message: 'Custom Icon', customIcon: true })" />
+          <ACell title="Show Close" arrow @click="showNotify2({ type: 'success', position: 'top', message: 'Show Close', showClose: true })" />
+          <ACell title="Slot" arrow @click="showNotify2({ type: 'info', position: 'top' })" />
+          <ACell title="Bg Gradient" arrow @click="showNotify3({ type: 'warning', position: 'top', message: 'Bg Gradient' })" />
+        </ACellGroup>
       </div>
     </div>
   </UBasePage>

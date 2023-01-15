@@ -22,6 +22,14 @@ export const notifyProps = {
   cs: useCustomStyleProp,
   type: useNotifyTypeProp,
   position: useNotifyPositionProp,
+  message: String,
+  duration: {
+    type: Number,
+    default: 3000,
+  },
+  showIcon: Boolean,
+  customIcon: Boolean,
+  showClose: Boolean,
 }
 
 export const notifyEmits = {

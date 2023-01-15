@@ -24,7 +24,7 @@ const animationName = {
 
 <template>
   <ATransition
-    :show="showValue" :name="animationName[notifyStatus.position]" :duration="300"
+    :show="showValue" :name="animationName[notifyStatus?.position || 'default']" :duration="300"
     :cc="['a-notify-base', `a-notify-position-${notifyStatus.position}`]"
   >
     <div
