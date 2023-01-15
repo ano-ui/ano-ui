@@ -59,9 +59,7 @@ const groupChecked2 = ref(['a', 'b'])
           </template>
         </ACheckbox>
         <ACheckbox v-model="checked3">
-          <template #label>
-            <div class="i-carbon-send-alt" />
-          </template>
+          <div class="i-carbon-send-alt" />
         </ACheckbox>
       </div>
       <div class="p-2">

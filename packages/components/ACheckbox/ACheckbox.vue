@@ -25,6 +25,6 @@ const { disabled, size, isChecked, toggle } = useCheckbox(props, emit)
     <template v-if="label">
       {{ label }}
     </template>
-    <slot v-else name="label" />
+    <slot v-else />
   </div>
 </template>
