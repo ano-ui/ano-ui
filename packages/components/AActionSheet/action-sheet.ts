@@ -1,6 +1,6 @@
 import type { ExtractPropTypes, PropType } from 'vue'
 import { useCustomClassProp, useCustomStyleProp } from '../composables'
-import { CLOSED_EVENT, CLOSE_EVENT, OPENED_EVENT, OPEN_EVENT, UPDATE_SHOW_EVENT } from '../constants'
+import { CANCEL_EVENT, CLOSED_EVENT, CLOSE_EVENT, OPENED_EVENT, OPEN_EVENT, UPDATE_SHOW_EVENT } from '../constants'
 import { isBoolean } from '../utils'
 import type { ActionSheetAction } from './types'
 
@@ -39,6 +39,7 @@ export const actionSheetEmits = {
   [CLOSE_EVENT]: () => true,
   [OPENED_EVENT]: () => true,
   [CLOSED_EVENT]: () => true,
+  [CANCEL_EVENT]: () => true,
 }
 
 export type ActionSheetProps = ExtractPropTypes<typeof actionSheetProps>

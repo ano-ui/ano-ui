@@ -1,4 +1,5 @@
 <script setup lang='ts'>
+import AButton from '../AButton/AButton.vue'
 import AOverlay from '../AOverlay/AOverlay.vue'
 import ATransition from '../ATransition/ATransition.vue'
 import { actionSheetEmits, actionSheetProps } from './action-sheet'
@@ -6,7 +7,7 @@ import { useActionSheet } from './use-action-sheet'
 
 const props = defineProps(actionSheetProps)
 const emit = defineEmits(actionSheetEmits)
-const { showValue } = useActionSheet(props, emit)
+const { showValue, cancelHandler } = useActionSheet(props, emit)
 </script>
 
 <template>
@@ -16,17 +17,22 @@ const { showValue } = useActionSheet(props, emit)
       :show="showValue" name="slide-up" :duration="duration"
       :cc="['a-action-sheet-wrapper-base', { 'rounded-t-2xl': round }, cc]" :style="cs" @click.stop
     >
-      <div :class="ccc" :style="ccs">
-        <template v-for="action, _idx of actions" :key="_idx">
-          <div class="a-action-sheet-content-base" :class="action.className" hover-class="a-action-sheet-action-hover">
-            {{ action.name }}
-          </div>
-        </template>
-        <slot />
-      </div>
+      <template v-for="action, _idx of actions" :key="_idx">
+        <AButton variant="text" block :cc="['color-inherit rounded-none', action.className]">
+          {{ action.name }}
+        </AButton>
+      </template>
+      <slot />
+      <template v-if="cancelText">
+        <div class="w-full h-2 bg-gray-200/20" />
+        <AButton v-if="cancelText" variant="text" block :cc="['color-inherit rounded-none']" @click="cancelHandler">
+          {{ cancelText }}
+        </AButton>
+      </template>
     </ATransition>
   </div>
 </template>
 
 <style scoped>
+
 </style>

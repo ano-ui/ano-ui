@@ -1,6 +1,6 @@
 import type { SetupContext } from 'vue'
 import { computed, ref } from 'vue'
-import { CLOSE_EVENT, OPEN_EVENT, UPDATE_SHOW_EVENT } from '../constants'
+import { CANCEL_EVENT, CLOSE_EVENT, OPEN_EVENT, UPDATE_SHOW_EVENT } from '../constants'
 import type { ActionSheetEmits, ActionSheetProps } from './action-sheet'
 
 export const useActionSheet = (
@@ -20,7 +20,14 @@ export const useActionSheet = (
     },
   })
 
+  const cancelHandler = () => {
+    showValue.value = false
+    emit(CANCEL_EVENT)
+  }
+
   return {
     showValue,
+
+    cancelHandler,
   }
 }
