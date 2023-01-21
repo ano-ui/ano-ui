@@ -15,7 +15,7 @@ const handleShow = (p: PositionType) => {
   <UBasePage>
     <div class="p-2 pb-safe">
       <APopup v-model:show="showValue" :position="position" :duration="300">
-        <div class="flex justify-center items-center w-full h-full">
+        <div class="flex justify-center items-center bg-teal w-200px h-100px">
           Content
         </div>
       </APopup>

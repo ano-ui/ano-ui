@@ -27,12 +27,12 @@ defineExpose({ showDialog })
       </div>
       <div class="a-dialog-action-base">
         <template v-if="dialogStatus?.showCancelButton">
-          <AButton class="flex-1" type="danger" variant="text" @click.stop="onCancel">
+          <AButton block class="flex-1" type="danger" variant="text" cc="border-none" @click.stop="onCancel">
             {{ dialogStatus.cancelButtonText || 'Cancel' }}
           </AButton>
         </template>
         <template v-if="dialogStatus?.showConfirmButton">
-          <AButton class="flex-1" variant="text" @click.stop="onConfirm">
+          <AButton block class="flex-1" variant="text" cc="border-none" @click.stop="onConfirm">
             {{ dialogStatus.confirmButtonText || 'Confirm' }}
           </AButton>
         </template>
