@@ -13,6 +13,7 @@ export * from './ARadioGroup'
 export * from './ASwitch'
 
 // Action
+export * from './AActionSheet'
 export * from './ADialog'
 export * from './ANotify'
 export * from './AOverlay'

@@ -49,6 +49,10 @@
     },
 
     {
+      "path": "pages/action/action-sheet/action-sheet",
+      "style": { "navigationBarTitleText": "ActionSheet 动作面板" }
+    },
+    {
       "path": "pages/action/dialog/dialog",
       "style": { "navigationBarTitleText": "Dialog 弹出框" }
     },
@@ -62,7 +66,7 @@
     },
     {
       "path": "pages/display/notice-bar/notice-bar",
-      "style": { "navigationBarTitleText": "Notice Bar 通知栏" }
+      "style": { "navigationBarTitleText": "NoticeBar 通知栏" }
     },
     {
       "path": "pages/display/tag/tag",

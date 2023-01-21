@@ -57,6 +57,7 @@ const goDisplay = (path: string) => {
         Action 反馈组件
       </div>
       <ACellGroup>
+        <ACell title="ActionSheet 动作面板" arrow @click="goAction('action-sheet')" />
         <ACell title="Dialog 弹出框" arrow @click="goAction('dialog')" />
         <ACell title="Notify 消息通知" arrow @click="goAction('notify')" />
         <ACell title="Overlay 遮罩层" arrow @click="goAction('overlay')" />
