@@ -1,8 +1,7 @@
 import type { ExtractPropTypes, PropType } from 'vue'
-import { useCustomClassProp, useCustomStyleProp, useSizeProp, useVariantProp } from '../composables'
+import { useCustomClassProp, useCustomStyleProp, useVariantProp } from '../composables'
 import { CLICK_EVENT } from '../constants'
-
-export type ButtonType = 'primary' | 'success' | 'info' | 'warning' | 'danger'
+import type { ButtonType } from './types'
 
 export const useButtonProp = {
   type: String as PropType<ButtonType>,
@@ -11,15 +10,23 @@ export const useButtonProp = {
   default: 'primary',
 }
 
+export const useButtonSizeProp = {
+  type: String as PropType<ButtonType>,
+  validator: (value: string) =>
+    ['mini', 'small', 'normal', 'large'].includes(value),
+  default: 'normal',
+}
+
 export const buttonProps = {
   cc: useCustomClassProp,
   cs: useCustomStyleProp,
   type: useButtonProp,
-  size: useSizeProp,
+  size: useButtonSizeProp,
   variant: useVariantProp,
+  square: Boolean,
+  round: Boolean,
   disabled: Boolean,
   icon: String,
-  iconOnly: Boolean,
   openType: String,
   block: Boolean,
   loading: Boolean,
