@@ -23,9 +23,7 @@ const animationName = {
     :show="showValue" :name="animationName[position]" :duration="duration"
     :cc="['a-popup-wrapper-base', `a-popup-wrapper-position-${position}`, cc]" :style="cs" @click.stop
   >
-    <div class="a-popup-content-base" :class="ccc" :style="ccs">
-      <slot />
-    </div>
+    <slot />
   </ATransition>
 </template>
 
