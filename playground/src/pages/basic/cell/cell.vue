@@ -28,7 +28,7 @@
             <i class="i-carbon-send-alt" />
           </template>
           <template #value>
-            <AButton size="xs">
+            <AButton size="sm">
               Value
             </AButton>
           </template>

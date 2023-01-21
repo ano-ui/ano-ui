@@ -32,7 +32,7 @@ export default defineConfig({
   transformers: [
     transformerDirectives(),
     transformerVariantGroup(),
-    transformerAttributify(),
+    transformerAttributify({ ignoreAttributes: ['block'] }),
     transformerApplet(),
   ],
 })

@@ -11,7 +11,7 @@ const { disabled, clickHandler } = useCell(props, emit)
 <template>
   <div
     class="a-bg-base-second a-cell-base" :class="[{ 'a-cell-disabled': disabled }, cc]" hover-class="a-cell-hover"
-    :style="cs" @click="clickHandler"
+    hover-stay-time="100" :style="cs" @click="clickHandler"
   >
     <div class="flex justify-center items-center gap1">
       <div class="flex items-center gap1">

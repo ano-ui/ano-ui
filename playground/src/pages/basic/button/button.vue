@@ -36,19 +36,16 @@ const getInfo = () => {
         Size
       </div>
       <div p-2 flex="~ gap2 wrap" items-center>
-        <AButton type="primary" size="xs">
-          Extra Mini
-        </AButton>
-        <AButton type="success" size="sm">
+        <AButton type="primary" size="sm">
           Mini
         </AButton>
-        <AButton type="info" size="md">
+        <AButton type="success" size="md">
           Small
         </AButton>
-        <AButton type="warning" size="lg">
+        <AButton type="info" size="lg">
           Medium
         </AButton>
-        <AButton type="danger" size="xl">
+        <AButton type="warning" size="xl">
           Large
         </AButton>
       </div>
@@ -89,9 +86,7 @@ const getInfo = () => {
       <div p-2 flex="~ gap2 wrap" items-center>
         <AButton icon="i-carbon-palm-tree" />
         <AButton type="success" icon-only cc="rounded-full">
-          <template #icon>
-            <div class="i-carbon-sprout" />
-          </template>
+          <div class="i-carbon-sprout" />
         </AButton>
         <AButton type="info" cc="rounded-full">
           Rounded

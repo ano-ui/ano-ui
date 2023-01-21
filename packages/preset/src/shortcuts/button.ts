@@ -1,13 +1,16 @@
 export const buttonShortcuts: Record<string, string> = {
-  'a-button-base':
-    `inline-flex justify-center gap1 items-center m0 rounded-lg border border-solid after:display-none a-transition
-     dark:bg-op80 dark:border-op80 dark:text-op80 !leading-none`,
-  'a-button-hover': '!bg-op70 !border-op0 op70',
+  'a-button-wrapper-base':
+    `relative box-border inline-block m-0 rounded-lg border border-solid after:display-none a-transition
+     dark:bg-op80 dark:border-op80 dark:text-op80 !leading-none text-center overflow-visible bg-clip-padding
+     before:content-none before:absolute before:w-full before:h-full before:left-50% before:top-50% before:-translate-50% 
+     before:border-style-inherit before:border-width-inherit before:border-rd-inherit before:border-black before:bg-black before:op0`,
+  'a-button-content-base': 'flex justify-center items-center h-full',
+  'a-button-hover': 'before:op10',
+  'a-button-disabled': 'before:display-none op70',
   'a-button-text-hover': '!text-op70',
-  'a-button-xs': 'px2 py1 text-xs',
-  'a-button-sm': 'px3 py1.5 text-sm',
-  'a-button-md': 'px4 py2 text-base',
-  'a-button-lg': 'px5 py2.5 text-lg',
-  'a-button-xl': 'px6 py3 text-xl',
+  'a-button-sm': 'h-8 min-w-10 text-sm',
+  'a-button-md': 'h-9 min-w-10 text-base',
+  'a-button-lg': 'h-10 min-w-10 text-lg',
+  'a-button-xl': 'h-12 min-w-10 text-xl',
   'a-button-icon': '!p2 aspect-square',
 }
