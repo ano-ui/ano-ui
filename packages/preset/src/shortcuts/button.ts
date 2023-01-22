@@ -1,7 +1,7 @@
 export const buttonShortcuts: Record<string, string> = {
   'a-button-wrapper-base':
     `relative box-border inline-block m-0 rounded-lg after:display-none a-transition
-    !leading-none text-center overflow-visible bg-clip-padding
+   text-center overflow-visible bg-clip-padding
      before:content-none before:absolute before:w-full before:h-full before:left-50% before:top-50% before:-translate-50% 
      before:border-style-inherit before:border-width-inherit before:border-rd-inherit before:border-black before:bg-black before:op0`,
   'a-button-content-base': 'flex justify-center items-center h-full',

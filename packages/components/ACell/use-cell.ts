@@ -9,17 +9,14 @@ export const useCell = (
   emit: SetupContext<CellEmits>['emit'],
 ) => {
   const cellGroup = inject(cellGroupKey, undefined)
-  const disabled = computed(() => cellGroup?.disabled ?? props.disabled)
+  const arrow = computed(() => cellGroup?.arrow ?? props.arrow)
 
   const clickHandler = (evt: MouseEvent) => {
-    if (disabled.value)
-      return
-
     emit(CLICK_EVENT, evt)
   }
 
   return {
-    disabled,
+    arrow,
 
     clickHandler,
   }

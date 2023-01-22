@@ -1,19 +1,29 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import { cellEmits, cellProps } from './cell'
 import { useCell } from './use-cell'
 
 const props = defineProps(cellProps)
 const emit = defineEmits(cellEmits)
 
-const { disabled, clickHandler } = useCell(props, emit)
+const { arrow, clickHandler } = useCell(props, emit)
+
+const className = computed(() => {
+  const _className = {}
+  // #ifdef H5
+  Object.assign(_className, { 'a-cell-hover-h5': true })
+  // #endif
+
+  return _className
+})
 </script>
 
 <template>
   <div
-    class="a-bg-base-second a-cell-base" :class="[{ 'a-cell-disabled': disabled }, cc]" hover-class="a-cell-hover"
-    hover-stay-time="100" :style="cs" @click="clickHandler"
+    class="a-cell-base" :class="[className, cc]" hover-class="a-cell-hover" hover-stay-time="100" :style="cs"
+    @click="clickHandler"
   >
-    <div class="flex justify-center items-center gap1">
+    <div class="a-cell-content-base">
       <div class="flex items-center gap1">
         <div v-if="icon" :class="icon" />
         <slot v-else name="icon" />

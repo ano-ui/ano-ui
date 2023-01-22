@@ -13,7 +13,7 @@ const {
 
 <template>
   <div
-    class="a-input-base a-input-border a-bg-base-second a-color-base"
+    class="a-input-base a-input-border a-bg-2 a-color-base"
     :class="[`a-input-${size}`, { 'a-disabled': disabled }, isClick ? 'border-context' : '', cc]"
     :style="cs"
   >
