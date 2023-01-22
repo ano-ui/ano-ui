@@ -17,11 +17,9 @@ defineExpose({ showToast, closeToast })
     :show="show" name="fade" :duration="300"
     :cc="['a-toast-base', `a-toast-position-${toastStatus?.position}`, cc]" :cs="cs"
   >
-    <div class="a-toast-content-base">
-      <template v-if="toastStatus?.message">
-        {{ toastStatus.message }}
-      </template>
-      <slot v-else />
-    </div>
+    <template v-if="toastStatus?.message">
+      {{ toastStatus.message }}
+    </template>
+    <slot v-else />
   </ATransition>
 </template>
