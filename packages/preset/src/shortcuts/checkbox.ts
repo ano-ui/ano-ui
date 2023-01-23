@@ -8,8 +8,8 @@ export const checkboxShortcuts: Record<string, string> = {
   'a-checkbox-disabled-label': 'text-[#C8C9CC] dark:text-[#4D4D4D]',
   'a-checkbox-checkbox-base': 'relative inline-block box-border border border-solid border-[#C8C9CC] bg-clip-padding rounded-md a-transition flex justify-center items-center',
   'a-checkbox-checkbox-icon': 'absolute inset-0 flex justify-center items-center animate-zoom-in animate-duration-200',
-  'a-checkbox-checkbox-mini': 'h4 w4',
-  'a-checkbox-checkbox-small': 'h5 w5',
-  'a-checkbox-checkbox-normal': 'h6 w6',
-  'a-checkbox-checkbox-large': 'h7 w7',
+  'a-checkbox-checkbox-mini': 'h5 w5',
+  'a-checkbox-checkbox-small': 'h6 w6',
+  'a-checkbox-checkbox-normal': 'h7 w7',
+  'a-checkbox-checkbox-large': 'h8 w8',
 }

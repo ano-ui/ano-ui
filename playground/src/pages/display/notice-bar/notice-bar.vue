@@ -5,11 +5,11 @@ const show = ref(true)
 
 <template>
   <UBasePage>
-    <div class="p-2 pb-safe">
-      <div class="p-2">
+    <div class="pb-safe">
+      <div class="p-4">
         Type
       </div>
-      <div p-2 flex="~ col gap2">
+      <div px-4 flex="~ col gap2">
         <ANoticeBar>
           This is a notice bar.
         </ANoticeBar>
@@ -26,10 +26,10 @@ const show = ref(true)
           Danger
         </ANoticeBar>
       </div>
-      <div class="p-2">
+      <div class="p-4">
         Variant
       </div>
-      <div p-2 flex="~ col gap2">
+      <div px-4 flex="~ col gap2">
         <ANoticeBar variant="solid">
           Solid
         </ANoticeBar>
@@ -46,10 +46,10 @@ const show = ref(true)
           Text
         </ANoticeBar>
       </div>
-      <div class="p-2">
+      <div class="p-4">
         Custom
       </div>
-      <div p-2>
+      <div px-4>
         <ANoticeBar type="danger" :show="show" show-close @close="show = false">
           Show Close
         </ANoticeBar>

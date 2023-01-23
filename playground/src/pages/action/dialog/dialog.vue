@@ -20,27 +20,25 @@ const handleCancel = () => {
 
 <template>
   <UBasePage>
-    <div class="p-2 pb-safe">
+    <div class="pb-safe">
       <ADialog ref="dialogRef" @confirm="handleConfirm" @cancel="handleCancel" />
-      <div class="p-2">
+      <div class="p-4">
         Dialog
       </div>
-      <div p-2>
-        <ACellGroup>
-          <ACell
-            title="Basic" arrow
-            @click="handleShow({ title: 'Dialog Title', message: 'Dialog Message Dialog Message' })"
-          />
-          <ACell
-            title="Basic No Title" arrow
-            @click="handleShow({ message: 'Dialog Message Dialog Message' })"
-          />
-          <ACell
-            title="Confirm" arrow
-            @click="handleShow({ title: 'Dialog Title', message: 'Dialog Message Dialog Message', showCancelButton: true, showConfirmButton: true })"
-          />
-        </ACellGroup>
-      </div>
+      <ACellGroup arrow inset divider>
+        <ACell
+          title="Basic"
+          @click="handleShow({ title: 'Dialog Title', message: 'Dialog Message Dialog Message' })"
+        />
+        <ACell
+          title="Basic No Title"
+          @click="handleShow({ message: 'Dialog Message Dialog Message' })"
+        />
+        <ACell
+          title="Confirm"
+          @click="handleShow({ title: 'Dialog Title', message: 'Dialog Message Dialog Message', showCancelButton: true, showConfirmButton: true })"
+        />
+      </ACellGroup>
     </div>
   </UBasePage>
 </template>

@@ -8,8 +8,8 @@ export const radioShortcuts: Record<string, string> = {
   'a-radio-disabled-label': 'text-[#C8C9CC] dark:text-[#4D4D4D]',
   'a-radio-radio-base': 'relative inline-block box-border border border-solid border-[#C8C9CC] bg-clip-padding rounded-full a-transition flex justify-center items-center',
   'a-radio-radio-icon': 'absolute inset-0 flex justify-center items-center animate-zoom-in animate-duration-200',
-  'a-radio-radio-mini': 'h4 w4',
-  'a-radio-radio-small': 'h5 w5',
-  'a-radio-radio-normal': 'h6 w6',
-  'a-radio-radio-large': 'h7 w7',
+  'a-radio-radio-mini': 'h5 w5',
+  'a-radio-radio-small': 'h6 w6',
+  'a-radio-radio-normal': 'h7 w7',
+  'a-radio-radio-large': 'h8 w8',
 }

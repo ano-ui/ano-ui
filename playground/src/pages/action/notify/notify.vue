@@ -32,7 +32,7 @@ const topStyle = computed(() => {
 
 <template>
   <UBasePage>
-    <div class="p-2 pb-safe">
+    <div class="pb-safe">
       <ANotify ref="notify" :cs="topStyle" />
       <ANotify ref="notify2" :cs="topStyle">
         <template #icon>
@@ -42,51 +42,46 @@ const topStyle = computed(() => {
       </ANotify>
       <ANotify ref="notify3" :cs="topStyle" ccc="bg-gradient-to-r from-indigo-500 to-pink-500" />
 
-      <div class="p-2">
+      <div class="p-4">
         Notify
       </div>
-      <div p-2>
-        <ACellGroup>
-          <ACell title="Show" arrow @click="showNotify({ type: 'primary', position: 'default', message: 'Notify' })" />
-        </ACellGroup>
-      </div>
-      <div class="p-2">
+      <ACellGroup arrow divider inset>
+        <ACell title="Show" @click="showNotify({ type: 'primary', position: 'default', message: 'Notify' })" />
+      </ACellGroup>
+
+      <div class="p-4">
         Position
       </div>
-      <div p-2>
-        <ACellGroup>
-          <ACell title="Default" arrow @click="showNotify({ position: 'default', message: 'Default' })" />
-          <ACell title="Top" arrow @click="showNotify({ position: 'top', message: 'Top' })" />
-          <ACell title="Top Left" arrow @click="showNotify({ position: 'top-left', message: 'Top Left' })" />
-          <ACell title="Top Right" arrow @click="showNotify({ position: 'top-right', message: 'Top Right' })" />
-          <ACell title="Bottom" arrow @click="showNotify({ position: 'bottom', message: 'Bottom' })" />
-          <ACell title="Bottom Left" arrow @click="showNotify({ position: 'bottom-left', message: 'Bottom Left' })" />
-          <ACell title="Bottom Right" arrow @click="showNotify({ position: 'bottom-right', message: 'Bottom Right' })" />
-        </ACellGroup>
-      </div>
-      <div class="p-2">
+      <ACellGroup arrow divider inset>
+        <ACell title="Default" @click="showNotify({ position: 'default', message: 'Default' })" />
+        <ACell title="Top" @click="showNotify({ position: 'top', message: 'Top' })" />
+        <ACell title="Top Left" @click="showNotify({ position: 'top-left', message: 'Top Left' })" />
+        <ACell title="Top Right" @click="showNotify({ position: 'top-right', message: 'Top Right' })" />
+        <ACell title="Bottom" @click="showNotify({ position: 'bottom', message: 'Bottom' })" />
+        <ACell title="Bottom Left" @click="showNotify({ position: 'bottom-left', message: 'Bottom Left' })" />
+        <ACell title="Bottom Right" @click="showNotify({ position: 'bottom-right', message: 'Bottom Right' })" />
+      </ACellGroup>
+
+      <div class="p-4">
         Type Icon
       </div>
-      <div p-2>
-        <ACellGroup>
-          <ACell title="Primary" arrow @click="showNotify({ type: 'primary', showIcon: true, message: 'Primary Icon' })" />
-          <ACell title="Success" arrow @click="showNotify({ type: 'success', showIcon: true, message: 'Success Icon' })" />
-          <ACell title="Info" arrow @click="showNotify({ type: 'info', showIcon: true, message: 'Info Icon' })" />
-          <ACell title="Warning" arrow @click="showNotify({ type: 'warning', showIcon: true, message: 'Warning Icon' })" />
-          <ACell title="Danger" arrow @click="showNotify({ type: 'danger', showIcon: true, message: 'Danger Icon' })" />
-        </ACellGroup>
-      </div>
-      <div class="p-2">
+      <ACellGroup arrow divider inset>
+        <ACell title="Primary" @click="showNotify({ type: 'primary', showIcon: true, message: 'Primary Icon' })" />
+        <ACell title="Success" @click="showNotify({ type: 'success', showIcon: true, message: 'Success Icon' })" />
+        <ACell title="Info" @click="showNotify({ type: 'info', showIcon: true, message: 'Info Icon' })" />
+        <ACell title="Warning" @click="showNotify({ type: 'warning', showIcon: true, message: 'Warning Icon' })" />
+        <ACell title="Danger" @click="showNotify({ type: 'danger', showIcon: true, message: 'Danger Icon' })" />
+      </ACellGroup>
+
+      <div class="p-4">
         Custom
       </div>
-      <div p-2>
-        <ACellGroup>
-          <ACell title="Custom Icon" arrow @click="showNotify2({ type: 'primary', position: 'top', message: 'Custom Icon', customIcon: true })" />
-          <ACell title="Show Close" arrow @click="showNotify2({ type: 'success', position: 'top', message: 'Show Close', showClose: true })" />
-          <ACell title="Slot" arrow @click="showNotify2({ type: 'info', position: 'top' })" />
-          <ACell title="Bg Gradient" arrow @click="showNotify3({ type: 'warning', position: 'top', message: 'Bg Gradient' })" />
-        </ACellGroup>
-      </div>
+      <ACellGroup arrow divider inset>
+        <ACell title="Custom Icon" @click="showNotify2({ type: 'primary', position: 'top', message: 'Custom Icon', customIcon: true })" />
+        <ACell title="Show Close" @click="showNotify2({ type: 'success', position: 'top', message: 'Show Close', showClose: true })" />
+        <ACell title="Slot" @click="showNotify2({ type: 'info', position: 'top' })" />
+        <ACell title="Bg Gradient" @click="showNotify3({ type: 'warning', position: 'top', message: 'Bg Gradient' })" />
+      </ACellGroup>
     </div>
   </UBasePage>
 </template>

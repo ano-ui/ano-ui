@@ -22,11 +22,11 @@ function toggle(index: any) {
 
 <template>
   <UBasePage>
-    <div class="p-2 pb-safe">
-      <div class="p-2">
+    <div class="pb-safe">
+      <div class="p-4">
         Type
       </div>
-      <div p-2 flex="~ col gap2">
+      <div px-4 flex="~ col gap2">
         <ACheckbox v-model="checked" label="Primary" />
         <ACheckbox v-model="checked" type="success" label="Success" />
         <ACheckbox v-model="checked" type="info" label="Info" />
@@ -34,35 +34,35 @@ function toggle(index: any) {
         <ACheckbox v-model="checked" type="danger" label="Danger" />
       </div>
 
-      <div class="p-2">
+      <div class="p-4">
         Size
       </div>
-      <div p-2 flex="~ col gap2">
+      <div px-4 flex="~ col gap2">
         <ACheckbox v-model="checked" type="primary" size="mini" label="Mini" />
         <ACheckbox v-model="checked" type="success" size="small" label="Small" />
         <ACheckbox v-model="checked" type="info" size="normal" label="Normal" />
         <ACheckbox v-model="checked" type="warning" size="large" label="Large" />
       </div>
-      <div class="p-2">
+      <div class="p-4">
         Variant
       </div>
-      <div p-2 flex="~ col gap2">
+      <div px-4 flex="~ col gap2">
         <ACheckbox v-model="checked" label="Solid" />
         <ACheckbox v-model="checked" type="success" variant="outline" label="Outline" />
         <ACheckbox v-model="checked" type="info" variant="ghost" label="Ghost" />
         <ACheckbox v-model="checked" type="warning" variant="light" label="Light" />
       </div>
-      <div class="p-2">
+      <div class="p-4">
         Status
       </div>
-      <div p-2 flex="~ col gap2">
+      <div px-4 flex="~ col gap2">
         <ACheckbox type="success" disabled label="Unchecked" />
         <ACheckbox v-model="statusChecked2" type="success" disabled label="Checked" />
       </div>
-      <div class="p-2">
+      <div class="p-4">
         Custom
       </div>
-      <div p-2 flex="~ col gap2">
+      <div px-4 flex="~ col gap2">
         <ACheckbox v-model="checked2" :value="1" label="Value" icon="i-carbon-send-alt" />
         <ACheckbox v-model="checked3" custom-icon value="yes" label="Slot Icon">
           <template #icon="props">
@@ -71,10 +71,10 @@ function toggle(index: any) {
         </ACheckbox>
       </div>
 
-      <div class="p-2">
+      <div class="p-4">
         CheckboxGroup: {{ groupChecked }}
       </div>
-      <div p-2>
+      <div px-4>
         <ACheckboxGroup v-model="groupChecked">
           <ACheckbox value="a" label="A" />
           <ACheckbox value="b" label="B" />
@@ -82,10 +82,10 @@ function toggle(index: any) {
         </ACheckboxGroup>
       </div>
 
-      <div class="p-2">
+      <div class="p-4">
         CheckboxGroup Min Max[1-2]: {{ groupChecked2 }}
       </div>
-      <div p-2>
+      <div px-4>
         <ACheckboxGroup v-model="groupChecked2" :min="1" :max="2" direction="horizontal">
           <ACheckbox value="a" label="A" />
           <ACheckbox value="b" label="B" />
@@ -93,7 +93,7 @@ function toggle(index: any) {
         </ACheckboxGroup>
       </div>
 
-      <div class="p-2">
+      <div class="p-4">
         CheckboxGroup with Cell: {{ groupChecked }}
       </div>
       <ACheckboxGroup v-model="groupChecked">

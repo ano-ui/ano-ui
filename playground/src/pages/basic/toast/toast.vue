@@ -11,21 +11,21 @@ const showToast = (options: ToastOptions) => {
 
 <template>
   <UBasePage>
-    <div class="p-2 pb-safe">
+    <div class="pb-safe">
       <AToast ref="toast" />
 
-      <div class="p-2">
+      <div class="p-4">
         Toast
       </div>
-      <div p-2 flex="~ gap2 wrap">
+      <div px-4 flex="~ gap2 wrap">
         <AButton @click="showToast({ position: 'default', message: 'Toast' })">
           Show Toast
         </AButton>
       </div>
-      <div class="p-2">
+      <div class="p-4">
         Position
       </div>
-      <div p-2 flex="~ gap2 wrap">
+      <div px-4 flex="~ gap2 wrap">
         <AButton type="primary" @click="showToast({ position: 'default', message: 'This is a toast, and it will disappear after 3 seconds.' })">
           Default
         </AButton>

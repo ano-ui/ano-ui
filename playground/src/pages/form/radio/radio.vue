@@ -9,11 +9,11 @@ const groupChecked = ref('a')
 
 <template>
   <UBasePage>
-    <div class="p-2 pb-safe">
-      <div class="p-2">
+    <div class="pb-safe">
+      <div class="p-4">
         Type
       </div>
-      <div p-2 flex="~ col gap2">
+      <div px-4 flex="~ col gap2">
         <ARadio v-model="checked" label="Primary" />
         <ARadio v-model="checked" type="success" label="Success" />
         <ARadio v-model="checked" type="info" label="Info" />
@@ -21,38 +21,38 @@ const groupChecked = ref('a')
         <ARadio v-model="checked" type="danger" label="Danger" />
       </div>
 
-      <div class="p-2">
+      <div class="p-4">
         Size
       </div>
-      <div p-2 flex="~ col gap2">
+      <div px-4 flex="~ col gap2">
         <ARadio v-model="checked" type="primary" size="mini" label="Mini" />
         <ARadio v-model="checked" type="success" size="small" label="Small" />
         <ARadio v-model="checked" type="info" size="normal" label="Normal" />
         <ARadio v-model="checked" type="warning" size="large" label="Large" />
       </div>
 
-      <div class="p-2">
+      <div class="p-4">
         Variant
       </div>
-      <div p-2 flex="~ col gap2">
+      <div px-4 flex="~ col gap2">
         <ARadio v-model="checked" label="Solid" />
         <ARadio v-model="checked" type="success" variant="outline" label="Outline" />
         <ARadio v-model="checked" type="info" variant="ghost" label="Ghost" />
         <ARadio v-model="checked" type="warning" variant="light" label="Light" />
       </div>
 
-      <div class="p-2">
+      <div class="p-4">
         Status
       </div>
-      <div p-2 flex="~ col gap2">
+      <div px-4 flex="~ col gap2">
         <ARadio type="success" disabled label="Unchecked" />
         <ARadio v-model="statusChecked2" type="success" disabled label="Checked" />
       </div>
 
-      <div class="p-2">
+      <div class="p-4">
         Custom
       </div>
-      <div p-2 flex="~ col gap2">
+      <div px-4 flex="~ col gap2">
         <ARadio v-model="checked2" :value="1" label="Value" icon="i-carbon-send-alt" />
         <ARadio v-model="checked3" custom-icon value="yes" label="Slot Icon">
           <template #icon="props">
@@ -61,10 +61,10 @@ const groupChecked = ref('a')
         </ARadio>
       </div>
 
-      <div class="p-2">
+      <div class="p-4">
         RadioGroup: {{ groupChecked }}
       </div>
-      <div p-2>
+      <div px-4>
         <ARadioGroup v-model="groupChecked">
           <ARadio value="a" label="A" />
           <ARadio value="b" label="B" />
@@ -72,10 +72,10 @@ const groupChecked = ref('a')
         </ARadioGroup>
       </div>
 
-      <div class="p-2">
+      <div class="p-4">
         RadioGroup: {{ groupChecked }}
       </div>
-      <div p-2>
+      <div px-4>
         <ARadioGroup v-model="groupChecked" direction="horizontal">
           <ARadio value="a" label="A" />
           <ARadio value="b" label="B" />
@@ -83,7 +83,7 @@ const groupChecked = ref('a')
         </ARadioGroup>
       </div>
 
-      <div class="p-2">
+      <div class="p-4">
         RadioGroup with Cell: {{ groupChecked }}
       </div>
       <ARadioGroup v-model="groupChecked">
