@@ -1,33 +1,33 @@
 <script setup lang="ts">
-import { inputEmits, inputProps } from './input'
-import { useInput } from './use-input'
+import { fieldEmits, fieldProps } from './field'
+import { useField } from './use-field'
 
-const props = defineProps(inputProps)
-const emit = defineEmits(inputEmits)
+const props = defineProps(fieldProps)
+const emit = defineEmits(fieldEmits)
 
 const {
   disabled, modelValue, placeholderText, isClick, showPasswordText, focus,
   focusHandler, clickHandler, blurHandler, inputHandler, clearHandler,
-} = useInput(props, emit)
+} = useField(props, emit)
 </script>
 
 <template>
   <div
-    class="a-input-base a-input-border a-bg-2 a-color-base"
-    :class="[`a-input-${size}`, { 'a-disabled': disabled }, isClick ? 'border-context' : '', cc]"
+    class="a-field-base a-field-border a-bg-2 a-color-base"
+    :class="[`a-field-${size}`, { 'a-disabled': disabled }, isClick ? 'border-context' : '', cc]"
     :style="cs"
   >
     <div v-if="icon" :class="icon" />
     <slot v-else name="icon" />
     <slot name="prefix" />
     <input
-      v-if="type !== 'textarea'" class="a-input-content-base" :type="type !== 'password' ? type : 'text'"
+      v-if="type !== 'textarea'" class="a-field-content-base" :type="type !== 'password' ? type : 'text'"
       :class="[ccc]" :style="ccs" :value="modelValue" :placeholder="placeholderText" :maxlength="maxlength" :focus="focus"
       :disabled="disabled" :password="type === 'password' ? !showPasswordText : false"
       placeholder-style="color: #d1d5db" @click="clickHandler" @blur="blurHandler" @input="inputHandler" @focus="focusHandler"
     >
     <textarea
-      v-else class="a-input-content-base h-12" :class="[ccc]" :style="ccs" :value="modelValue"
+      v-else class="a-field-content-base h-12" :class="[ccc]" :style="ccs" :value="modelValue"
       :placeholder="placeholderText" :maxlength="maxlength" :focus="focus" :disabled="disabled"
       placeholder-style="color: #d1d5db" @click="clickHandler" @blur="blurHandler" @input="inputHandler" @focus="focusHandler"
     />
@@ -38,7 +38,7 @@ const {
     />
     <div v-if="suffixIcon" :class="suffixIcon" />
     <slot name="suffix" />
-    <div v-if="showWordLimit && modelValue" class="a-input-word-limit text-caption">
+    <div v-if="showWordLimit && modelValue" class="a-field-word-limit text-caption">
       {{ modelValue.length }}/{{ maxlength }}
     </div>
   </div>

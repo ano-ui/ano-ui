@@ -49,7 +49,7 @@ const goDisplay = (path: string) => {
       </div>
       <ACellGroup inset arrow divider>
         <ACell title="Checkbox 复选框" arrow @click="goForm('checkbox')" />
-        <ACell title="Input 输入框" arrow @click="goForm('input')" />
+        <ACell title="Field 输入框" arrow @click="goForm('field')" />
         <ACell title="Radio 单选框" arrow @click="goForm('radio')" />
         <ACell title="Switch 开关" arrow @click="goForm('switch')" />
       </ACellGroup>

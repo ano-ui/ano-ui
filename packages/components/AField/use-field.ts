@@ -1,11 +1,11 @@
 import type { SetupContext } from 'vue'
 import { computed, ref } from 'vue'
 import { BLUR_EVENT, CHANGE_EVENT, CLEAR_EVENT, FOCUS_EVENT, INPUT_EVENT, UPDATE_MODEL_EVENT } from '../constants'
-import type { InputEmits, InputProps } from './input'
+import type { FieldEmits, FieldProps } from './field'
 
-export const useInput = (
-  props: InputProps,
-  emit: SetupContext<InputEmits>['emit'],
+export const useField = (
+  props: FieldProps,
+  emit: SetupContext<FieldEmits>['emit'],
 ) => {
   const disabled = computed(() => props.disabled ?? false)
   const modelValue = computed(() => props.modelValue || '')
