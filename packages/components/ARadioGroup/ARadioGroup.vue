@@ -22,10 +22,7 @@ provide(radioGroupKey,
 </script>
 
 <template>
-  <div
-    class="a-radio-group-base" :class="[cc]"
-    :style="cs"
-  >
+  <div :class="[`a-radio-group-${direction}`, cc]" :style="cs">
     <slot />
   </div>
 </template>

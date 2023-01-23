@@ -57,10 +57,8 @@ const groupChecked2 = ref(['a', 'b'])
             <div :class="props.checked ? 'i-carbon-send-alt' : 'i-carbon-send'" />
           </template>
         </ACheckbox>
-        <ACheckbox v-model="checked3">
-          <div class="i-carbon-send-alt" />Content
-        </ACheckbox>
       </div>
+
       <div class="p-2">
         CheckboxGroup: {{ groupChecked }}
       </div>

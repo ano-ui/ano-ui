@@ -11,61 +11,72 @@ const groupChecked = ref('a')
   <UBasePage>
     <div class="p-2 pb-safe">
       <div class="p-2">
-        Color
+        Type
       </div>
-      <div p-2 flex="~ gap2 wrap" items-center>
-        <ARadio v-model="checked" />
-        <ARadio v-model="checked" type="success" />
-        <ARadio v-model="checked" type="info" />
-        <ARadio v-model="checked" type="warning" />
-        <ARadio v-model="checked" type="danger" />
+      <div p-2 flex="~ col gap2">
+        <ARadio v-model="checked" label="Primary" />
+        <ARadio v-model="checked" type="success" label="Success" />
+        <ARadio v-model="checked" type="info" label="Info" />
+        <ARadio v-model="checked" type="warning" label="Warning" />
+        <ARadio v-model="checked" type="danger" label="Danger" />
       </div>
 
       <div class="p-2">
         Size
       </div>
-      <div p-2 flex="~ gap2 wrap" items-center>
-        <ARadio v-model="checked" type="primary" size="xs" label="Extra Mini" />
-        <ARadio v-model="checked" type="success" size="sm" label="Mini" />
-        <ARadio v-model="checked" type="info" size="md" label="Small" />
-        <ARadio v-model="checked" type="warning" size="lg" label="Medium" />
-        <ARadio v-model="checked" type="danger" size="xl" label="Large" />
+      <div p-2 flex="~ col gap2">
+        <ARadio v-model="checked" type="primary" size="mini" label="Mini" />
+        <ARadio v-model="checked" type="success" size="small" label="Small" />
+        <ARadio v-model="checked" type="info" size="normal" label="Normal" />
+        <ARadio v-model="checked" type="warning" size="large" label="Large" />
       </div>
+
       <div class="p-2">
         Variant
       </div>
-      <div p-2 flex="~ gap2 wrap" items-center>
-        <ARadio v-model="checked" variant="solid" />
-        <ARadio v-model="checked" type="success" variant="outline" />
-        <ARadio v-model="checked" type="info" variant="ghost" />
-        <ARadio v-model="checked" type="warning" variant="light" />
-        <ARadio v-model="checked" type="danger" variant="text" />
+      <div p-2 flex="~ col gap2">
+        <ARadio v-model="checked" label="Solid" />
+        <ARadio v-model="checked" type="success" variant="outline" label="Outline" />
+        <ARadio v-model="checked" type="info" variant="ghost" label="Ghost" />
+        <ARadio v-model="checked" type="warning" variant="light" label="Light" />
       </div>
+
       <div class="p-2">
         Status
       </div>
-      <div p-2 flex="~ gap2 wrap" items-center>
-        <ARadio v-model="statusChecked2" type="success" disabled />
+      <div p-2 flex="~ col gap2">
+        <ARadio type="success" disabled label="Unchecked" />
+        <ARadio v-model="statusChecked2" type="success" disabled label="Checked" />
       </div>
+
       <div class="p-2">
         Custom
       </div>
-      <div p-2 flex="~ gap2 wrap" items-center>
-        <ARadio v-model="checked2" :value="1" />
-        <ARadio v-model="checked3" custom-icon value="yes">
-          <template #icon>
-            <div class="i-carbon-send-alt" />
+      <div p-2 flex="~ col gap2">
+        <ARadio v-model="checked2" :value="1" label="Value" icon="i-carbon-send-alt" />
+        <ARadio v-model="checked3" custom-icon value="yes" label="Slot Icon">
+          <template #icon="props">
+            <div :class="props.checked ? 'i-carbon-send-alt' : 'i-carbon-send'" />
           </template>
         </ARadio>
-        <ARadio v-model="checked3">
-          <div class="i-carbon-send-alt" />
-        </ARadio>
       </div>
+
       <div class="p-2">
-        Radio Group: {{ groupChecked }}
+        RadioGroup: {{ groupChecked }}
       </div>
       <div p-2>
         <ARadioGroup v-model="groupChecked">
+          <ARadio value="a" label="A" />
+          <ARadio value="b" label="B" />
+          <ARadio value="c" label="C" />
+        </ARadioGroup>
+      </div>
+
+      <div class="p-2">
+        RadioGroup: {{ groupChecked }}
+      </div>
+      <div p-2>
+        <ARadioGroup v-model="groupChecked" direction="horizontal">
           <ARadio value="a" label="A" />
           <ARadio value="b" label="B" />
           <ARadio value="c" label="C" />

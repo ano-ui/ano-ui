@@ -4,7 +4,7 @@ import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '../constants'
 import { isBoolean, isNumber, isString } from '../utils'
 import type { CheckboxShape, CheckboxSize, CheckboxType } from './types'
 
-export const useCheckboxProp = {
+export const useCheckboxTypeProp = {
   type: String as PropType<CheckboxType>,
   validator: (value: string) =>
     ['primary', 'success', 'info', 'warning', 'danger'].includes(value),
@@ -32,7 +32,7 @@ export const checkboxProps = {
   ccc: useCustomClassProp,
   cs: useCustomStyleProp,
   ccs: useCustomStyleProp,
-  type: useCheckboxProp,
+  type: useCheckboxTypeProp,
   size: useCheckboxSizeProp,
   shape: useCheckboxShapeProp,
   variant: useVariantProp,

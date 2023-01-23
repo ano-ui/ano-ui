@@ -14,7 +14,7 @@ export const useRadio = (
   const disabled = computed(() => radioGroup?.disabled ?? props.disabled)
   const modelValue = computed<RadioProps['modelValue']>(() => isGroup.value ? radioGroup!.modelValue : props.modelValue)
 
-  const isChecked = computed(() => isGroup.value ? radioGroup!.modelValue === props.value : props.modelValue)
+  const checked = computed(() => isGroup.value ? radioGroup!.modelValue === props.value : props.modelValue)
 
   const toggle = (e: MouseEvent) => {
     e.stopPropagation()
@@ -36,7 +36,7 @@ export const useRadio = (
     size,
     disabled,
     modelValue,
-    isChecked,
+    checked,
 
     toggle,
   }

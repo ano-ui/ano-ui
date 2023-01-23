@@ -1,8 +1,8 @@
 import type { ExtractPropTypes, PropType } from 'vue'
-import type { CheckboxValueType } from '../ACheckbox/checkbox'
-import { useCheckboxSizeProp } from '../ACheckbox/checkbox'
+import type { CheckboxValueType } from '../ACheckbox'
+import { useCheckboxSizeProp } from '../ACheckbox'
 import { useCustomClassProp, useCustomStyleProp } from '../composables'
-import { UPDATE_MODEL_EVENT } from '../constants'
+import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '../constants'
 import { isArray } from '../utils'
 import type { CheckboxGroupDirection } from './types'
 
@@ -36,7 +36,7 @@ export type CheckboxGroupProps = ExtractPropTypes<typeof checkboxGroupProps>
 
 export const checkboxGroupEmits = {
   [UPDATE_MODEL_EVENT]: (val: CheckboxValueType[]) => isArray(val),
-  change: (val: CheckboxValueType[]) => isArray(val),
+  [CHANGE_EVENT]: (val: CheckboxValueType[]) => isArray(val),
 }
 
 export type CheckboxGroupEmits = typeof checkboxGroupEmits
