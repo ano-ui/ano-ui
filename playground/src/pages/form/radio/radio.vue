@@ -82,6 +82,29 @@ const groupChecked = ref('a')
           <ARadio value="c" label="C" />
         </ARadioGroup>
       </div>
+
+      <div class="p-2">
+        RadioGroup with Cell: {{ groupChecked }}
+      </div>
+      <ARadioGroup v-model="groupChecked">
+        <ACellGroup inset divider clickable>
+          <ACell title="Radio a" @click="groupChecked = 'a'">
+            <template #right-icon>
+              <ARadio value="a" />
+            </template>
+          </ACell>
+          <ACell title="Radio b" @click="groupChecked = 'b'">
+            <template #right-icon>
+              <ARadio value="b" />
+            </template>
+          </ACell>
+          <ACell title="Radio c" @click="groupChecked = 'c'">
+            <template #right-icon>
+              <ARadio value="c" />
+            </template>
+          </ACell>
+        </ACellGroup>
+      </ARadioGroup>
     </div>
   </UBasePage>
 </template>

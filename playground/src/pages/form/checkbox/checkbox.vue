@@ -6,6 +6,18 @@ const checked2 = ref(true)
 const checked3 = ref(false)
 const groupChecked = ref(['a', 'b'])
 const groupChecked2 = ref(['a', 'b'])
+
+function toggle(index: any) {
+  const _checked = groupChecked.value
+  const i = _checked.indexOf(index)
+  if (i > -1)
+    _checked.splice(i, 1)
+
+  else
+    _checked.push(index)
+
+  groupChecked.value = [..._checked]
+}
 </script>
 
 <template>
@@ -80,6 +92,29 @@ const groupChecked2 = ref(['a', 'b'])
           <ACheckbox value="c" label="C" />
         </ACheckboxGroup>
       </div>
+
+      <div class="p-2">
+        CheckboxGroup with Cell: {{ groupChecked }}
+      </div>
+      <ACheckboxGroup v-model="groupChecked">
+        <ACellGroup inset divider clickable>
+          <ACell title="Title a" @click="toggle('a')">
+            <template #right-icon>
+              <ACheckbox value="a" />
+            </template>
+          </ACell>
+          <ACell title="Title b" @click="toggle('b')">
+            <template #right-icon>
+              <ACheckbox value="b" />
+            </template>
+          </ACell>
+          <ACell title="Title c" @click="toggle('c')">
+            <template #right-icon>
+              <ACheckbox value="c" />
+            </template>
+          </ACell>
+        </ACellGroup>
+      </ACheckboxGroup>
     </div>
   </UBasePage>
 </template>
