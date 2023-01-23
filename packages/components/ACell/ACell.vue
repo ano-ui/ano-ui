@@ -38,6 +38,7 @@ const className = computed(() => {
 
       <slot v-else name="label" />
     </div>
+    <slot />
     <div class="a-cell-value">
       <template v-if="value">
         {{ value }}

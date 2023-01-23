@@ -17,6 +17,7 @@ export const fieldProps = {
   ccs: useCustomStyleProp,
   type: FieldTypeProp,
   size: useSizeProp,
+  label: String,
   disabled: Boolean,
   focus: Boolean,
   icon: String,

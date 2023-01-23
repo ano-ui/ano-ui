@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import ACell from '../ACell/ACell.vue'
 import { fieldEmits, fieldProps } from './field'
 import { useField } from './use-field'
 
@@ -12,34 +13,39 @@ const {
 </script>
 
 <template>
-  <div
-    class="a-field-base a-field-border a-bg-2 a-color-base"
-    :class="[`a-field-${size}`, { 'a-disabled': disabled }, isClick ? 'border-context' : '', cc]"
-    :style="cs"
-  >
-    <div v-if="icon" :class="icon" />
-    <slot v-else name="icon" />
-    <slot name="prefix" />
-    <input
-      v-if="type !== 'textarea'" class="a-field-content-base" :type="type !== 'password' ? type : 'text'"
-      :class="[ccc]" :style="ccs" :value="modelValue" :placeholder="placeholderText" :maxlength="maxlength" :focus="focus"
-      :disabled="disabled" :password="type === 'password' ? !showPasswordText : false"
-      placeholder-style="color: #d1d5db" @click="clickHandler" @blur="blurHandler" @input="inputHandler" @focus="focusHandler"
-    >
-    <textarea
-      v-else class="a-field-content-base h-12" :class="[ccc]" :style="ccs" :value="modelValue"
-      :placeholder="placeholderText" :maxlength="maxlength" :focus="focus" :disabled="disabled"
-      placeholder-style="color: #d1d5db" @click="clickHandler" @blur="blurHandler" @input="inputHandler" @focus="focusHandler"
-    />
-    <div v-if="showClear && modelValue" class="i-carbon-close-filled" @click="clearHandler" />
-    <div
-      v-if="type === 'password'" :class="showPasswordText ? 'i-carbon-view-filled' : 'i-carbon-view-off-filled'"
-      @click.stop="showPasswordText = !showPasswordText"
-    />
-    <div v-if="suffixIcon" :class="suffixIcon" />
-    <slot name="suffix" />
-    <div v-if="showWordLimit && modelValue" class="a-field-word-limit text-caption">
-      {{ modelValue.length }}/{{ maxlength }}
-    </div>
-  </div>
+  <ACell :center="type !== 'textarea'" cc="a-field-base">
+    <template #title>
+      <div class="flex items-center gap1" :class="{ 'a-field-disabled': disabled }">
+        <div v-if="icon" :class="icon" />
+        <slot v-else name="icon" />
+        <span v-if="label">{{ label }}</span>
+      </div>
+    </template>
+    <template #value>
+      <div class="flex items-center gap1 text-left">
+        <slot name="prefix" />
+        <input
+          v-if="type !== 'textarea'" class="a-field-content-base" :type="type !== 'password' ? type : 'text'"
+          :class="[{ 'a-field-disabled': disabled }, ccc]" :style="ccs" :value="modelValue" :placeholder="placeholderText" :maxlength="maxlength" :focus="focus"
+          :disabled="disabled" :password="type === 'password' ? !showPasswordText : false"
+          placeholder-style="color: #C8C9CC" @click="clickHandler" @blur="blurHandler" @input="inputHandler" @focus="focusHandler"
+        >
+        <textarea
+          v-else class="a-field-content-base" :class="[{ 'a-field-disabled': disabled }, ccc]" :style="ccs" :value="modelValue"
+          :placeholder="placeholderText" :maxlength="maxlength" :focus="focus" :disabled="disabled"
+          placeholder-style="color: #C8C9CC" @click="clickHandler" @blur="blurHandler" @input="inputHandler" @focus="focusHandler"
+        />
+        <div v-if="showWordLimit && modelValue">
+          {{ modelValue.length }}/{{ maxlength }}
+        </div>
+      </div>
+    </template>
+    <template #right-icon>
+      <div v-if="showClear && modelValue" class="i-carbon-close-filled" @click="clearHandler" />
+      <div
+        v-if="type === 'password'" :class="showPasswordText ? 'i-carbon-view-filled' : 'i-carbon-view-off-filled'"
+        @click.stop="showPasswordText = !showPasswordText"
+      />
+    </template>
+  </ACell>
 </template>

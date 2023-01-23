@@ -1,75 +1,54 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
 
-const pwd = ref('password')
+const pwd = ref('')
 
 watch(pwd, (val) => {
   // eslint-disable-next-line no-console
   console.log(val)
 })
+const showClearText = ref('abc')
+const wordLimitText = ref('abc')
 </script>
 
 <template>
   <UBasePage>
-    <div class="p-2 pb-safe">
-      <div class="p-2">
+    <div class="pb-safe">
+      <div class="p-4">
         Type
       </div>
-      <div p-2 flex="~ col gap2">
-        <AField placeholder="Text" />
-        <AField type="number" placeholder="Number" />
-        <AField type="digit" placeholder="Digit" />
-        <AField v-model="pwd" type="password" placeholder="Password" />
-        <AField type="textarea" show-clear placeholder="Textarea" />
-      </div>
-
-      <div class="p-2">
-        Size
-      </div>
-      <div p-2 flex="~ col gap2">
-        <AField placeholder="Extra Mini" size="xs" />
-        <AField placeholder="Mini" size="sm" />
-        <AField placeholder="Small" size="md" />
-        <AField placeholder="Medium" size="lg" />
-        <AField placeholder="Large" size="xl" />
-      </div>
-
-      <div class="p-2">
+      <ACellGroup inset divider>
+        <AField label="Text" placeholder="Text" />
+        <AField label="Number" type="number" placeholder="Number" />
+        <AField label="Digit" type="digit" placeholder="Digit" />
+        <AField v-model="pwd" label="Password" type="password" placeholder="Password" />
+        <AField label="Textarea" type="textarea" show-clear placeholder="Textarea" />
+      </ACellGroup>
+      <div class="p-4">
         Status
       </div>
-      <div p-2 flex="~ col gap2">
-        <AField disabled placeholder="Disabled" />
-      </div>
-
-      <div class="p-2">
+      <ACellGroup inset divider>
+        <AField label="Disabled" disabled placeholder="Disabled" />
+      </ACellGroup>
+      <div class="p-4">
         Custom
       </div>
-      <div p-2 flex="~ col gap2">
-        <AField placeholder="Border None" :border="false" />
-        <AField show-clear placeholder="Clear Icon" />
-        <AField icon="i-carbon-palm-tree" placeholder="Prefix Icon" />
-        <AField placeholder="Prefix Slot Icon">
-          <template #icon>
-            <div class="i-carbon-send-alt-filled" />
-          </template>
-        </AField>
-        <AField suffix-icon="i-carbon-palm-tree" placeholder="Suffix Icon" />
-        <AField placeholder="Suffix Slot">
+      <ACellGroup inset divider>
+        <AField v-model="showClearText" label="Clear" show-clear placeholder="Clear Icon" />
+        <AField label="Icon" icon="i-carbon-palm-tree" placeholder="Icon" />
+        <AField label="Prefix Slot" placeholder="Prefix Slot">
           <template #prefix>
             <div>https://</div>
           </template>
         </AField>
-        <AField icon="i-carbon-search" placeholder="Suffix Icon">
-          <template #suffix>
-            <AButton size="xs">
-              Search
-            </AButton>
+        <AField label="Slot" placeholder="Slot Icon">
+          <template #icon>
+            <div class="i-carbon-send-alt-filled" />
           </template>
         </AField>
-        <AField cc="rounded-full px4" placeholder="Custom Rounded" />
-        <AField ccc="text-red" placeholder="Custom Input Style" />
-        <AField :maxlength="10" show-word-limit placeholder="Word Limit" />
-      </div>
+        <AField label="Text" ccc="text-red" placeholder="Red Text" />
+        <AField v-model="wordLimitText" label="Limit" :maxlength="10" show-word-limit placeholder="Word Limit" />
+      </ACellGroup>
     </div>
   </UBasePage>
 </template>
