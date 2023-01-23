@@ -34,7 +34,7 @@ export const useCheckbox = (
     return false
   })
 
-  const isChecked = computed(() => {
+  const checked = computed(() => {
     if (isGroup.value) {
       const value = checkboxGroup!.modelValue
       return Array.isArray(value)
@@ -74,60 +74,8 @@ export const useCheckbox = (
     max,
     disabled,
     modelValue,
-    isChecked,
+    checked,
 
     toggle,
   }
 }
-
-// const _checked = ref(false)
-
-// watch(() => props.modelValue, (val) => {
-//   _checked.value = val
-// }, { immediate: true })
-
-// watch(() => groupValue, (val) => {
-//   if (isGroup)
-//     _checked.value = val.includes(props.value)
-// }, { immediate: true })
-
-// const isDisabled = computed(() => {
-//   if (!isGroup)
-//     return props.loading || props.disabled
-
-//   if (_disabled)
-//     return true
-
-//   if (min !== -1 && groupValue.length === min)
-//     return groupValue.includes(props.value)
-
-//   if (max !== -1 && groupValue.length === max)
-//     return !groupValue.includes(props.value)
-//   return false
-// })
-
-// const clickHandler = (e: MouseEvent) => {
-//   e.stopPropagation()
-//   if (isDisabled.value)
-//     return
-
-//   if (isGroup) {
-//     if (min !== -1 && groupValue.length <= min) {
-//       if (groupValue.includes(props.value))
-//         return
-//     }
-
-//     if (max !== -1 && groupValue.length >= max) {
-//       if (!groupValue.includes(props.value))
-//         return
-//     }
-
-//     groupValue.includes(props.value)
-//       ? groupValue.splice(groupValue.indexOf(props.value), 1)
-//       : groupValue.push(props.value)
-//   }
-
-//   _checked.value = !_checked.value
-//   emit('update:modelValue', _checked.value)
-//   emit('click', e)
-// }

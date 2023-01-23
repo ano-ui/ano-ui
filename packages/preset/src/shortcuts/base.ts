@@ -16,6 +16,6 @@ export const baseShortcuts: Record<string, string> = {
   'a-solid': 'bg-context border border-solid border-context text-white dark:bg-op80 dark:border-op80 dark:text-op80',
   'a-outline': 'bg-transparent border border-solid border-context text-context dark:border-op80 dark:text-op80',
   'a-ghost': 'bg-transparent border border-dashed border-context text-context dark:border-op80 dark:text-op80',
-  'a-light': 'bg-context border border-solid border-context bg-op20 border-op20 text-context dark:text-op80',
+  'a-light': 'bg-context border border-solid border-context text-context bg-op20 border-op20 dark:text-op80',
   'a-text': 'bg-transparent border-context !border-op0 text-context dark:text-op80',
 }

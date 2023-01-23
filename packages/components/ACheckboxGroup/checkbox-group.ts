@@ -1,8 +1,16 @@
-import type { ExtractPropTypes } from 'vue'
+import type { ExtractPropTypes, PropType } from 'vue'
 import type { CheckboxValueType } from '../ACheckbox/checkbox'
-import { useCustomClassProp, useCustomStyleProp, useSizeProp } from '../composables'
+import { useCheckboxSizeProp } from '../ACheckbox/checkbox'
+import { useCustomClassProp, useCustomStyleProp } from '../composables'
 import { UPDATE_MODEL_EVENT } from '../constants'
 import { isArray } from '../utils'
+import type { CheckboxGroupDirection } from './types'
+
+export const useCheckboxGroupDirectionProp = {
+  type: String as PropType<CheckboxGroupDirection>,
+  validator: (value: string) => ['vertical', 'horizontal'].includes(value),
+  default: 'vertical',
+}
 
 export const checkboxGroupProps = {
   cc: useCustomClassProp,
@@ -11,7 +19,8 @@ export const checkboxGroupProps = {
     type: Array<CheckboxValueType>,
     default: () => [],
   },
-  size: useSizeProp,
+  size: useCheckboxSizeProp,
+  direction: useCheckboxGroupDirectionProp,
   min: {
     type: Number,
     default: -1,

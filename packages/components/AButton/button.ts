@@ -1,7 +1,7 @@
 import type { ExtractPropTypes, PropType } from 'vue'
 import { useCustomClassProp, useCustomStyleProp, useVariantProp } from '../composables'
 import { CLICK_EVENT } from '../constants'
-import type { ButtonType } from './types'
+import type { ButtonSize, ButtonType } from './types'
 
 export const useButtonProp = {
   type: String as PropType<ButtonType>,
@@ -11,7 +11,7 @@ export const useButtonProp = {
 }
 
 export const useButtonSizeProp = {
-  type: String as PropType<ButtonType>,
+  type: String as PropType<ButtonSize>,
   validator: (value: string) =>
     ['mini', 'small', 'normal', 'large'].includes(value),
   default: 'normal',
