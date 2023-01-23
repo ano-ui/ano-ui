@@ -5,6 +5,8 @@ export const baseShortcuts: Record<string, string> = {
   'a-active': 'bg-[#F2F3F5] dark:!bg-[#3A3A3C]',
   'a-active-h5': 'active:bg-[#F2F3F5] active:dark:bg-[#3A3A3C]',
   'a-text-color': 'text-[#323233] dark:text-[#F5F5F5]',
+  'a-text-color-2': 'text-[#969799] dark:text-[#707070]',
+  'a-text-color-3': 'text-[#C8C9CC] dark:text-[#4D4D4D]',
 
   'a-color-base': 'text-gray-700 dark:text-light-200',
   'a-color-base-second': 'text-gray-400 dark:text-gray-500/60',

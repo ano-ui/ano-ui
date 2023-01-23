@@ -8,25 +8,28 @@
         Basic
       </div>
       <div>
-        <ACell title="Title" value="Value" />
-        <ACell icon="i-carbon-palm-tree" title="Title" value="Value" label="Label" />
+        <ACell title="Title" value="Content" />
+        <ACell icon="i-carbon-palm-tree" title="Title" value="Content" label="Description Description Description" />
       </div>
       <div class="p-4">
         Custom
       </div>
       <div>
         <ACellGroup divider>
-          <ACell title="Title" value="Value" cc="rounded-none" />
-          <ACell icon="i-carbon-palm-tree" title="Title" value="Value" label="Label" arrow />
-          <ACell title="Custom">
+          <ACell title="Title" value="Content" cc="rounded-none" />
+          <ACell icon="i-carbon-palm-tree" title="Title" value="Content" label="Description" arrow center />
+          <ACell title="Slots">
             <template #icon>
               <i class="i-carbon-send-alt" />
             </template>
             <template #value>
-              <ATag size="sm" variant="ghost" label="Value" />
+              <div>Content slot</div>
             </template>
             <template #label>
-              <ATag size="sm" variant="ghost" label="Label" />
+              <div>Description slot</div>
+            </template>
+            <template #right-icon>
+              <i class="i-carbon-search" />
             </template>
           </ACell>
         </ACellGroup>
@@ -36,9 +39,9 @@
       </div>
       <div>
         <ACellGroup inset arrow divider>
-          <ACell title="Title" value="Value" />
-          <ACell title="Title" value="Value" />
-          <ACell title="Title" value="Value" />
+          <ACell title="Title" value="Content" />
+          <ACell title="Title" value="Content" />
+          <ACell title="Title" value="Content" />
         </ACellGroup>
       </div>
     </div>

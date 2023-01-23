@@ -7,6 +7,7 @@ export const cellGroupProps = {
   divider: Boolean,
   inset: Boolean,
   arrow: Boolean,
+  center: Boolean,
 }
 
 export type CellGroupProps = ExtractPropTypes<typeof cellGroupProps>
