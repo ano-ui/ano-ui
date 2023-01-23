@@ -11,7 +11,7 @@ const { className, disabled, clickHandler } = useButton(props, emit)
 <template>
   <button
     class="a-button-wrapper-base" :class="[className, cc]" :hover-class="disabled ? '' : 'a-button-hover'"
-    hover-stay-time="100" :open-type="openType" :style="cs" @click="clickHandler"
+    hover-stay-time="60" :open-type="openType" :style="cs" @click="clickHandler"
   >
     <div class="a-button-content-base">
       <div v-if="loading" class="i-carbon-circle-dash animate-spin mr-1" />

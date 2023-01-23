@@ -20,7 +20,7 @@ const className = computed(() => {
 
 <template>
   <div
-    class="a-cell-base" :class="[className, cc]" :hover-class="{ 'a-cell-hover': arrow }" hover-stay-time="100"
+    class="a-cell-base" :class="[className, cc]" :hover-class="arrow ? 'a-cell-hover' : '' " hover-stay-time="60"
     :style="cs" @click="clickHandler"
   >
     <div class="a-cell-icon">
