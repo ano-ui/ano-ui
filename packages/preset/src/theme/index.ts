@@ -8,6 +8,16 @@ export default {
     info: '#0080FF',
     warning: '#F17F42',
     danger: '#F15C5C',
+
+    gray1: '#f7f8fa',
+    gray2: '#f2f3f5',
+    gray3: '#ebedf0',
+    gray4: '#dcdee0',
+    gray5: '#c8c9cc',
+    gray6: '#969799',
+    gray7: '#646566',
+    gray8: '#323233',
+
     lightBg: '#F3F4F6',
     darkBg: '#373739',
     placeholder: '#DCDCDC',

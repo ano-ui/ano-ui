@@ -3,20 +3,21 @@ import { useCustomClassProp, useCustomStyleProp, useSizeProp } from '../composab
 import { BLUR_EVENT, CHANGE_EVENT, CLEAR_EVENT, CLICK_EVENT, FOCUS_EVENT, INPUT_EVENT, UPDATE_MODEL_EVENT } from '../constants'
 import { isString } from '../utils'
 
-export type InputType = 'text' | 'number' | 'digit' | 'password' | 'textarea'
+export type FieldType = 'text' | 'number' | 'digit' | 'password' | 'textarea'
 
-export const InputTypeProp = {
-  type: String as PropType<InputType>,
+export const FieldTypeProp = {
+  type: String as PropType<FieldType>,
   default: 'text',
 }
 
-export const inputProps = {
+export const fieldProps = {
   cc: useCustomClassProp,
   ccc: useCustomClassProp,
   cs: useCustomStyleProp,
   ccs: useCustomStyleProp,
-  type: InputTypeProp,
+  type: FieldTypeProp,
   size: useSizeProp,
+  label: String,
   disabled: Boolean,
   focus: Boolean,
   icon: String,
@@ -31,7 +32,7 @@ export const inputProps = {
   showWordLimit: Boolean,
 }
 
-export const inputEmits = {
+export const fieldEmits = {
   [UPDATE_MODEL_EVENT]: (value: string) => isString(value),
   [CLICK_EVENT]: (evt: MouseEvent) => evt instanceof Object,
   [FOCUS_EVENT]: () => true,
@@ -41,5 +42,5 @@ export const inputEmits = {
   [CLEAR_EVENT]: () => true,
 }
 
-export type InputProps = ExtractPropTypes<typeof inputProps>
-export type InputEmits = typeof inputEmits
+export type FieldProps = ExtractPropTypes<typeof fieldProps>
+export type FieldEmits = typeof fieldEmits

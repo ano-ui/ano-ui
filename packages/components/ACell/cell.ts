@@ -8,9 +8,10 @@ export const cellProps = {
   title: String,
   value: String,
   label: String,
-  disabled: Boolean,
   icon: String,
   arrow: Boolean,
+  center: Boolean,
+  clickable: Boolean,
 }
 
 export const cellEmits = {

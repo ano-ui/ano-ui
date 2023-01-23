@@ -18,20 +18,18 @@ const onCancel = () => {
 
 <template>
   <UBasePage>
-    <div class="p-2 pb-safe">
+    <div class="pb-safe">
       <AToast ref="toast" />
       <AActionSheet v-model:show="showValue" :actions="actions" />
       <AActionSheet v-model:show="showValue2" :actions="actions" cancel-text="Cancel" @cancel="onCancel" />
 
-      <div class="p-2">
+      <div class="p-4">
         Basic
       </div>
-      <div p-2>
-        <ACellGroup>
-          <ACell title="Show" arrow @click="showValue = true" />
-          <ACell title="Show Cancel" arrow @click="showValue2 = true" />
-        </ACellGroup>
-      </div>
+      <ACellGroup arrow divider inset>
+        <ACell title="Show" @click="showValue = true" />
+        <ACell title="Show Cancel" @click="showValue2 = true" />
+      </ACellGroup>
     </div>
   </UBasePage>
 </template>

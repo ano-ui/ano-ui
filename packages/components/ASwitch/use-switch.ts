@@ -9,7 +9,7 @@ export const useSwitch = (
 ) => {
   const disabled = computed(() => props.disabled || props.loading)
   const modelValue = computed(() => props.modelValue)
-  const isChecked = computed(() => props.modelValue === props.activeValue)
+  const checked = computed(() => props.modelValue === props.activeValue)
 
   const toggle = (evt: MouseEvent) => {
     evt.stopPropagation()
@@ -24,7 +24,7 @@ export const useSwitch = (
   return {
     disabled,
     modelValue,
-    isChecked,
+    checked,
 
     toggle,
   }

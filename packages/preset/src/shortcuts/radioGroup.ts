@@ -1,3 +1,4 @@
 export const radioGroupShortcuts: Record<string, string> = {
-  'a-radio-group-base': 'flex justify-start items-center flex-wrap gap4',
+  'a-radio-group-vertical': 'flex flex-col flex-wrap gap-2',
+  'a-radio-group-horizontal': 'flex flex-wrap gap-2',
 }

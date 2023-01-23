@@ -36,8 +36,8 @@
       "style": { "navigationBarTitleText": "Checkbox 复选框" }
     },
     {
-      "path": "pages/form/input/input",
-      "style": { "navigationBarTitleText": "Input 输入框" }
+      "path": "pages/form/field/field",
+      "style": { "navigationBarTitleText": "Field 输入框" }
     },
     {
       "path": "pages/form/radio/radio",

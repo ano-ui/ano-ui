@@ -6,66 +6,75 @@ const checked2 = ref(true)
 const checked3 = ref(false)
 const groupChecked = ref(['a', 'b'])
 const groupChecked2 = ref(['a', 'b'])
+
+function toggle(index: any) {
+  const _checked = groupChecked.value
+  const i = _checked.indexOf(index)
+  if (i > -1)
+    _checked.splice(i, 1)
+
+  else
+    _checked.push(index)
+
+  groupChecked.value = [..._checked]
+}
 </script>
 
 <template>
   <UBasePage>
-    <div class="p-2 pb-safe">
-      <div class="p-2">
-        Color
+    <div class="pb-safe">
+      <div class="p-4">
+        Type
       </div>
-      <div p-2 flex="~ gap2 wrap" items-center>
-        <ACheckbox v-model="checked" />
-        <ACheckbox v-model="checked" type="success" />
-        <ACheckbox v-model="checked" type="info" />
-        <ACheckbox v-model="checked" type="warning" />
-        <ACheckbox v-model="checked" type="danger" />
+      <div px-4 flex="~ col gap2">
+        <ACheckbox v-model="checked" label="Primary" />
+        <ACheckbox v-model="checked" type="success" label="Success" />
+        <ACheckbox v-model="checked" type="info" label="Info" />
+        <ACheckbox v-model="checked" type="warning" label="Warning" />
+        <ACheckbox v-model="checked" type="danger" label="Danger" />
       </div>
 
-      <div class="p-2">
+      <div class="p-4">
         Size
       </div>
-      <div p-2 flex="~ gap2 wrap" items-center>
-        <ACheckbox v-model="checked" type="primary" size="xs" label="Extra Mini" />
-        <ACheckbox v-model="checked" type="success" size="sm" label="Mini" />
-        <ACheckbox v-model="checked" type="info" size="md" label="Small" />
-        <ACheckbox v-model="checked" type="warning" size="lg" label="Medium" />
-        <ACheckbox v-model="checked" type="danger" size="xl" label="Large" />
+      <div px-4 flex="~ col gap2">
+        <ACheckbox v-model="checked" type="primary" size="mini" label="Mini" />
+        <ACheckbox v-model="checked" type="success" size="small" label="Small" />
+        <ACheckbox v-model="checked" type="info" size="normal" label="Normal" />
+        <ACheckbox v-model="checked" type="warning" size="large" label="Large" />
       </div>
-      <div class="p-2">
+      <div class="p-4">
         Variant
       </div>
-      <div p-2 flex="~ gap2 wrap" items-center>
-        <ACheckbox v-model="checked" variant="solid" />
-        <ACheckbox v-model="checked" type="success" variant="outline" />
-        <ACheckbox v-model="checked" type="info" variant="ghost" />
-        <ACheckbox v-model="checked" type="warning" variant="light" />
-        <ACheckbox v-model="checked" type="danger" variant="text" />
+      <div px-4 flex="~ col gap2">
+        <ACheckbox v-model="checked" label="Solid" />
+        <ACheckbox v-model="checked" type="success" variant="outline" label="Outline" />
+        <ACheckbox v-model="checked" type="info" variant="ghost" label="Ghost" />
+        <ACheckbox v-model="checked" type="warning" variant="light" label="Light" />
       </div>
-      <div class="p-2">
+      <div class="p-4">
         Status
       </div>
-      <div p-2 flex="~ gap2 wrap" items-center>
-        <ACheckbox v-model="statusChecked2" type="success" disabled />
+      <div px-4 flex="~ col gap2">
+        <ACheckbox type="success" disabled label="Unchecked" />
+        <ACheckbox v-model="statusChecked2" type="success" disabled label="Checked" />
       </div>
-      <div class="p-2">
+      <div class="p-4">
         Custom
       </div>
-      <div p-2 flex="~ gap2 wrap" items-center>
-        <ACheckbox v-model="checked2" :value="1" />
-        <ACheckbox v-model="checked3" custom-icon value="yes">
-          <template #icon>
-            <div class="i-carbon-send-alt" />
+      <div px-4 flex="~ col gap2">
+        <ACheckbox v-model="checked2" :value="1" label="Value" icon="i-carbon-send-alt" />
+        <ACheckbox v-model="checked3" custom-icon value="yes" label="Slot Icon">
+          <template #icon="props">
+            <div :class="props.checked ? 'i-carbon-send-alt' : 'i-carbon-send'" />
           </template>
         </ACheckbox>
-        <ACheckbox v-model="checked3">
-          <div class="i-carbon-send-alt" />
-        </ACheckbox>
       </div>
-      <div class="p-2">
-        Checkbox Group: {{ groupChecked }}
+
+      <div class="p-4">
+        CheckboxGroup: {{ groupChecked }}
       </div>
-      <div p-2>
+      <div px-4>
         <ACheckboxGroup v-model="groupChecked">
           <ACheckbox value="a" label="A" />
           <ACheckbox value="b" label="B" />
@@ -73,16 +82,39 @@ const groupChecked2 = ref(['a', 'b'])
         </ACheckboxGroup>
       </div>
 
-      <div class="p-2">
-        Checkbox Group Min Max[1-2]: {{ groupChecked2 }}
+      <div class="p-4">
+        CheckboxGroup Min Max[1-2]: {{ groupChecked2 }}
       </div>
-      <div p-2>
-        <ACheckboxGroup v-model="groupChecked2" :min="1" :max="2">
+      <div px-4>
+        <ACheckboxGroup v-model="groupChecked2" :min="1" :max="2" direction="horizontal">
           <ACheckbox value="a" label="A" />
           <ACheckbox value="b" label="B" />
           <ACheckbox value="c" label="C" />
         </ACheckboxGroup>
       </div>
+
+      <div class="p-4">
+        CheckboxGroup with Cell: {{ groupChecked }}
+      </div>
+      <ACheckboxGroup v-model="groupChecked">
+        <ACellGroup inset divider clickable>
+          <ACell title="Title a" @click="toggle('a')">
+            <template #right-icon>
+              <ACheckbox value="a" />
+            </template>
+          </ACell>
+          <ACell title="Title b" @click="toggle('b')">
+            <template #right-icon>
+              <ACheckbox value="b" />
+            </template>
+          </ACell>
+          <ACell title="Title c" @click="toggle('c')">
+            <template #right-icon>
+              <ACheckbox value="c" />
+            </template>
+          </ACell>
+        </ACellGroup>
+      </ACheckboxGroup>
     </div>
   </UBasePage>
 </template>

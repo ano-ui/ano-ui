@@ -5,11 +5,10 @@ export const cellGroupProps = {
   cc: useCustomClassProp,
   cs: useCustomStyleProp,
   divider: Boolean,
-  card: {
-    type: Boolean,
-    default: true,
-  },
-  disabled: Boolean,
+  inset: Boolean,
+  arrow: Boolean,
+  center: Boolean,
+  clickable: Boolean,
 }
 
 export type CellGroupProps = ExtractPropTypes<typeof cellGroupProps>

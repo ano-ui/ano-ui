@@ -1,7 +1,29 @@
-import type { ExtractPropTypes } from 'vue'
-import { TypeProp, useCustomClassProp, useCustomStyleProp, useSizeProp, useVariantProp } from '../composables'
+import type { ExtractPropTypes, PropType } from 'vue'
+import { useCustomClassProp, useCustomStyleProp, useVariantProp } from '../composables'
 import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '../constants'
 import { isBoolean, isNumber, isString } from '../utils'
+import type { CheckboxShape, CheckboxSize, CheckboxType } from './types'
+
+export const useCheckboxTypeProp = {
+  type: String as PropType<CheckboxType>,
+  validator: (value: string) =>
+    ['primary', 'success', 'info', 'warning', 'danger'].includes(value),
+  default: 'primary',
+}
+
+export const useCheckboxSizeProp = {
+  type: String as PropType<CheckboxSize>,
+  validator: (value: string) =>
+    ['mini', 'small', 'normal', 'large'].includes(value),
+  default: 'normal',
+}
+
+export const useCheckboxShapeProp = {
+  type: String as PropType<CheckboxShape>,
+  validator: (value: string) =>
+    ['default', 'square', 'round'].includes(value),
+  default: 'default',
+}
 
 export type CheckboxValueType = string | number | boolean
 
@@ -10,8 +32,9 @@ export const checkboxProps = {
   ccc: useCustomClassProp,
   cs: useCustomStyleProp,
   ccs: useCustomStyleProp,
-  type: TypeProp,
-  size: useSizeProp,
+  type: useCheckboxTypeProp,
+  size: useCheckboxSizeProp,
+  shape: useCheckboxShapeProp,
   variant: useVariantProp,
   disabled: Boolean,
   modelValue: {

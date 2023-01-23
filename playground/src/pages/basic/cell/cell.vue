@@ -3,60 +3,43 @@
 
 <template>
   <UBasePage>
-    <div class="p-2 pb-safe">
-      <div class="p-2">
+    <div class="pb-safe">
+      <div class="p-4">
         Basic
       </div>
-      <div p-2 flex="~ col gap2">
-        <ACell title="Title" value="Value" />
-        <ACell icon="i-carbon-palm-tree" title="Title" value="Value" label="Label" />
+      <div>
+        <ACell title="Title" value="Content" />
+        <ACell icon="i-carbon-palm-tree" title="Title" value="Content" label="Description Description Description" />
       </div>
-      <div class="p-2">
-        Status
-      </div>
-      <div p-2 flex="~ col gap2">
-        <ACell title="Title" value="Value" disabled />
-      </div>
-      <div class="p-2">
+      <div class="p-4">
         Custom
       </div>
-      <div p-2 flex="~ col gap2">
-        <ACell title="Title" value="Value" cc="rounded-none" />
-        <ACell icon="i-carbon-palm-tree" title="Title" value="Value" label="Label" arrow />
-        <ACell title="Custom">
+      <ACellGroup divider>
+        <ACell title="Title" value="Content" cc="rounded-none" />
+        <ACell icon="i-carbon-palm-tree" title="Title" value="Content" label="Description" arrow center />
+        <ACell title="Slots">
           <template #icon>
             <i class="i-carbon-send-alt" />
           </template>
           <template #value>
-            <AButton size="sm">
-              Value
-            </AButton>
+            <div>Content slot</div>
           </template>
           <template #label>
-            <ATag size="sm" variant="ghost" label="Label" />
+            <div>Description slot</div>
+          </template>
+          <template #right-icon>
+            <i class="i-carbon-search" />
           </template>
         </ACell>
-      </div>
-      <div class="p-2">
+      </ACellGroup>
+      <div class="p-4">
         Cell Group
       </div>
-      <div p-2>
-        <ACellGroup>
-          <ACell title="Title" value="Value" />
-          <ACell title="Title" value="Value" />
-          <ACell title="Title" value="Value" />
-        </ACellGroup>
-      </div>
-      <div class="p-2">
-        Cell Group With Divider and Not Card
-      </div>
-      <div p-2>
-        <ACellGroup divider :card="false">
-          <ACell title="Title" value="Value" />
-          <ACell title="Title" value="Value" />
-          <ACell title="Title" value="Value" />
-        </ACellGroup>
-      </div>
+      <ACellGroup inset arrow divider>
+        <ACell title="Title" value="Content" />
+        <ACell title="Title" value="Content" />
+        <ACell title="Title" value="Content" />
+      </ACellGroup>
     </div>
   </UBasePage>
 </template>

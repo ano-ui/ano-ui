@@ -13,32 +13,28 @@ const handleShow = (p: PositionType) => {
 
 <template>
   <UBasePage>
-    <div class="p-2 pb-safe">
+    <div class="pb-safe">
       <APopup v-model:show="showValue" :position="position" :duration="300">
         <div class="flex justify-center items-center bg-teal w-200px h-100px">
           Content
         </div>
       </APopup>
 
-      <div class="p-2">
+      <div class="p-4">
         Basic
       </div>
-      <div p-2>
-        <ACellGroup>
-          <ACell title="Show Popup" arrow @click="handleShow('center')" />
-        </ACellGroup>
-      </div>
-      <div class="p-2">
+      <ACellGroup inset divider arrow>
+        <ACell title="Show Popup" arrow @click="handleShow('center')" />
+      </ACellGroup>
+      <div class="p-4">
         Position
       </div>
-      <div p-2>
-        <ACellGroup>
-          <ACell title="From Top" arrow @click="handleShow('top')" />
-          <ACell title="From Bottom" arrow @click="handleShow('bottom')" />
-          <ACell title="From Left" arrow @click="handleShow('left')" />
-          <ACell title="From Right" arrow @click="handleShow('right')" />
-        </ACellGroup>
-      </div>
+      <ACellGroup inset divider arrow>
+        <ACell title="From Top" @click="handleShow('top')" />
+        <ACell title="From Bottom" @click="handleShow('bottom')" />
+        <ACell title="From Left" @click="handleShow('left')" />
+        <ACell title="From Right" @click="handleShow('right')" />
+      </ACellGroup>
     </div>
   </UBasePage>
 </template>

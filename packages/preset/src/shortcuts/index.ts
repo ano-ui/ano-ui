@@ -14,7 +14,7 @@ import { transitionShortcuts } from './transition'
 // form
 import { checkboxShortcuts } from './checkbox'
 import { checkboxGroupShortcuts } from './checkboxGroup'
-import { inputShortcuts } from './input'
+import { fieldShortcuts } from './field'
 import { radioShortcuts } from './radio'
 import { radioGroupShortcuts } from './radioGroup'
 import { switchShortcuts } from './switch'
@@ -38,7 +38,7 @@ export default [
 
   checkboxShortcuts,
   checkboxGroupShortcuts,
-  inputShortcuts,
+  fieldShortcuts,
   radioShortcuts,
   radioGroupShortcuts,
   switchShortcuts,

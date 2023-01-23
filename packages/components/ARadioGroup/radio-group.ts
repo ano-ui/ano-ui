@@ -1,6 +1,13 @@
-import type { ExtractPropTypes } from 'vue'
-import { radioEmits } from '../ARadio/radio'
-import { useCustomClassProp, useCustomStyleProp, useSizeProp } from '../composables'
+import type { ExtractPropTypes, PropType } from 'vue'
+import { radioEmits, useRadioSizeProp } from '../ARadio'
+import { useCustomClassProp, useCustomStyleProp } from '../composables'
+import type { RadioGroupDirection } from './types'
+
+export const useRadioGroupDirectionProp = {
+  type: String as PropType<RadioGroupDirection>,
+  validator: (value: string) => ['vertical', 'horizontal'].includes(value),
+  default: 'vertical',
+}
 
 export const radioGroupProps = {
   cc: useCustomClassProp,
@@ -9,7 +16,8 @@ export const radioGroupProps = {
     type: [String, Number, Boolean],
     default: '',
   },
-  size: useSizeProp,
+  size: useRadioSizeProp,
+  direction: useRadioGroupDirectionProp,
   min: {
     type: Number,
     default: -1,

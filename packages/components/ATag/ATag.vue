@@ -11,7 +11,7 @@ const { disabled, clickHandler, closeHandler } = useTag(props, emit)
 <template>
   <div
     v-if="show" class="a-tag-base"
-    :class="[`a-${type}`, `a-tag-${size}`, { '!p-0.5 aspect-square': iconOnly }, `a-${variant}`, { 'a-disabled': disabled }, cc]"
+    :class="[`a-${type}`, `a-tag-${size}`, { '!p-0.5 aspect-square': iconOnly }, `a-${variant}`, { 'a-tag-disabled': disabled }, cc]"
     :style="cs" @click="clickHandler"
   >
     <div v-if="icon" class="text-base" :class="icon" />

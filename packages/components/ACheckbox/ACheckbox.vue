@@ -5,26 +5,26 @@ import { useCheckbox } from './use-checkbox'
 const props = defineProps(checkboxProps)
 const emit = defineEmits(checkboxEmits)
 
-const { disabled, size, isChecked, toggle } = useCheckbox(props, emit)
+const { checked, disabled, size, toggle } = useCheckbox(props, emit)
 </script>
 
 <template>
   <div class="a-checkbox-base" :class="[`a-checkbox-${size}`, cc]" :style="cs">
     <div
       class="a-checkbox-checkbox-base"
-      :class="[`a-checkbox-checkbox-${size}`, `a-${variant}`, isChecked ? `a-${type}` : '', { 'a-disabled': disabled }, ccc]"
+      :class="[`a-checkbox-checkbox-${size}`, checked ? `a-${type} a-${variant}` : '', { 'a-checkbox-disabled': disabled }, ccc]"
       :style="ccs" @click="toggle"
     >
       <div class="a-checkbox-checkbox-icon">
-        <template v-if="isChecked">
-          <slot v-if="customIcon" name="icon" />
-          <div v-else class="i-carbon-checkmark animate-zoom-in animate-duration-200" :class="[icon]" />
-        </template>
+        <slot v-if="customIcon" :checked="checked" name="icon" />
+        <div v-else-if="checked" class="i-carbon-checkmark" :class="[icon]" />
       </div>
     </div>
-    <template v-if="label">
-      {{ label }}
-    </template>
-    <slot v-else />
+    <div class="ml2" :class="{ 'a-checkbox-disabled-label': disabled }">
+      <template v-if="label">
+        {{ label }}
+      </template>
+      <slot v-else />
+    </div>
   </div>
 </template>

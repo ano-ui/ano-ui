@@ -37,7 +37,7 @@ a-color-base {
   body,
   page,
   a-color-base {
-    background-color: #222222;
+    background-color: #000;
     height: 100%;
   }
 }

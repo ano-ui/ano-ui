@@ -1,25 +1,24 @@
 <script setup lang='ts'>
-import { computed, ref } from 'vue'
 import { switchEmits, switchProps } from './switch'
 import { useSwitch } from './use-switch'
 
 const props = defineProps(switchProps)
 const emit = defineEmits(switchEmits)
 
-const { disabled, isChecked, toggle } = useSwitch(props, emit)
+const { disabled, checked, toggle } = useSwitch(props, emit)
 </script>
 
 <template>
   <div
     class="a-switch-base"
-    :class="[`a-switch-${size}`, `a-${variant}`, isChecked ? `a-${type}` : '', { 'a-disabled': disabled }, cc]"
+    :class="[`a-switch-${size} a-${variant} `, checked ? `a-${type}` : '', { 'a-switch-disabled': disabled }, cc]"
     :style="cs" @click="toggle"
   >
     <div
       class="a-switch-dot"
-      :class="[`a-switch-dot-${size}`, variant === 'solid' ? 'bg-white text-context' : 'bg-context text-white', { 'a-switch-dot-checked': isChecked }]"
+      :class="[`a-switch-dot-${size}`, variant === 'solid' ? 'bg-white text-context' : 'bg-context text-white', { 'a-switch-dot-checked': checked }, { 'a-switch-dot-disabled': disabled }]"
     >
-      <template v-if="isChecked">
+      <template v-if="checked">
         <div v-if="loading" class="i-carbon-circle-dash animate-spin" />
         <template v-else-if="showIcon">
           <slot v-if="customIcon" name="icon" />
@@ -27,7 +26,7 @@ const { disabled, isChecked, toggle } = useSwitch(props, emit)
         </template>
       </template>
     </div>
-    <template v-if="isChecked">
+    <template v-if="checked">
       <div class="a-switch-active-label" :class="[`a-switch-dot-${size}`]">
         <template v-if="activeLabel">
           {{ activeLabel }}

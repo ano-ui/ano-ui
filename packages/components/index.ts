@@ -7,7 +7,7 @@ export * from './AToast'
 // Form
 export * from './ACheckbox'
 export * from './ACheckboxGroup'
-export * from './AInput'
+export * from './AField'
 export * from './ARadio'
 export * from './ARadioGroup'
 export * from './ASwitch'

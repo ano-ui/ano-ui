@@ -17,7 +17,7 @@ const log = (msg: string) => console.log(`[${transitionName.value}] ${msg}`)
 
 <template>
   <UBasePage>
-    <div class="p-2 pb-safe">
+    <div class="pb-safe">
       <ATransition
         :show="showValue" :name="transitionName" :duration="1000" timing-function="ease-in"
         cc="fixed top-50 bottom-50 left-20 right-20 h-50 z-200 bg-primary rounded-lg flex items-center justify-center"
@@ -29,24 +29,22 @@ const log = (msg: string) => console.log(`[${transitionName.value}] ${msg}`)
         </div>
       </ATransition>
 
-      <div class="p-2">
+      <div class="p-4">
         Basic
       </div>
-      <div p-2>
-        <ACellGroup>
-          <ACell title="Fade" arrow @click="show('fade')" />
-          <ACell title="Fade Up" arrow @click="show('fade-up')" />
-          <ACell title="Fade Down" arrow @click="show('fade-down')" />
-          <ACell title="Fade Left" arrow @click="show('fade-left')" />
-          <ACell title="Fade Right" arrow @click="show('fade-right')" />
-          <ACell title="Slide Up" arrow @click="show('slide-up')" />
-          <ACell title="Slide Down" arrow @click="show('slide-down')" />
-          <ACell title="Slide Left" arrow @click="show('slide-left')" />
-          <ACell title="Slide Right" arrow @click="show('slide-right')" />
-          <ACell title="Zoom" arrow @click="show('zoom')" />
-          <ACell title="Fade Zoom" arrow @click="show('fade-zoom')" />
-        </ACellGroup>
-      </div>
+      <ACellGroup inset divider arrow>
+        <ACell title="Fade" @click="show('fade')" />
+        <ACell title="Fade Up" @click="show('fade-up')" />
+        <ACell title="Fade Down" @click="show('fade-down')" />
+        <ACell title="Fade Left" @click="show('fade-left')" />
+        <ACell title="Fade Right" @click="show('fade-right')" />
+        <ACell title="Slide Up" @click="show('slide-up')" />
+        <ACell title="Slide Down" @click="show('slide-down')" />
+        <ACell title="Slide Left" @click="show('slide-left')" />
+        <ACell title="Slide Right" @click="show('slide-right')" />
+        <ACell title="Zoom" @click="show('zoom')" />
+        <ACell title="Fade Zoom" @click="show('fade-zoom')" />
+      </ACellGroup>
     </div>
   </UBasePage>
 </template>

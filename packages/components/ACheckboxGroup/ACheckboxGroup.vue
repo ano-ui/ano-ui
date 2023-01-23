@@ -20,10 +20,7 @@ provide(checkboxGroupKey, reactive({
 </script>
 
 <template>
-  <div
-    class="a-checkbox-group-base" :class="[cc]"
-    :style="cs"
-  >
+  <div :class="[`a-checkbox-group-${direction}`, cc]" :style="cs">
     <slot />
   </div>
 </template>

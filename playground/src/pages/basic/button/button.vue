@@ -11,11 +11,11 @@ const getInfo = () => {
 
 <template>
   <UBasePage>
-    <div class="p-2 pb-safe">
-      <div class="p-2">
+    <div class="pb-safe">
+      <div class="p-4">
         Color
       </div>
-      <div p-2 flex="~ gap2 wrap" items-center>
+      <div px-4 flex="~ gap2 wrap" items-center>
         <AButton>
           Primary
         </AButton>
@@ -32,27 +32,27 @@ const getInfo = () => {
           Danger
         </AButton>
       </div>
-      <div class="p-2">
+      <div class="p-4">
         Size
       </div>
-      <div p-2 flex="~ gap2 wrap" items-center>
-        <AButton type="primary" size="sm">
+      <div px-4 flex="~ gap2 wrap" items-center>
+        <AButton type="primary" size="mini">
           Mini
         </AButton>
-        <AButton type="success" size="md">
+        <AButton type="success" size="small">
           Small
         </AButton>
-        <AButton type="info" size="lg">
-          Medium
+        <AButton type="info" size="normal">
+          Normal
         </AButton>
-        <AButton type="warning" size="xl">
+        <AButton type="warning" size="large">
           Large
         </AButton>
       </div>
-      <div class="p-2">
+      <div class="p-4">
         Variant
       </div>
-      <div p-2 flex="~ gap2 wrap" items-center>
+      <div px-4 flex="~ gap2 wrap" items-center>
         <AButton variant="solid">
           Solid
         </AButton>
@@ -69,10 +69,10 @@ const getInfo = () => {
           Text
         </AButton>
       </div>
-      <div class="p-2">
+      <div class="p-4">
         Status
       </div>
-      <div p-2 flex="~ gap2 wrap" items-center>
+      <div px-4 flex="~ gap2 wrap" items-center>
         <AButton loading>
           Loading
         </AButton>
@@ -80,16 +80,16 @@ const getInfo = () => {
           Disabled
         </AButton>
       </div>
-      <div class="p-2">
+      <div class="p-4">
         Custom
       </div>
-      <div p-2 flex="~ gap2 wrap" items-center>
+      <div px-4 flex="~ gap2 wrap" items-center>
         <AButton icon="i-carbon-palm-tree" />
-        <AButton type="success" icon-only cc="rounded-full">
-          <div class="i-carbon-sprout" />
+        <AButton type="success" square>
+          Square
         </AButton>
-        <AButton type="info" cc="rounded-full">
-          Rounded
+        <AButton type="info" round>
+          Round
         </AButton>
         <AButton type="warning" icon="i-carbon-send-alt">
           Send
@@ -97,11 +97,11 @@ const getInfo = () => {
         <AButton cc="bg-teal border-teal" open-type="getUserInfo" @click="getInfo">
           OpenType
         </AButton>
-        <AButton size="lg" :cc="['bg-gradient-to-r', 'from-indigo-500', 'to-pink-500', 'border-none']">
+        <AButton :cc="['bg-gradient-to-r', 'from-indigo-500', 'to-pink-500', 'border-none']">
           Bg Gradient
         </AButton>
       </div>
-      <div p-2>
+      <div px-4 mt-2>
         <AButton type="danger" block>
           Block
         </AButton>

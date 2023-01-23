@@ -7,22 +7,20 @@ const showValue2 = ref(false)
 
 <template>
   <UBasePage>
-    <div class="p-2 pb-safe">
+    <div class="pb-safe">
       <AOverlay :show="showValue1" :duration="300" @click="showValue1 = false" />
       <AOverlay :show="showValue2" :duration="300" @click="showValue2 = false">
         <div class="flex justify-center items-center h-full">
           <div class="w-20 h-20 bg-white" @click.stop />
         </div>
       </AOverlay>
-      <div class="p-2">
+      <div class="p-4">
         Overlay
       </div>
-      <div p-2>
-        <ACellGroup>
-          <ACell arrow title="Show" @click="showValue1 = true" />
-          <ACell arrow title="Embedded Content" @click="showValue2 = true" />
-        </ACellGroup>
-      </div>
+      <ACellGroup arrow divider inset>
+        <ACell arrow title="Show" @click="showValue1 = true" />
+        <ACell arrow title="Embedded Content" @click="showValue2 = true" />
+      </ACellGroup>
     </div>
   </UBasePage>
 </template>

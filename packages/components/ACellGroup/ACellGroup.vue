@@ -1,5 +1,5 @@
 <script setup lang='ts'>
-import { provide, reactive, toRefs } from 'vue'
+import { computed, provide, reactive, toRefs } from 'vue'
 import { cellGroupKey } from '../tokens'
 import { cellGroupProps } from './cell-group'
 
@@ -10,13 +10,23 @@ provide(cellGroupKey,
     ...toRefs(props),
   }),
 )
+
+const className = computed(() => {
+  const { inset, divider } = props
+
+  const _className = {
+    'a-cell-group-inset': inset,
+    'a-cell-group-divider': divider,
+  }
+  // #ifdef H5
+  Object.assign(_className, { 'a-cell-group-divider-h5': true })
+  // #endif
+  return _className
+})
 </script>
 
 <template>
-  <div
-    class="a-cell-group-base" :class="[{ 'a-cell-group-card': card, 'a-cell-group-divider': divider }, cc]"
-    :style="cs"
-  >
+  <div :class="[className, cc]" :style="cs">
     <slot />
   </div>
 </template>
