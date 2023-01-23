@@ -21,11 +21,10 @@ const show = ref(true)
         Size
       </div>
       <div px-4 flex="~ gap2 wrap" items-center>
-        <ATag label="Extra Mini" type="primary" size="xs" />
-        <ATag label="Mini" type="success" size="sm" />
-        <ATag label="Small" type="info" size="md" />
-        <ATag label="Medium" type="warning" size="lg" />
-        <ATag label="Large" type="danger" size="xl" />
+        <ATag label="Mini" type="primary" size="mini" />
+        <ATag label="Small" type="success" size="small" />
+        <ATag label="Normal" type="info" size="normal" />
+        <ATag label="Large" type="warning" size="large" />
       </div>
 
       <div class="p-4">
@@ -64,7 +63,7 @@ const show = ref(true)
             <div class="i-carbon-send-alt" />
           </template>
         </ATag>
-        <ATag label="Bg Gradient" cc="bg-gradient-to-r from-indigo-500 to-pink-500 border-white" />
+        <ATag label="Bg Gradient" cc="bg-gradient-to-r from-indigo-500 to-pink-500 border-none" />
       </div>
     </div>
   </UBasePage>
