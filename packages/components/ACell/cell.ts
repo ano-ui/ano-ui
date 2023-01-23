@@ -11,6 +11,7 @@ export const cellProps = {
   icon: String,
   arrow: Boolean,
   center: Boolean,
+  clickable: Boolean,
 }
 
 export const cellEmits = {

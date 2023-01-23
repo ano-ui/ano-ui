@@ -11,6 +11,7 @@ export const useCell = (
   const cellGroup = inject(cellGroupKey, undefined)
   const arrow = computed(() => cellGroup?.arrow || props.arrow)
   const center = computed(() => cellGroup?.center || props.center)
+  const clickable = computed(() => cellGroup?.clickable || props.clickable)
 
   const clickHandler = (evt: MouseEvent) => {
     emit(CLICK_EVENT, evt)
@@ -19,6 +20,7 @@ export const useCell = (
   return {
     arrow,
     center,
+    clickable,
 
     clickHandler,
   }

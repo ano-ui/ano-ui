@@ -6,13 +6,13 @@ import { useCell } from './use-cell'
 const props = defineProps(cellProps)
 const emit = defineEmits(cellEmits)
 
-const { arrow, center, clickHandler } = useCell(props, emit)
+const { arrow, center, clickable, clickHandler } = useCell(props, emit)
 
 const className = computed(() => {
   const _className = { 'items-center': center.value }
 
   // #ifdef H5
-  Object.assign(_className, { 'a-cell-hover-h5': arrow.value })
+  Object.assign(_className, { 'a-cell-hover-h5': arrow.value || clickable.value })
   // #endif
   return _className
 })
