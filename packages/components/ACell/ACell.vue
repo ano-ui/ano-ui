@@ -12,7 +12,7 @@ const className = computed(() => {
   const _className = { 'items-center': center.value }
 
   // #ifdef H5
-  Object.assign(_className, { 'a-cell-hover-h5': true })
+  Object.assign(_className, { 'a-cell-hover-h5': arrow.value })
   // #endif
   return _className
 })
@@ -20,7 +20,7 @@ const className = computed(() => {
 
 <template>
   <div
-    class="a-cell-base" :class="[className, cc]" hover-class="a-cell-hover" hover-stay-time="100"
+    class="a-cell-base" :class="[className, cc]" :hover-class="{ 'a-cell-hover': arrow }" hover-stay-time="100"
     :style="cs" @click="clickHandler"
   >
     <div class="a-cell-icon">
