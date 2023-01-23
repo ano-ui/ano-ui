@@ -2,6 +2,7 @@
 const checked = ref(false)
 const checked2 = ref(0)
 const checked3 = ref('yes')
+const disChecked = ref(true)
 </script>
 
 <template>
@@ -22,21 +23,10 @@ const checked3 = ref('yes')
         Size
       </div>
       <div p-2 flex="~ gap2 wrap" items-center>
-        <ASwitch v-model="checked" type="primary" size="xs">
-          Extra Mini
-        </ASwitch>
-        <ASwitch v-model="checked" type="success" size="sm">
-          Mini
-        </ASwitch>
-        <ASwitch v-model="checked" type="info" size="md">
-          Small
-        </ASwitch>
-        <ASwitch v-model="checked" type="warning" size="lg">
-          Medium
-        </ASwitch>
-        <ASwitch v-model="checked" type="danger" size="xl">
-          Large
-        </ASwitch>
+        <ASwitch v-model="checked" type="primary" size="mini" />
+        <ASwitch v-model="checked" type="success" size="small" />
+        <ASwitch v-model="checked" type="info" size="normal" />
+        <ASwitch v-model="checked" type="warning" size="large" />
       </div>
       <div class="p-2">
         Variant
@@ -46,14 +36,14 @@ const checked3 = ref('yes')
         <ASwitch v-model="checked" type="success" variant="outline" />
         <ASwitch v-model="checked" type="info" variant="ghost" />
         <ASwitch v-model="checked" type="warning" variant="light" />
-        <ASwitch v-model="checked" type="danger" variant="text" />
       </div>
       <div class="p-2">
         Status
       </div>
       <div p-2 flex="~ gap2 wrap" items-center>
         <ASwitch :model-value="true" loading />
-        <ASwitch v-model="checked" type="success" disabled />
+        <ASwitch type="success" disabled />
+        <ASwitch v-model="disChecked" type="success" disabled />
       </div>
       <div class="p-2">
         Custom
