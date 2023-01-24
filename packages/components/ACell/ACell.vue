@@ -28,9 +28,9 @@ const className = computed(() => {
       <slot v-else name="icon" />
     </div>
     <div class="a-cell-title">
-      <template v-if="title">
+      <span v-if="title">
         {{ title }}
-      </template>
+      </span>
       <slot v-else name="title" />
       <div v-if="label" class="a-cell-label">
         {{ label }}
@@ -40,9 +40,9 @@ const className = computed(() => {
     </div>
     <slot />
     <div class="a-cell-value">
-      <template v-if="value">
+      <span v-if="value">
         {{ value }}
-      </template>
+      </span>
       <slot v-else name="value" />
     </div>
     <div class="a-cell-right-icon">
