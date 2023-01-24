@@ -28,7 +28,7 @@ const wordLimitText = ref('abc')
         Status
       </div>
       <ACellGroup inset divider>
-        <AField label="Disabled" disabled placeholder="Disabled" />
+        <AField icon="i-carbon-palm-tree" label="Disabled" disabled placeholder="Disabled" />
       </ACellGroup>
       <div class="p-4">
         Custom

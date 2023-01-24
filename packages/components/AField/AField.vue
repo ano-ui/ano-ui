@@ -13,39 +13,40 @@ const {
 </script>
 
 <template>
-  <ACell :center="type !== 'textarea'" cc="a-field-base">
-    <template #title>
-      <div class="flex items-center gap1" :class="{ 'a-field-disabled': disabled }">
-        <div v-if="icon" :class="icon" />
-        <slot v-else name="icon" />
-        <span v-if="label">{{ label }}</span>
-      </div>
-    </template>
-    <template #value>
-      <div class="flex items-center gap1 text-left">
-        <slot name="prefix" />
-        <input
-          v-if="type !== 'textarea'" class="a-field-content-base" :type="type !== 'password' ? type : 'text'"
-          :class="[{ 'a-field-disabled': disabled }, ccc]" :style="ccs" :value="modelValue" :placeholder="placeholderText" :maxlength="maxlength" :focus="focus"
-          :disabled="disabled" :password="type === 'password' ? !showPasswordText : false"
-          placeholder-style="color: #C8C9CC" @click="clickHandler" @blur="blurHandler" @input="inputHandler" @focus="focusHandler"
-        >
-        <textarea
-          v-else class="a-field-content-base" :class="[{ 'a-field-disabled': disabled }, ccc]" :style="ccs" :value="modelValue"
-          :placeholder="placeholderText" :maxlength="maxlength" :focus="focus" :disabled="disabled"
-          placeholder-style="color: #C8C9CC" @click="clickHandler" @blur="blurHandler" @input="inputHandler" @focus="focusHandler"
-        />
-        <div v-if="showWordLimit && modelValue">
-          {{ modelValue.length }}/{{ maxlength }}
-        </div>
-      </div>
-    </template>
-    <template #right-icon>
-      <div v-if="showClear && modelValue" class="i-carbon-close-filled" @click="clearHandler" />
+  <div
+    class="a-cell-base a-field-base"
+    :class="[{ 'items-center': type !== 'textarea' }, { 'a-field-disabled': disabled }, cc]" :style="cs"
+  >
+    <div v-if="icon" :class="icon" class="a-cell-icon" />
+    <slot v-else name="icon" />
+    <div class="a-cell-title a-field-title" :class="{ 'items-unset': type === 'textarea' }">
+      <span v-if="label">{{ label }}</span>
+      <slot v-else name="label" />
+    </div>
+    <slot />
+    <div class="a-cell-value a-field-value">
+      <slot name="prefix" />
+      <input
+        v-if="type !== 'textarea'" class="a-field-content-base min-h-auto"
+        :type="type !== 'password' ? type : 'text'" :class="[{ 'a-field-disabled': disabled }, ccc]" :style="ccs"
+        :value="modelValue" :placeholder="placeholderText" :maxlength="maxlength" :focus="focus" :disabled="disabled"
+        :password="type === 'password' ? !showPasswordText : false" placeholder-style="color: #C8C9CC"
+        @click="clickHandler" @blur="blurHandler" @input="inputHandler" @focus="focusHandler"
+      >
+      <textarea
+        v-else class="a-field-content-base w-full h-20" :class="[{ 'a-field-disabled': disabled }, ccc]"
+        :style="ccs" :value="modelValue" :placeholder="placeholderText" :maxlength="maxlength" :focus="focus"
+        :disabled="disabled" placeholder-style="color: #C8C9CC" @click="clickHandler" @blur="blurHandler"
+        @input="inputHandler" @focus="focusHandler"
+      />
+      <div v-if="showClear && modelValue" class="i-carbon-close-filled" @click.stop="clearHandler" />
       <div
         v-if="type === 'password'" :class="showPasswordText ? 'i-carbon-view-filled' : 'i-carbon-view-off-filled'"
         @click.stop="showPasswordText = !showPasswordText"
       />
-    </template>
-  </ACell>
+      <div v-if="showWordLimit && modelValue">
+        {{ modelValue.length }}/{{ maxlength }}
+      </div>
+    </div>
+  </div>
 </template>

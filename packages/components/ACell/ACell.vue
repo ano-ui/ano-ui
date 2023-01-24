@@ -23,10 +23,8 @@ const className = computed(() => {
     class="a-cell-base" :class="[className, cc]" :hover-class="arrow ? 'a-cell-hover' : '' " hover-stay-time="60"
     :style="cs" @click="clickHandler"
   >
-    <div class="a-cell-icon">
-      <div v-if="icon" :class="icon" />
-      <slot v-else name="icon" />
-    </div>
+    <div v-if="icon" class="a-cell-icon" :class="icon" />
+    <slot v-else name="icon" />
     <div class="a-cell-title">
       <span v-if="title">
         {{ title }}
@@ -45,9 +43,7 @@ const className = computed(() => {
       </span>
       <slot v-else name="value" />
     </div>
-    <div class="a-cell-right-icon">
-      <div v-if="arrow" class="i-carbon-chevron-right" />
-      <slot name="right-icon" />
-    </div>
+    <div v-if="arrow" class="a-cell-right-icon i-carbon-chevron-right" />
+    <slot v-else name="right-icon" />
   </div>
 </template>
