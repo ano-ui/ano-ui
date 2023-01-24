@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import ACell from '../ACell/ACell.vue'
 import { fieldEmits, fieldProps } from './field'
 import { useField } from './use-field'
 
@@ -19,7 +18,7 @@ const {
   >
     <div v-if="icon" :class="icon" class="a-cell-icon" />
     <slot v-else name="icon" />
-    <div class="a-cell-title a-field-title" :class="{ 'items-unset': type === 'textarea' }">
+    <div class="a-cell-title a-field-title" :class="[`a-field-title-${labelAlign}`]">
       <span v-if="label">{{ label }}</span>
       <slot v-else name="label" />
     </div>
@@ -28,13 +27,13 @@ const {
       <slot name="prefix" />
       <input
         v-if="type !== 'textarea'" class="a-field-content-base min-h-auto"
-        :type="type !== 'password' ? type : 'text'" :class="[{ 'a-field-disabled': disabled }, ccc]" :style="ccs"
+        :type="type !== 'password' ? type : 'text'" :class="[`a-field-content-base-${inputAlign}`, { 'a-field-disabled': disabled }, ccc]" :style="ccs"
         :value="modelValue" :placeholder="placeholderText" :maxlength="maxlength" :focus="focus" :disabled="disabled"
         :password="type === 'password' ? !showPasswordText : false" placeholder-style="color: #C8C9CC"
         @click="clickHandler" @blur="blurHandler" @input="inputHandler" @focus="focusHandler"
       >
       <textarea
-        v-else class="a-field-content-base w-full h-20" :class="[{ 'a-field-disabled': disabled }, ccc]"
+        v-else class="a-field-content-base h-20" :class="[`a-field-content-base-${inputAlign}`, { 'a-field-disabled': disabled }, ccc]"
         :style="ccs" :value="modelValue" :placeholder="placeholderText" :maxlength="maxlength" :focus="focus"
         :disabled="disabled" placeholder-style="color: #C8C9CC" @click="clickHandler" @blur="blurHandler"
         @input="inputHandler" @focus="focusHandler"

@@ -46,8 +46,9 @@ const wordLimitText = ref('abc')
             <div class="i-carbon-send-alt-filled" />
           </template>
         </AField>
-        <AField label="Text" ccc="text-red" placeholder="Red Text" />
+        <AField label="Text" ccc="text-red" input-align="right" placeholder="Input Red, Align Right" />
         <AField v-model="wordLimitText" label="Limit" :maxlength="10" show-word-limit placeholder="Word Limit" />
+        <AField label-align="top" label="Label" placeholder="Label Align Top" />
       </ACellGroup>
     </div>
   </UBasePage>

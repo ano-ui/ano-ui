@@ -1,13 +1,25 @@
 import type { ExtractPropTypes, PropType } from 'vue'
-import { useCustomClassProp, useCustomStyleProp, useSizeProp } from '../composables'
+import { useCustomClassProp, useCustomStyleProp } from '../composables'
 import { BLUR_EVENT, CHANGE_EVENT, CLEAR_EVENT, CLICK_EVENT, FOCUS_EVENT, INPUT_EVENT, UPDATE_MODEL_EVENT } from '../constants'
 import { isString } from '../utils'
+import type { FieldLabelAlign, FieldType } from './types'
 
-export type FieldType = 'text' | 'number' | 'digit' | 'password' | 'textarea'
-
-export const FieldTypeProp = {
+export const useFieldTypeProp = {
   type: String as PropType<FieldType>,
+  validator: (value: string) => ['text', 'number', 'digit', 'password', 'textarea'].includes(value),
   default: 'text',
+}
+
+export const useFieldLabelAlignProp = {
+  type: String as PropType<FieldLabelAlign>,
+  validator: (value: string) => ['left', 'right', 'top'].includes(value),
+  default: 'left',
+}
+
+export const useFieldInputAlignProp = {
+  type: String as PropType<FieldLabelAlign>,
+  validator: (value: string) => ['left', 'right'].includes(value),
+  default: 'left',
 }
 
 export const fieldProps = {
@@ -15,9 +27,10 @@ export const fieldProps = {
   ccc: useCustomClassProp,
   cs: useCustomStyleProp,
   ccs: useCustomStyleProp,
-  type: FieldTypeProp,
-  size: useSizeProp,
+  type: useFieldTypeProp,
   label: String,
+  labelAlign: useFieldLabelAlignProp,
+  inputAlign: useFieldInputAlignProp,
   disabled: Boolean,
   focus: Boolean,
   icon: String,
