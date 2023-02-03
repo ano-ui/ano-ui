@@ -26,13 +26,13 @@ const showToast = (options: ToastOptions) => {
         Position
       </div>
       <div px-4 flex="~ gap2 wrap">
-        <AButton type="primary" @click="showToast({ position: 'default', message: 'This is a toast, and it will disappear after 3 seconds.' })">
+        <AButton type="primary" @click="showToast({ position: 'default', duration: 3000, message: 'This is a toast, and it will disappear after 3 seconds.' })">
           Default
         </AButton>
-        <AButton type="success" @click="showToast({ position: 'top', message: 'This is a toast, and it will disappear after 3 seconds.' })">
+        <AButton type="success" @click="showToast({ position: 'top', message: 'This is a toast, and it will disappear after 2 seconds.' })">
           Top
         </AButton>
-        <AButton type="info" @click="showToast({ position: 'bottom', message: 'This is a toast, and it will disappear after 3 seconds.' })">
+        <AButton type="info" @click="showToast({ position: 'bottom', message: 'This is a toast, and it will disappear after 2 seconds.' })">
           Bottom
         </AButton>
       </div>

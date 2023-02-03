@@ -1,6 +1,12 @@
 <script setup lang="ts">
-import type { DialogOptions, DialogRef } from 'ano-ui'
+import type { DialogOptions, DialogRef, ToastOptions } from 'ano-ui'
 import { ref } from 'vue'
+
+const toast = ref<{ showToast: (options?: ToastOptions) => {} }>()
+
+const showToast = (options: ToastOptions) => {
+  toast.value!.showToast(options)
+}
 
 const dialogRef = ref<DialogRef>()
 const handleShow = (options: DialogOptions) => {
@@ -8,20 +14,20 @@ const handleShow = (options: DialogOptions) => {
 }
 
 const handleConfirm = () => {
-  // eslint-disable-next-line no-console
-  console.log('confirm')
+  showToast({ message: 'confirm' })
 }
 
 const handleCancel = () => {
-  // eslint-disable-next-line no-console
-  console.log('cancel')
+  showToast({ message: 'cancel' })
 }
 </script>
 
 <template>
   <UBasePage>
     <div class="pb-safe">
+      <AToast ref="toast" />
       <ADialog ref="dialogRef" @confirm="handleConfirm" @cancel="handleCancel" />
+
       <div class="p-4">
         Dialog
       </div>

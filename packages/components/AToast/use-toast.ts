@@ -24,7 +24,7 @@ export const useToast = (
     const {
       position = 'default',
       message = '',
-      duration = 3000,
+      duration = 2000,
     } = options
 
     show.value = true
