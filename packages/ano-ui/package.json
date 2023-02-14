@@ -51,10 +51,10 @@
   },
   "devDependencies": {
     "@types/fs-extra": "^11.0.1",
-    "@types/node": "18.11.18",
+    "@types/node": "18.11.19",
     "esno": "^0.16.3",
     "fs-extra": "^11.1.0",
-    "unplugin-vue-components": "^0.22.12",
-    "vue": "^3.2.45"
+    "unplugin-vue-components": "^0.23.0",
+    "vue": "^3.2.47"
   }
 }
