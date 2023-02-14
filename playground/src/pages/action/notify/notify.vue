@@ -40,7 +40,7 @@ const topStyle = computed(() => {
         </template>
         Slot
       </ANotify>
-      <ANotify ref="notify3" :cs="topStyle" ccc="bg-gradient-to-r from-indigo-500 to-pink-500" />
+      <ANotify ref="notify3" :cs="topStyle" ccc="bg-gradient-to-r from-indigo-500 to-pink-500 border-none" />
 
       <div class="p-4">
         Notify

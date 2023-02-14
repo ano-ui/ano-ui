@@ -10,9 +10,15 @@ const { handleClose } = useNoticeBar(props, emit)
 
 <template>
   <div v-if="show" class="a-notice-bar-base" :class="[`a-${type}`, `a-${variant}`, cc]" :style="cs">
-    <div class="i-carbon-notification-filled" />
-    <div v-if="icon" :class="icon" />
-    <slot v-else name="icon" />
+    <template v-if="$slots.icon">
+      <slot name="icon" />
+    </template>
+    <div v-else-if="icon" :class="icon" />
+    <div v-else-if="type === 'primary'" class="i-carbon-notification-filled" />
+    <div v-else-if="type === 'success'" class="i-carbon-checkmark-filled" />
+    <div v-else-if="type === 'info'" class="i-carbon-information-filled" />
+    <div v-else-if="type === 'warning'" class="i-carbon-warning-filled" />
+    <div v-else-if="type === 'danger'" class="i-carbon-error-filled" />
     <div class="flex-1 relative overflow-hidden" :class="loop ? '' : 'truncate'">
       <template v-if="loop">
         <div class="text-transparent">

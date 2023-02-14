@@ -42,9 +42,6 @@ const show = ref(true)
         <ANoticeBar type="warning" variant="light">
           Light
         </ANoticeBar>
-        <ANoticeBar type="danger" variant="text">
-          Text
-        </ANoticeBar>
       </div>
       <div class="p-4">
         Custom
@@ -53,7 +50,10 @@ const show = ref(true)
         <ANoticeBar type="danger" :show="show" show-close @close="show = false">
           Show Close
         </ANoticeBar>
-        <ANoticeBar mt2 block cc="bg-gradient-to-r from-indigo-500 to-pink-500 border-none">
+        <ANoticeBar mt2 cc="bg-gradient-to-r from-indigo-500 to-pink-500 border-none">
+          <template #icon>
+            <div class="i-carbon-palm-tree" />
+          </template>
           Bg Gradient
         </ANoticeBar>
       </div>

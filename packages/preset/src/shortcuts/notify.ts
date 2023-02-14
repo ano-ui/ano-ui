@@ -7,5 +7,5 @@ export const notifyShortcuts: Record<string, string> = {
   'a-notify-position-bottom': '!top-auto bottom-0 left-5 right-5 mb-safe pb-5',
   'a-notify-position-bottom-left': '!top-auto bottom-5 left-5 mb-safe pl-5',
   'a-notify-position-bottom-right': '!top-auto bottom-5 right-5 mb-safe pr-5',
-  'a-notify-content-base': 'flex justify-center gap2 items-center py2 px3 rounded-lg dark:bg-op80 dark:text-op80 a-transition a-solid',
+  'a-notify-content-base': 'box-border flex justify-center gap-2 items-center rounded-lg bg-clip-padding a-transition px-3 min-h-10 text-base a-solid',
 }
