@@ -8,7 +8,7 @@ defineProps({
 
 <template>
   <div :class="{ dark }">
-    <div class="a-bg-base a-color-base">
+    <div class="a-bg a-text-color">
       <slot />
     </div>
   </div>
