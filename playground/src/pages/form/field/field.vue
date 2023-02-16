@@ -34,6 +34,7 @@ const wordLimitText = ref('abc')
         Custom
       </div>
       <ACellGroup inset divider>
+        <AField placeholder="No Label" />
         <AField v-model="showClearText" label="Clear" show-clear placeholder="Clear Icon" />
         <AField label="Icon" icon="i-carbon-palm-tree" placeholder="Icon" />
         <AField label="Prefix Slot" placeholder="Prefix Slot">

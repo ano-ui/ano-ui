@@ -18,7 +18,7 @@ const {
   >
     <div v-if="icon" :class="icon" class="a-cell-icon" />
     <slot v-else name="icon" />
-    <div class="a-cell-title a-field-title" :class="[`a-field-title-${labelAlign}`]">
+    <div v-if="$slots.label || label" class="a-cell-title a-field-title" :class="[`a-field-title-${labelAlign}`]">
       <span v-if="label">{{ label }}</span>
       <slot v-else name="label" />
     </div>
