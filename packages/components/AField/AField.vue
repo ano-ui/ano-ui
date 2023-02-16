@@ -23,7 +23,7 @@ const {
       <slot v-else name="label" />
     </div>
     <slot />
-    <div class="a-cell-value a-field-value">
+    <div class="a-cell-value a-field-value" :class="[labelAlign === 'top' ? 'w-full' : 'flex-1']">
       <slot name="prefix" />
       <input
         v-if="type !== 'textarea'" class="a-field-content-base min-h-auto"

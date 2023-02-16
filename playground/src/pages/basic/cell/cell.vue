@@ -9,13 +9,14 @@
       </div>
       <div>
         <ACell title="Title" value="Content" />
+        <ACell value="No Title" />
         <ACell icon="i-carbon-palm-tree" title="Title" value="Content" label="Description Description Description" />
       </div>
       <div class="p-4">
         Custom
       </div>
       <ACellGroup divider>
-        <ACell title="Title" value="Content" cc="rounded-none" />
+        <ACell title="Title" value="Rounded Full" cc="rounded-full" />
         <ACell icon="i-carbon-palm-tree" title="Title" value="Content" label="Description" arrow center />
         <ACell title="Slots">
           <template #icon>

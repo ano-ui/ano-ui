@@ -25,7 +25,7 @@ const className = computed(() => {
   >
     <div v-if="icon" class="a-cell-icon" :class="icon" />
     <slot v-else name="icon" />
-    <div class="a-cell-title">
+    <div v-if="$slots.title || title" class="a-cell-title">
       <span v-if="title">
         {{ title }}
       </span>
@@ -37,7 +37,7 @@ const className = computed(() => {
       <slot v-else name="label" />
     </div>
     <slot />
-    <div class="a-cell-value">
+    <div class="a-cell-value" :class="{ 'w-full text-left': !title }">
       <span v-if="value">
         {{ value }}
       </span>
