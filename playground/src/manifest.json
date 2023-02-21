@@ -1,34 +1,34 @@
 {
-    "name" : "Ano UI",
-    "appid" : "__UNI__D989E4B",
-    "description" : "",
-    "versionName" : "0.1.0",
-    "versionCode" : "100",
-    "transformPx" : false,
-    "mp-weixin" : {
-        "appid" : "wx34c53cdf4e901def",
-        "setting" : {
-            "urlCheck" : false,
-            "es6" : true,
-            "minified" : true,
-            "postcss" : true
-        },
-        "usingComponents" : true,
-        "darkmode" : true,
-        "themeLocation" : "theme.json"
+  "name": "Ano UI",
+  "appid": "__UNI__D989E4B",
+  "description": "",
+  "versionName": "0.1.0",
+  "versionCode": "100",
+  "transformPx": false,
+  "mp-weixin": {
+    "appid": "wx34c53cdf4e901def",
+    "setting": {
+      "urlCheck": false,
+      "es6": true,
+      "minified": true,
+      "postcss": true
     },
-    "uniStatistics" : {
-        "enable" : false
-    },
-    "vueVersion" : "3",
-    "app-plus" : {
-        "distribute" : {
-            "ios" : {
-                "dSYMs" : false
-            },
-            "sdkConfigs" : {
-                "ad" : {}
-            }
-        }
+    "usingComponents": true,
+    "darkmode": true,
+    "themeLocation": "theme.json"
+  },
+  "uniStatistics": {
+    "enable": false
+  },
+  "vueVersion": "3",
+  "app-plus": {
+    "distribute": {
+      "ios": {
+        "dSYMs": false
+      },
+      "sdkConfigs": {
+        "ad": {}
+      }
     }
+  }
 }

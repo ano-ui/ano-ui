@@ -11,7 +11,7 @@ const showValue2 = ref(false)
       <AOverlay :show="showValue1" :duration="300" @click="showValue1 = false" />
       <AOverlay :show="showValue2" :duration="300" @click="showValue2 = false">
         <div class="flex justify-center items-center h-full">
-          <div class="w-20 h-20 bg-white" @click.stop />
+          <div class="h-20 w-20 bg-white" @click.stop />
         </div>
       </AOverlay>
       <div class="p-4">

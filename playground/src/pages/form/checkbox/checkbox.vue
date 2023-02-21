@@ -1,6 +1,5 @@
 <script setup lang="ts">
 const checked = ref(false)
-const statusChecked1 = ref(false)
 const statusChecked2 = ref(true)
 const checked2 = ref(true)
 const checked3 = ref(false)

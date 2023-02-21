@@ -1,6 +1,6 @@
-import type { Rule, RuleContext } from '@unocss/core'
-import type { Theme } from '@unocss/preset-mini'
-import { parseColor } from '@unocss/preset-mini/utils'
+import type { Rule, RuleContext } from 'unocss'
+import type { Theme } from 'unocss/preset-mini'
+import { parseColor } from '@unocss/preset-mini'
 
 export default [
   [/^a-(.*)$/, ([, body]: string[], { theme }: RuleContext<Theme>) => {

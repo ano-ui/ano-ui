@@ -9,7 +9,7 @@ import ATag from '../components/ATag/ATag.vue'
 // Form
 import ACheckbox from '../components/ACheckbox/ACheckbox.vue'
 import ACheckboxGroup from '../components/ACheckboxGroup/ACheckboxGroup.vue'
-import AInput from '../components/AInput/AInput.vue'
+import AField from '../components/AField/AField.vue'
 import ARadio from '../components/ARadio/ARadio.vue'
 import ARadioGroup from '../components/ARadioGroup/ARadioGroup.vue'
 import ASwitch from '../components/ASwitch/ASwitch.vue'
@@ -33,7 +33,7 @@ export { default as ATag } from '../components/ATag/ATag.vue'
 // Form
 export { default as ACheckbox } from '../components/ACheckbox/ACheckbox.vue'
 export { default as ACheckboxGroup } from '../components/ACheckboxGroup/ACheckboxGroup.vue'
-export { default as AInput } from '../components/AInput/AInput.vue'
+export { default as AField } from '../components/AField/AField.vue'
 export { default as ARadio } from '../components/ARadio/ARadio.vue'
 export { default as ARadioGroup } from '../components/ARadioGroup/ARadioGroup.vue'
 export { default as ASwitch } from '../components/ASwitch/ASwitch.vue'
@@ -56,7 +56,7 @@ const ano = {
     app.component('ATag', ATag)
     app.component('ACheckbox', ACheckbox)
     app.component('ACheckboxGroup', ACheckboxGroup)
-    app.component('AInput', AInput)
+    app.component('AField', AField)
     app.component('ARadio', ARadio)
     app.component('ARadioGroup', ARadioGroup)
     app.component('ASwitch', ASwitch)

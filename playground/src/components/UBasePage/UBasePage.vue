@@ -1,5 +1,5 @@
 <script setup lang='ts'>
-const { darkMode, customBarHeight, statusBarHeight } = storeToRefs(useAppStore())
+const { darkMode } = storeToRefs(useAppStore())
 </script>
 
 <template>

@@ -27,7 +27,7 @@ const goDisplay = (path: string) => {
 <template>
   <UBasePage>
     <div class="pb-safe">
-      <div class="p4 text-center a-color-base" flex="~ col gap1">
+      <div class="text-center p4 a-color-base" flex="~ col gap1">
         <div class="text-xl">
           Ano UI
         </div>

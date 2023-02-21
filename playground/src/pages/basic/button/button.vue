@@ -15,7 +15,7 @@ const getInfo = () => {
       <div class="p-4">
         Color
       </div>
-      <div px-4 flex="~ gap2 wrap" items-center>
+      <div flex="~ gap2 wrap" items-center px-4>
         <AButton>
           Primary
         </AButton>
