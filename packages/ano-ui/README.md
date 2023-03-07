@@ -20,17 +20,13 @@ Custom UnoCSS config(`unocss.config.ts`):
 ```ts
 import { defineConfig, presetIcons } from 'unocss'
 // unocss-applet https://github.com/unocss-applet/unocss-applet
-import { presetApplet, presetRemToRpx, transformerApplet } from 'unocss-applet'
+import { presetApplet, presetRemRpx, transformerApplet } from 'unocss-applet'
 import { presetAno } from 'ano-ui'
-
-// UniApp
-const isApplet = process.env?.UNI_PLATFORM?.startsWith('mp-')
 
 export default defineConfig({
   presets: [
-    presetApplet({ enable: isApplet }),
-    presetAttributify({ enable: isApplet }),
-    presetRemToRpx({ enable: isApplet }),
+    presetApplet(),
+    presetRemRpx(),
     presetIcons({
       scale: 1.2,
       extraProperties: {
@@ -41,7 +37,7 @@ export default defineConfig({
     presetAno(),
   ],
   transformers: [
-    transformerApplet({ enable: isApplet }),
+    transformerApplet(),
   ],
 })
 ```
@@ -57,6 +53,28 @@ Update `pages.json` file like below:
     }
   }
 }
+```
+
+Or use [@uni-helper/vite-plugin-uni-components](https://github.com/uni-helper/vite-plugin-uni-components) to scan components automatically.
+
+```ts
+import { defineConfig } from 'vite'
+
+import Components from '@uni-helper/vite-plugin-uni-components'
+import { AnoResolver } from 'ano-ui'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  // ...
+  plugins: [
+    // ...
+    Components({
+      include: [/\.vue$/, /\.vue\?vue/],
+      dts: 'src/components.d.ts',
+      resolvers: [AnoResolver()],
+    }),
+  ],
+})
 ```
 
 And then enjoy it. Just use a button component like this:
@@ -93,12 +111,17 @@ Then import the project(`xx/ano-ui/playground/dev/mp-weixin`) into WeChat DevToo
 
 ## Acknowledgement
 
-- [anu](https://github.com/jd-solanki/anu)
-- [Element Plus](https://github.com/element-plus/element-plus)
+### Tools
+
 - [UnoCSS](https://github.com/unocss/unocss)
-- [onu-ui](https://github.com/onu-ui/onu-ui)
-- [tm-ui](https://gitee.com/LYTB/tmui-design)
+
+### UI Frameworks
+
+- [Anu](https://github.com/jd-solanki/anu)
+- [Element Plus](https://github.com/element-plus/element-plus)
+- [Onu UI](https://github.com/onu-ui/onu-ui)
 - [uView](https://github.com/umicro/uView2.0)
+- [Vant](https://github.com/youzan/vant)
 
 ## License
 

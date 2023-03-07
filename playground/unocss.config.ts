@@ -8,7 +8,7 @@ import {
 
 import {
   presetApplet,
-  presetRemToRpx,
+  presetRemRpx,
   transformerApplet,
   transformerAttributify,
 } from 'unocss-applet'
@@ -25,7 +25,7 @@ export default defineConfig({
       },
     }),
     presetApplet(),
-    presetRemToRpx(),
+    presetRemRpx(),
     presetAttributify(),
     presetAno(),
   ],

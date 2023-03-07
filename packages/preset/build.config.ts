@@ -11,7 +11,5 @@ export default defineBuildConfig({
   },
   externals: [
     'unocss',
-    '@unocss/preset-mini',
-    '@unocss/core',
   ],
 })

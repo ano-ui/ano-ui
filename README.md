@@ -20,14 +20,13 @@ Custom UnoCSS config(`unocss.config.ts`):
 ```ts
 import { defineConfig, presetIcons } from 'unocss'
 // unocss-applet https://github.com/unocss-applet/unocss-applet
-import { presetApplet, presetRemToRpx, transformerApplet } from 'unocss-applet'
+import { presetApplet, presetRemRpx, transformerApplet } from 'unocss-applet'
 import { presetAno } from 'ano-ui'
 
 export default defineConfig({
   presets: [
     presetApplet(),
-    presetAttributify(),
-    presetRemToRpx(),
+    presetRemRpx(),
     presetIcons({
       scale: 1.2,
       extraProperties: {
@@ -54,6 +53,28 @@ Update `pages.json` file like below:
     }
   }
 }
+```
+
+Or use [@uni-helper/vite-plugin-uni-components](https://github.com/uni-helper/vite-plugin-uni-components) to scan components automatically.
+
+```ts
+import { defineConfig } from 'vite'
+
+import Components from '@uni-helper/vite-plugin-uni-components'
+import { AnoResolver } from 'ano-ui'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  // ...
+  plugins: [
+    // ...
+    Components({
+      include: [/\.vue$/, /\.vue\?vue/],
+      dts: 'src/components.d.ts',
+      resolvers: [AnoResolver()],
+    }),
+  ],
+})
 ```
 
 And then enjoy it. Just use a button component like this:
