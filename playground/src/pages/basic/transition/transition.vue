@@ -3,7 +3,7 @@ import { ref } from 'vue'
 
 const showValue = ref(false)
 const transitionName = ref('')
-const show = (name: string) => {
+function show(name: string) {
   transitionName.value = name
   showValue.value = true
   setTimeout(() => {
@@ -11,8 +11,10 @@ const show = (name: string) => {
   }, 2000)
 }
 
-// eslint-disable-next-line no-console
-const log = (msg: string) => console.log(`[${transitionName.value}] ${msg}`)
+function log(msg: string) {
+  // eslint-disable-next-line no-console
+  return console.log(`[${transitionName.value}] ${msg}`)
+}
 </script>
 
 <template>
@@ -48,3 +50,8 @@ const log = (msg: string) => console.log(`[${transitionName.value}] ${msg}`)
     </div>
   </UBasePage>
 </template>
+
+<route lang="yaml">
+style:
+  navigationBarTitleText: Transition 动画
+</route>

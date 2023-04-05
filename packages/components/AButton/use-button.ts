@@ -4,10 +4,8 @@ import { CLICK_EVENT } from '../constants'
 import type { ButtonEmits, ButtonProps } from './button'
 // @unocss-include
 
-export const useButton = (
-  props: ButtonProps,
-  emit: SetupContext<ButtonEmits>['emit'],
-) => {
+export function useButton(props: ButtonProps,
+  emit: SetupContext<ButtonEmits>['emit']) {
   const disabled = computed(() => props.disabled || props.loading)
   const className = computed(() => {
     const { type, size, variant, block, square, round } = props

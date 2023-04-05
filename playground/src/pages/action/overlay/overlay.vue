@@ -24,3 +24,8 @@ const showValue2 = ref(false)
     </div>
   </UBasePage>
 </template>
+
+<route lang="yaml">
+style:
+  navigationBarTitleText: Overlay 遮罩层
+</route>

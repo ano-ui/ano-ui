@@ -3,10 +3,8 @@ import { computed, nextTick, ref, watch } from 'vue'
 import { CLICK_EVENT } from '../constants'
 import type { TransitionEmits, TransitionProps } from './transition'
 
-export const useTransition = (
-  props: TransitionProps,
-  emit: SetupContext<TransitionEmits>['emit'],
-) => {
+export function useTransition(props: TransitionProps,
+  emit: SetupContext<TransitionEmits>['emit']) {
   const display = ref(false)
   const name = computed(() => props.name || 'fade')
 

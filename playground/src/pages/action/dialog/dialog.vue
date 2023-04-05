@@ -4,20 +4,20 @@ import { ref } from 'vue'
 
 const toast = ref<{ showToast: (options?: ToastOptions) => {} }>()
 
-const showToast = (options: ToastOptions) => {
+function showToast(options: ToastOptions) {
   toast.value!.showToast(options)
 }
 
 const dialogRef = ref<DialogRef>()
-const handleShow = (options: DialogOptions) => {
+function handleShow(options: DialogOptions) {
   dialogRef.value?.showDialog(options)
 }
 
-const handleConfirm = () => {
+function handleConfirm() {
   showToast({ message: 'confirm' })
 }
 
-const handleCancel = () => {
+function handleCancel() {
   showToast({ message: 'cancel' })
 }
 </script>
@@ -48,3 +48,8 @@ const handleCancel = () => {
     </div>
   </UBasePage>
 </template>
+
+<route lang="yaml">
+style:
+  navigationBarTitleText: Dialog 弹出框
+</route>

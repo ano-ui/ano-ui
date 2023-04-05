@@ -2,7 +2,6 @@
   "name": "ano-ui",
   "type": "module",
   "version": "0.6.5",
-  "packageManager": "pnpm@7.2.1",
   "description": "",
   "author": "Neil Lee <zguolee@foxmail.com>",
   "license": "MIT",
@@ -51,9 +50,9 @@
   },
   "devDependencies": {
     "@types/fs-extra": "^11.0.1",
-    "@types/node": "18.14.6",
+    "@types/node": "18.15.11",
     "esno": "^0.16.3",
-    "fs-extra": "^11.1.0",
+    "fs-extra": "^11.1.1",
     "unplugin-vue-components": "^0.24.1",
     "vue": "^3.2.47"
   }

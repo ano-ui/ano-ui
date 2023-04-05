@@ -5,7 +5,7 @@ import { ref } from 'vue'
 const showValue = ref(false)
 const position = ref<PositionType>('center')
 
-const handleShow = (p: PositionType) => {
+function handleShow(p: PositionType) {
   showValue.value = true
   position.value = p
 }
@@ -38,3 +38,8 @@ const handleShow = (p: PositionType) => {
     </div>
   </UBasePage>
 </template>
+
+<route lang="yaml">
+style:
+  navigationBarTitleText: Popup 弹出层
+</route>

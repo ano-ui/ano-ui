@@ -4,10 +4,8 @@ import { CANCEL_EVENT, CONFIRM_EVENT } from '../constants'
 import type { DialogEmits, DialogProps } from './dialog'
 import type { DialogOptions } from './types'
 
-export const useDialog = (
-  props: DialogProps,
-  emit: SetupContext<DialogEmits>['emit'],
-) => {
+export function useDialog(props: DialogProps,
+  emit: SetupContext<DialogEmits>['emit']) {
   const show = ref(props.show || false)
   const showValue = computed(() => props.show || show.value)
 

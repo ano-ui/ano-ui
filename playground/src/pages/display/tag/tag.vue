@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+
 const show = ref(true)
 </script>
 
@@ -68,3 +69,8 @@ const show = ref(true)
     </div>
   </UBasePage>
 </template>
+
+<route lang="yaml">
+style:
+  navigationBarTitleText: Tag 标签
+  </route>

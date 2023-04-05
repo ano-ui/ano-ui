@@ -117,3 +117,8 @@ function toggle(index: any) {
     </div>
   </UBasePage>
 </template>
+
+<route lang="yaml">
+style:
+  navigationBarTitleText: Checkbox 复选框
+</route>

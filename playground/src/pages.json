@@ -1,4 +1,118 @@
 {
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "type": "home",
+      "style": {
+        "navigationBarTitleText": "Ano UI"
+      }
+    },
+    {
+      "path": "pages/action/action-sheet/action-sheet",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "ActionSheet 动作面板"
+      }
+    },
+    {
+      "path": "pages/action/dialog/dialog",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "Dialog 弹出框"
+      }
+    },
+    {
+      "path": "pages/action/notify/notify",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "Notify 消息通知"
+      }
+    },
+    {
+      "path": "pages/action/overlay/overlay",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "Overlay 遮罩层"
+      }
+    },
+    {
+      "path": "pages/basic/button/button",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "Button 按钮"
+      }
+    },
+    {
+      "path": "pages/basic/cell/cell",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "Cell 单元格"
+      }
+    },
+    {
+      "path": "pages/basic/popup/popup",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "Popup 弹出层"
+      }
+    },
+    {
+      "path": "pages/basic/toast/toast",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "Toast 轻提示"
+      }
+    },
+    {
+      "path": "pages/basic/transition/transition",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "Transition 动画"
+      }
+    },
+    {
+      "path": "pages/display/notice-bar/notice-bar",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "NoticeBar 通告栏"
+      }
+    },
+    {
+      "path": "pages/display/tag/tag",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "Tag 标签"
+      }
+    },
+    {
+      "path": "pages/form/checkbox/checkbox",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "Checkbox 复选框"
+      }
+    },
+    {
+      "path": "pages/form/field/field",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "Field 输入框"
+      }
+    },
+    {
+      "path": "pages/form/radio/radio",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "Radio 单选框"
+      }
+    },
+    {
+      "path": "pages/form/switch/switch",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "Switch 开关"
+      }
+    }
+  ],
   "globalStyle": {
     "navigationBarBackgroundColor": "@navBgColor",
     "navigationBarTextStyle": "@navTxtStyle",
@@ -7,76 +121,5 @@
     "backgroundTextStyle": "@bgTxtStyle",
     "backgroundColorTop": "@bgColorTop",
     "backgroundColorBottom": "@bgColorBottom"
-  },
-  "pages": [
-    { "path": "pages/index/index" },
-    {
-      "path": "pages/basic/button/button",
-      "style": { "navigationBarTitleText": "Button 按钮" }
-    },
-    {
-      "path": "pages/basic/cell/cell",
-      "style": { "navigationBarTitleText": "Cell 单元格" }
-    },
-    {
-      "path": "pages/basic/popup/popup",
-      "style": { "navigationBarTitleText": "Popup 弹出层" }
-    },
-    {
-      "path": "pages/basic/toast/toast",
-      "style": { "navigationBarTitleText": "Toast 轻提示" }
-    },
-    {
-      "path": "pages/basic/transition/transition",
-      "style": { "navigationBarTitleText": "Transition 过渡" }
-    },
-
-    {
-      "path": "pages/form/checkbox/checkbox",
-      "style": { "navigationBarTitleText": "Checkbox 复选框" }
-    },
-    {
-      "path": "pages/form/field/field",
-      "style": { "navigationBarTitleText": "Field 输入框" }
-    },
-    {
-      "path": "pages/form/radio/radio",
-      "style": { "navigationBarTitleText": "Radio 单选框" }
-    },
-    {
-      "path": "pages/form/switch/switch",
-      "style": { "navigationBarTitleText": "Switch 开关" }
-    },
-
-    {
-      "path": "pages/action/action-sheet/action-sheet",
-      "style": { "navigationBarTitleText": "ActionSheet 动作面板" }
-    },
-    {
-      "path": "pages/action/dialog/dialog",
-      "style": { "navigationBarTitleText": "Dialog 弹出框" }
-    },
-    {
-      "path": "pages/action/notify/notify",
-      "style": { "navigationBarTitleText": "Notify 消息通知" }
-    },
-    {
-      "path": "pages/action/overlay/overlay",
-      "style": { "navigationBarTitleText": "Overlay 遮罩层" }
-    },
-    {
-      "path": "pages/display/notice-bar/notice-bar",
-      "style": { "navigationBarTitleText": "NoticeBar 通知栏" }
-    },
-    {
-      "path": "pages/display/tag/tag",
-      "style": { "navigationBarTitleText": "Tag 标签" }
-    }
-  ],
-  "easycom": {
-    "autoscan": true,
-    "custom": {
-      "^A(.*)": "ano-ui/components/A$1/A$1.vue"
-    }
   }
 }

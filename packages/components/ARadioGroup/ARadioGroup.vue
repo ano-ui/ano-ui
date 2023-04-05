@@ -8,7 +8,7 @@ import { radioGroupEmits, radioGroupProps } from './radio-group'
 const props = defineProps(radioGroupProps)
 const emit = defineEmits(radioGroupEmits)
 
-const changeEvent = (value: RadioGroupProps['modelValue']) => {
+function changeEvent(value: RadioGroupProps['modelValue']) {
   emit(UPDATE_MODEL_EVENT, value)
   nextTick(() => emit(CHANGE_EVENT, value))
 }

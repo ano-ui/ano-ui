@@ -4,10 +4,8 @@ import { cellGroupKey } from '../tokens'
 import { CLICK_EVENT } from '../constants'
 import type { CellEmits, CellProps } from './cell'
 
-export const useCell = (
-  props: CellProps,
-  emit: SetupContext<CellEmits>['emit'],
-) => {
+export function useCell(props: CellProps,
+  emit: SetupContext<CellEmits>['emit']) {
   const cellGroup = inject(cellGroupKey, undefined)
   const arrow = computed(() => cellGroup?.arrow || props.arrow)
   const center = computed(() => cellGroup?.center || props.center)

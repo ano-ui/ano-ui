@@ -3,10 +3,8 @@ import { computed } from 'vue'
 import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '../constants'
 import type { SwitchEmits, SwitchProps } from './switch'
 
-export const useSwitch = (
-  props: SwitchProps,
-  emit: SetupContext<SwitchEmits>['emit'],
-) => {
+export function useSwitch(props: SwitchProps,
+  emit: SetupContext<SwitchEmits>['emit']) {
   const disabled = computed(() => props.disabled || props.loading)
   const modelValue = computed(() => props.modelValue)
   const checked = computed(() => props.modelValue === props.activeValue)

@@ -4,10 +4,8 @@ import { CLOSE_EVENT } from '../constants'
 import type { NotifyOptions } from './types'
 import type { NotifyEmits, NotifyProps } from './notify'
 
-export const useNotify = (
-  props: NotifyProps,
-  emit: SetupContext<NotifyEmits>['emit'],
-) => {
+export function useNotify(props: NotifyProps,
+  emit: SetupContext<NotifyEmits>['emit']) {
   const timer = ref()
   const showValue = ref(false)
 

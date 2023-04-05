@@ -4,6 +4,7 @@ import Uni from '@dcloudio/vite-plugin-uni'
 import UnoCSS from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from '@uni-helper/vite-plugin-uni-components'
+import UniPages from '@uni-helper/vite-plugin-uni-pages'
 import { AnoResolver } from 'ano-ui'
 
 // https://vitejs.dev/config/
@@ -20,6 +21,7 @@ export default defineConfig({
       dts: 'src/components.d.ts',
       resolvers: [AnoResolver()],
     }),
+    UniPages({ routeBlockLang: 'yaml' }),
     Uni(),
 
     // https://github.com/antfu/unocss

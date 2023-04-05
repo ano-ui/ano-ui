@@ -107,3 +107,8 @@ const groupChecked = ref('a')
     </div>
   </UBasePage>
 </template>
+
+<route lang="yaml">
+style:
+  navigationBarTitleText: Radio 单选框
+</route>

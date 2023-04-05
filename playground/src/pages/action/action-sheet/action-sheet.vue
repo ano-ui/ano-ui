@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import type { ActionSheetAction, ToastOptions } from 'ano-ui'
+
 const toast = ref<{ showToast: (options?: ToastOptions) => {} }>()
 
 const showValue = ref(false)
@@ -11,7 +12,7 @@ const actions: ActionSheetAction[] = [
   { name: '选项三' },
 ]
 
-const onCancel = () => {
+function onCancel() {
   toast.value?.showToast({ message: 'Cancel' })
 }
 </script>
@@ -33,3 +34,8 @@ const onCancel = () => {
     </div>
   </UBasePage>
 </template>
+
+<route lang="yaml">
+style:
+  navigationBarTitleText: ActionSheet 动作面板
+</route>

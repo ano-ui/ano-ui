@@ -15,6 +15,8 @@ import {
 
 import { presetAno } from 'ano-ui'
 
+const isApplet = process.env?.UNI_PLATFORM?.startsWith('mp') ?? false
+
 export default defineConfig({
   presets: [
     presetIcons({
@@ -24,15 +26,15 @@ export default defineConfig({
         'vertical-align': 'middle',
       },
     }),
-    presetApplet(),
-    presetRemRpx(),
+    presetApplet({ enable: isApplet }),
+    presetRemRpx({ mode: isApplet ? 'rem2rpx' : 'rpx2rem' }),
     presetAttributify(),
     presetAno(),
   ],
   transformers: [
     transformerDirectives(),
     transformerVariantGroup(),
-    transformerAttributify({ ignoreAttributes: ['block'] }),
-    transformerApplet(),
+    transformerAttributify({ enable: isApplet, ignoreAttributes: ['block'] }),
+    transformerApplet({ enable: isApplet }),
   ],
 })

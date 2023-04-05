@@ -4,10 +4,8 @@ import { CLOSE_EVENT } from '../constants'
 import type { ToastOptions } from './types'
 import type { ToastEmits, ToastProps } from './toast'
 
-export const useToast = (
-  props: ToastProps,
-  emit: SetupContext<ToastEmits>['emit'],
-) => {
+export function useToast(props: ToastProps,
+  emit: SetupContext<ToastEmits>['emit']) {
   const timer = ref()
   const show = ref(false)
 

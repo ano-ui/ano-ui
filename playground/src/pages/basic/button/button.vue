@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const getInfo = () => {
+function getInfo() {
   uni.getUserInfo({
     success: (res) => {
       // eslint-disable-next-line no-console
@@ -109,3 +109,8 @@ const getInfo = () => {
     </div>
   </UBasePage>
 </template>
+
+<route lang="yaml">
+style:
+  navigationBarTitleText: Button 按钮
+</route>

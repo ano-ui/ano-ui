@@ -3,18 +3,18 @@ import type { NotifyOptions } from 'ano-ui'
 
 const notify = ref<{ showNotify: (options?: NotifyOptions) => {} }>()
 
-const showNotify = (options: NotifyOptions) => {
+function showNotify(options: NotifyOptions) {
   notify.value!.showNotify(options)
 }
 
 const notify2 = ref<{ showNotify: (options?: NotifyOptions) => {} }>()
 
-const showNotify2 = (options: NotifyOptions) => {
+function showNotify2(options: NotifyOptions) {
   notify2.value!.showNotify(options)
 }
 const notify3 = ref<{ showNotify: (options?: NotifyOptions) => {} }>()
 
-const showNotify3 = (options: NotifyOptions) => {
+function showNotify3(options: NotifyOptions) {
   notify3.value!.showNotify(options)
 }
 
@@ -85,3 +85,8 @@ const topStyle = computed(() => {
     </div>
   </UBasePage>
 </template>
+
+<route lang="yaml">
+style:
+  navigationBarTitleText: Notify 消息通知
+</route>

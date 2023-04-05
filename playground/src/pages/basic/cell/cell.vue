@@ -44,3 +44,8 @@
     </div>
   </UBasePage>
 </template>
+
+<route lang="yaml">
+style:
+  navigationBarTitleText: Cell 单元格
+</route>

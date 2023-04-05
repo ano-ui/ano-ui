@@ -1,23 +1,23 @@
 <script setup lang="ts">
-const goBasic = (path: string) => {
+function goBasic(path: string) {
   uni.navigateTo({
     url: `/pages/basic/${path}/${path}`,
   })
 }
 
-const goForm = (path: string) => {
+function goForm(path: string) {
   uni.navigateTo({
     url: `/pages/form/${path}/${path}`,
   })
 }
 
-const goAction = (path: string) => {
+function goAction(path: string) {
   uni.navigateTo({
     url: `/pages/action/${path}/${path}`,
   })
 }
 
-const goDisplay = (path: string) => {
+function goDisplay(path: string) {
   uni.navigateTo({
     url: `/pages/display/${path}/${path}`,
   })
@@ -72,3 +72,8 @@ const goDisplay = (path: string) => {
     </div>
   </UBasePage>
 </template>
+
+<route type="home" lang="yaml">
+style:
+  navigationBarTitleText: Ano UI
+</route>

@@ -2,7 +2,6 @@
   "name": "@ano-ui/preset",
   "type": "module",
   "version": "0.6.5",
-  "packageManager": "pnpm@7.2.1",
   "description": "",
   "author": "Neil Lee <zguolee@foxmail.com>",
   "license": "MIT",
@@ -37,6 +36,6 @@
     "stub": "unbuild --stub"
   },
   "dependencies": {
-    "@unocss/preset-mini": "^0.50.4"
+    "@unocss/preset-mini": "^0.50.6"
   }
 }

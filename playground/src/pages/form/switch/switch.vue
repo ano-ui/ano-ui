@@ -68,3 +68,8 @@ const disChecked = ref(true)
     </div>
   </UBasePage>
 </template>
+
+<route lang="yaml">
+style:
+  navigationBarTitleText: Switch 开关
+</route>

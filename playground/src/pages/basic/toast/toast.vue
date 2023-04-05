@@ -4,7 +4,7 @@ import type { ToastOptions } from 'ano-ui'
 
 const toast = ref<{ showToast: (options?: ToastOptions) => {} }>()
 
-const showToast = (options: ToastOptions) => {
+function showToast(options: ToastOptions) {
   toast.value!.showToast(options)
 }
 </script>
@@ -39,3 +39,8 @@ const showToast = (options: ToastOptions) => {
     </div>
   </UBasePage>
 </template>
+
+<route lang="yaml">
+style:
+  navigationBarTitleText: Toast 轻提示
+</route>

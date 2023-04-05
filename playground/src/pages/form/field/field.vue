@@ -54,3 +54,8 @@ const wordLimitText = ref('abc')
     </div>
   </UBasePage>
 </template>
+
+<route lang="yaml">
+style:
+  navigationBarTitleText: Field 输入框
+</route>

@@ -4,10 +4,8 @@ import { CLOSE_EVENT, OPEN_EVENT, UPDATE_SHOW_EVENT } from '../constants'
 import type { PopupEmits, PopupProps } from './popup'
 // import type { PopupOptions } from './types'
 
-export const usePopup = (
-  props: PopupProps,
-  emit: SetupContext<PopupEmits>['emit'],
-) => {
+export function usePopup(props: PopupProps,
+  emit: SetupContext<PopupEmits>['emit']) {
   const show = ref(props.show || false)
   const showValue = computed<PopupProps['show']>({
     get: () => props.show || show.value,
