@@ -37,7 +37,7 @@ importers:
         version: 0.50.6(postcss@8.4.21)(rollup@3.20.2)(vite@4.2.1)
       vite:
         specifier: ^4.2.1
-        version: 4.2.1(@types/node@18.15.11)(sass@1.60.0)(terser@5.16.8)
+        version: 4.2.1(@types/node@18.15.11)(sass@1.61.0)(terser@5.16.8)
       vitest:
         specifier: ^0.29.8
         version: 0.29.8
@@ -89,7 +89,7 @@ importers:
     dependencies:
       '@dcloudio/uni-app':
         specifier: 3.0.0-alpha-3071220230331002
-        version: 3.0.0-alpha-3071220230331002(@dcloudio/types@3.2.11)(postcss@8.4.21)(vue@3.2.47)
+        version: 3.0.0-alpha-3071220230331002(@dcloudio/types@3.3.2)(postcss@8.4.21)(vue@3.2.47)
       '@dcloudio/uni-app-plus':
         specifier: 3.0.0-alpha-3071220230331002
         version: 3.0.0-alpha-3071220230331002(postcss@8.4.21)(vite@4.2.1)(vue@3.2.47)
@@ -140,8 +140,8 @@ importers:
         version: 9.2.2(vue@3.2.47)
     devDependencies:
       '@dcloudio/types':
-        specifier: ^3.2.11
-        version: 3.2.11
+        specifier: ^3.3.2
+        version: 3.3.2
       '@dcloudio/uni-automator':
         specifier: 3.0.0-alpha-3071220230331002
         version: 3.0.0-alpha-3071220230331002(jest-environment-node@27.5.1)(jest@27.0.4)(postcss@8.4.21)(vue@3.2.47)
@@ -161,14 +161,14 @@ importers:
         specifier: ^0.0.3
         version: 0.0.3(rollup@3.20.2)
       '@uni-helper/vite-plugin-uni-pages':
-        specifier: ^0.1.5
-        version: 0.1.5
+        specifier: ^0.1.6
+        version: 0.1.6
       postcss:
         specifier: ^8.4.21
         version: 8.4.21
       sass:
-        specifier: ^1.60.0
-        version: 1.60.0
+        specifier: ^1.61.0
+        version: 1.61.0
       terser:
         specifier: ^5.16.8
         version: 5.16.8
@@ -179,14 +179,14 @@ importers:
         specifier: ^0.50.6
         version: 0.50.6(postcss@8.4.21)(rollup@3.20.2)(vite@4.2.1)
       unocss-applet:
-        specifier: ^0.3.8
-        version: 0.3.8
+        specifier: ^0.4.0
+        version: 0.4.0
       unplugin-auto-import:
         specifier: ^0.15.2
         version: 0.15.2(rollup@3.20.2)
       vite:
         specifier: ^4.2.1
-        version: 4.2.1(@types/node@18.15.11)(sass@1.60.0)(terser@5.16.8)
+        version: 4.2.1(@types/node@18.15.11)(sass@1.61.0)(terser@5.16.8)
 
 packages:
 
@@ -1695,8 +1695,8 @@ packages:
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
     dev: true
 
-  /@dcloudio/types@3.2.11:
-    resolution: {integrity: sha512-Ws+pUiQMvCcSjg0soF+vTTwwsdNlK/1cxIfo5LBBDFPoXfUAAh6k9HnCt5cudERNhY0M3wE7ATMx/1Cb9bmUig==}
+  /@dcloudio/types@3.3.2:
+    resolution: {integrity: sha512-O+7M55RXqYJMCTh3MC86IGJvDPTR+v214yUeaoz1YUIHa2gJdgObs4RRwfAwZoLMtdoZ9J5BElZZqRy5oi+UTg==}
 
   /@dcloudio/uni-app-plus@3.0.0-alpha-3071220230331002(postcss@8.4.21)(vite@4.2.1)(vue@3.2.47):
     resolution: {integrity: sha512-dwAn1+ujilWIEBJeLr7XfR6zuUnSO1tZBgYvtTWKRdiBWr4AbjenOE3x3dXIdXD+4MoOTJM6iAOgwQlKTd14zQ==}
@@ -1741,12 +1741,12 @@ packages:
     resolution: {integrity: sha512-QzvJWyqwEAGXB3rK0O4QKvEY78Y38Nk1uu43VWeRrdJdqsLbEhFNn3tm97KlwaqRpE1YRjdhs2qQs/CNHH3bFA==}
     dev: false
 
-  /@dcloudio/uni-app@3.0.0-alpha-3071220230331002(@dcloudio/types@3.2.11)(postcss@8.4.21)(vue@3.2.47):
+  /@dcloudio/uni-app@3.0.0-alpha-3071220230331002(@dcloudio/types@3.3.2)(postcss@8.4.21)(vue@3.2.47):
     resolution: {integrity: sha512-gBL8Yrxj2922LhbSfeYd5UnFfYqXYkDSwdGUOopn+1wJLC+H0hmXcna08pAZ+DavHqQZgDwBWygVY7Ci2A1qug==}
     peerDependencies:
       '@dcloudio/types': ^3.3.2
     dependencies:
-      '@dcloudio/types': 3.2.11
+      '@dcloudio/types': 3.3.2
       '@dcloudio/uni-cloud': 3.0.0-alpha-3071220230331002(postcss@8.4.21)(vue@3.2.47)
       '@dcloudio/uni-components': 3.0.0-alpha-3071220230331002
       '@dcloudio/uni-i18n': 3.0.0-alpha-3071220230331002
@@ -2170,7 +2170,7 @@ packages:
       magic-string: 0.27.0
       picocolors: 1.0.0
       terser: 5.16.8
-      vite: 4.2.1(@types/node@18.15.11)(sass@1.60.0)(terser@5.16.8)
+      vite: 4.2.1(@types/node@18.15.11)(sass@1.61.0)(terser@5.16.8)
     transitivePeerDependencies:
       - postcss
       - supports-color
@@ -3651,8 +3651,8 @@ packages:
       - supports-color
     dev: true
 
-  /@uni-helper/vite-plugin-uni-pages@0.1.5:
-    resolution: {integrity: sha512-pXkUKVPED2giitg6LGjjVwguh6svPxN2FruqqCnqF1HIQaCdpOFs8nx9sjgN08Y0mas7ED3PMe9AvcLVav5Guw==}
+  /@uni-helper/vite-plugin-uni-pages@0.1.6:
+    resolution: {integrity: sha512-MJbd+yiJlWHXyzQSrb8JySNNbO0Pm/QH2Q/zaEnWIEgrApDr+qr/FTL+apVDA8iOPdJeydEsEgM0wYZydQNuPg==}
     dependencies:
       '@vue/compiler-sfc': 3.2.47
       chokidar: 3.5.3
@@ -3667,28 +3667,28 @@ packages:
       - supports-color
     dev: true
 
-  /@unocss-applet/preset-applet@0.3.8:
-    resolution: {integrity: sha512-QB/82c9klZ+cuMkUDJxFdvrfXv+ZaT0OLAfkGERoVmnPoZbhmPX88Mcj1+rbhE8anxHOsNLD4+VYNi8lgCKF4g==}
+  /@unocss-applet/preset-applet@0.4.0:
+    resolution: {integrity: sha512-v9F29x4+j9GqUk8Bhslt1NWSmrWmgZe/eynYUjsTHDVvfNHqX4DmGXogWc0x089NMOh+XACttEfq5ZB0kSDjSQ==}
     dependencies:
       '@unocss/core': 0.50.6
       '@unocss/preset-mini': 0.50.6
       '@unocss/preset-wind': 0.50.6
     dev: true
 
-  /@unocss-applet/preset-rem-rpx@0.3.8:
-    resolution: {integrity: sha512-NtH1+O55KjEf7a5Vs64t4oLPm3BdlJsajq084UVI3Dq0wVmWolIU35CaJmVpjjOe5xpDGRGFV76E4OxJSvEYqA==}
+  /@unocss-applet/preset-rem-rpx@0.4.0:
+    resolution: {integrity: sha512-2Bry/276BxJrI43gzkCyEIMLEEERlH/1VZrQ0k9N3KDCYyE8EV0RGEgOu0sDWO8KYTwtlrjb/iNwhsK56kKPfg==}
     dev: true
 
   /@unocss-applet/preset-rem-to-rpx@0.3.0:
     resolution: {integrity: sha512-75wYgp5KFQGnknXLsVReiAl95mFKr2TSciJLf14gqRhLRVMhmlvQyJDLqhY/Z18/SmKwTd10QI2Brzg8Up+Jzg==}
     dev: true
 
-  /@unocss-applet/transformer-applet@0.3.8:
-    resolution: {integrity: sha512-cx4z+U4e4H/HBYOeh4cFRhqhBpzilnJemanN/3zl6JMWSJF2aAHKkrTnVbNf9Sr7MqxVR6tCLZAxLGnkc4Y8CQ==}
+  /@unocss-applet/transformer-applet@0.4.0:
+    resolution: {integrity: sha512-3WZ6Z2tH40Bwb6V7CxFxmSKJVe/3pewE0L+vZRXTQhLGKeJPEvNURjTZ8CLoSSdnYVmbDGOh939sU6+lvJWCoA==}
     dev: true
 
-  /@unocss-applet/transformer-attributify@0.3.8:
-    resolution: {integrity: sha512-keqKJ/jW6h/MaZNtlNJw3u9TmDAzh+sAEzfT+GBjF9EGe52IVrknMiwLl5qUiKaJZo5f9ECCgwfbro2P6oPjEw==}
+  /@unocss-applet/transformer-attributify@0.4.0:
+    resolution: {integrity: sha512-NqIk1hyM8QOwcNm0X1A6XIalFobk9vZ9oIOa/dE4yeMUFYWV2jtlwjpUXhabZofD3e1MjKqq10yh6aqnIq/Mwg==}
     dev: true
 
   /@unocss/astro@0.50.6(rollup@3.20.2)(vite@4.2.1):
@@ -3886,7 +3886,7 @@ packages:
       chokidar: 3.5.3
       fast-glob: 3.2.12
       magic-string: 0.30.0
-      vite: 4.2.1(@types/node@18.15.11)(sass@1.60.0)(terser@5.16.8)
+      vite: 4.2.1(@types/node@18.15.11)(sass@1.61.0)(terser@5.16.8)
     transitivePeerDependencies:
       - rollup
     dev: true
@@ -3906,7 +3906,7 @@ packages:
       regenerator-runtime: 0.13.11
       systemjs: 6.14.1
       terser: 5.16.8
-      vite: 4.2.1(@types/node@18.15.11)(sass@1.60.0)(terser@5.16.8)
+      vite: 4.2.1(@types/node@18.15.11)(sass@1.61.0)(terser@5.16.8)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -3921,7 +3921,7 @@ packages:
       '@babel/core': 7.20.12
       '@babel/plugin-transform-typescript': 7.21.3(@babel/core@7.20.12)
       '@vue/babel-plugin-jsx': 1.1.1(@babel/core@7.20.12)
-      vite: 4.2.1(@types/node@18.15.11)(sass@1.60.0)(terser@5.16.8)
+      vite: 4.2.1(@types/node@18.15.11)(sass@1.61.0)(terser@5.16.8)
       vue: 3.2.47
     transitivePeerDependencies:
       - supports-color
@@ -3934,7 +3934,7 @@ packages:
       vite: ^4.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 4.2.1(@types/node@18.15.11)(sass@1.60.0)(terser@5.16.8)
+      vite: 4.2.1(@types/node@18.15.11)(sass@1.61.0)(terser@5.16.8)
       vue: 3.2.47
 
   /@vitest/expect@0.29.8:
@@ -4073,7 +4073,7 @@ packages:
   /@vue/reactivity-transform@3.2.47:
     resolution: {integrity: sha512-m8lGXw8rdnPVVIdIFhf0LeQ/ixyHkH5plYuS83yop5n7ggVJU+z5v0zecwEnX7fa7HNLBhh2qngJJkxpwEEmYA==}
     dependencies:
-      '@babel/parser': 7.20.7
+      '@babel/parser': 7.21.4
       '@vue/compiler-core': 3.2.47
       '@vue/shared': 3.2.47
       estree-walker: 2.0.2
@@ -8567,9 +8567,9 @@ packages:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
     dev: true
 
-  /sass@1.60.0:
-    resolution: {integrity: sha512-updbwW6fNb5gGm8qMXzVO7V4sWf7LMXnMly/JEyfbfERbVH46Fn6q02BX7/eHTdKpE7d+oTkMMQpFWNUMfFbgQ==}
-    engines: {node: '>=12.0.0'}
+  /sass@1.61.0:
+    resolution: {integrity: sha512-PDsN7BrVkNZK2+dj/dpKQAWZavbAQ87IXqVvw2+oEYI+GwlTWkvbQtL7F2cCNbMqJEYKPh1EcjSxsnqIb/kyaQ==}
+    engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
       chokidar: 3.5.3
@@ -8725,6 +8725,7 @@ packages:
 
   /sourcemap-codec@1.4.8:
     resolution: {integrity: sha512-9NykojV5Uih4lgo5So5dtw+f0JgJX30KCNI8gwhz2J9A15wD0Ml6tjHKwf6fTSa6fAdVBdZeNOs9eJ71qCk8vA==}
+    deprecated: Please use @jridgewell/sourcemap-codec instead
 
   /spdx-correct@3.1.1:
     resolution: {integrity: sha512-cOYcUWwhCuHCXi49RhFRCyJEK3iPj1Ziz9DpViV3tbZOwXD49QzIN3MpOLJNxh2qwq2lJJZaKMVw9qNi4jTC0w==}
@@ -9257,14 +9258,14 @@ packages:
     resolution: {integrity: sha512-hAZsKq7Yy11Zu1DE0OzWjw7nnLZmJZYTDZZyEFHZdUhV8FkH5MCfoU1XMaxXovpyW5nq5scPqq0ZDP9Zyl04oQ==}
     engines: {node: '>= 10.0.0'}
 
-  /unocss-applet@0.3.8:
-    resolution: {integrity: sha512-IHQ2s3sylBBkvTn+8+qGqoFhgqkFXEGomTHx7V7j+cWJZLVYUJsxGfa6nSW2VazvaeguvylxNR413q1WaYE6lA==}
+  /unocss-applet@0.4.0:
+    resolution: {integrity: sha512-2gtwOMaNtgXkV9kBn71AgStT+9wxhc4FEuBuWyaFyoTWg+3y8trOQc/aSJd0pdLuC8a1MDiFf4C5QOphZBrQNQ==}
     dependencies:
-      '@unocss-applet/preset-applet': 0.3.8
-      '@unocss-applet/preset-rem-rpx': 0.3.8
+      '@unocss-applet/preset-applet': 0.4.0
+      '@unocss-applet/preset-rem-rpx': 0.4.0
       '@unocss-applet/preset-rem-to-rpx': 0.3.0
-      '@unocss-applet/transformer-applet': 0.3.8
-      '@unocss-applet/transformer-attributify': 0.3.8
+      '@unocss-applet/transformer-applet': 0.4.0
+      '@unocss-applet/transformer-attributify': 0.4.0
     dev: true
 
   /unocss@0.50.6(postcss@8.4.21)(rollup@3.20.2)(vite@4.2.1):
@@ -9463,7 +9464,7 @@ packages:
       mlly: 1.2.0
       pathe: 1.1.0
       picocolors: 1.0.0
-      vite: 4.2.1(@types/node@18.15.11)(sass@1.60.0)(terser@5.16.8)
+      vite: 4.2.1(@types/node@18.15.11)(sass@1.61.0)(terser@5.16.8)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -9474,7 +9475,7 @@ packages:
       - terser
     dev: true
 
-  /vite@4.2.1(@types/node@18.15.11)(sass@1.60.0)(terser@5.16.8):
+  /vite@4.2.1(@types/node@18.15.11)(sass@1.61.0)(terser@5.16.8):
     resolution: {integrity: sha512-7MKhqdy0ISo4wnvwtqZkjke6XN4taqQ2TBaTccLIpOKv7Vp2h4Y+NpmWCnGDeSvvn45KxvWgGyb0MkHvY1vgbg==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -9504,7 +9505,7 @@ packages:
       postcss: 8.4.21
       resolve: 1.22.1
       rollup: 3.20.2
-      sass: 1.60.0
+      sass: 1.61.0
       terser: 5.16.8
     optionalDependencies:
       fsevents: 2.3.2
@@ -9561,7 +9562,7 @@ packages:
       tinybench: 2.3.1
       tinypool: 0.4.0
       tinyspy: 1.0.2
-      vite: 4.2.1(@types/node@18.15.11)(sass@1.60.0)(terser@5.16.8)
+      vite: 4.2.1(@types/node@18.15.11)(sass@1.61.0)(terser@5.16.8)
       vite-node: 0.29.8(@types/node@18.15.11)
       why-is-node-running: 2.2.2
     transitivePeerDependencies:
