@@ -7,5 +7,5 @@ export default defineBuildConfig({
   rollup: {
     emitCJS: true,
   },
-  externals: ['unocss', 'vue', 'unplugin-vue-components'],
+  externals: ['unocss', 'vue', '@uni-helper/vite-plugin-uni-components'],
 })

@@ -51,9 +51,9 @@
   "devDependencies": {
     "@types/fs-extra": "^11.0.1",
     "@types/node": "18.15.11",
+    "@uni-helper/vite-plugin-uni-components": "^0.0.5",
     "esno": "^0.16.3",
     "fs-extra": "^11.1.1",
-    "unplugin-vue-components": "^0.24.1",
     "vue": "^3.2.47"
   }
 }

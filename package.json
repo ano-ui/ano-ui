@@ -2,7 +2,7 @@
   "name": "@ano-ui/monorepo",
   "version": "0.6.10",
   "private": true,
-  "packageManager": "pnpm@8.1.0",
+  "packageManager": "pnpm@8.1.1",
   "scripts": {
     "dev": "pnpm stub",
     "build": "rimraf packages/*/dist && pnpm -r --filter=./packages/* run build && pnpm -r run build-post",
@@ -25,14 +25,14 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.38.4",
-    "@unocss/eslint-config": "^0.50.6",
+    "@unocss/eslint-config": "^0.50.8",
     "bumpp": "^9.1.0",
-    "eslint": "^8.37.0",
+    "eslint": "^8.38.0",
     "esno": "^0.16.3",
     "rimraf": "^4.4.1",
-    "typescript": "^5.0.3",
+    "typescript": "^5.0.4",
     "unbuild": "^1.2.0",
-    "unocss": "^0.50.6",
+    "unocss": "^0.50.8",
     "vite": "^4.2.1",
     "vitest": "^0.29.8",
     "vue-tsc": "^1.2.0"
