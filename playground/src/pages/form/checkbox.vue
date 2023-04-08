@@ -43,15 +43,6 @@ function toggle(index: any) {
         <ACheckbox v-model="checked" type="warning" size="large" label="Large" />
       </div>
       <div class="p-4">
-        Variant
-      </div>
-      <div px-4 flex="~ col gap2">
-        <ACheckbox v-model="checked" label="Solid" />
-        <ACheckbox v-model="checked" type="success" variant="outline" label="Outline" />
-        <ACheckbox v-model="checked" type="info" variant="ghost" label="Ghost" />
-        <ACheckbox v-model="checked" type="warning" variant="light" label="Light" />
-      </div>
-      <div class="p-4">
         Status
       </div>
       <div px-4 flex="~ col gap2">

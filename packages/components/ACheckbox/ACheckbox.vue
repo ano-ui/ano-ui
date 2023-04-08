@@ -15,10 +15,10 @@ const { checked, disabled, size, toggle } = useCheckbox(props, emit)
       :class="[`a-checkbox-checkbox-${size}`, checked ? `a-${type} a-${variant}` : '', { 'a-checkbox-disabled': disabled }, ccc]"
       :style="ccs" @click="toggle"
     >
-      <div class="a-checkbox-checkbox-icon">
-        <slot v-if="customIcon" :checked="checked" name="icon" />
-        <div v-else-if="checked" class="i-carbon-checkmark" :class="[icon]" />
-      </div>
+      <ATransition class="a-checkbox-checkbox-icon" :show="!!checked" name="fade-zoom">
+        <div v-if="!$slots.icon" class="i-carbon-checkmark" :class="[icon]" />
+        <slot v-else name="icon" />
+      </ATransition>
     </div>
     <div class="ml2" :class="{ 'a-checkbox-disabled-label': disabled }">
       <template v-if="label">
