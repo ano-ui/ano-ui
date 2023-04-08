@@ -49,7 +49,7 @@ export function useTransition(props: TransitionProps,
   )
 
   const clickHandler = (evt: MouseEvent) => {
-    evt.stopPropagation()
+    // evt.stopPropagation()
     emit(CLICK_EVENT, evt)
   }
 

@@ -1,112 +1,112 @@
 {
   "pages": [
     {
-      "path": "pages/index/index",
+      "path": "pages/index",
       "type": "home",
       "style": {
         "navigationBarTitleText": "Ano UI"
       }
     },
     {
-      "path": "pages/action/action-sheet/action-sheet",
+      "path": "pages/action/action-sheet",
       "type": "page",
       "style": {
         "navigationBarTitleText": "ActionSheet 动作面板"
       }
     },
     {
-      "path": "pages/action/dialog/dialog",
+      "path": "pages/action/dialog",
       "type": "page",
       "style": {
         "navigationBarTitleText": "Dialog 弹出框"
       }
     },
     {
-      "path": "pages/action/notify/notify",
+      "path": "pages/action/notify",
       "type": "page",
       "style": {
         "navigationBarTitleText": "Notify 消息通知"
       }
     },
     {
-      "path": "pages/action/overlay/overlay",
+      "path": "pages/action/overlay",
       "type": "page",
       "style": {
         "navigationBarTitleText": "Overlay 遮罩层"
       }
     },
     {
-      "path": "pages/basic/button/button",
+      "path": "pages/basic/button",
       "type": "page",
       "style": {
         "navigationBarTitleText": "Button 按钮"
       }
     },
     {
-      "path": "pages/basic/cell/cell",
+      "path": "pages/basic/cell",
       "type": "page",
       "style": {
         "navigationBarTitleText": "Cell 单元格"
       }
     },
     {
-      "path": "pages/basic/popup/popup",
+      "path": "pages/basic/popup",
       "type": "page",
       "style": {
         "navigationBarTitleText": "Popup 弹出层"
       }
     },
     {
-      "path": "pages/basic/toast/toast",
+      "path": "pages/basic/toast",
       "type": "page",
       "style": {
         "navigationBarTitleText": "Toast 轻提示"
       }
     },
     {
-      "path": "pages/basic/transition/transition",
+      "path": "pages/basic/transition",
       "type": "page",
       "style": {
         "navigationBarTitleText": "Transition 动画"
       }
     },
     {
-      "path": "pages/display/notice-bar/notice-bar",
+      "path": "pages/display/notice-bar",
       "type": "page",
       "style": {
         "navigationBarTitleText": "NoticeBar 通告栏"
       }
     },
     {
-      "path": "pages/display/tag/tag",
+      "path": "pages/display/tag",
       "type": "page",
       "style": {
         "navigationBarTitleText": "Tag 标签"
       }
     },
     {
-      "path": "pages/form/checkbox/checkbox",
+      "path": "pages/form/checkbox",
       "type": "page",
       "style": {
         "navigationBarTitleText": "Checkbox 复选框"
       }
     },
     {
-      "path": "pages/form/field/field",
+      "path": "pages/form/field",
       "type": "page",
       "style": {
         "navigationBarTitleText": "Field 输入框"
       }
     },
     {
-      "path": "pages/form/radio/radio",
+      "path": "pages/form/radio",
       "type": "page",
       "style": {
         "navigationBarTitleText": "Radio 单选框"
       }
     },
     {
-      "path": "pages/form/switch/switch",
+      "path": "pages/form/switch",
       "type": "page",
       "style": {
         "navigationBarTitleText": "Switch 开关"

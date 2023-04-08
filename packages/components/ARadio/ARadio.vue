@@ -1,4 +1,5 @@
 <script setup lang='ts'>
+import ATransition from '../ATransition/ATransition.vue'
 import { radioEmits, radioProps } from './radio'
 import { useRadio } from './use-radio'
 
@@ -11,16 +12,16 @@ const { disabled, size, checked, toggle } = useRadio(props, emit)
 <template>
   <div class="a-radio-base" :class="[`a-radio-${size}`, cc]" :style="cs">
     <div
-      class="a-radio-radio-base"
-      :class="[`a-radio-radio-${size}`, checked ? `a-${type} a-${variant}` : '', { 'a-radio-disabled': disabled }, ccc]"
-      :style="ccs" @click="toggle"
+      class="a-radio-radio-base border-context"
+      :class="[`a-radio-radio-${size}`, checked ? `a-${type}` : '', { 'a-radio-disabled': disabled }, ccc]" :style="ccs"
+      @click="toggle"
     >
-      <div class="a-radio-radio-icon">
-        <slot v-if="customIcon" :checked="checked" name="icon" />
-        <div v-else-if="checked" class="i-carbon-dot-mark" :class="[icon]" />
-      </div>
+      <ATransition class="a-radio-radio-dot" :show="!!checked" name="fade-zoom">
+        <div v-if="!$slots.icon" class="bg-context rounded-full" :class="[`a-radio-radio-dot-${size}`]" />
+        <slot v-else name="icon" />
+      </ATransition>
     </div>
-    <div class="ml2" :class="{ 'a-radio-disabled-label': disabled }">
+    <div v-if="$slots.default || label" class="ml2" :class="{ 'a-radio-disabled-label': disabled }">
       <template v-if="label">
         {{ label }}
       </template>

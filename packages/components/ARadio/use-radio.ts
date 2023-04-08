@@ -9,7 +9,7 @@ export function useRadio(props: RadioProps,
   const radioGroup = inject(radioGroupKey, undefined)
   const isGroup = computed(() => !!radioGroup)
   const size = computed(() => radioGroup?.size ?? props.size)
-  const disabled = computed(() => radioGroup?.disabled ?? props.disabled)
+  const disabled = computed(() => radioGroup?.disabled ? radioGroup?.disabled : props.disabled)
   const modelValue = computed<RadioProps['modelValue']>(() => isGroup.value ? radioGroup!.modelValue : props.modelValue)
 
   const checked = computed(() => isGroup.value ? radioGroup!.modelValue === props.value : props.modelValue)
@@ -22,8 +22,10 @@ export function useRadio(props: RadioProps,
     const newValue = typeof modelValue.value === 'string' ? props.value : !modelValue.value
     if (isGroup.value)
       radioGroup!.changeEvent(newValue)
-    else
+    else if (!checked.value)
       emit && emit(UPDATE_MODEL_EVENT, newValue)
+    else
+      return
 
     emit && emit(CHANGE_EVENT, newValue)
   }

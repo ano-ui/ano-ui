@@ -14,7 +14,7 @@ import {
   transformerAttributify,
 } from 'unocss-applet'
 
-import { presetAno } from 'ano-ui'
+import { presetAno } from '../packages/preset/src/index'
 
 const isApplet = process.env?.UNI_PLATFORM?.startsWith('mp') ?? false
 const presets: Preset[] = []

@@ -1,25 +1,25 @@
 <script setup lang="ts">
 function goBasic(path: string) {
   uni.navigateTo({
-    url: `/pages/basic/${path}/${path}`,
+    url: `/pages/basic/${path}`,
   })
 }
 
 function goForm(path: string) {
   uni.navigateTo({
-    url: `/pages/form/${path}/${path}`,
+    url: `/pages/form/${path}`,
   })
 }
 
 function goAction(path: string) {
   uni.navigateTo({
-    url: `/pages/action/${path}/${path}`,
+    url: `/pages/action/${path}`,
   })
 }
 
 function goDisplay(path: string) {
   uni.navigateTo({
-    url: `/pages/display/${path}/${path}`,
+    url: `/pages/display/${path}`,
   })
 }
 </script>

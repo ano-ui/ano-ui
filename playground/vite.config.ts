@@ -5,7 +5,6 @@ import UnoCSS from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from '@uni-helper/vite-plugin-uni-components'
 import UniPages from '@uni-helper/vite-plugin-uni-pages'
-import { AnoResolver } from 'ano-ui'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -19,7 +18,7 @@ export default defineConfig({
     Components({
       include: [/\.vue$/, /\.vue\?vue/],
       dts: 'src/components.d.ts',
-      resolvers: [AnoResolver()],
+      dirs: ['src/components', '../packages/components'],
     }),
     UniPages({ routeBlockLang: 'yaml' }),
     Uni(),
