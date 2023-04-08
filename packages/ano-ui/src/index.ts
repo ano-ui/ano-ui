@@ -1,3 +1,5 @@
-export * from '@ano-ui/preset'
-export * from '@ano-ui/components'
+import { presetAno } from '@ano-ui/preset'
+
 export * from './resolver'
+
+export { presetAno }
