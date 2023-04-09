@@ -20,9 +20,6 @@ importers:
       eslint:
         specifier: ^8.38.0
         version: 8.38.0
-      esno:
-        specifier: ^0.16.3
-        version: 0.16.3
       rimraf:
         specifier: ^4.4.1
         version: 4.4.1
@@ -47,12 +44,12 @@ importers:
 
   packages/ano-ui:
     dependencies:
-      '@ano-ui/components':
-        specifier: workspace:*
-        version: link:../components
       '@ano-ui/preset':
-        specifier: workspace:*
-        version: link:../preset
+        specifier: ^0.0.10
+        version: 0.0.10
+      '@unocss/preset-mini':
+        specifier: ^0.50.8
+        version: 0.50.8
     devDependencies:
       '@types/fs-extra':
         specifier: ^11.0.1
@@ -72,18 +69,6 @@ importers:
       vue:
         specifier: ^3.2.47
         version: 3.2.47
-
-  packages/components:
-    dependencies:
-      vue:
-        specifier: ^3.2.0
-        version: 3.2.47
-
-  packages/preset:
-    dependencies:
-      '@unocss/preset-mini':
-        specifier: ^0.50.8
-        version: 0.50.8
 
   playground:
     dependencies:
@@ -196,6 +181,12 @@ packages:
     dependencies:
       '@jridgewell/gen-mapping': 0.1.1
       '@jridgewell/trace-mapping': 0.3.17
+
+  /@ano-ui/preset@0.0.10:
+    resolution: {integrity: sha512-4pzGWMhdAXgVUo9yikf1gvQLr5aSlUnJaCTASgsLZHHXFNkDbpe9W8GWnXT2SwFGMsTYcPtEp2thKHLRAvotMQ==}
+    dependencies:
+      '@unocss/preset-mini': 0.46.5
+    dev: false
 
   /@antfu/eslint-config-basic@0.38.4(@typescript-eslint/eslint-plugin@5.57.1)(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)(typescript@5.0.4):
     resolution: {integrity: sha512-QcJ/84eVa7mJD2PEbHw1r7dRg7pHNOvTvkHud+iFYxkDjzcuFMiHFZ7JCYLnuA1NKzeUmczdLFFrHnASxtpV3g==}
@@ -3542,6 +3533,10 @@ packages:
       unconfig: 0.3.7
     dev: true
 
+  /@unocss/core@0.46.5:
+    resolution: {integrity: sha512-apPWISH2ASKySyp4vBAkEzr5XNJDv4mu26eQ4wvg2a32cHRokUsiHLWFNMDe7oJquivTAOHsXqbLQuR9ePKNSg==}
+    dev: false
+
   /@unocss/core@0.50.8:
     resolution: {integrity: sha512-rWmyeNE0Na8dJPDynLVar0X22qMHFNhO+/F2FZDpG4tubTavXJJo9uvhZr/D381kiWxt+XZ38y6EAD4UMdBqMA==}
 
@@ -3607,6 +3602,12 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /@unocss/preset-mini@0.46.5:
+    resolution: {integrity: sha512-pSiCUeNoLs9F5ux7BzsTKqQhTABvwtggv45Kza2wDIStPESLYHInPUHF57e753IhKdZSpX08gSRiYF4mXVcFWg==}
+    dependencies:
+      '@unocss/core': 0.46.5
+    dev: false
 
   /@unocss/preset-mini@0.50.8:
     resolution: {integrity: sha512-/4sbOdyaqJMvFkw1xzo2+h6bZJHw6WCYw1mF+f0ydHzj8ruvwaj9ClDDOweW5cdrk3wzDzRZ6NPRahKqLwv6/Q==}

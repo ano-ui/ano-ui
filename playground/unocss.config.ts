@@ -14,7 +14,7 @@ import {
   transformerAttributify,
 } from 'unocss-applet'
 
-import { presetAno } from '../packages/preset/src/index'
+import { presetAno } from '../packages/ano-ui/src/preset'
 
 const isApplet = process.env?.UNI_PLATFORM?.startsWith('mp') ?? false
 const presets: Preset[] = []
@@ -28,6 +28,7 @@ if (isApplet) {
 }
 else {
   presets.push(presetApplet())
+  presets.push(presetAttributify())
   presets.push(presetRemRpx({ mode: 'rpx2rem' }))
 }
 
@@ -41,11 +42,6 @@ export default defineConfig({
         'vertical-align': 'middle',
       },
     }),
-    /**
-     * you can add `presetAttributify()` here to enable unocss attributify mode prompt
-     * although preset is not working for applet, but will generate useless css
-     */
-    presetAttributify(),
     ...presets,
     presetAno(),
   ],

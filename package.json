@@ -28,7 +28,6 @@
     "@unocss/eslint-config": "^0.50.8",
     "bumpp": "^9.1.0",
     "eslint": "^8.38.0",
-    "esno": "^0.16.3",
     "rimraf": "^4.4.1",
     "typescript": "^5.0.4",
     "unbuild": "^1.2.0",
