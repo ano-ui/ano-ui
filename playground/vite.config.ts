@@ -18,7 +18,7 @@ export default defineConfig({
     Components({
       include: [/\.vue$/, /\.vue\?vue/],
       dts: 'src/components.d.ts',
-      dirs: ['src/components', '../packages/components'],
+      dirs: ['src/components', '../packages/ano-ui/src/components'],
     }),
     UniPages({ routeBlockLang: 'yaml' }),
     Uni(),
