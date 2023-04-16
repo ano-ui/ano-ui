@@ -52,16 +52,16 @@ const show = ref(true)
         Custom
       </div>
       <div px-4 flex="~ gap2 wrap" items-center>
-        <ATag icon="i-carbon-palm-tree" icon-only />
+        <ATag icon="i-tabler-carrot" icon-only />
         <ATag type="success" icon-only cc="rounded-full">
           <template #icon>
-            <div class="i-carbon-sprout" />
+            <div class="i-tabler-carrot" />
           </template>
         </ATag>
         <ATag label="Rounded" type="info" variant="ghost" cc="rounded-full" />
         <ATag label="Send" type="warning">
           <template #icon>
-            <div class="i-carbon-send-alt" />
+            <div class="i-tabler-carrot" />
           </template>
         </ATag>
         <ATag label="Bg Gradient" cc="bg-gradient-to-r from-indigo-500 to-pink-500 border-none" />

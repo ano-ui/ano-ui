@@ -17,10 +17,7 @@ const show = ref(true)
         <ANoticeBar type="success" loop>
           This is a notice bar. This is a notice bar.
         </ANoticeBar>
-        <ANoticeBar type="info" :show="show" show-close @close="show = false">
-          This is a notice bar. This is a notice bar.
-        </ANoticeBar>
-        <ANoticeBar type="warning">
+        <ANoticeBar type="warning" :show="show" show-close @close="show = false">
           Warning
         </ANoticeBar>
         <ANoticeBar type="danger">
@@ -37,10 +34,10 @@ const show = ref(true)
         <ANoticeBar type="success" variant="outline">
           Outline
         </ANoticeBar>
-        <ANoticeBar type="info" variant="ghost">
+        <ANoticeBar type="warning" variant="ghost">
           Ghost
         </ANoticeBar>
-        <ANoticeBar type="warning" variant="light">
+        <ANoticeBar type="danger" variant="light">
           Light
         </ANoticeBar>
       </div>
@@ -48,12 +45,9 @@ const show = ref(true)
         Custom
       </div>
       <div px-4>
-        <ANoticeBar type="danger" :show="show" show-close @close="show = false">
-          Show Close
-        </ANoticeBar>
         <ANoticeBar mt2 cc="bg-gradient-to-r from-indigo-500 to-pink-500 border-none">
           <template #icon>
-            <div class="i-carbon-palm-tree" />
+            <div class="i-tabler-carrot" />
           </template>
           Bg Gradient
         </ANoticeBar>

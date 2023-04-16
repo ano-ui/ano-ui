@@ -10,7 +10,7 @@
 
 ```bash
 pnpm add ano-ui
-pnpm add -D unocss @iconify-json/carbon unocss-applet
+pnpm add -D unocss @iconify-json/tabler unocss-applet
 ```
 
 ## Usage

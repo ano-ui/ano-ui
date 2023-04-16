@@ -56,7 +56,7 @@
     "@dcloudio/uni-automator": "3.0.0-alpha-3071320230407001",
     "@dcloudio/uni-cli-shared": "3.0.0-alpha-3071320230407001",
     "@dcloudio/vite-plugin-uni": "3.0.0-alpha-3071320230407001",
-    "@iconify-json/carbon": "^1.1.16",
+    "@iconify-json/tabler": "^1.1.72",
     "@types/node": "^18.15.11",
     "@uni-helper/vite-plugin-uni-components": "^0.0.5",
     "@uni-helper/vite-plugin-uni-pages": "^0.1.6",

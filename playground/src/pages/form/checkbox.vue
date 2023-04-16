@@ -53,10 +53,10 @@ function toggle(index: any) {
         Custom
       </div>
       <div px-4 flex="~ col gap2">
-        <ACheckbox v-model="checked2" :value="1" label="Value" icon="i-carbon-send-alt" />
+        <ACheckbox v-model="checked2" :value="1" label="Value" icon="i-tabler-carrot" />
         <ACheckbox v-model="checked3" custom-icon value="yes" label="Slot Icon">
           <template #icon="props">
-            <div :class="props.checked ? 'i-carbon-send-alt' : 'i-carbon-send'" />
+            <div :class="props.checked ? 'i-tabler-carrot' : 'i-tabler-lemon'" />
           </template>
         </ACheckbox>
       </div>

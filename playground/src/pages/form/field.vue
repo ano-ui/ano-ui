@@ -28,7 +28,7 @@ const wordLimitText = ref('abc')
         Status
       </div>
       <ACellGroup inset divider>
-        <AField icon="i-carbon-palm-tree" label="Disabled" disabled placeholder="Disabled" />
+        <AField icon="i-tabler-carrot" label="Disabled" disabled placeholder="Disabled" />
       </ACellGroup>
       <div class="p-4">
         Custom
@@ -36,7 +36,7 @@ const wordLimitText = ref('abc')
       <ACellGroup inset divider>
         <AField placeholder="No Label" />
         <AField v-model="showClearText" label="Clear" show-clear placeholder="Clear Icon" />
-        <AField label="Icon" icon="i-carbon-palm-tree" placeholder="Icon" />
+        <AField label="Icon" icon="i-tabler-carrot" placeholder="Icon" />
         <AField label="Prefix Slot" placeholder="Prefix Slot">
           <template #prefix>
             <div>https://</div>
@@ -44,7 +44,7 @@ const wordLimitText = ref('abc')
         </AField>
         <AField label="Slot" placeholder="Slot Icon">
           <template #icon>
-            <div class="i-carbon-send-alt-filled" />
+            <div class="i-tabler-carrot" />
           </template>
         </AField>
         <AField label="Text" ccc="text-red" input-align="right" placeholder="Input Red, Align Right" />

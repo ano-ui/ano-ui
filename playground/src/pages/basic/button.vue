@@ -84,14 +84,14 @@ function getInfo() {
         Custom
       </div>
       <div px-4 flex="~ gap2 wrap" items-center>
-        <AButton icon="i-carbon-palm-tree" />
+        <AButton icon="i-tabler-carrot" />
         <AButton type="success" square>
-          Square
+          S
         </AButton>
         <AButton type="info" round>
           Round
         </AButton>
-        <AButton type="warning" icon="i-carbon-send-alt">
+        <AButton type="warning" icon="i-tabler-send">
           Send
         </AButton>
         <AButton cc="bg-teal border-teal" open-type="getUserInfo" @click="getInfo">

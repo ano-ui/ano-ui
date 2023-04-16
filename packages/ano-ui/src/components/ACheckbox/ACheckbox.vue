@@ -16,7 +16,7 @@ const { checked, disabled, size, toggle } = useCheckbox(props, emit)
       :style="ccs" @click="toggle"
     >
       <ATransition class="a-checkbox-checkbox-icon" :show="!!checked" name="fade-zoom">
-        <div v-if="!$slots.icon" class="i-carbon-checkmark" :class="[icon]" />
+        <div v-if="!$slots.icon" class="i-tabler-check" :class="[icon]" />
         <slot v-else name="icon" />
       </ATransition>
     </div>

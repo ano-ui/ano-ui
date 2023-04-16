@@ -37,11 +37,10 @@ const animationName = {
       </template>
 
       <template v-else-if="notifyStatus.showIcon">
-        <div v-if="notifyStatus.type === 'primary'" class="i-carbon-notification-filled" />
-        <div v-else-if="notifyStatus.type === 'success'" class="i-carbon-checkmark-filled" />
-        <div v-else-if="notifyStatus.type === 'info'" class="i-carbon-information-filled" />
-        <div v-else-if="notifyStatus.type === 'warning'" class="i-carbon-warning-filled" />
-        <div v-else-if="notifyStatus.type === 'danger'" class="i-carbon-error-filled" />
+        <div v-if="notifyStatus.type === 'primary'" class="i-tabler-info-circle-filled" />
+        <div v-else-if="notifyStatus.type === 'success'" class="i-tabler-circle-check-filled" />
+        <div v-else-if="notifyStatus.type === 'warning'" class="i-tabler-alert-circle-filled" />
+        <div v-else-if="notifyStatus.type === 'danger'" class="i-tabler-circle-x-filled" />
       </template>
       <div class="flex-1" :class="{ 'text-center': !notifyStatus.showIcon && !notifyStatus.customIcon }">
         <template v-if="notifyStatus.message">
@@ -49,7 +48,7 @@ const animationName = {
         </template>
         <slot v-else />
       </div>
-      <div v-if="notifyStatus.showIcon || notifyStatus.showClose" class="i-carbon-close" @click.stop="closeNotify" />
+      <div v-if="notifyStatus.showIcon || notifyStatus.showClose" class="i-tabler-x" @click.stop="closeNotify" />
     </div>
   </ATransition>
 </template>

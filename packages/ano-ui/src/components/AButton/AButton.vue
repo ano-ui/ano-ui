@@ -14,7 +14,7 @@ const { className, disabled, clickHandler } = useButton(props, emit)
     hover-stay-time="60" :open-type="openType" :style="cs" @click="clickHandler"
   >
     <div class="a-button-content-base">
-      <div v-if="loading" class="i-carbon-circle-dash animate-spin mr-1" />
+      <div v-if="loading" class="animate-spin mr-1 i-tabler-loader-3" />
       <div v-else-if="icon" class="mr-1" :class="[icon]" />
       <slot />
     </div>

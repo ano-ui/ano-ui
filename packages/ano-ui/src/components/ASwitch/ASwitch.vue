@@ -19,10 +19,10 @@ const { disabled, checked, toggle } = useSwitch(props, emit)
       :class="[`a-switch-dot-${size}`, variant === 'solid' ? 'bg-white text-context' : 'bg-context text-white', { 'a-switch-dot-checked': checked }, { 'a-switch-dot-disabled': disabled }]"
     >
       <template v-if="checked">
-        <div v-if="loading" class="i-carbon-circle-dash animate-spin" />
+        <div v-if="loading" class="animate-spin i-tabler-loader" />
         <template v-else-if="showIcon">
           <slot v-if="customIcon" name="icon" />
-          <div v-else class="i-carbon-checkmark animate-zoom-in animate-duration-200" :class="[icon]" />
+          <div v-else class="animate-zoom-in animate-duration-200 i-tabler-check" :class="[icon]" />
         </template>
       </template>
     </div>

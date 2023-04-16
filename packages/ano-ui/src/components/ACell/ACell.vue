@@ -43,7 +43,7 @@ const className = computed(() => {
       </span>
       <slot v-else name="value" />
     </div>
-    <div v-if="arrow" class="a-cell-right-icon i-carbon-chevron-right" />
+    <div v-if="arrow" class="a-cell-right-icon i-tabler-chevron-right" />
     <slot v-else name="right-icon" />
   </div>
 </template>

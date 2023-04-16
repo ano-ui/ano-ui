@@ -36,7 +36,7 @@ const topStyle = computed(() => {
       <ANotify ref="notify" :cs="topStyle" />
       <ANotify ref="notify2" :cs="topStyle">
         <template #icon>
-          <div class="i-carbon-send-alt-filled" />
+          <div class="i-tabler-carrot" />
         </template>
         Slot
       </ANotify>
@@ -68,7 +68,6 @@ const topStyle = computed(() => {
       <ACellGroup arrow divider inset>
         <ACell title="Primary" @click="showNotify({ type: 'primary', showIcon: true, message: 'Primary Icon' })" />
         <ACell title="Success" @click="showNotify({ type: 'success', showIcon: true, message: 'Success Icon' })" />
-        <ACell title="Info" @click="showNotify({ type: 'info', showIcon: true, message: 'Info Icon' })" />
         <ACell title="Warning" @click="showNotify({ type: 'warning', showIcon: true, message: 'Warning Icon' })" />
         <ACell title="Danger" @click="showNotify({ type: 'danger', showIcon: true, message: 'Danger Icon' })" />
       </ACellGroup>

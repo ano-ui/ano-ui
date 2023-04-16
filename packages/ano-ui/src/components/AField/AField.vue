@@ -38,9 +38,9 @@ const {
         :disabled="disabled" placeholder-style="color: #C8C9CC" @click="clickHandler" @blur="blurHandler"
         @input="inputHandler" @focus="focusHandler"
       />
-      <div v-if="showClear && modelValue" class="i-carbon-close-filled" @click.stop="clearHandler" />
+      <div v-if="showClear && modelValue" class="i-tabler-circle-x" @click.stop="clearHandler" />
       <div
-        v-if="type === 'password'" :class="showPasswordText ? 'i-carbon-view-filled' : 'i-carbon-view-off-filled'"
+        v-if="type === 'password'" :class="showPasswordText ? 'i-tabler-eye' : 'i-tabler-eye-closed'"
         @click.stop="showPasswordText = !showPasswordText"
       />
       <div v-if="showWordLimit && modelValue">

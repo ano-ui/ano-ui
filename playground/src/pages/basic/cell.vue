@@ -10,17 +10,17 @@
       <div>
         <ACell title="Title" value="Content" />
         <ACell value="No Title" />
-        <ACell icon="i-carbon-palm-tree" title="Title" value="Content" label="Description Description Description" />
+        <ACell icon="i-tabler-carrot" title="Title" value="Content" label="Description Description Description" />
       </div>
       <div class="p-4">
         Custom
       </div>
       <ACellGroup divider>
         <ACell title="Title" value="Rounded Full" cc="rounded-full" />
-        <ACell icon="i-carbon-palm-tree" title="Title" value="Content" label="Description" arrow center />
+        <ACell icon="i-tabler-carrot" title="Title" value="Content" label="Description" arrow center />
         <ACell title="Slots">
           <template #icon>
-            <i class="i-carbon-send-alt" />
+            <i class="i-tabler-carrot" />
           </template>
           <template #value>
             <div>Content slot</div>
@@ -29,7 +29,7 @@
             <div>Description slot</div>
           </template>
           <template #right-icon>
-            <i class="i-carbon-search" />
+            <i class="i-tabler-search" />
           </template>
         </ACell>
       </ACellGroup>

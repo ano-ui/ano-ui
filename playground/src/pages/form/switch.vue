@@ -14,7 +14,6 @@ const disChecked = ref(true)
       <div px-4 flex="~ gap2 wrap" items-center>
         <ASwitch v-model="checked" />
         <ASwitch v-model="checked" type="success" />
-        <ASwitch v-model="checked" type="info" />
         <ASwitch v-model="checked" type="warning" />
         <ASwitch v-model="checked" type="danger" />
       </div>
@@ -25,8 +24,8 @@ const disChecked = ref(true)
       <div px-4 flex="~ gap2 wrap" items-center>
         <ASwitch v-model="checked" type="primary" size="mini" />
         <ASwitch v-model="checked" type="success" size="small" />
-        <ASwitch v-model="checked" type="info" size="normal" />
-        <ASwitch v-model="checked" type="warning" size="large" />
+        <ASwitch v-model="checked" type="warning" size="normal" />
+        <ASwitch v-model="checked" type="danger" size="large" />
       </div>
       <div class="p-4">
         Variant
@@ -34,8 +33,8 @@ const disChecked = ref(true)
       <div px-4 flex="~ gap2 wrap" items-center>
         <ASwitch v-model="checked" variant="solid" />
         <ASwitch v-model="checked" type="success" variant="outline" />
-        <ASwitch v-model="checked" type="info" variant="ghost" />
-        <ASwitch v-model="checked" type="warning" variant="light" />
+        <ASwitch v-model="checked" type="warning" variant="ghost" />
+        <ASwitch v-model="checked" type="danger" variant="light" />
       </div>
       <div class="p-4">
         Status
@@ -53,15 +52,15 @@ const disChecked = ref(true)
         <ASwitch v-model="checked3" active-value="yes" active-label="yes" inactive-value="no" inactive-label="no" />
         <ASwitch v-model="checked" :show-icon="false">
           <template #active>
-            <div class="i-carbon-checkmark" />
+            <div class="i-tabler-check" />
           </template>
           <template #inactive>
-            <div class="i-carbon-close" />
+            <div class="i-tabler-x" />
           </template>
         </ASwitch>
         <ASwitch v-model="checked" custom-icon>
           <template #icon>
-            <div class="i-carbon-send-alt" />
+            <div class="i-tabler-carrot" />
           </template>
         </ASwitch>
       </div>
