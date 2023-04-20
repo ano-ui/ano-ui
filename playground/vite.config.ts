@@ -6,8 +6,9 @@ import UnoCSS from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from '@uni-helper/vite-plugin-uni-components'
 import UniPages from '@uni-helper/vite-plugin-uni-pages'
+import { isCI } from 'std-env'
 
-if (!fs.existsSync('./src/ano-ui')) {
+if (!fs.existsSync('./src/ano-ui') && !isCI) {
   try {
     fs.symlinkSync('../../packages/ano-ui/components', './ano-ui')
   }
@@ -30,7 +31,7 @@ export default defineConfig({
     Components({
       include: [/\.vue$/, /\.vue\?vue/],
       dts: 'src/components.d.ts',
-      dirs: ['src/components', 'src/ano-ui'],
+      dirs: ['src/components', isCI ? '../packages/ano-ui/src/components' : 'src/ano-ui'],
     }),
     UniPages({ routeBlockLang: 'yaml' }),
     Uni(),
