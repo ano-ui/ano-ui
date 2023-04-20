@@ -1,10 +1,22 @@
 import { resolve } from 'node:path'
+import fs from 'node:fs'
 import { defineConfig } from 'vite'
 import Uni from '@dcloudio/vite-plugin-uni'
 import UnoCSS from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from '@uni-helper/vite-plugin-uni-components'
 import UniPages from '@uni-helper/vite-plugin-uni-pages'
+
+if (!fs.existsSync('./src/ano-ui')) {
+  try {
+    fs.symlinkSync('../../packages/ano-ui/components', './ano-ui')
+  }
+  catch (error: any) {
+    console.error('ano-ui: Create symlink error, Please manually create and restart to obtain HMR')
+    console.error(`\n\tcd ${resolve(__dirname, 'src')}\n\tnode -e "fs.symlinkSync(\'../../packages/ano-ui/components\', \'./ano-ui\')"\n`)
+    console.error(`${error.message}\n`)
+  }
+}
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -18,7 +30,7 @@ export default defineConfig({
     Components({
       include: [/\.vue$/, /\.vue\?vue/],
       dts: 'src/components.d.ts',
-      dirs: ['src/components', '../packages/ano-ui/src/components'],
+      dirs: ['src/components', 'src/ano-ui'],
     }),
     UniPages({ routeBlockLang: 'yaml' }),
     Uni(),
