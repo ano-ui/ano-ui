@@ -1,9 +1,5 @@
-<script setup lang='ts'>
-const { darkMode } = storeToRefs(useAppStore())
-</script>
-
 <template>
-  <APage class="font-sans" :dark="darkMode">
+  <APage class="font-sans">
     <slot />
   </APage>
 </template>

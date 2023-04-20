@@ -17,17 +17,16 @@ import {
 import { presetAno } from '../packages/ano-ui/src/preset'
 
 const isApplet = process.env?.UNI_PLATFORM?.startsWith('mp') ?? false
-const presets: Preset[] = []
+const presets: Preset[] = [presetApplet({ dark: 'media' })]
+
 const transformers: SourceCodeTransformer[] = []
 
 if (isApplet) {
-  presets.push(presetApplet())
   presets.push(presetRemRpx())
   transformers.push(transformerAttributify({ ignoreAttributes: ['block'] }))
   transformers.push(transformerApplet())
 }
 else {
-  presets.push(presetApplet())
   presets.push(presetAttributify())
   presets.push(presetRemRpx({ mode: 'rpx2rem' }))
 }
@@ -50,6 +49,9 @@ export default defineConfig({
     transformerVariantGroup(),
     ...transformers,
   ],
+  theme: {
+    preflightRoot: isApplet ? ['page,::before,::after'] : undefined,
+  },
   rules: [
     [
       'p-safe',

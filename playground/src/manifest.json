@@ -14,14 +14,17 @@
       "postcss": true
     },
     "usingComponents": true,
-    "darkmode": true,
-    "themeLocation": "theme.json"
+    "darkmode": true
   },
   "uniStatistics": {
     "enable": false
   },
+  "h5": {
+    "darkmode": true
+  },
   "vueVersion": "3",
   "app-plus": {
+    "darkmode": true,
     "distribute": {
       "ios": {
         "dSYMs": false
