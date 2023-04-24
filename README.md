@@ -19,6 +19,7 @@ Custom UnoCSS config(`unocss.config.ts`):
 
 ```ts
 import { defineConfig, presetIcons } from 'unocss'
+
 // unocss-applet https://github.com/unocss-applet/unocss-applet
 import { presetApplet, presetRemRpx, transformerApplet } from 'unocss-applet'
 import { presetAno } from 'ano-ui'
