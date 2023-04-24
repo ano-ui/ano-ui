@@ -69,7 +69,8 @@
     "build:quickapp-webview-union": "uni build -p quickapp-webview-union",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
-    "lint:fix": "nr lint --fix"
+    "lint:fix": "nr lint --fix",
+    "new": "plop component"
   },
   "peerDependencies": {
     "vue": "^3.2.0"
@@ -110,7 +111,9 @@
     "esno": "^0.16.3",
     "fs-extra": "^11.1.1",
     "postcss": "^8.4.23",
+    "plop": "^3.1.2",
     "rimraf": "^4.4.1",
+    "scule": "^1.0.0",
     "sass": "^1.62.0",
     "unbuild": "^1.2.1",
     "unocss": "^0.50.8",

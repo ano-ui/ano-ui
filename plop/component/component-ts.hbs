@@ -1,0 +1,14 @@
+import type { ExtractPropTypes } from 'vue'
+import { CLICK_EVENT } from '../constants'
+import { useCustomClassProp, useCustomStyleProp } from '../composables'
+
+export const {{camelCaseName}}Props = {
+  cc: useCustomClassProp,
+  cs: useCustomStyleProp,
+}
+export const {{camelCaseName}}Emits = {
+  [CLICK_EVENT]: (evt: MouseEvent) => evt instanceof Object,
+}
+
+export type {{pascalCaseName}}Props = ExtractPropTypes<typeof {{camelCaseName}}Props>
+export type {{pascalCaseName}}Emits = typeof {{camelCaseName}}Emits
