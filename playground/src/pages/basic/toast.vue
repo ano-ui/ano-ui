@@ -5,7 +5,7 @@ import type { ToastInst, ToastOptions } from 'ano-ui'
 const toast = ref<ToastInst>()
 
 function showToast(options: ToastOptions) {
-  toast.value!.show(options)
+  toast.value?.show(options)
 }
 </script>
 

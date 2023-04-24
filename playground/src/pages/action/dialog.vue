@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import type { DialogOptions, DialogRef, ToastOptions } from 'ano-ui'
+import type { DialogOptions, DialogRef, ToastInst, ToastOptions } from 'ano-ui'
 import { ref } from 'vue'
 
-const toast = ref<{ showToast: (options?: ToastOptions) => {} }>()
+const toast = ref<ToastInst>()
 
 function showToast(options: ToastOptions) {
-  toast.value!.showToast(options)
+  toast.value?.show(options)
 }
 
 const dialogRef = ref<DialogRef>()
