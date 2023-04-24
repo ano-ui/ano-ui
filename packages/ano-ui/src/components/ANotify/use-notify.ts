@@ -7,19 +7,19 @@ import type { NotifyEmits, NotifyProps } from './notify'
 export function useNotify(props: NotifyProps,
   emit: SetupContext<NotifyEmits>['emit']) {
   const timer = ref()
-  const showValue = ref(false)
+  const visible = ref(false)
 
-  const notifyStatus = ref<NotifyOptions>({})
+  const state = ref<NotifyOptions>({})
 
-  const closeNotify = () => {
+  const close = () => {
     if (timer.value)
       clearTimeout(timer.value)
-    showValue.value = false
+    visible.value = false
     emit(CLOSE_EVENT)
   }
 
-  const showNotify = (options: NotifyOptions = {}) => {
-    notifyStatus.value = {
+  const show = (options: NotifyOptions = {}) => {
+    state.value = {
       type: options.type ?? props.type,
       position: options.position ?? props.position,
       message: options.message ?? props.message,
@@ -28,21 +28,19 @@ export function useNotify(props: NotifyProps,
       customIcon: options.customIcon ?? props.customIcon,
       showClose: options.showClose ?? props.showClose,
     }
-    showValue.value = true
+    visible.value = true
 
     if (timer.value)
       clearTimeout(timer.value)
 
-    timer.value = setTimeout(() => {
-      closeNotify()
-    }, notifyStatus.value.duration)
+    timer.value = setTimeout(close, state.value.duration)
   }
 
   return {
-    showValue,
-    notifyStatus,
+    visible,
+    state,
 
-    showNotify,
-    closeNotify,
+    show,
+    close,
   }
 }
