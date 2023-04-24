@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import type { ToastOptions } from 'ano-ui'
+import type { ToastInst, ToastOptions } from 'ano-ui'
 
-const toast = ref<{ showToast: (options?: ToastOptions) => {} }>()
+const toast = ref<ToastInst>()
 
 function showToast(options: ToastOptions) {
-  toast.value!.showToast(options)
+  toast.value!.show(options)
 }
 </script>
 

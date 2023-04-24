@@ -7,18 +7,18 @@ import { useToast } from './use-toast'
 const props = defineProps(toastProps)
 const emit = defineEmits(toastEmits)
 
-const { show, toastStatus, showToast, closeToast } = useToast(props, emit)
+const { visible, state, show, close } = useToast(props, emit)
 
-defineExpose({ showToast, closeToast })
+defineExpose({ show, close })
 </script>
 
 <template>
   <ATransition
-    :show="show" name="fade" :duration="300"
-    :cc="['a-toast-base', `a-toast-position-${toastStatus?.position}`, cc]" :cs="cs"
+    :show="visible" name="fade" :duration="300"
+    :cc="['a-toast-base', `a-toast-position-${state?.position}`, cc]" :cs="cs"
   >
-    <template v-if="toastStatus?.message">
-      {{ toastStatus.message }}
+    <template v-if="state?.message">
+      {{ state.message }}
     </template>
     <slot v-else />
   </ATransition>
