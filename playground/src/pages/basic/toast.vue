@@ -36,6 +36,23 @@ function showToast(options: ToastOptions) {
           Bottom
         </AButton>
       </div>
+      <div class="p-4">
+        Type
+      </div>
+      <div px-4 flex="~ gap2 wrap">
+        <AButton @click="showToast({ type: 'loading', message: 'Loading' })">
+          Loading
+        </AButton>
+        <AButton @click="showToast({ type: 'success', message: 'Success' })">
+          Success
+        </AButton>
+        <AButton @click="showToast({ type: 'danger', message: 'Danger' })">
+          Danger
+        </AButton>
+        <AButton @click="showToast({ type: 'warning', message: 'Warning' })">
+          Warning
+        </AButton>
+      </div>
     </div>
   </UBasePage>
 </template>

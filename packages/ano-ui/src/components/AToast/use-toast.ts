@@ -6,14 +6,13 @@ import type { ToastEmits, ToastProps } from './toast'
 
 export function useToast(props: ToastProps,
   emit: SetupContext<ToastEmits>['emit']) {
-  const timer = ref()
+  let timer: NodeJS.Timeout
   const visible = ref(false)
 
   const state = ref<ToastOptions>()
 
   const close = () => {
-    if (timer.value)
-      clearTimeout(timer.value)
+    clearTimeout(timer)
     visible.value = false
     emit(CLOSE_EVENT)
   }
@@ -23,22 +22,22 @@ export function useToast(props: ToastProps,
       position = 'default',
       message = '',
       duration = 2000,
+      type,
     } = options
 
     visible.value = true
 
     state.value = {
+      type,
       position,
       message,
       duration,
     }
 
-    if (timer.value)
-      clearTimeout(timer.value)
+    clearTimeout(timer)
 
-    timer.value = setTimeout(() => {
-      close()
-    }, state.value.duration)
+    if (state.value.duration !== false)
+      timer = setTimeout(close, state.value.duration)
   }
 
   return {

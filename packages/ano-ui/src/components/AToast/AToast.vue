@@ -17,6 +17,12 @@ defineExpose({ show, close })
     :show="visible" name="fade" :duration="300"
     :cc="['a-toast-base', `a-toast-position-${state?.position}`, cc]" :cs="cs"
   >
+    <slot name="icon">
+      <div v-if="state?.type === 'success'" class="mr-2 i-tabler-circle-check-filled" />
+      <div v-else-if="state?.type === 'warning'" class="mr-2 i-tabler-alert-circle-filled" />
+      <div v-else-if="state?.type === 'danger'" class="mr-2 i-tabler-circle-x-filled" />
+      <div v-else-if="state?.type === 'loading'" class="mr-2 animate-spin mr-1 i-tabler-loader-3" />
+    </slot>
     <template v-if="state?.message">
       {{ state.message }}
     </template>
