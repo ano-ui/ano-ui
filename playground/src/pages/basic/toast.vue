@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import type { ToastOptions } from 'ano-ui'
+import type { ToastInst, ToastOptions } from 'ano-ui'
 
-const toast = ref<{ showToast: (options?: ToastOptions) => {} }>()
+const toast = ref<ToastInst>()
 
 function showToast(options: ToastOptions) {
-  toast.value!.showToast(options)
+  toast.value?.show(options)
 }
 </script>
 
@@ -34,6 +34,23 @@ function showToast(options: ToastOptions) {
         </AButton>
         <AButton type="info" @click="showToast({ position: 'bottom', message: 'This is a toast, and it will disappear after 2 seconds.' })">
           Bottom
+        </AButton>
+      </div>
+      <div class="p-4">
+        Type
+      </div>
+      <div px-4 flex="~ gap2 wrap">
+        <AButton @click="showToast({ type: 'loading', message: 'Loading' })">
+          Loading
+        </AButton>
+        <AButton @click="showToast({ type: 'success', message: 'Success' })">
+          Success
+        </AButton>
+        <AButton @click="showToast({ type: 'danger', message: 'Danger' })">
+          Danger
+        </AButton>
+        <AButton @click="showToast({ type: 'warning', message: 'Warning' })">
+          Warning
         </AButton>
       </div>
     </div>

@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import type { ActionSheetAction, ToastOptions } from 'ano-ui'
+import type { ActionSheetAction, ToastInst } from 'ano-ui'
 
-const toast = ref<{ showToast: (options?: ToastOptions) => {} }>()
+const toast = ref<ToastInst>()
 
 const showValue = ref(false)
 const showValue2 = ref(false)
@@ -13,7 +13,7 @@ const actions: ActionSheetAction[] = [
 ]
 
 function onCancel() {
-  toast.value?.showToast({ message: 'Cancel' })
+  toast.value?.show({ message: 'Cancel' })
 }
 </script>
 

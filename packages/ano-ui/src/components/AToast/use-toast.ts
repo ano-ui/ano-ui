@@ -6,46 +6,44 @@ import type { ToastEmits, ToastProps } from './toast'
 
 export function useToast(props: ToastProps,
   emit: SetupContext<ToastEmits>['emit']) {
-  const timer = ref()
-  const show = ref(false)
+  let timer: NodeJS.Timeout
+  const visible = ref(false)
 
-  const toastStatus = ref<ToastOptions>()
+  const state = ref<ToastOptions>()
 
-  const closeToast = () => {
-    if (timer.value)
-      clearTimeout(timer.value)
-    show.value = false
+  const close = () => {
+    clearTimeout(timer)
+    visible.value = false
     emit(CLOSE_EVENT)
   }
 
-  const showToast = (options: ToastOptions = {}) => {
+  const show = (options: ToastOptions = {}) => {
     const {
       position = 'default',
       message = '',
       duration = 2000,
+      type,
     } = options
 
-    show.value = true
+    visible.value = true
 
-    toastStatus.value = {
+    state.value = {
+      type,
       position,
       message,
       duration,
     }
 
-    if (timer.value)
-      clearTimeout(timer.value)
+    clearTimeout(timer)
 
-    timer.value = setTimeout(() => {
-      closeToast()
-    }, toastStatus.value.duration)
+    if (state.value.duration !== false)
+      timer = setTimeout(close, state.value.duration)
   }
 
   return {
+    state,
     show,
-    toastStatus,
-
-    showToast,
-    closeToast,
+    close,
+    visible,
   }
 }
