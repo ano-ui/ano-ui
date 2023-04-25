@@ -44,7 +44,7 @@ export default defineConfig({
 ```
 
 Update `pages.json` file like below:
-  
+
 ```json
 {
   "easycom": {
@@ -86,30 +86,6 @@ And then enjoy it. Just use a button component like this:
 </template>
 ```
 
-## Preview
-
-### WeChat
-
-> Probably not the latest version.
-
-<img src="./public/applet-code.png" style="width:120px;" />
-
-### WeChat DevTools(Recommended)
-
-You can see the preview by the following commands:
-
-```bash
-pnpm i
-```
-
-Run playground to see the result.
-
-```bash
-pnpm play:mp-weixin
-```
-
-Then import the project(`xx/ano-ui/playground/dev/mp-weixin`) into WeChat DevTools.
-
 ## Acknowledgement
 
 ### Tools
@@ -126,4 +102,4 @@ Then import the project(`xx/ano-ui/playground/dev/mp-weixin`) into WeChat DevToo
 
 ## License
 
-[MIT](https://github.com/ano-ui/ano-ui/blob/main/LICENSE) License &copy; 2022-PRESENT [Neil Lee](https://github.com/zguolee)
+[MIT](https://github.com/ano-ui/ano-ui/blob/main/LICENSE) License &copy; 2022-PRESENT [Neil Lee](https://github.com/zguolee) and all contributors.
