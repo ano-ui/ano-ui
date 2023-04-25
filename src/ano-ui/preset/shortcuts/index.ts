@@ -8,7 +8,6 @@ import { buttonShortcuts } from './button'
 import { cellShortcuts } from './cell'
 import { cellGroupShortcuts } from './cellGroup'
 import { popupShortcuts } from './popup'
-import { tagShortcuts } from './tag'
 import { toastShortcuts } from './toast'
 import { transitionShortcuts } from './transition'
 
@@ -25,18 +24,25 @@ import { actionSheetShortcuts } from './actionSheet'
 import { dialogShortcuts } from './dialog'
 import { overlayShortcuts } from './overlay'
 import { notifyShortcuts } from './notify'
+
+// display
+import { tagShortcuts } from './tag'
 import { noticeBarShortcuts } from './noticeBar'
+
+// navigation
+
 
 export const shortcuts: UserShortcuts<Theme> = [
   baseShortcuts,
+  // basic
   buttonShortcuts,
   cellShortcuts,
   cellGroupShortcuts,
   popupShortcuts,
-  tagShortcuts,
   toastShortcuts,
   transitionShortcuts,
 
+  // form
   checkboxShortcuts,
   checkboxGroupShortcuts,
   fieldShortcuts,
@@ -44,9 +50,15 @@ export const shortcuts: UserShortcuts<Theme> = [
   radioGroupShortcuts,
   switchShortcuts,
 
+  // action
   actionSheetShortcuts,
   dialogShortcuts,
   overlayShortcuts,
   notifyShortcuts,
+
+  // display
+  tagShortcuts,
   noticeBarShortcuts,
+
+  // navigation
 ]

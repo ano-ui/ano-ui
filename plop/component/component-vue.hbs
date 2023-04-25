@@ -1,0 +1,16 @@
+<script setup lang="ts">
+import { {{camelCaseName}}Emits, {{camelCaseName}}Props } from './{{kebabCaseName}}'
+import { use{{pascalCaseName}} } from './use-{{kebabCaseName}}'
+
+const props = defineProps({{camelCaseName}}Props)
+const emit = defineEmits({{camelCaseName}}Emits)
+
+const { className, clickHandler } = use{{pascalCaseName}}(props, emit)
+</script>
+
+<template>
+  <div :class="[className, cc]" :style="cs" @click="clickHandler">
+    {{pascalCaseNameWithPrefix}}
+    <slot />
+  </div>
+</template>

@@ -1,0 +1,21 @@
+import type { SetupContext } from 'vue'
+import { computed } from 'vue'
+import { CLICK_EVENT } from '../constants'
+import type { {{pascalCaseName}}Emits, {{pascalCaseName}}Props } from './{{kebabCaseName}}'
+
+// @unocss-include
+
+export function use{{pascalCaseName}}(props: {{pascalCaseName}}Props,
+  emit: SetupContext<{{pascalCaseName}}Emits>['emit']) {
+  const className = computed(() => [])
+
+  const clickHandler = (evt: MouseEvent) => {
+    emit(CLICK_EVENT, evt)
+  }
+
+  return {
+    className,
+
+    clickHandler,
+  }
+}
