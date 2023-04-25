@@ -25,6 +25,7 @@ import { dialogShortcuts } from './dialog'
 import { overlayShortcuts } from './overlay'
 import { notifyShortcuts } from './notify'
 import { noticeBarShortcuts } from './noticeBar'
+import { badgeShortcuts } from './badge'
 
 export default [
   baseShortcuts,
@@ -35,6 +36,7 @@ export default [
   tagShortcuts,
   toastShortcuts,
   transitionShortcuts,
+  badgeShortcuts,
 
   checkboxShortcuts,
   checkboxGroupShortcuts,

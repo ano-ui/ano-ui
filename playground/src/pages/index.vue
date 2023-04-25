@@ -68,6 +68,7 @@ function goDisplay(path: string) {
       <ACellGroup arrow inset divider>
         <ACell title="NoticeBar 消息栏" @click="goDisplay('notice-bar')" />
         <ACell title="Tag 标签" @click="goDisplay('tag')" />
+        <ACell title="Badge 标记" @click="goDisplay('badge')" />
       </ACellGroup>
     </div>
   </UBasePage>
