@@ -71,6 +71,13 @@
       }
     },
     {
+      "path": "pages/display/badge",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "Badge 标记"
+      }
+    },
+    {
       "path": "pages/display/notice-bar",
       "type": "page",
       "style": {

@@ -21,6 +21,7 @@ export * from './AOverlay'
 // Display
 export * from './ANoticeBar'
 export * from './ATag'
+export * from './ABadge'
 
 // Navigation
 
