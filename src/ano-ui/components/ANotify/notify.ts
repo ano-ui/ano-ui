@@ -40,7 +40,3 @@ export const notifyEmits = {
 
 export type NotifyProps = ExtractPropTypes<typeof notifyProps>
 export type NotifyEmits = typeof notifyEmits
-export interface NotifyInst {
-  show: (options?: NotifyOptions) => {}
-  close: () => {}
-}

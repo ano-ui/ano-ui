@@ -37,7 +37,7 @@
   "scripts": {
     "dev": "pnpm stub",
     "build": "rimraf dist & esno build/components.ts & unbuild",
-    "stub": "unbuild stub",
+    "stub": "unbuild --stub",
     "release": "bumpp package.json ./src/ano-ui/*/package.json",
     "dev:app": "uni -p app",
     "dev:custom": "uni -p",
