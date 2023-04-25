@@ -12,7 +12,7 @@ const { className, visible, content, offsetStyle, dotStyle } = useBadge(props)
   <div class="inline-block relative text-xs">
     <slot />
     <ATransition
-      :style="[offsetStyle, dotStyle]" :class="[className]" class="a-badge-sup" :show="visible" name="fade"
+      :style="[offsetStyle, dotStyle, cs]" :class="[className, cc]" class="a-badge-sup" :show="visible" name="fade"
       :duration="300"
     >
       <slot name="value">
