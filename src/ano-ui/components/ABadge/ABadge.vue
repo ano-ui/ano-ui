@@ -28,12 +28,12 @@ const { className, visible, content, offsetStyle, dotStyle } = useBadge(props)
 <style>
 @keyframes badge-wave-spread {
   from {
-    box-shadow: 0 0 0.5px 0px rgba(var(--ano-c-context),var(--un-bg-opacity));
+    box-shadow: 0 0 1rpx 0 rgba(var(--ano-c-context),var(--un-bg-opacity));
     opacity: 0.6;
   }
 
   to {
-    box-shadow: 0 0 0.5px 4.5px rgba(var(--ano-c-context),var(--un-bg-opacity));
+    box-shadow: 0 0 1rpx 9rpx rgba(var(--ano-c-context),var(--un-bg-opacity));
     opacity: 0;
   }
 }
