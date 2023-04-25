@@ -71,6 +71,13 @@
       }
     },
     {
+      "path": "pages/display/badge",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "Tag 标签"
+      }
+    },
+    {
       "path": "pages/display/notice-bar",
       "type": "page",
       "style": {

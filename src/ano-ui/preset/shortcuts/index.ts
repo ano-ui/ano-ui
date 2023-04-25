@@ -28,6 +28,7 @@ import { notifyShortcuts } from './notify'
 // display
 import { tagShortcuts } from './tag'
 import { noticeBarShortcuts } from './noticeBar'
+import { badgeShortcuts } from './badge'
 
 // navigation
 
@@ -41,6 +42,7 @@ export const shortcuts: UserShortcuts<Theme> = [
   popupShortcuts,
   toastShortcuts,
   transitionShortcuts,
+  badgeShortcuts,
 
   // form
   checkboxShortcuts,
