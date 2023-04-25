@@ -74,7 +74,7 @@
       "path": "pages/display/badge",
       "type": "page",
       "style": {
-        "navigationBarTitleText": "Tag 标签"
+        "navigationBarTitleText": "Badge 标记"
       }
     },
     {
