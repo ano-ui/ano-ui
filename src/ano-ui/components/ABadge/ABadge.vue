@@ -9,7 +9,7 @@ const { className, visible, content, offsetStyle, dotStyle } = useBadge(props)
 </script>
 
 <template>
-  <div class="inline-block relative text-xs">
+  <div class="relative inline-block text-xs">
     <slot />
     <ATransition
       :style="[offsetStyle, dotStyle, cs]" :class="[className, cc]" class="a-badge-sup" :show="visible" name="fade"
@@ -37,6 +37,7 @@ const { className, visible, content, offsetStyle, dotStyle } = useBadge(props)
     opacity: 0;
   }
 }
+
 .a-badge-wave {
   z-index: 1;
   animation-duration: 2s;

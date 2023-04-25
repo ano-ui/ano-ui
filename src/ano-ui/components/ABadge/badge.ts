@@ -5,8 +5,8 @@ import type { BadgeType } from './types'
 export const useBadgeProp = {
   type: String as PropType<BadgeType>,
   validator: (value: string) =>
-    ['default', 'error', 'info', 'success', 'warning'].includes(value),
-  default: 'default',
+    ['primary', 'success', 'info', 'warning', 'danger'].includes(value),
+  default: 'primary',
 }
 
 export const useBadgeOffsetProp = {

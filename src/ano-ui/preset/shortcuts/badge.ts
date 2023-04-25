@@ -8,5 +8,5 @@ export const badgeShortcuts: Record<string, string> = {
   'a-badge-danger': 'a-danger',
   'a-badge-success': 'a-success',
   'a-badge-warning': 'a-warning',
-  'a-badge-default': 'a-danger',
+  'a-badge-primary': 'a-primary',
 }

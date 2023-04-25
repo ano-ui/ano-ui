@@ -8,10 +8,10 @@ export function useBadge(props: BadgeProps) {
     if (!offset)
       return { transform: 'translateX(-50%)' }
     const [x, y] = offset
-    const reslovedOffsetX = typeof x === 'number' ? `${x}rpx` : x
-    const reslovedOffsetY = typeof y === 'number' ? `${y}rpx` : y
+    const resolvedOffsetX = typeof x === 'number' ? `${x}rpx` : x
+    const resolvedOffsetY = typeof y === 'number' ? `${y}rpx` : y
     return {
-      transform: `translate(calc(-50% + ${reslovedOffsetX}), ${reslovedOffsetY})`,
+      transform: `translate(calc(-50% + ${resolvedOffsetX}), ${resolvedOffsetY})`,
     }
   })
 
@@ -39,6 +39,7 @@ export function useBadge(props: BadgeProps) {
     && props.max
     && props.value >= props.max,
   )
+
   const content = computed(() => {
     return ltg.value ? `${props.max}+` : props.value
   })
