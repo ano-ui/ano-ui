@@ -1,21 +1,21 @@
 <script setup lang="ts">
-import type { NotifyOptions } from '~/ano-ui'
+import type { NotifyInst, NotifyOptions } from '~/ano-ui'
 
-const notify = ref<{ showNotify: (options?: NotifyOptions) => {} }>()
+const notify = ref<NotifyInst>()
 
 function showNotify(options: NotifyOptions) {
-  notify.value!.showNotify(options)
+  notify.value!.show(options)
 }
 
-const notify2 = ref<{ showNotify: (options?: NotifyOptions) => {} }>()
+const notify2 = ref<NotifyInst>()
 
 function showNotify2(options: NotifyOptions) {
-  notify2.value!.showNotify(options)
+  notify2.value!.show(options)
 }
-const notify3 = ref<{ showNotify: (options?: NotifyOptions) => {} }>()
+const notify3 = ref<NotifyInst>()
 
 function showNotify3(options: NotifyOptions) {
-  notify3.value!.showNotify(options)
+  notify3.value!.show(options)
 }
 
 const topStyle = computed(() => {

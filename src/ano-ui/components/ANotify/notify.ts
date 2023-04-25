@@ -1,7 +1,7 @@
 import type { ExtractPropTypes, PropType } from 'vue'
 import { useCustomClassProp, useCustomStyleProp } from '../composables'
 import { CLOSE_EVENT } from '../constants'
-import type { NotifyPositionType, NotifyType } from './types'
+import type { NotifyOptions, NotifyPositionType, NotifyType } from './types'
 
 export const useNotifyTypeProp = {
   type: String as PropType<NotifyType>,
@@ -40,3 +40,7 @@ export const notifyEmits = {
 
 export type NotifyProps = ExtractPropTypes<typeof notifyProps>
 export type NotifyEmits = typeof notifyEmits
+export interface NotifyInst {
+  show: (options?: NotifyOptions) => {}
+  close: () => {}
+}

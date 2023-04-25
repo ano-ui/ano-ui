@@ -11,3 +11,8 @@ export interface NotifyOptions {
   customIcon?: boolean
   showClose?: boolean
 }
+
+export interface NotifyInst {
+  show: (options?: NotifyOptions) => {}
+  close: () => {}
+}
