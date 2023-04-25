@@ -30,7 +30,7 @@ import { tagShortcuts } from './tag'
 import { noticeBarShortcuts } from './noticeBar'
 
 // navigation
-
+import { navBarShortcuts } from './navBar'
 
 export const shortcuts: UserShortcuts<Theme> = [
   baseShortcuts,
@@ -61,4 +61,5 @@ export const shortcuts: UserShortcuts<Theme> = [
   noticeBarShortcuts,
 
   // navigation
+  navBarShortcuts,
 ]

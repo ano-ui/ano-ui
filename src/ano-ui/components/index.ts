@@ -23,6 +23,7 @@ export * from './ANoticeBar'
 export * from './ATag'
 
 // Navigation
+export * from './ANavBar'
 
 export * from './composables'
 export * from './tokens'

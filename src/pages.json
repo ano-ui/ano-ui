@@ -111,6 +111,14 @@
       "style": {
         "navigationBarTitleText": "Switch 开关"
       }
+    },
+    {
+      "path": "pages/navigation/nav-bar",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "NavBar 导航栏",
+        "navigationStyle": "custom"
+      }
     }
   ],
   "globalStyle": {
