@@ -1,7 +1,6 @@
 {
   "name": "ano-ui",
   "version": "0.6.13-beta.0",
-  "packageManager": "pnpm@8.3.1",
   "author": "Neil Lee <zguolee@foxmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/ano-ui/ano-ui#readme",
@@ -33,11 +32,11 @@
   "types": "./dist/index.d.ts",
   "files": [
     "dist",
-    "src/ano-ui/components"
+    "components"
   ],
   "scripts": {
     "dev": "pnpm stub",
-    "build": "rimraf dist & unbuild",
+    "build": "rimraf dist & esno build/components.ts & unbuild",
     "stub": "unbuild stub",
     "release": "bumpp package.json ./src/ano-ui/*/package.json",
     "dev:app": "uni -p app",
@@ -101,12 +100,15 @@
     "@dcloudio/uni-cli-shared": "3.0.0-alpha-3071320230417001",
     "@dcloudio/vite-plugin-uni": "3.0.0-alpha-3071320230417001",
     "@iconify-json/tabler": "^1.1.74",
+    "@types/fs-extra": "^11.0.1",
     "@types/node": "^18.16.0",
     "@uni-helper/vite-plugin-uni-components": "^0.0.5",
     "@uni-helper/vite-plugin-uni-pages": "^0.1.8",
     "@unocss/eslint-config": "^0.50.8",
     "bumpp": "^9.1.0",
     "eslint": "^8.39.0",
+    "esno": "^0.16.3",
+    "fs-extra": "^11.1.1",
     "postcss": "^8.4.23",
     "rimraf": "^4.4.1",
     "sass": "^1.62.0",
