@@ -20,4 +20,7 @@ export const baseShortcuts: Record<string, string> = {
   'a-ghost': 'bg-transparent border border-dashed border-context text-context dark:border-op80 dark:text-op80',
   'a-light': 'bg-context border border-solid border-context text-context bg-op20 border-op20 dark:text-op80',
   'a-text': 'bg-transparent border-context !border-op0 text-context dark:text-op80',
+
+  'a-hairline': 'relative after:content-[\'_\'] after:pointer-events-none after:absolute after:box-border after:top--50% after:right--50% after:bottom--50% after:left--50% after:a-border-300 after:border-solid after:border-0 after:scale-50',
+  'a-hairline-bottom': 'a-hairline after:border-b-1px',
 }

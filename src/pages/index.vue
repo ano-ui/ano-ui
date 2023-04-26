@@ -22,6 +22,12 @@ function goDisplay(path: string) {
     url: `/pages/display/${path}`,
   })
 }
+
+function goNavigation(path: string) {
+  uni.navigateTo({
+    url: `/pages/navigation/${path}`,
+  })
+}
 </script>
 
 <template>
@@ -69,6 +75,12 @@ function goDisplay(path: string) {
         <ACell title="NoticeBar 消息栏" @click="goDisplay('notice-bar')" />
         <ACell title="Tag 标签" @click="goDisplay('tag')" />
         <ACell title="Badge 标记" @click="goDisplay('badge')" />
+      </ACellGroup>
+      <div class="p-4">
+        Navigation 导航组件
+      </div>
+      <ACellGroup arrow inset divider>
+        <ACell title="NavBar 导航栏" @click="goNavigation('nav-bar')" />
       </ACellGroup>
     </div>
   </UBasePage>
