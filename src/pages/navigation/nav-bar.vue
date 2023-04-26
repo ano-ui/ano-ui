@@ -1,13 +1,20 @@
 <script setup lang="ts">
 function onClickLeft() {
-  uni.navigateBack()
+  const pages = getCurrentPages()
+  if (pages.length > 1) {
+    uni.navigateBack()
+  }
+  else {
+    uni.redirectTo({
+      url: '/',
+    })
+  }
 }
 
 function onClickRight() {
   uni.showToast({
-    title: 'Button',
+    title: 'Click',
     icon: 'none',
-    mask: true,
   })
 }
 </script>
@@ -17,7 +24,7 @@ function onClickRight() {
     <div class="pb-safe">
       <ANavBar
         title="NavBar 导航栏"
-        placeholder left-arrow
+        left-arrow placeholder
         :fixed="true" z-index="999"
         @click-left="onClickLeft"
       />
@@ -39,7 +46,6 @@ function onClickRight() {
       </div>
       <ANavBar
         title="Title"
-        left-text="Back"
         right-text="Button"
         left-arrow
         @click-left="onClickLeft"
@@ -49,16 +55,36 @@ function onClickRight() {
         Use Slot
       </div>
       <ANavBar
-        left-text="Back"
-        left-arrow
         :border="false"
+        :clickable="false"
+        @click-left="onClickLeft"
+        @click-right="onClickRight"
       >
+        <template #left>
+          <div flex items-center>
+            <image
+              src="../../static/logo.png"
+              mode="scaleToFill"
+              mr-1 h-50rpx w-50rpx
+            />
+            AnoUI
+          </div>
+        </template>
         <template #title>
           Title
         </template>
         <template #right>
           <div class="i-tabler-search a-nav-bar-icon" />
         </template>
+      </ANavBar>
+      <div class="p-4">
+        Use Default Slot
+      </div>
+      <ANavBar>
+        <AField icon="i-tabler-search" placeholder="Enter something" cc="h-full p2" class="flex-1" />
+        <AButton size="mini" mx-2 variant="light" @click="onClickRight">
+          Search
+        </AButton>
       </ANavBar>
     </div>
   </UBasePage>
