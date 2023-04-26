@@ -24,6 +24,7 @@ export * from './ATag'
 export * from './ABadge'
 
 // Navigation
+export * from './ANavBar'
 
 export * from './composables'
 export * from './tokens'
