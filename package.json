@@ -36,7 +36,8 @@
   ],
   "scripts": {
     "dev": "pnpm stub",
-    "build": "rimraf dist & esno build/components.ts & unbuild",
+    "build": "rimraf dist & esno build/components.ts & unbuild & unocss & pnpm build:mp",
+    "build:mp": "unocss -c unocss.config.mp.ts",
     "stub": "unbuild --stub",
     "release": "bumpp package.json ./src/ano-ui/*/package.json",
     "dev:app": "uni -p app",
@@ -105,6 +106,7 @@
     "@types/node": "^18.16.0",
     "@uni-helper/vite-plugin-uni-components": "^0.0.5",
     "@uni-helper/vite-plugin-uni-pages": "^0.1.8",
+    "@unocss/cli": "^0.51.8",
     "@unocss/eslint-config": "^0.50.8",
     "bumpp": "^9.1.0",
     "eslint": "^8.39.0",
