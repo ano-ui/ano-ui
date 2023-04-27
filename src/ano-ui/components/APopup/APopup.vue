@@ -28,4 +28,27 @@ const animationName = {
 </template>
 
 <style scoped>
+.a-popup-wrapper-base {
+  --at-apply: 'a-bg-2 fixed z-200'
+}
+
+.a-popup-wrapper-position-center {
+  --at-apply: 'left-50% top-50% -translate-50%'
+}
+
+.a-popup-wrapper-position-top {
+  --at-apply: 'top-0 left-0 right-0'
+}
+
+.a-popup-wrapper-position-bottom {
+  --at-apply: 'bottom-0 left-0 right-0'
+}
+
+.a-popup-wrapper-position-left {
+  --at-apply: 'top-0 left-0 bottom-0'
+}
+
+.a-popup-wrapper-position-right {
+  --at-apply: 'top-0 right-0 bottom-0'
+}
 </style>
