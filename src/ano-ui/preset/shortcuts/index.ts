@@ -4,8 +4,6 @@ import type { Theme } from '@unocss/preset-mini'
 import { baseShortcuts } from './base'
 
 // basic
-import { cellShortcuts } from './cell'
-import { cellGroupShortcuts } from './cellGroup'
 import { popupShortcuts } from './popup'
 import { toastShortcuts } from './toast'
 import { transitionShortcuts } from './transition'
@@ -35,8 +33,6 @@ import { navBarShortcuts } from './navBar'
 export const shortcuts: UserShortcuts<Theme> = [
   baseShortcuts,
   // basic
-  cellShortcuts,
-  cellGroupShortcuts,
   popupShortcuts,
   toastShortcuts,
   transitionShortcuts,
