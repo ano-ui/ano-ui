@@ -17,7 +17,7 @@ import { presetAno } from './src/ano-ui'
 export default defineConfig({
   cli: {
     entry: {
-      patterns: ['components/**/*.{vue,ts}'],
+      patterns: ['components-mp/**/*.{vue,ts}'],
       outFile: 'dist/styles.mp.css',
     },
   },

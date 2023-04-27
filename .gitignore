@@ -158,5 +158,6 @@ dist
 .pnp.*
 
 components
+components-mp
 !src/components
 !src/ano-ui/components
