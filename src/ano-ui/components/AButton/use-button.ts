@@ -11,7 +11,7 @@ export function useButton(props: ButtonProps, emit: SetupContext<ButtonEmits>['e
     const { type, size, variant, block, square, round } = props
     return [
       `a-${type}`,
-      { block },
+      { '!block': block },
       `a-button-${size}`,
       `a-${variant}`,
       { 'a-button-disabled': disabled.value },

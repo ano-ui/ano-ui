@@ -25,10 +25,10 @@ const animationName = {
 <template>
   <ATransition
     :show="visible" :name="animationName[state?.position || 'default']" :duration="300"
-    :cc="['a-notify-base', `a-notify-position-${state.position}`, cc]" :cs="cs"
+    :cc="['fixed z-500', `a-notify-position-${state.position}`, cc]" :cs="cs"
   >
     <div
-      class="a-notify-content-base"
+      class="box-border min-h-10 flex items-center justify-center gap-2 rounded-lg px-3 text-base a-transition a-solid"
       :class="[`a-${state.type}`, { 'rounded-none': state.position === 'default' }, { 'justify-start': state.showIcon }, ccc]"
       :style="ccs"
     >
@@ -52,3 +52,37 @@ const animationName = {
     </div>
   </ATransition>
 </template>
+
+<style scoped>
+.a-notify-position-default {
+  --at-apply: 'top-0 left-0 right-0'
+}
+
+.a-notify-position-top {
+  --at-apply: 'top-0 left-5 right-5 pt-5'
+}
+
+.a-notify-position-top-left {
+  --at-apply: 'top-0 left-0 pt-5 pl-5'
+}
+
+.a-notify-position-top-right {
+  --at-apply: 'top-0 right-0 pt-5 pr-5'
+}
+
+.a-notify-position-bottom {
+  --at-apply: '!top-auto bottom-0 left-5 right-5 mb-safe pb-5'
+}
+
+.a-notify-position-bottom-left {
+  --at-apply: '!top-auto bottom-5 left-5 mb-safe pl-5'
+}
+
+.a-notify-position-bottom-right {
+  --at-apply: '!top-auto bottom-5 right-5 mb-safe pr-5'
+}
+
+.a-notify-content-base {
+  --at-apply: 'box-border flex justify-center gap-2 items-center rounded-lg bg-clip-padding a-transition px-3 min-h-10 text-base a-solid'
+}
+</style>

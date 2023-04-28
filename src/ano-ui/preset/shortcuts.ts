@@ -1,4 +1,7 @@
-export const baseShortcuts: Record<string, string> = {
+import type { UserShortcuts } from 'unocss'
+import type { Theme } from '@unocss/preset-mini'
+
+export const shortcuts: UserShortcuts<Theme> = {
   'a-bg': 'bg-gray-100 dark:bg-black',
   'a-bg-2': 'bg-white dark:bg-[#1C1C1E]',
   'a-border': 'border-[#EBEDF0] dark:border-[#3A3A3C]',

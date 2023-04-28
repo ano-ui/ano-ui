@@ -12,8 +12,8 @@ const { className, visible, content, offsetStyle, dotStyle } = useBadge(props)
   <div class="relative inline-block text-xs">
     <slot />
     <ATransition
-      :style="[offsetStyle, dotStyle, cs]" :class="[className, cc]" class="a-badge-sup" :show="visible" name="fade"
-      :duration="300"
+      :style="[offsetStyle, dotStyle, cs]" :class="[className, cc]" class="a-badge-sup" :show="visible"
+      name="fade" :duration="300"
     >
       <slot name="value">
         <template v-if="!dot">
@@ -25,15 +25,31 @@ const { className, visible, content, offsetStyle, dotStyle } = useBadge(props)
   </div>
 </template>
 
-<style>
+<style scoped>
+.a-badge-sup {
+  --at-apply: 'absolute inline-block box-border rounded-full text-white left-full z-10 bg-context whitespace-nowrap'
+}
+
+.a-badge-s-dot {
+  --at-apply: 'w-2 h-2'
+}
+
+.a-badge-s-default {
+  --at-apply: 'h-36rpx px-2'
+}
+
+.a-badge-wave {
+  --at-apply: 'z-1 absolute inset-0 rounded-inherit'
+}
+
 @keyframes badge-wave-spread {
   from {
-    box-shadow: 0 0 1rpx 0 rgba(var(--ano-c-context),var(--un-bg-opacity));
+    box-shadow: 0 0 1rpx 0 rgba(var(--ano-c-context), var(--un-bg-opacity));
     opacity: 0.6;
   }
 
   to {
-    box-shadow: 0 0 1rpx 9rpx rgba(var(--ano-c-context),var(--un-bg-opacity));
+    box-shadow: 0 0 1rpx 9rpx rgba(var(--ano-c-context), var(--un-bg-opacity));
     opacity: 0;
   }
 }

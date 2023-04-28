@@ -52,3 +52,49 @@ const {
   </div>
   <div v-if="placeholder" :style="placeholderStyle" />
 </template>
+
+<style scoped>
+.a-nav-bar-base {
+  --at-apply: 'relative text-base select-none a-bg-2'
+}
+
+.a-nav-bar-fixed {
+  --at-apply: 'fixed top-0 left-0 w-full'
+}
+
+.a-nav-bar-border {
+  --at-apply: 'relative text-base select-none a-bg-2'
+}
+
+.a-nav-bar-clickable-hover {
+  --at-apply: 'op60'
+}
+
+.a-nav-bar-clickable-hover-h5 {
+  --at-apply: 'active:op60'
+}
+
+.a-nav-bar-content-base {
+  --at-apply: 'relative flex items-center'
+}
+
+.a-nav-bar-left {
+  --at-apply: 'absolute bottom-0 left-0 top-0 flex items-center px-2'
+}
+
+.a-nav-bar-title {
+  --at-apply: 'line-clamp-1 m-auto max-w-60% text-base text-lg font-bold a-color-base'
+}
+
+.a-nav-bar-right {
+  --at-apply: 'absolute bottom-0 right-0 top-0 flex items-center px-2'
+}
+
+.a-nav-bar-text {
+  --at-apply: 'color-blue'
+}
+
+.a-nav-bar-icon {
+  --at-apply: 'a-nav-bar-text'
+}
+</style>

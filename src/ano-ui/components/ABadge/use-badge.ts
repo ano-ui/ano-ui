@@ -21,7 +21,7 @@ export function useBadge(props: BadgeProps) {
 
   const className = computed(() => {
     return [
-      `a-badge-${props.type}`,
+      `a-${props.type}`,
       props.dot ? 'a-badge-s-dot' : 'a-badge-s-default',
     ] as const
   })

@@ -9,7 +9,11 @@ const { handleClose } = useNoticeBar(props, emit)
 </script>
 
 <template>
-  <div v-if="show" class="a-notice-bar-base" :class="[`a-${type}`, `a-${variant}`, cc]" :style="cs">
+  <div
+    v-if="show"
+    class="box-border min-h-10 flex items-center justify-center gap-2 rounded-lg px-3 a-transition"
+    :class="[`a-${type}`, `a-${variant}`, cc]" :style="cs"
+  >
     <template v-if="$slots.icon">
       <slot name="icon" />
     </template>
