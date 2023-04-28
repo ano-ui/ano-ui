@@ -44,6 +44,7 @@ function goNavigation(path: string) {
         Basic 基础组件
       </div>
       <ACellGroup arrow inset divider>
+        <ACell title="Avatar 头像" @click="goBasic('avatar')" />
         <ACell title="Button 按钮" @click="goBasic('button')" />
         <ACell title="Cell 单元格" @click="goBasic('cell')" />
         <ACell title="Popup 弹出层" @click="goBasic('popup')" />

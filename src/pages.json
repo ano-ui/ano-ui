@@ -36,6 +36,13 @@
       }
     },
     {
+      "path": "pages/basic/avatar",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "Avatar 头像"
+      }
+    },
+    {
       "path": "pages/basic/button",
       "type": "page",
       "style": {
