@@ -20,7 +20,14 @@ provide(checkboxGroupKey, reactive({
 </script>
 
 <template>
-  <div :class="[`a-checkbox-group-${direction}`, cc]" :style="cs">
+  <div
+    class="flex flex-wrap gap-2"
+    :class="[direction === 'horizontal' ? '' : 'flex-col', cc]"
+    :style="cs"
+  >
     <slot />
   </div>
 </template>
+
+<style scoped>
+</style>

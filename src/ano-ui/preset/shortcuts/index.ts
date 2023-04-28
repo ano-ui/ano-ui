@@ -6,14 +6,6 @@ import { baseShortcuts } from './base'
 // basic
 import { toastShortcuts } from './toast'
 
-// form
-import { checkboxShortcuts } from './checkbox'
-import { checkboxGroupShortcuts } from './checkboxGroup'
-import { fieldShortcuts } from './field'
-import { radioShortcuts } from './radio'
-import { radioGroupShortcuts } from './radioGroup'
-import { switchShortcuts } from './switch'
-
 // action
 import { actionSheetShortcuts } from './actionSheet'
 import { dialogShortcuts } from './dialog'
@@ -33,14 +25,6 @@ export const shortcuts: UserShortcuts<Theme> = [
   // basic
   toastShortcuts,
   badgeShortcuts,
-
-  // form
-  checkboxShortcuts,
-  checkboxGroupShortcuts,
-  fieldShortcuts,
-  radioShortcuts,
-  radioGroupShortcuts,
-  switchShortcuts,
 
   // action
   actionSheetShortcuts,

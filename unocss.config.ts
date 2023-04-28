@@ -23,13 +23,13 @@ const presets: Preset[] = []
 const transformers: SourceCodeTransformer[] = []
 
 if (isApplet) {
-  presets.push(presetApplet({ dark: 'media' }))
+  presets.push(presetApplet())
   presets.push(presetRemRpx())
   transformers.push(transformerAttributify({ ignoreAttributes: ['block'] }))
   transformers.push(transformerApplet())
 }
 else {
-  presets.push(presetUno({ dark: 'media' }))
+  presets.push(presetUno())
   presets.push(presetAttributify())
   presets.push(presetRemRpx({ mode: 'rpx2rem' }))
 }

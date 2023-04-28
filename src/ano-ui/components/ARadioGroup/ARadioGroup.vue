@@ -22,7 +22,14 @@ provide(radioGroupKey,
 </script>
 
 <template>
-  <div :class="[`a-radio-group-${direction}`, cc]" :style="cs">
+  <div
+    class="flex flex-wrap gap-2"
+    :class="[direction === 'horizontal' ? '' : 'flex-col', cc]"
+    :style="cs"
+  >
     <slot />
   </div>
 </template>
+
+<style scoped>
+</style>

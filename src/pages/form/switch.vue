@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const checked = ref(false)
 const checked2 = ref(0)
-const checked3 = ref('yes')
+const checked3 = ref('y')
 const disChecked = ref(true)
 </script>
 
@@ -28,15 +28,6 @@ const disChecked = ref(true)
         <ASwitch v-model="checked" type="danger" size="large" />
       </div>
       <div class="p-4">
-        Variant
-      </div>
-      <div flex="~ gap2 wrap" items-center px-4>
-        <ASwitch v-model="checked" variant="solid" />
-        <ASwitch v-model="checked" type="success" variant="outline" />
-        <ASwitch v-model="checked" type="warning" variant="ghost" />
-        <ASwitch v-model="checked" type="danger" variant="light" />
-      </div>
-      <div class="p-4">
         Status
       </div>
       <div flex="~ gap2 wrap" items-center px-4>
@@ -49,7 +40,7 @@ const disChecked = ref(true)
       </div>
       <div flex="~ gap2 wrap" items-center px-4>
         <ASwitch v-model="checked2" :active-value="1" active-label="1" :inactive-value="0" inactive-label="0" />
-        <ASwitch v-model="checked3" active-value="yes" active-label="yes" inactive-value="no" inactive-label="no" />
+        <ASwitch v-model="checked3" active-value="y" active-label="y" inactive-value="n" inactive-label="n" />
         <ASwitch v-model="checked" :show-icon="false">
           <template #active>
             <div class="i-tabler-check" />

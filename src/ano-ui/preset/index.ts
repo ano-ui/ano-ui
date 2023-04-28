@@ -16,6 +16,7 @@ export function presetAno(): Preset<Theme> {
     safelist: [
       // common
       ...colors.map(c => `a-${c}`),
+      ...colors.map(c => `!a-${c}`),
 
       // shortcuts
       ...shortcutsArray.map(s => Object.keys(s)).flat(),
