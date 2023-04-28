@@ -1,9 +1,6 @@
-import type { Preset, SourceCodeTransformer } from 'unocss'
 import {
   defineConfig,
-  presetAttributify,
   presetIcons,
-  presetUno,
   transformerDirectives,
   transformerVariantGroup,
 } from 'unocss'
@@ -17,31 +14,16 @@ import {
 
 import { presetAno } from './src/ano-ui'
 
-const isApplet = process.env?.UNI_PLATFORM?.startsWith('mp') ?? false
-const presets: Preset[] = []
-
-const transformers: SourceCodeTransformer[] = []
-
-if (isApplet) {
-  presets.push(presetApplet({ dark: 'media' }))
-  presets.push(presetRemRpx())
-  transformers.push(transformerAttributify({ ignoreAttributes: ['block'] }))
-  transformers.push(transformerApplet())
-}
-else {
-  presets.push(presetUno({ dark: 'media' }))
-  presets.push(presetAttributify())
-  presets.push(presetRemRpx({ mode: 'rpx2rem' }))
-}
-
 export default defineConfig({
   cli: {
     entry: {
-      patterns: ['components/**/*.{vue,ts}'],
-      outFile: 'dist/styles.css',
+      patterns: ['components-mp/**/*.{vue,ts}'],
+      outFile: 'dist/styles.mp.css',
     },
   },
   presets: [
+    presetApplet({ dark: 'media' }),
+    presetRemRpx(),
     presetIcons({
       scale: 1.2,
       warn: true,
@@ -50,16 +32,16 @@ export default defineConfig({
         'vertical-align': 'middle',
       },
     }),
-    ...presets,
     presetAno(),
   ],
   transformers: [
     transformerDirectives(),
     transformerVariantGroup(),
-    ...transformers,
+    transformerAttributify({ ignoreAttributes: ['block'] }),
+    transformerApplet(),
   ],
   theme: {
-    preflightRoot: isApplet ? ['page,::before,::after'] : undefined,
+    preflightRoot: ['page,::before,::after'],
   },
   rules: [
     [

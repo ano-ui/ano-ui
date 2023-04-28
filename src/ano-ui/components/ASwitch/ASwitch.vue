@@ -10,24 +10,33 @@ const { disabled, checked, toggle } = useSwitch(props, emit)
 
 <template>
   <div
-    class="a-switch-base"
-    :class="[`a-switch-${size} a-${variant} `, checked ? `a-${type}` : '', { 'a-switch-disabled': disabled }, cc]"
-    :style="cs" @click="toggle"
+    class="relative rounded-full bg-context text-white a-transition dark:bg-op80 dark:text-op80"
+    :class="[`a-switch-${size}`, checked ? `a-${type}` : 'a-gray3', { '!a-gray2 dark:!a-gray4': disabled }, cc]" :style="cs"
+    @click="toggle"
   >
     <div
-      class="a-switch-dot"
-      :class="[`a-switch-dot-${size}`, variant === 'solid' ? 'bg-white text-context' : 'bg-context text-white', { 'a-switch-dot-checked': checked }, { 'a-switch-dot-disabled': disabled }]"
+      class="absolute inset-0.5 right-auto rounded-full bg-white text-context a-transition"
+      :class="[`a-switch-dot-${size}`, { 'left-50%': checked }, { 'a-gray3': disabled }]"
     >
       <template v-if="checked">
-        <div v-if="loading" class="i-tabler-loader animate-spin" />
-        <template v-else-if="showIcon">
-          <slot v-if="customIcon" name="icon" />
-          <div v-else class="i-tabler-check animate-zoom-in animate-duration-200" :class="[icon]" />
-        </template>
+        <div
+          class="absolute inset-0 flex animate-zoom-in animate-duration-200 items-center justify-center text-context"
+          :class="[`a-${type}`]"
+        >
+          <div v-if="loading" class="i-tabler-loader animate-spin" />
+          <template v-else-if="showIcon">
+            <div v-if="!$slots.icon" class="i-tabler-check" :class="[icon]" />
+            <slot v-else name="icon" />
+          </template>
+        </div>
       </template>
     </div>
+
     <template v-if="checked">
-      <div class="a-switch-active-label" :class="[`a-switch-dot-${size}`]">
+      <div
+        class="absolute inset-0.5 right-auto flex animate-zoom-in animate-duration-200 items-center justify-center a-transition !leading-none"
+        :class="[`a-switch-dot-${size}`]"
+      >
         <template v-if="activeLabel">
           {{ activeLabel }}
         </template>
@@ -35,7 +44,10 @@ const { disabled, checked, toggle } = useSwitch(props, emit)
       </div>
     </template>
     <template v-else>
-      <div class="a-switch-inactive-label" :class="[`a-switch-dot-${size}`]">
+      <div
+        class="absolute inset-0.5 left-50% right-auto flex animate-zoom-in animate-duration-200 items-center justify-center a-transition !leading-none"
+        :class="[`a-switch-dot-${size}`]"
+      >
         <template v-if="inactiveLabel">
           {{ inactiveLabel }}
         </template>
@@ -44,3 +56,37 @@ const { disabled, checked, toggle } = useSwitch(props, emit)
     </template>
   </div>
 </template>
+
+<style scoped>
+.a-switch-mini {
+  --at-apply: 'min-w9 h5 text-xs'
+}
+
+.a-switch-small {
+  --at-apply: 'min-w11 h6 text-sm'
+}
+
+.a-switch-normal {
+  --at-apply: 'min-w13 h7 text-base'
+}
+
+.a-switch-large {
+  --at-apply: 'min-w15 h8 text-lg'
+}
+
+.a-switch-dot-mini {
+  --at-apply: 'min-w4 h4'
+}
+
+.a-switch-dot-small {
+  --at-apply: 'min-w5 h5'
+}
+
+.a-switch-dot-normal {
+  --at-apply: 'min-w6 h6'
+}
+
+.a-switch-dot-large {
+  --at-apply: 'min-w7 h7'
+}
+</style>

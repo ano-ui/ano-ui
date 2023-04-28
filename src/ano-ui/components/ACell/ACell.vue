@@ -20,12 +20,12 @@ const className = computed(() => {
 
 <template>
   <div
-    class="a-cell-base" :class="[className, cc]" :hover-class="arrow ? 'a-cell-hover' : '' " hover-stay-time="60"
+    class="a-cell-base" :class="[className, cc]" :hover-class="arrow ? 'a-cell-hover' : ''" hover-stay-time="60"
     :style="cs" @click="clickHandler"
   >
     <div v-if="icon" class="a-cell-icon" :class="icon" />
     <slot v-else name="icon" />
-    <div v-if="$slots.title || title" class="a-cell-title">
+    <div v-if="$slots.title || title" class="flex-1">
       <span v-if="title">
         {{ title }}
       </span>
@@ -47,3 +47,33 @@ const className = computed(() => {
     <slot v-else name="right-icon" />
   </div>
 </template>
+
+<style scoped>
+.a-cell-base {
+  --at-apply: 'relative box-border a-transition flex a-bg-2 px-4 py-3 text-base a-text-color overflow-hidden'
+}
+
+.a-cell-icon {
+  --at-apply: 'mr1 h-1.5rem flex justify-center items-center'
+}
+
+.a-cell-value {
+  --at-apply: 'text-right a-text-color-2 v-middle leading-inherit'
+}
+
+.a-cell-label {
+  --at-apply: 'text-sm a-text-color-2'
+}
+
+.a-cell-right-icon {
+  --at-apply: 'ml1 h-1.5rem flex justify-center items-center a-text-color-2'
+}
+
+.a-cell-hover {
+  --at-apply: 'a-active'
+}
+
+.a-cell-hover-h5 {
+  --at-apply: 'a-active-h5'
+}
+</style>

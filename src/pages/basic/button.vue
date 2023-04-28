@@ -97,7 +97,7 @@ function getInfo() {
         <AButton cc="bg-teal border-teal" open-type="getUserInfo" @click="getInfo">
           OpenType
         </AButton>
-        <AButton :cc="['bg-gradient-to-r', 'from-indigo-500', 'to-pink-500', 'border-none']">
+        <AButton :cc="['bg-gradient-to-r', 'from-indigo-500', 'to-pink-500']">
           Bg Gradient
         </AButton>
       </div>

@@ -42,5 +42,19 @@ defineExpose({ showDialog })
 </template>
 
 <style scoped>
+.a-dialog-wrapper-base {
+  --at-apply: 'absolute min-w-80% min-h-20% z-200 left-50% top-50% -translate-50%'
+}
 
+.a-dialog-content-base {
+  --at-apply: 'rounded-lg a-transition a-bg-2 text-center overflow-hidden'
+}
+
+.a-dialog-action-base {
+  --at-apply: 'flex justify-center items-center border-t border-t-solid border-t-gray-400/25'
+}
+
+.a-dialog-disabled {
+  --at-apply: '!bg-op70 !border-op0 op70'
+}
 </style>

@@ -48,7 +48,7 @@ export function useTransition(props: TransitionProps,
     { immediate: true },
   )
 
-  const clickHandler = (evt: MouseEvent) => {
+  function clickHandler(evt: MouseEvent) {
     // evt.stopPropagation()
     emit(CLICK_EVENT, evt)
   }

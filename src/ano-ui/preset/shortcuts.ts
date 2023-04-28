@@ -1,4 +1,7 @@
-export const baseShortcuts: Record<string, string> = {
+import type { UserShortcuts } from 'unocss'
+import type { Theme } from '@unocss/preset-mini'
+
+export const shortcuts: UserShortcuts<Theme> = {
   'a-bg': 'bg-gray-100 dark:bg-black',
   'a-bg-2': 'bg-white dark:bg-[#1C1C1E]',
   'a-border': 'border-[#EBEDF0] dark:border-[#3A3A3C]',
@@ -15,11 +18,11 @@ export const baseShortcuts: Record<string, string> = {
   'a-border-300': 'border-gray-400/40',
   'a-transition': 'transition-all duration-200',
 
-  'a-solid': 'bg-context border border-solid border-context text-white dark:bg-op80 dark:border-op80 dark:text-op80',
+  'a-solid': 'bg-context text-white dark:bg-op80 dark:text-op80',
   'a-outline': 'bg-transparent border border-solid border-context text-context dark:border-op80 dark:text-op80',
   'a-ghost': 'bg-transparent border border-dashed border-context text-context dark:border-op80 dark:text-op80',
-  'a-light': 'bg-context border border-solid border-context text-context bg-op20 border-op20 dark:text-op80',
-  'a-text': 'bg-transparent border-context !border-op0 text-context dark:text-op80',
+  'a-light': 'bg-context text-context bg-op20 dark:text-op80',
+  'a-text': 'bg-transparent text-context dark:text-op80',
 
   'a-hairline': 'relative after:content-[\'_\'] after:pointer-events-none after:absolute after:box-border after:top--50% after:right--50% after:bottom--50% after:left--50% after:a-border-300 after:border-solid after:border-0 after:scale-50',
   'a-hairline-bottom': 'a-hairline after:border-b-1px',

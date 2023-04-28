@@ -1,5 +1,4 @@
 <script setup lang='ts'>
-import ATransition from '../ATransition/ATransition.vue'
 import { radioEmits, radioProps } from './radio'
 import { useRadio } from './use-radio'
 
@@ -10,16 +9,18 @@ const { disabled, size, checked, toggle } = useRadio(props, emit)
 </script>
 
 <template>
-  <div class="a-radio-base" :class="[`a-radio-${size}`, cc]" :style="cs">
+  <div class="flex items-center" :class="[`a-radio-${size}`, cc]" :style="cs">
     <div
-      class="a-radio-radio-base border-context"
-      :class="[`a-radio-radio-${size}`, checked ? `a-${type}` : '', { 'a-radio-disabled': disabled }, ccc]" :style="ccs"
-      @click="toggle"
+      class="relative border border-gray3 rounded-full border-solid transition-all duration-200 dark:border-op80"
+      :class="[`a-radio-radio-${size}`, { 'a-radio-disabled': disabled }, ccc]"
+      :style="ccs" @click="toggle"
     >
-      <ATransition class="a-radio-radio-dot" :show="!!checked" name="fade-zoom">
-        <div v-if="!$slots.icon" class="rounded-full bg-context" :class="[`a-radio-radio-dot-${size}`]" />
-        <slot v-else name="icon" />
-      </ATransition>
+      <template v-if="checked">
+        <div class="absolute inset-0 flex animate-zoom-in animate-duration-200 items-center justify-center" :class="[`a-${type}`]">
+          <div v-if="!$slots.icon" class="rounded-full bg-context" :class="[`a-radio-radio-dot-${size}`]" />
+          <slot v-else name="icon" />
+        </div>
+      </template>
     </div>
     <div v-if="$slots.default || label" class="ml2" :class="{ 'a-radio-disabled-label': disabled }">
       <template v-if="label">
@@ -29,3 +30,57 @@ const { disabled, size, checked, toggle } = useRadio(props, emit)
     </div>
   </div>
 </template>
+
+<style scoped>
+.a-radio-mini {
+  --at-apply: 'text-xs'
+}
+
+.a-radio-small {
+  --at-apply: 'text-sm'
+}
+
+.a-radio-normal {
+  --at-apply: 'text-base'
+}
+
+.a-radio-large {
+  --at-apply: 'text-lg'
+}
+
+.a-radio-disabled-label {
+  --at-apply: 'text-[#C8C9CC] dark:text-[#4D4D4D]'
+}
+
+.a-radio-radio-mini {
+  --at-apply: 'h5 w5'
+}
+
+.a-radio-radio-small {
+  --at-apply: 'h6 w6'
+}
+
+.a-radio-radio-normal {
+  --at-apply: 'h7 w7'
+}
+
+.a-radio-radio-large {
+  --at-apply: 'h8 w8'
+}
+
+.a-radio-radio-dot-mini {
+  --at-apply: 'h2 w2'
+}
+
+.a-radio-radio-dot-small {
+  --at-apply: 'h3 w3'
+}
+
+.a-radio-radio-dot-normal {
+  --at-apply: 'h4 w4'
+}
+
+.a-radio-radio-dot-large {
+  --at-apply: 'h5 w5'
+}
+</style>
