@@ -2,7 +2,6 @@ import { camelCase, kebabCase, pascalCase } from 'scule'
 
 const anoUiDir = './src/ano-ui'
 const componentDir = `${anoUiDir}/components`
-const presetDir = `${anoUiDir}/preset`
 const playgroundDir = './src'
 
 export default function (
@@ -74,12 +73,9 @@ export default function (
       const componentTypes = `${baseDir}/types.ts`
       const componentUse = `${baseDir}/use-${kebabCaseName}.ts`
 
-      const componentShortcut = `${presetDir}/shortcuts/${camelCaseName}.ts`
-
       const componentPlayground = `${playgroundDir}/pages/${type}/${kebabCaseName}.vue`
 
       const componentExportEntry = `${componentDir}/index.ts`
-      const componentShortcutEntry = `${presetDir}/shortcuts/index.ts`
       const componentPlaygroundEntry = `${playgroundDir}/pages/index.vue`
 
       /** @type {import('plop').ActionType[]} */
@@ -116,12 +112,6 @@ export default function (
         },
         {
           type: 'add',
-          path: componentShortcut,
-          templateFile: './plop/component/component-shortcut.hbs',
-          data,
-        },
-        {
-          type: 'add',
           path: componentPlayground,
           templateFile: './plop/component/component-playground.hbs',
           data,
@@ -131,19 +121,6 @@ export default function (
           path: componentExportEntry,
           pattern: pascalCase(type),
           template: `export * from './${pascalCaseNameWithPrefix}'`,
-        },
-        {
-          type: 'append',
-          path: componentShortcutEntry,
-          pattern: type,
-          template: `import { ${camelCaseName}Shortcuts } from './${camelCaseName}'`,
-        },
-        {
-          type: 'append',
-          path: componentShortcutEntry,
-          pattern: new RegExp(`export const shortcuts[\\W\\w]*?${type}`),
-          // keep the space
-          template: `  ${camelCaseName}Shortcuts,`,
         },
         {
           type: 'append',
