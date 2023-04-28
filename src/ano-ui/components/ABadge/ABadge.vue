@@ -44,21 +44,19 @@ const { className, visible, content, offsetStyle, dotStyle } = useBadge(props)
 
 @keyframes badge-wave-spread {
   from {
+    --at-apply: 'opacity-60';
     box-shadow: 0 0 1rpx 0 rgba(var(--ano-c-context), var(--un-bg-opacity));
-    opacity: 0.6;
   }
 
   to {
+    --at-apply: 'opacity-0';
     box-shadow: 0 0 1rpx 9rpx rgba(var(--ano-c-context), var(--un-bg-opacity));
-    opacity: 0;
   }
 }
 
 .a-badge-wave {
-  z-index: 1;
-  animation-duration: 2s;
+  --at-apply: 'z-1 duration-200 delay-100';
   animation-iteration-count: infinite;
-  animation-delay: 1s;
   animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   animation-name: badge-wave-spread;
 }
