@@ -80,6 +80,7 @@ function goNavigation(path: string) {
         Navigation 导航组件
       </div>
       <ACellGroup arrow inset divider>
+        <ACell title="TabBar 标签栏" @click="goNavigation('tab-bar')" />
         <ACell title="NavBar 导航栏" @click="goNavigation('nav-bar')" />
       </ACellGroup>
     </div>

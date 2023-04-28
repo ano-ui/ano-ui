@@ -27,6 +27,8 @@ declare module '@vue/runtime-core' {
     ARadio: typeof import('./ano-ui/components/ARadio/ARadio.vue')['default']
     ARadioGroup: typeof import('./ano-ui/components/ARadioGroup/ARadioGroup.vue')['default']
     ASwitch: typeof import('./ano-ui/components/ASwitch/ASwitch.vue')['default']
+    ATabBar: typeof import('./ano-ui/components/ATabBar/ATabBar.vue')['default']
+    ATabBarItem: typeof import('./ano-ui/components/ATabBarItem/ATabBarItem.vue')['default']
     ATag: typeof import('./ano-ui/components/ATag/ATag.vue')['default']
     AToast: typeof import('./ano-ui/components/AToast/AToast.vue')['default']
     ATransition: typeof import('./ano-ui/components/ATransition/ATransition.vue')['default']
