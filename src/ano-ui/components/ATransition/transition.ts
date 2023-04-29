@@ -1,11 +1,15 @@
 import type { ExtractPropTypes } from 'vue'
+
 import { useCustomClassProp, useCustomStyleProp } from '../composables'
 import { CLICK_EVENT } from '../constants'
 
 export const transitionProps = {
   cc: useCustomClassProp,
   cs: useCustomStyleProp,
-  name: String,
+  name: {
+    type: String,
+    default: 'fade',
+  },
   mode: String,
   show: Boolean,
   duration: {

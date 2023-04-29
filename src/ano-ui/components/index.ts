@@ -1,4 +1,6 @@
 // Basic
+export * from './AAvatarGroup'
+export * from './AAvatar'
 export * from './AButton'
 export * from './ACell'
 export * from './APopup'

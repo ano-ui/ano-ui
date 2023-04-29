@@ -11,21 +11,25 @@ const { checked, disabled, size, toggle } = useCheckbox(props, emit)
 <template>
   <div class="flex items-center" :class="[`a-checkbox-${size}`, cc]" :style="cs">
     <div
-      class="a-checkbox-checkbox-base"
+      class="relative box-border inline-block border border-[#C8C9CC] rounded-sm border-solid bg-clip-padding a-transition"
       :class="[`a-checkbox-checkbox-${size}`, checked ? `a-${type} a-${variant}` : '', { 'a-checkbox-disabled': disabled }, ccc]"
       :style="ccs" @click="toggle"
     >
-      <ATransition class="a-checkbox-checkbox-icon" :show="!!checked" name="fade-zoom">
-        <div v-if="!$slots.icon" class="i-tabler-check" :class="[icon]" />
-        <slot v-else :checked="checked" name="icon" />
-      </ATransition>
+      <ATransition cc="['absolute inset-0']" :show="!!checked" name="fade" :duration="200" />
+      <div
+        class="absolute inset-0 flex animate-duration-200 items-center justify-center"
+        :class="[checked ? 'animate-zoom-in text-white' : 'animate-zoom-out text-transparent']"
+      >
+        <slot name="icon" :checked="checked">
+          <div class="i-tabler-check" :class="[icon]" />
+        </slot>
+      </div>
     </div>
-    <div class="ml2" :class="{ 'a-checkbox-disabled-label': disabled }">
-      <template v-if="label">
+    <slot name="label">
+      <div class="ml2" :class="{ 'text-[#C8C9CC] dark:text-[#4D4D4D]': disabled }">
         {{ label }}
-      </template>
-      <slot v-else />
-    </div>
+      </div>
+    </slot>
   </div>
 </template>
 
@@ -48,10 +52,6 @@ const { checked, disabled, size, toggle } = useCheckbox(props, emit)
 
 .a-checkbox-disabled {
   --at-apply: 'bg-[#EBEDF0] border-[#C8C9CC] dark:bg-[#3A3A3C] text-[#C8C9CC] dark:text-[#4D4D4D]'
-}
-
-.a-checkbox-disabled-label {
-  --at-apply: 'text-[#C8C9CC] dark:text-[#4D4D4D]'
 }
 
 .a-checkbox-checkbox-base {

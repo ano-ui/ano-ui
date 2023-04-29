@@ -36,6 +36,33 @@ const active = ref('home')
           <div class="i-tabler-user text-lg" />
         </ATabBarItem>
       </ATabBar>
+      <div mt-2 />
+      <ATabBar v-model="active">
+        <ATabBarItem name="home">
+          首页
+        </ATabBarItem>
+        <ATabBarItem name="discovery">
+          发现
+        </ATabBarItem>
+        <ATabBarItem name="mine">
+          我的
+        </ATabBarItem>
+      </ATabBar>
+
+      <div class="p-4">
+        Fixed
+      </div>
+      <ATabBar v-model="active" cc="fixed bottom-0 pb-safe left-0 right-0">
+        <ATabBarItem name="home" icon="i-tabler-home">
+          首页
+        </ATabBarItem>
+        <ATabBarItem name="discovery" icon="i-tabler-compass">
+          发现
+        </ATabBarItem>
+        <ATabBarItem name="mine" icon="i-tabler-user">
+          我的
+        </ATabBarItem>
+      </ATabBar>
     </div>
   </UBasePage>
 </template>
