@@ -7,12 +7,12 @@ import type { AvatarEmits, AvatarProps } from './avatar'
 
 export function useAvatar(props: AvatarProps,
   emit: SetupContext<AvatarEmits>['emit']) {
-  const className = computed(() => {
+  const classes = computed(() => {
     return [
-      props.size === 'mini' && 'w-8 h-8 text-2',
-      props.size === 'small' && 'w-10 h-10',
-      props.size === 'normal' && 'w-12 h-12 text-5',
-      props.size === 'large' && 'w-14 h-14 text-6',
+      props.size === 'mini' && 'w-8 h-8 text-xs',
+      props.size === 'small' && 'w-10 h-10 text-sm',
+      props.size === 'normal' && 'w-12 h-12 text-base',
+      props.size === 'large' && 'w-14 h-14 text-lg',
     ] as const
   })
 
@@ -30,7 +30,7 @@ export function useAvatar(props: AvatarProps,
   })
 
   return {
-    className,
+    classes,
     clickHandler,
     mode,
   }

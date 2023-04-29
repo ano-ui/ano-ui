@@ -23,7 +23,7 @@ const groupChecked4 = ref<RadioGroupValue>('a')
       </div>
 
       <div class="p-4">
-        Size
+        大小
       </div>
       <div px-4 flex="~ col gap2">
         <ARadioGroup v-model="groupChecked2" size="mini" direction="horizontal">
@@ -69,17 +69,17 @@ const groupChecked4 = ref<RadioGroupValue>('a')
       <ARadioGroup v-model="groupChecked4">
         <ACellGroup inset divider clickable>
           <ACell title="Radio a" @click="groupChecked4 = 'a'">
-            <template #right-icon>
+            <template #value>
               <ARadio value="a" />
             </template>
           </ACell>
           <ACell title="Radio b" @click="groupChecked4 = 'b'">
-            <template #right-icon>
+            <template #value>
               <ARadio value="b" />
             </template>
           </ACell>
           <ACell title="Radio c" @click="groupChecked4 = 'c'">
-            <template #right-icon>
+            <template #value>
               <ARadio value="c" />
             </template>
           </ACell>

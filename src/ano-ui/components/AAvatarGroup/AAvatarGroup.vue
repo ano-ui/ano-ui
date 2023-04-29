@@ -10,16 +10,21 @@ const { className, clickHandler, spliceOptions, reset, lt } = useAvatarGroup(pro
 </script>
 
 <template>
-  <div class="flex" :class="[className, cc]" :style="[{ '--a-gap': '-24rpx' }, cs]" @click="clickHandler">
-    <template v-for="(option, index) in spliceOptions" :key="index">
+  <div
+    class="inline-flex [&_.a-avatar+.a-avatar]:-ml-3 [&_a-avatar+a-avatar>.a-avatar]:-ml-3 [&_view+view]:-ml-3"
+    :class="[className, cc]" :style="[cs]" @click="clickHandler"
+  >
+    <template v-for="(option, index) of spliceOptions" :key="index">
       <slot name="avatar" :option="option">
-        <AAvatar rounded-full :src="option.src" />
+        <AAvatar cc="rounded-full" :src="option.src" />
       </slot>
     </template>
     <slot v-if="lt" name="reset" :reset="reset" :options="options">
-      <AAvatar z-1 rounded-full bg-primary text-white>
+      <AAvatar cc="z-1 rounded-full bg-primary text-white">
         +{{ reset }}
       </AAvatar>
     </slot>
   </div>
 </template>
+
+<style scoped></style>

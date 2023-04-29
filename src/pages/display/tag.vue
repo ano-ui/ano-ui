@@ -19,7 +19,7 @@ const show = ref(true)
       </div>
 
       <div class="p-4">
-        Size
+        大小
       </div>
       <div flex="~ gap2 wrap" items-center px-4>
         <ATag label="Mini" type="primary" size="mini" />
@@ -29,7 +29,7 @@ const show = ref(true)
       </div>
 
       <div class="p-4">
-        Variant
+        变体
       </div>
       <div flex="~ gap2 wrap" items-center px-4>
         <ATag label="Solid" variant="solid" />

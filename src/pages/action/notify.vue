@@ -76,7 +76,7 @@ const topStyle = computed(() => {
         Custom
       </div>
       <ACellGroup arrow divider inset>
-        <ACell title="Custom Icon" @click="showNotify2({ type: 'primary', position: 'top', message: 'Custom Icon', customIcon: true })" />
+        <ACell title="Custom Icon" @click="showNotify2({ type: 'primary', position: 'top', message: 'Custom Icon' })" />
         <ACell title="Show Close" @click="showNotify2({ type: 'success', position: 'top', message: 'Show Close', showClose: true })" />
         <ACell title="Slot" @click="showNotify2({ type: 'info', position: 'top' })" />
         <ACell title="Bg Gradient" @click="showNotify3({ type: 'warning', position: 'top', message: 'Bg Gradient' })" />

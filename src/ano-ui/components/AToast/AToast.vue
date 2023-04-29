@@ -7,7 +7,7 @@ import { useToast } from './use-toast'
 const props = defineProps(toastProps)
 const emit = defineEmits(toastEmits)
 
-const { visible, state, show, close } = useToast(props, emit)
+const { visible, state, show, close, classes } = useToast(props, emit)
 
 defineExpose({ show, close })
 </script>
@@ -15,7 +15,8 @@ defineExpose({ show, close })
 <template>
   <ATransition
     :show="visible" name="fade" :duration="300"
-    :cc="['a-toast-base', `a-toast-position-${state?.position}`, cc]" :cs="cs"
+    :cc="['fixed z-500 flex justify-center items-center min-w-20 max-w-70% px-4 py-2 rounded-lg bg-black/70 text-white text-base text-center',
+          classes, cc]" :cs="cs"
   >
     <slot name="icon">
       <div v-if="state?.type === 'success'" class="i-tabler-circle-check-filled mr-2" />
@@ -31,19 +32,4 @@ defineExpose({ show, close })
 </template>
 
 <style scoped>
-.a-toast-base {
-  --at-apply: 'fixed z-500 flex justify-center items-center min-w-20 max-w-70% px-4 py-2 rounded-lg bg-black/70 text-white text-base text-center a-transition'
-}
-
-.a-toast-position-default {
-  --at-apply: 'left-50% top-50% -translate-50%'
-}
-
-.a-toast-position-top {
-  --at-apply: 'left-50% top-20% -translate-50%'
-}
-
-.a-toast-position-bottom {
-  --at-apply: 'left-50% top-80% -translate-50%'
-}
 </style>

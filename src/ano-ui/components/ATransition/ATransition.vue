@@ -10,7 +10,7 @@ const { display, classes, clickHandler } = useTransition(props, emit)
 <template>
   <div
     v-if="display" class="transition-all" :class="[classes, cc]"
-    :style="[{ 'transition-duration': `${duration}ms` }, { 'transition-timing-function': timingFunction }, cs]"
+    :style="[{ 'animation-duration': `${duration}ms` }, { 'animation-timing-function': timingFunction }, cs]"
     @click="clickHandler"
   >
     <slot />

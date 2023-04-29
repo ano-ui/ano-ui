@@ -13,39 +13,39 @@ const options = ref([
   <UBasePage>
     <div class="pb-safe">
       <div class="p-4">
-        Basic
+        基础
       </div>
       <div flex="~ gap2 wrap" items-center px-4>
         <AAvatar :src="image" size="mini" />
         <AAvatar :src="image" size="small" />
         <AAvatar src="https://pic2.imgdb.cn/item/644bf3c40d2dde5777ab58cb.png" size="normal" />
         <AAvatar :src="image" size="large" />
-        <AAvatar :src="image" h-16 w-16 />
+        <AAvatar :src="image" cc="h-16 w-16" />
       </div>
 
       <div class="p-4">
-        Round
+        圆形
       </div>
       <div flex="~ gap2 wrap" items-center px-4>
-        <AAvatar :src="image" rounded-full size="mini" />
-        <AAvatar :src="image" rounded-full size="small" />
-        <AAvatar :src="image" rounded-full size="normal" />
-        <AAvatar :src="image" rounded-full size="large" />
+        <AAvatar :src="image" cc="rounded-full" size="mini" />
+        <AAvatar :src="image" cc="rounded-full" size="small" />
+        <AAvatar :src="image" cc="rounded-full" size="normal" />
+        <AAvatar :src="image" cc="rounded-full" size="large" />
       </div>
 
       <div class="p-4">
-        Custom
+        自定义
       </div>
       <div flex="~ gap2 wrap" items-center px-4>
-        <AAvatar rounded-full bg-primary text-white>
+        <AAvatar cc="rounded-full bg-primary text-white">
           T
         </AAvatar>
-        <AAvatar border="~ 2 solid white" rounded-full bg-primary text-white>
+        <AAvatar cc="rounded-full bg-primary text-white">
           <div class="i-tabler-loader" />
         </AAvatar>
       </div>
       <div class="p-4">
-        Group
+        头像组
       </div>
       <div flex="~ gap2 wrap" items-center px-4>
         <AAvatarGroup :max="3" :options="options" />
@@ -53,10 +53,10 @@ const options = ref([
       <div flex="~ gap2 wrap" items-center px-4 pt-4>
         <AAvatarGroup :max="3" :options="options">
           <template #avatar="{ option: { src } }">
-            <AAvatar rounded-full :src="src" />
+            <AAvatar cc="rounded-full" :src="src" />
           </template>
           <template #reset="{ reset }">
-            <AAvatar z-1 rounded-full bg-primary text-white>
+            <AAvatar cc="z-1 rounded-full bg-primary text-white">
               +{{ reset }}
             </AAvatar>
           </template>

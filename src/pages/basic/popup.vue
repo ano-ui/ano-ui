@@ -15,19 +15,19 @@ function handleShow(p: PositionType) {
   <UBasePage>
     <div class="pb-safe">
       <APopup v-model:show="showValue" :position="position" :duration="300">
-        <div class="h-100px w-200px flex items-center justify-center bg-teal">
+        <div class="h-100px w-200px flex items-center justify-center bg-primary text-white">
           Content
         </div>
       </APopup>
 
       <div class="p-4">
-        Basic
+        Basic 基础
       </div>
       <ACellGroup inset divider arrow>
         <ACell title="Show Popup" arrow @click="handleShow('center')" />
       </ACellGroup>
       <div class="p-4">
-        Position
+        Position 位置
       </div>
       <ACellGroup inset divider arrow>
         <ACell title="From Top" @click="handleShow('top')" />

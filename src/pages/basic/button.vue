@@ -13,7 +13,7 @@ function getInfo() {
   <UBasePage>
     <div class="pb-safe">
       <div class="p-4">
-        Color
+        类型
       </div>
       <div flex="~ gap2 wrap" items-center px-4>
         <AButton>
@@ -33,7 +33,7 @@ function getInfo() {
         </AButton>
       </div>
       <div class="p-4">
-        Size
+        Size 大小
       </div>
       <div flex="~ gap2 wrap" items-center px-4>
         <AButton type="primary" size="mini">
@@ -50,7 +50,7 @@ function getInfo() {
         </AButton>
       </div>
       <div class="p-4">
-        Variant
+        Variant 变体
       </div>
       <div flex="~ gap2 wrap" items-center px-4>
         <AButton variant="solid">
@@ -70,7 +70,7 @@ function getInfo() {
         </AButton>
       </div>
       <div class="p-4">
-        Status
+        状态 State
       </div>
       <div flex="~ gap2 wrap" items-center px-4>
         <AButton loading>
