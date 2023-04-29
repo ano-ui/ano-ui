@@ -21,7 +21,7 @@ provide(tabBarKey,
 </script>
 
 <template>
-  <div class="h-50px flex a-bg-2 a-text-color" :class="[cc]" :style="cs">
+  <div class="h-100rpx flex [&>a-tab-bar-item]:flex-1 a-bg-2 a-text-color" :class="[cc]" :style="cs">
     <slot />
   </div>
 </template>
