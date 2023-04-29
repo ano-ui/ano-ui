@@ -44,20 +44,20 @@ const { className, visible, content, offsetStyle, dotStyle } = useBadge(props)
 
 @keyframes badge-wave-spread {
   from {
-    --at-apply: 'opacity-60';
-    box-shadow: 0 0 1rpx 0 rgba(var(--ano-c-context), var(--un-bg-opacity));
+    --at-apply: 'opacity-60'
+    box-shadow: 0 0 1rpx 0 rgba(var(--ano-c-context), var(--un-bg-opacity))
   }
 
   to {
-    --at-apply: 'opacity-0';
-    box-shadow: 0 0 1rpx 9rpx rgba(var(--ano-c-context), var(--un-bg-opacity));
+    --at-apply: 'opacity-0'
+    box-shadow: 0 0 1rpx 9rpx rgba(var(--ano-c-context), var(--un-bg-opacity))
   }
 }
 
 .a-badge-wave {
-  --at-apply: 'z-1 duration-200 delay-100';
-  animation-iteration-count: infinite;
-  animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  animation-name: badge-wave-spread;
+  --at-apply: 'z-1 duration-200 delay-100'
+  animation-iteration-count: infinite
+  animation-timing-function: cubic-bezier(0, 0, 0.2, 1)
+  animation-name: badge-wave-spread
 }
 </style>
