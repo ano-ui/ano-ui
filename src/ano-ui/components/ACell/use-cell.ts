@@ -7,7 +7,6 @@ import type { CellEmits, CellProps } from './cell'
 export function useCell(props: CellProps, emit: SetupContext<CellEmits>['emit']) {
   const cellGroup = inject(cellGroupKey, undefined)
   const arrow = computed(() => cellGroup?.arrow || props.arrow)
-  const center = computed(() => cellGroup?.center || props.center)
   const clickable = computed(() => cellGroup?.clickable || props.clickable)
 
   function clickHandler(evt: MouseEvent) {
@@ -16,7 +15,6 @@ export function useCell(props: CellProps, emit: SetupContext<CellEmits>['emit'])
 
   return {
     arrow,
-    center,
     clickable,
 
     clickHandler,

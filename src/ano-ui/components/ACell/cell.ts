@@ -10,7 +10,6 @@ export const cellProps = {
   label: String,
   icon: String,
   arrow: Boolean,
-  center: Boolean,
   clickable: Boolean,
 }
 

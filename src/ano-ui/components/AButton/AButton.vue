@@ -10,7 +10,7 @@ const { disabled, clickHandler } = useButton(props, emit)
 
 <template>
   <button
-    class="a-button-wrapper-reset box-border flex items-center justify-center gap-2 text-center a-transition"
+    class="a-button-wrapper-reset m-0 box-border flex items-center justify-center gap-2 text-center a-transition"
     :class="[`a-${type}`, `a-button-${size}`, `a-${variant}`, block ? 'block' : 'inline-block',
              round ? 'rounded-full' : square ? 'rounded-none' : 'rounded-lg', disabled ? 'op-50' : '', cc]"
     :hover-class="disabled ? '' : '!before:op10'" :open-type="openType" :style="cs"

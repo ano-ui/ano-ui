@@ -5,7 +5,7 @@
   <UBasePage>
     <div class="pb-safe">
       <div class="p-4">
-        Basic
+        Basic 基础
       </div>
       <div>
         <ACell title="Title" value="Content" />
@@ -13,11 +13,10 @@
         <ACell icon="i-tabler-carrot" title="Title" value="Content" label="Description Description Description" />
       </div>
       <div class="p-4">
-        Custom
+        Custom 自定义
       </div>
       <ACellGroup divider>
-        <ACell title="Title" value="Rounded Full" cc="rounded-full" />
-        <ACell icon="i-tabler-carrot" title="Title" value="Content" label="Description" arrow center />
+        <ACell icon="i-tabler-carrot" title="Title" value="Content" label="Description" arrow />
         <ACell title="Slots">
           <template #icon>
             <i class="i-tabler-carrot" />
