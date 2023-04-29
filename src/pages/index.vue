@@ -49,6 +49,7 @@ function goNavigation(path: string) {
         <ACell title="Popup 弹出层" @click="goBasic('popup')" />
         <ACell title="Toast 轻提示" @click="goBasic('toast')" />
         <ACell title="Transition 过渡" @click="goBasic('transition')" />
+        <ACell title="CollapseTransition 折叠过渡" @click="goBasic('collapse-transition')" />
       </ACellGroup>
       <div class="p-4">
         Form 表单组件
@@ -72,6 +73,7 @@ function goNavigation(path: string) {
         Display 展示组件
       </div>
       <ACellGroup arrow inset divider>
+        <ACell title="ACollapse 折叠面板" @click="goDisplay('a-collapse')" />
         <ACell title="NoticeBar 消息栏" @click="goDisplay('notice-bar')" />
         <ACell title="Tag 标签" @click="goDisplay('tag')" />
         <ACell title="Badge 标记" @click="goDisplay('badge')" />

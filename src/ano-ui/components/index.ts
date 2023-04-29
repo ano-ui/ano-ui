@@ -19,6 +19,7 @@ export * from './ANotify'
 export * from './AOverlay'
 
 // Display
+export * from './AACollapse'
 export * from './ANoticeBar'
 export * from './ATag'
 export * from './ABadge'
