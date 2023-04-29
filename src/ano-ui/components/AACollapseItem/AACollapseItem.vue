@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import ACell from '../ACell/ACell.vue'
 import ACollapseTransition from '../ACollapseTransition/ACollapseTransition.vue'
 import { aCollapseItemEmits, aCollapseItemProps } from './a-collapse-item'
 import { useACollapseItem } from './use-a-collapse-item'
@@ -6,17 +7,31 @@ import { useACollapseItem } from './use-a-collapse-item'
 const props = defineProps(aCollapseItemProps)
 const emit = defineEmits(aCollapseItemEmits)
 
-const { className, clickHandler } = useACollapseItem(props, emit)
-const show = ref(true)
+const { className, clickHandler, clickOpenCollapse, arrow, expanded } = useACollapseItem(props, emit)
 </script>
 
 <template>
   <div :class="[className, cc]" :style="cs" @click="clickHandler">
-    <div @click="show = !show">
-      click me
-    </div>
-    <ACollapseTransition :show="show">
-      <slot />
+    <ACell :disabled="disabled" :title="title" :label="label" :value="value" :icon="icon" :arrow="arrow" @click="clickOpenCollapse">
+      <template #title>
+        <slot />
+      </template>
+
+      <template #icon>
+        <slot name="icon" />
+      </template>
+      <template #value>
+        <slot name="value" />
+      </template>
+      <template #label>
+        <slot name="label" />
+      </template>
+    </ACell>
+
+    <ACollapseTransition :show="expanded">
+      <ACell>
+        <slot />
+      </ACell>
     </ACollapseTransition>
   </div>
 </template>

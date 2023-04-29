@@ -10,7 +10,8 @@ const { className, clickHandler } = useACollapse(props, emit)
 
 <template>
   <div :class="[className, cc]" :style="cs" @click="clickHandler">
-    AACollapse
-    <slot />
+    <ACellGroup divider>
+      <slot />
+    </ACellGroup>
   </div>
 </template>
