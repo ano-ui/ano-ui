@@ -56,7 +56,7 @@ function toggle(index: any) {
         <ACheckbox v-model="checked2" :value="1" label="Value" icon="i-tabler-carrot" />
         <ACheckbox v-model="checked3" custom-icon value="yes" label="Slot Icon">
           <template #icon="props">
-            <div :class="props.checked ? 'i-tabler-carrot' : 'i-tabler-lemon'" />
+            <div :class="props.checked ? 'i-tabler-carrot' : 'i-tabler-lemon a-text-color-2'" />
           </template>
         </ACheckbox>
       </div>
@@ -89,17 +89,17 @@ function toggle(index: any) {
       <ACheckboxGroup v-model="groupChecked">
         <ACellGroup inset divider clickable>
           <ACell title="Title a" @click="toggle('a')">
-            <template #right-icon>
+            <template #value>
               <ACheckbox value="a" />
             </template>
           </ACell>
           <ACell title="Title b" @click="toggle('b')">
-            <template #right-icon>
+            <template #value>
               <ACheckbox value="b" />
             </template>
           </ACell>
           <ACell title="Title c" @click="toggle('c')">
-            <template #right-icon>
+            <template #value>
               <ACheckbox value="c" />
             </template>
           </ACell>

@@ -6,9 +6,9 @@ const transitionName = ref('')
 function show(name: string) {
   transitionName.value = name
   showValue.value = true
-  setTimeout(() => {
-    showValue.value = false
-  }, 2000)
+  // setTimeout(() => {
+  //   showValue.value = false
+  // }, 2000)
 }
 
 function log(msg: string) {
@@ -21,12 +21,15 @@ function log(msg: string) {
   <UBasePage>
     <div class="pb-safe">
       <ATransition
-        :show="showValue" :name="transitionName" :duration="2000" timing-function="ease-in"
-        cc="fixed top-50 bottom-50 left-20 right-20 h-50 z-200 bg-primary rounded-lg flex items-center justify-center"
-        @before-enter="log('before-enter')" @enter="log('enter')" @after-enter="log('after-enter')"
-        @before-leave="log('before-leave')" @leave="log('leave')" @after-leave="log('after-leave')"
+        :show="showValue" :name="transitionName" :duration="200" timing-function="ease-in"
+        cc="fixed top-50 bottom-50 left-20 right-20 h-50 z-200 bg-primary rounded-lg flex items-center justify-center" @before-enter="log('before-enter')"
+        @enter="log('enter')" @after-enter="log('after-enter')" @before-leave="log('before-leave')" @leave="log('leave')"
+        @after-leave="log('after-leave')"
       >
-        <div class="text-center text-white">
+        <div
+          class="h-full w-full flex items-center justify-center text-white"
+          @click="showValue = false"
+        >
           Content
         </div>
       </ATransition>
@@ -45,7 +48,6 @@ function log(msg: string) {
         <ACell title="Slide Left" @click="show('slide-left')" />
         <ACell title="Slide Right" @click="show('slide-right')" />
         <ACell title="Zoom" @click="show('zoom')" />
-        <ACell title="Fade Zoom" @click="show('fade-zoom')" />
       </ACellGroup>
     </div>
   </UBasePage>

@@ -4,6 +4,8 @@ import { CLOSE_EVENT } from '../constants'
 import type { ToastOptions } from './types'
 import type { ToastEmits, ToastProps } from './toast'
 
+// @unocss-include
+
 export function useToast(props: ToastProps,
   emit: SetupContext<ToastEmits>['emit']) {
   let timer: NodeJS.Timeout
@@ -11,13 +13,13 @@ export function useToast(props: ToastProps,
 
   const state = ref<ToastOptions>()
 
-  const close = () => {
+  function close() {
     clearTimeout(timer)
     visible.value = false
     emit(CLOSE_EVENT)
   }
 
-  const show = (options: ToastOptions = {}) => {
+  function show(options: ToastOptions = {}) {
     const {
       position = 'default',
       message = '',
@@ -40,10 +42,19 @@ export function useToast(props: ToastProps,
       timer = setTimeout(close, state.value.duration)
   }
 
+  const classes = computed(() => {
+    return [
+      state.value?.position === 'default' && 'left-50% top-50% translate--50%',
+      state.value?.position === 'top' && 'left-50% top-20% translate--50%',
+      state.value?.position === 'bottom' && 'left-50% top-80% translate--50%',
+    ] as const
+  })
+
   return {
     state,
     show,
     close,
     visible,
+    classes,
   }
 }

@@ -39,7 +39,7 @@ const className = computed(() => {
       </slot>
     </div>
     <slot name="value">
-      <div class="a-text-color-2" :class="[title ? 'text-right' : 'text-left']">
+      <div v-if="title" class="a-text-color-2" :class="[title ? 'text-right' : 'text-left']">
         {{ value }}
       </div>
     </slot>
