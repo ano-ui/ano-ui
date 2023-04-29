@@ -10,6 +10,8 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     AActionSheet: typeof import('./ano-ui/components/AActionSheet/AActionSheet.vue')['default']
+    AAvatar: typeof import('./ano-ui/components/AAvatar/AAvatar.vue')['default']
+    AAvatarGroup: typeof import('./ano-ui/components/AAvatarGroup/AAvatarGroup.vue')['default']
     ABadge: typeof import('./ano-ui/components/ABadge/ABadge.vue')['default']
     AButton: typeof import('./ano-ui/components/AButton/AButton.vue')['default']
     ACell: typeof import('./ano-ui/components/ACell/ACell.vue')['default']
