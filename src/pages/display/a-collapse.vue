@@ -38,10 +38,10 @@
         </AACollapseItem>
         <AACollapseItem title="Slots" name="1">
           <template #icon>
-            <div class="i-tabler-carrot mr-1" />
+            <div class="i-tabler-carrot" />
           </template>
           <template #value>
-            Content
+            <span class="text-gray">Content</span>
           </template>
           <template #label>
             <div class="text-gray">

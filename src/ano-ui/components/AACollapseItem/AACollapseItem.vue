@@ -14,7 +14,7 @@ const { className, clickHandler, clickOpenCollapse, arrow, expanded } = useAColl
   <div :class="[className, cc]" :style="cs" @click="clickHandler">
     <ACell :disabled="disabled" :title="title" :label="label" :value="value" :icon="icon" :arrow="arrow" @click="clickOpenCollapse">
       <template #title>
-        <slot />
+        <slot name="title" />
       </template>
 
       <template #icon>
@@ -30,7 +30,9 @@ const { className, clickHandler, clickOpenCollapse, arrow, expanded } = useAColl
 
     <ACollapseTransition :show="expanded">
       <ACell>
-        <slot />
+        <template #title>
+          <slot />
+        </template>
       </ACell>
     </ACollapseTransition>
   </div>
