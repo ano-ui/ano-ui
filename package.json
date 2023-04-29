@@ -121,7 +121,7 @@
     "scule": "^1.0.0",
     "unbuild": "^1.2.1",
     "unocss": "^0.50.8",
-    "unocss-applet": "^0.4.4",
+    "unocss-applet": "^0.4.5",
     "unplugin-auto-import": "^0.15.3",
     "vite": "^4.3.3",
     "vitest": "^0.29.8",

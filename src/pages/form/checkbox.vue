@@ -34,7 +34,7 @@ function toggle(index: any) {
       </div>
 
       <div class="p-4">
-        Size
+        大小
       </div>
       <div px-4 flex="~ col gap2">
         <ACheckbox v-model="checked" type="primary" size="mini" label="Mini" />

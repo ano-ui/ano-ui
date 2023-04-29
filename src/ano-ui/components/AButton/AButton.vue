@@ -5,30 +5,26 @@ import { useButton } from './use-button'
 const props = defineProps(buttonProps)
 const emit = defineEmits(buttonEmits)
 
-const { className, disabled, clickHandler } = useButton(props, emit)
+const { disabled, clickHandler } = useButton(props, emit)
 </script>
 
 <template>
   <button
-    class="a-button-wrapper-reset relative m-0 box-border inline-block overflow-visible rounded-lg text-center a-transition after:display-none"
-    :class="[className, cc]" :hover-class="disabled ? '' : '!before:op10'" hover-stay-time="60" :open-type="openType"
-    :style="cs" @click="clickHandler"
+    class="a-button-wrapper-reset box-border flex items-center justify-center gap-2 text-center a-transition"
+    :class="[`a-${type}`, `a-button-${size}`, `a-${variant}`, block ? 'block' : 'inline-block',
+             round ? 'rounded-full' : square ? 'rounded-none' : 'rounded-lg', disabled ? 'op-50' : '', cc]"
+    :hover-class="disabled ? '' : '!before:op10'" :open-type="openType" :style="cs"
+    @click="clickHandler"
   >
-    <div class="h-full flex items-center justify-center">
-      <div v-if="loading" class="i-tabler-loader mr-1 animate-spin" />
-      <div v-else-if="icon" class="mr-1" :class="[icon]" />
-      <slot />
-    </div>
+    <div v-if="loading" class="i-tabler-loader animate-spin" />
+    <div v-else-if="icon" :class="[icon]" />
+    <slot />
   </button>
 </template>
 
 <style scoped>
 .a-button-wrapper-reset {
-  --at-apply: 'before:content-none before:absolute before:w-full before:h-full before:left-50% before:top-50% before:-translate-50% before:border-style-inherit before:border-width-inherit before:border-rd-inherit before:border-black before:bg-black before:op0'
-}
-
-.a-button-disabled {
-  --at-apply: 'before:display-none op50'
+  --at-apply: 'after:display-none before:content-none before:absolute before:inset-0 before:bg-black before:op0'
 }
 
 .a-button-mini {

@@ -25,7 +25,7 @@ const show = ref(true)
         </ANoticeBar>
       </div>
       <div class="p-4">
-        Variant
+        变体
       </div>
       <div px-4 flex="~ col gap2">
         <ANoticeBar variant="solid">

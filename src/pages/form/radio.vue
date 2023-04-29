@@ -23,7 +23,7 @@ const groupChecked4 = ref<RadioGroupValue>('a')
       </div>
 
       <div class="p-4">
-        Size
+        大小
       </div>
       <div px-4 flex="~ col gap2">
         <ARadioGroup v-model="groupChecked2" size="mini" direction="horizontal">

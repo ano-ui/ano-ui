@@ -19,7 +19,7 @@ const disChecked = ref(true)
       </div>
 
       <div class="p-4">
-        Size
+        大小
       </div>
       <div flex="~ gap2 wrap" items-center px-4>
         <ASwitch v-model="checked" type="primary" size="mini" />
