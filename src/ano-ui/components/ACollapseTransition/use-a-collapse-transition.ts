@@ -1,7 +1,7 @@
 import type { SetupContext } from 'vue'
 import { CLICK_EVENT } from '../constants'
-import { useQueryClientRect } from '../composables'
 import { delay, guid } from '../utils'
+import { useQuerySelector } from '../composables'
 import type { ACollapseTransitionItemEmits, ACollapseTransitionProps } from './a-collapse-transition'
 
 export function useACollapseTransition(props: ACollapseTransitionProps,
@@ -10,7 +10,7 @@ export function useACollapseTransition(props: ACollapseTransitionProps,
   const elementGuid = ref<string>(`tr${guid()}`)
   const animating = ref(false)
   const animation = ref()
-  const { querySelector } = useQueryClientRect()
+  const querySelector = useQuerySelector('boundingClientRect')
 
   const clickHandler = (evt: MouseEvent) => {
     emit(CLICK_EVENT, evt)

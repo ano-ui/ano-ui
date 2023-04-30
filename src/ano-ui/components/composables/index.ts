@@ -1,3 +1,3 @@
 export * from './useProps'
-export * from './useQueryClientRect'
-export * from './useQueryFields'
+export * from './useQuerySelector'
+export * from './useQuerySelectorAll'
