@@ -85,6 +85,13 @@
       }
     },
     {
+      "path": "pages/display/a-collapse",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "ACollapse"
+      }
+    },
+    {
       "path": "pages/display/badge",
       "type": "page",
       "style": {

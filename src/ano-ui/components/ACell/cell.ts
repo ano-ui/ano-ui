@@ -1,4 +1,4 @@
-import type { ExtractPropTypes } from 'vue'
+import type { ExtractPropTypes, PropType } from 'vue'
 import { useCustomClassProp, useCustomStyleProp } from '../composables'
 import { CLICK_EVENT } from '../constants'
 
@@ -9,8 +9,12 @@ export const cellProps = {
   value: String,
   label: String,
   icon: String,
-  arrow: Boolean,
+  arrow: {
+    type: [Boolean, String] as PropType<boolean | 'right' | 'bottom'>,
+  },
+  center: Boolean,
   clickable: Boolean,
+  disabled: Boolean,
 }
 
 export const cellEmits = {

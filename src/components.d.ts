@@ -9,6 +9,8 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    AACollapse: typeof import('./ano-ui/components/AACollapse/AACollapse.vue')['default']
+    AACollapseItem: typeof import('./ano-ui/components/AACollapseItem/AACollapseItem.vue')['default']
     AActionSheet: typeof import('./ano-ui/components/AActionSheet/AActionSheet.vue')['default']
     AAvatar: typeof import('./ano-ui/components/AAvatar/AAvatar.vue')['default']
     AAvatarGroup: typeof import('./ano-ui/components/AAvatarGroup/AAvatarGroup.vue')['default']
