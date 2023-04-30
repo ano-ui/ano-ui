@@ -57,6 +57,13 @@
       }
     },
     {
+      "path": "pages/basic/collapse-transition",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "CollapseTransition 折叠过渡"
+      }
+    },
+    {
       "path": "pages/basic/popup",
       "type": "page",
       "style": {
