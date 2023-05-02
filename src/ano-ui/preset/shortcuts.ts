@@ -5,7 +5,7 @@ export const shortcuts: UserShortcuts<Theme> = {
   'a-bg': 'bg-gray-100 dark:bg-black',
   'a-bg-2': 'bg-white dark:bg-[#1C1C1E]',
   'a-border': 'border-[#EBEDF0] dark:border-[#3A3A3C]',
-  'a-active': 'bg-[#F2F3F5] dark:!bg-[#3A3A3C]',
+  'a-active': 'bg-[#F2F3F5] dark:bg-[#3A3A3C]',
   'a-active-h5': 'active:bg-[#F2F3F5] active:dark:bg-[#3A3A3C]',
   'a-text-color': 'text-[#323233] dark:text-[#F5F5F5]',
   'a-text-color-2': 'text-[#969799] dark:text-[#707070]',

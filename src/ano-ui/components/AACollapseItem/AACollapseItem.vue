@@ -12,7 +12,10 @@ const { className, clickHandler, clickOpenCollapse, arrow, expanded } = useAColl
 
 <template>
   <div :class="[className, cc]" :style="cs" @click="clickHandler">
-    <ACell :disabled="disabled" :title="title" :label="label" :value="value" :icon="icon" :arrow="arrow" @click="clickOpenCollapse">
+    <ACell
+      :disabled="disabled" :title="title" :label="label" :value="value" :icon="icon" :arrow="arrow"
+      @click="clickOpenCollapse"
+    >
       <template #title>
         <slot name="title" />
       </template>

@@ -72,5 +72,5 @@
 
 <route lang="yaml">
 style:
-  navigationBarTitleText: ACollapse
+  navigationBarTitleText: Collapse 折叠面板
 </route>

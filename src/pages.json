@@ -85,17 +85,17 @@
       }
     },
     {
-      "path": "pages/display/a-collapse",
-      "type": "page",
-      "style": {
-        "navigationBarTitleText": "ACollapse"
-      }
-    },
-    {
       "path": "pages/display/badge",
       "type": "page",
       "style": {
         "navigationBarTitleText": "Badge 标记"
+      }
+    },
+    {
+      "path": "pages/display/collapse",
+      "type": "page",
+      "style": {
+        "navigationBarTitleText": "Collapse 折叠面板"
       }
     },
     {
