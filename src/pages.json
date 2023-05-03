@@ -163,7 +163,8 @@
     "backgroundColor": "@bgColor",
     "backgroundTextStyle": "@bgTxtStyle",
     "backgroundColorTop": "@bgColorTop",
-    "backgroundColorBottom": "@bgColorBottom"
+    "backgroundColorBottom": "@bgColorBottom",
+    "navigationStyle": "custom"
   },
   "subPackages": []
 }

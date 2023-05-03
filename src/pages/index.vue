@@ -31,9 +31,9 @@ function goNavigation(path: string) {
 </script>
 
 <template>
-  <UBasePage>
-    <div class="pb-safe">
-      <div class="p4 text-center a-color-base" flex="~ col gap1">
+  <UBasePage :show="false">
+    <div class="pt-10 pb-safe">
+      <div class="p4 text-center" flex="~ col gap1">
         <div class="text-xl">
           Ano UI
         </div>

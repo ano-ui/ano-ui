@@ -13,97 +13,99 @@ function getInfo() {
   <UBasePage>
     <div class="pb-safe">
       <div class="p-4">
-        类型
+        按钮类型
       </div>
       <div flex="~ gap2 wrap" items-center px-4>
         <AButton>
-          Primary
+          主要按钮
         </AButton>
         <AButton type="success">
-          Success
+          成功按钮
         </AButton>
         <AButton type="info">
-          Info
+          信息按钮
         </AButton>
         <AButton type="warning">
-          Warning
+          警告按钮
         </AButton>
         <AButton type="danger">
-          Danger
+          危险按钮
         </AButton>
       </div>
       <div class="p-4">
-        Size 大小
+        按钮大小
       </div>
       <div flex="~ gap2 wrap" items-center px-4>
         <AButton type="primary" size="mini">
-          Mini
+          迷你按钮
         </AButton>
         <AButton type="success" size="small">
-          Small
+          小型按钮
         </AButton>
         <AButton type="info" size="normal">
-          Normal
+          普通按钮
         </AButton>
         <AButton type="warning" size="large">
-          Large
+          大型按钮
         </AButton>
       </div>
       <div class="p-4">
-        Variant 变体
+        按钮变体
       </div>
       <div flex="~ gap2 wrap" items-center px-4>
         <AButton variant="solid">
-          Solid
+          实心按钮
         </AButton>
         <AButton type="success" variant="outline">
-          Outline
+          空心按钮
         </AButton>
         <AButton type="info" variant="ghost">
-          Ghost
+          虚线按钮
         </AButton>
         <AButton type="warning" variant="light">
-          Light
+          次要按钮
         </AButton>
         <AButton type="danger" variant="text">
-          Text
+          文字按钮
         </AButton>
       </div>
       <div class="p-4">
-        状态 State
+        按钮状态
       </div>
       <div flex="~ gap2 wrap" items-center px-4>
         <AButton loading>
-          Loading
+          加载中
         </AButton>
         <AButton type="success" disabled>
-          Disabled
+          禁用状态
         </AButton>
       </div>
       <div class="p-4">
-        Custom
+        自定义
       </div>
       <div flex="~ gap2 wrap" items-center px-4>
         <AButton icon="i-tabler-carrot" />
-        <AButton type="success" square>
-          S
+        <AButton type="success" cc="rounded-none aspect-square">
+          方
         </AButton>
-        <AButton type="info" round>
-          Round
+        <AButton type="info" cc="rounded-full aspect-square">
+          圆
         </AButton>
-        <AButton type="warning" icon="i-tabler-send">
-          Send
+        <AButton type="warning">
+          <template #icon>
+            <i class="i-tabler-send" /> 插槽
+          </template>
         </AButton>
         <AButton cc="bg-teal border-teal" open-type="getUserInfo" @click="getInfo">
           OpenType
         </AButton>
         <AButton :cc="['bg-gradient-to-r', 'from-indigo-500', 'to-pink-500']">
-          Bg Gradient
+          背景渐变
         </AButton>
       </div>
       <div mt-2 px-4>
         <AButton type="danger" block>
-          Block
+          块级元素
         </AButton>
       </div>
     </div>

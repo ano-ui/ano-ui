@@ -1,15 +1,18 @@
 <script setup lang='ts'>
-import { BooleanProp } from '../composables'
+import { useCustomClassProp, useCustomStyleProp } from '../composables'
 
 defineProps({
-  dark: BooleanProp,
+  dark: {
+    type: Boolean,
+    default: false,
+  },
+  cc: useCustomClassProp,
+  cs: useCustomStyleProp,
 })
 </script>
 
 <template>
-  <div :class="{ dark }">
-    <div class="a-bg a-text-color">
-      <slot />
-    </div>
+  <div class="a-bg a-text-color" :class="[{ dark }, cc]" :style="cs">
+    <slot />
   </div>
 </template>

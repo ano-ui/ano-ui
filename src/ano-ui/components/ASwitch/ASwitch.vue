@@ -10,12 +10,12 @@ const { disabled, checked, toggle } = useSwitch(props, emit)
 
 <template>
   <div
-    class="relative rounded-full bg-context text-white a-transition dark:bg-op80 dark:text-op80"
+    class="relative rounded-full bg-context text-white transition-all dark:bg-op80 dark:text-op80"
     :class="[`a-switch-${size}`, checked ? `a-${type}` : 'a-gray3', { '!a-gray2 dark:!a-gray4': disabled }, cc]" :style="cs"
     @click="toggle"
   >
     <div
-      class="absolute inset-0.5 right-auto rounded-full bg-white text-context a-transition"
+      class="absolute inset-0.5 right-auto rounded-full bg-white text-context transition-all"
       :class="[`a-switch-dot-${size}`, { 'left-50%': checked }, { 'a-gray3': disabled }]"
     >
       <template v-if="checked">
@@ -59,19 +59,19 @@ const { disabled, checked, toggle } = useSwitch(props, emit)
 
 <style scoped>
 .a-switch-mini {
-  --at-apply: 'min-w9 h5 text-xs'
+  --at-apply: 'min-w10 h5 text-xs'
 }
 
 .a-switch-small {
-  --at-apply: 'min-w11 h6 text-sm'
+  --at-apply: 'min-w12 h6 text-sm'
 }
 
 .a-switch-normal {
-  --at-apply: 'min-w13 h7 text-base'
+  --at-apply: 'min-w14 h7 text-base'
 }
 
 .a-switch-large {
-  --at-apply: 'min-w15 h8 text-lg'
+  --at-apply: 'min-w16 h8 text-lg'
 }
 
 .a-switch-dot-mini {

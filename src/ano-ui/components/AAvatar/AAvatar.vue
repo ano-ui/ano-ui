@@ -10,13 +10,12 @@ const { classes, clickHandler, mode } = useAvatar(props, emit)
 
 <template>
   <div
-    class="a-avatar box-border inline-flex items-center justify-center overflow-hidden rounded"
-    :class="[classes, cc]" :style="[cs]" @click="clickHandler"
+    class="a-avatar box-border aspect-square inline-flex items-center justify-center overflow-hidden rounded"
+    :class="[classes, `a-text-${size}`, cc]" :style="[cs]" @click="clickHandler"
   >
-    <image v-if="src" :mode="mode" class="h-full w-full align-middle" :src="src" />
+    <image v-if="src" :mode="mode" class="h-full w-full" :src="src" />
     <slot />
   </div>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>

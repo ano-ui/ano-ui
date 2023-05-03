@@ -11,11 +11,11 @@ export const shortcuts: UserShortcuts<Theme> = {
   'a-text-color-2': 'text-[#969799] dark:text-[#707070]',
   'a-text-color-3': 'text-[#C8C9CC] dark:text-[#4D4D4D]',
 
-  'a-color-base': 'text-gray-700 dark:text-light-200',
-  'a-color-base-second': 'text-gray-400 dark:text-gray-500/60',
-  // 'a-border-base': 'border-gray-400/80',
-  'a-border-200': 'border-gray-400/25',
-  'a-border-300': 'border-gray-400/40',
+  'a-text-mini': 'text-xs',
+  'a-text-small': 'text-sm',
+  'a-text-normal': 'text-base',
+  'a-text-large': 'text-lg',
+
   'a-transition': 'transition-all duration-200',
 
   'a-solid': 'bg-context text-white dark:bg-op80 dark:text-op80',
