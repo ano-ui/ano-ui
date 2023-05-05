@@ -5,27 +5,27 @@
   <UBasePage>
     <div class="pb-safe">
       <div class="p-4">
-        Basic 基础
+        基础用法
       </div>
       <div>
-        <ACell title="Title" value="Content" />
-        <ACell value="No Title" />
-        <ACell icon="i-tabler-carrot" title="Title" value="Content" label="Description Description Description" />
+        <ACell title="单元格" value="内容" />
+        <ACell value="无标题内容" />
+        <ACell icon="i-tabler-carrot" title="单元格" value="内容" label="描述信息" />
       </div>
       <div class="p-4">
-        Custom 自定义
+        自定义
       </div>
       <ACellGroup divider>
-        <ACell icon="i-tabler-carrot" title="Title" value="Content" label="Description" arrow />
-        <ACell title="Slots">
+        <ACell icon="i-tabler-carrot" title="单元格" value="内容" label="描述信息" arrow />
+        <ACell title="单元格">
           <template #icon>
             <i class="i-tabler-carrot" />
           </template>
           <template #value>
-            <div>Content slot</div>
+            <div>内容插槽</div>
           </template>
           <template #label>
-            <div>Description slot</div>
+            <div>描述信息插槽</div>
           </template>
           <template #right-icon>
             <i class="i-tabler-search" />
@@ -33,12 +33,12 @@
         </ACell>
       </ACellGroup>
       <div class="p-4">
-        Cell Group
+        单元格组
       </div>
       <ACellGroup inset arrow divider>
-        <ACell title="Title" value="Content" />
-        <ACell title="Title" value="Content" />
-        <ACell title="Title" value="Content" />
+        <ACell title="单元格" value="内容" />
+        <ACell title="单元格" value="内容" />
+        <ACell title="单元格" value="内容" />
       </ACellGroup>
     </div>
   </UBasePage>

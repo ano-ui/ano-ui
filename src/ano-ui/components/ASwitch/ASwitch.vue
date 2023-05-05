@@ -5,18 +5,18 @@ import { useSwitch } from './use-switch'
 const props = defineProps(switchProps)
 const emit = defineEmits(switchEmits)
 
-const { disabled, checked, toggle } = useSwitch(props, emit)
+const { disabled, checked, dotTranslateClasses, toggle } = useSwitch(props, emit)
 </script>
 
 <template>
   <div
     class="relative rounded-full bg-context text-white transition-all dark:bg-op80 dark:text-op80"
-    :class="[`a-switch-${size}`, checked ? `a-${type}` : 'a-gray3', { '!a-gray2 dark:!a-gray4': disabled }, cc]" :style="cs"
-    @click="toggle"
+    :class="[`a-switch-${size}`, `a-text-${size}`, checked ? `a-${type}` : 'a-gray3', { 'op-50': disabled }, cc]"
+    :style="cs" @click="toggle"
   >
     <div
-      class="absolute inset-0.5 right-auto rounded-full bg-white text-context transition-all"
-      :class="[`a-switch-dot-${size}`, { 'left-50%': checked }, { 'a-gray3': disabled }]"
+      class="absolute top-0.5 rounded-full bg-white text-context transition-all"
+      :class="[`a-switch-dot-${size}`, checked ? dotTranslateClasses : 'left-0.5']"
     >
       <template v-if="checked">
         <div
@@ -34,7 +34,7 @@ const { disabled, checked, toggle } = useSwitch(props, emit)
 
     <template v-if="checked">
       <div
-        class="absolute inset-0.5 right-auto flex animate-zoom-in animate-duration-200 items-center justify-center a-transition !leading-none"
+        class="absolute left-0.5 right-auto top-0.5 flex animate-zoom-in animate-duration-200 items-center justify-center a-transition !leading-none"
         :class="[`a-switch-dot-${size}`]"
       >
         <template v-if="activeLabel">
@@ -45,7 +45,7 @@ const { disabled, checked, toggle } = useSwitch(props, emit)
     </template>
     <template v-else>
       <div
-        class="absolute inset-0.5 left-50% right-auto flex animate-zoom-in animate-duration-200 items-center justify-center a-transition !leading-none"
+        class="absolute right-0.5 top-0.5 flex animate-zoom-in animate-duration-200 items-center justify-center a-transition !leading-none"
         :class="[`a-switch-dot-${size}`]"
       >
         <template v-if="inactiveLabel">
@@ -59,19 +59,19 @@ const { disabled, checked, toggle } = useSwitch(props, emit)
 
 <style scoped>
 .a-switch-mini {
-  --at-apply: 'min-w10 h5 text-xs'
+  --at-apply: 'min-w8 h5'
 }
 
 .a-switch-small {
-  --at-apply: 'min-w12 h6 text-sm'
+  --at-apply: 'min-w10 h6'
 }
 
 .a-switch-normal {
-  --at-apply: 'min-w14 h7 text-base'
+  --at-apply: 'min-w12 h7'
 }
 
 .a-switch-large {
-  --at-apply: 'min-w16 h8 text-lg'
+  --at-apply: 'min-w14 h8'
 }
 
 .a-switch-dot-mini {

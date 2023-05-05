@@ -30,12 +30,12 @@ function log(msg: string) {
           class="h-full w-full flex items-center justify-center text-white"
           @click="showValue = false"
         >
-          Content
+          内容
         </div>
       </ATransition>
 
       <div class="p-4">
-        Basic
+        基础用法
       </div>
       <ACellGroup inset divider arrow>
         <ACell title="Fade" @click="show('fade')" />

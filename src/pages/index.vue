@@ -41,7 +41,7 @@ function goNavigation(path: string) {
         <div>一个使用 UnoCSS 的 UniApp 组件</div>
       </div>
       <div class="p-4">
-        Basic 基础组件
+        基础组件
       </div>
       <ACellGroup arrow inset divider>
         <ACell title="Avatar 头像" @click="goBasic('avatar')" />
@@ -53,7 +53,7 @@ function goNavigation(path: string) {
         <ACell title="CollapseTransition 折叠过渡" @click="goBasic('collapse-transition')" />
       </ACellGroup>
       <div class="p-4">
-        Form 表单组件
+        表单组件
       </div>
       <ACellGroup arrow inset divider>
         <ACell title="Checkbox 复选框" @click="goForm('checkbox')" />
@@ -62,7 +62,7 @@ function goNavigation(path: string) {
         <ACell title="Switch 开关" @click="goForm('switch')" />
       </ACellGroup>
       <div class="p-4">
-        Action 反馈组件
+        反馈组件
       </div>
       <ACellGroup arrow inset divider>
         <ACell title="ActionSheet 动作面板" @click="goAction('action-sheet')" />
@@ -71,7 +71,7 @@ function goNavigation(path: string) {
         <ACell title="Overlay 遮罩层" @click="goAction('overlay')" />
       </ACellGroup>
       <div class="p-4">
-        Display 展示组件
+        展示组件
       </div>
       <ACellGroup arrow inset divider>
         <ACell title="Collapse 折叠面板" @click="goDisplay('collapse')" />
@@ -80,7 +80,7 @@ function goNavigation(path: string) {
         <ACell title="Badge 标记" @click="goDisplay('badge')" />
       </ACellGroup>
       <div class="p-4">
-        Navigation 导航组件
+        导航组件
       </div>
       <ACellGroup arrow inset divider>
         <ACell title="TabBar 标签栏" @click="goNavigation('tab-bar')" />

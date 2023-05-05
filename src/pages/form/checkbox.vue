@@ -23,38 +23,38 @@ function toggle(index: any) {
   <UBasePage>
     <div class="pb-safe">
       <div class="p-4">
-        Type
+        自定义类型
       </div>
       <div px-4 flex="~ col gap2">
-        <ACheckbox v-model="checked" label="Primary" />
-        <ACheckbox v-model="checked" type="success" label="Success" />
-        <ACheckbox v-model="checked" type="info" label="Info" />
-        <ACheckbox v-model="checked" type="warning" label="Warning" />
-        <ACheckbox v-model="checked" type="danger" label="Danger" />
+        <ACheckbox v-model="checked" label="主要" />
+        <ACheckbox v-model="checked" type="success" label="成功" />
+        <ACheckbox v-model="checked" type="info" label="信息" />
+        <ACheckbox v-model="checked" type="warning" label="警告" />
+        <ACheckbox v-model="checked" type="danger" label="危险" />
       </div>
 
       <div class="p-4">
         大小
       </div>
       <div px-4 flex="~ col gap2">
-        <ACheckbox v-model="checked" type="primary" size="mini" label="Mini" />
-        <ACheckbox v-model="checked" type="success" size="small" label="Small" />
-        <ACheckbox v-model="checked" type="info" size="normal" label="Normal" />
-        <ACheckbox v-model="checked" type="warning" size="large" label="Large" />
+        <ACheckbox v-model="checked" type="primary" size="mini" label="迷你" />
+        <ACheckbox v-model="checked" type="success" size="small" label="小型" />
+        <ACheckbox v-model="checked" type="info" size="normal" label="普通" />
+        <ACheckbox v-model="checked" type="warning" size="large" label="大型" />
       </div>
       <div class="p-4">
-        Status
+        状态
       </div>
       <div px-4 flex="~ col gap2">
-        <ACheckbox type="success" disabled label="Unchecked" />
-        <ACheckbox v-model="statusChecked2" type="success" disabled label="Checked" />
+        <ACheckbox type="success" disabled label="禁用" />
+        <ACheckbox v-model="statusChecked2" type="success" disabled label="禁用" />
       </div>
       <div class="p-4">
-        Custom
+        自定义
       </div>
       <div px-4 flex="~ col gap2">
-        <ACheckbox v-model="checked2" :value="1" label="Value" icon="i-tabler-carrot" />
-        <ACheckbox v-model="checked3" custom-icon value="yes" label="Slot Icon">
+        <ACheckbox v-model="checked2" :value="1" label="值" icon="i-tabler-carrot" />
+        <ACheckbox v-model="checked3" custom-icon value="yes" label="图标插槽">
           <template #icon="props">
             <div :class="props.checked ? 'i-tabler-carrot' : 'i-tabler-lemon a-text-color-2'" />
           </template>
@@ -62,7 +62,7 @@ function toggle(index: any) {
       </div>
 
       <div class="p-4">
-        CheckboxGroup: {{ groupChecked }}
+        复选框组: {{ groupChecked }}
       </div>
       <div px-4>
         <ACheckboxGroup v-model="groupChecked">
@@ -73,7 +73,7 @@ function toggle(index: any) {
       </div>
 
       <div class="p-4">
-        CheckboxGroup Min Max[1-2]: {{ groupChecked2 }}
+        复选框组限制可选数量[1-2]: {{ groupChecked2 }}
       </div>
       <div px-4>
         <ACheckboxGroup v-model="groupChecked2" :min="1" :max="2" direction="horizontal">
@@ -84,22 +84,22 @@ function toggle(index: any) {
       </div>
 
       <div class="p-4">
-        CheckboxGroup with Cell: {{ groupChecked }}
+        搭配单元格组件使用: {{ groupChecked }}
       </div>
       <ACheckboxGroup v-model="groupChecked">
         <ACellGroup inset divider clickable>
-          <ACell title="Title a" @click="toggle('a')">
-            <template #value>
+          <ACell title="复选框 a" @click="toggle('a')">
+            <template #right-icon>
               <ACheckbox value="a" />
             </template>
           </ACell>
-          <ACell title="Title b" @click="toggle('b')">
-            <template #value>
+          <ACell title="复选框 b" @click="toggle('b')">
+            <template #right-icon>
               <ACheckbox value="b" />
             </template>
           </ACell>
-          <ACell title="Title c" @click="toggle('c')">
-            <template #value>
+          <ACell title="复选框 c" @click="toggle('c')">
+            <template #right-icon>
               <ACheckbox value="c" />
             </template>
           </ACell>

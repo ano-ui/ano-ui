@@ -10,15 +10,15 @@ const groupChecked4 = ref<RadioGroupValue>('a')
   <UBasePage>
     <div class="pb-safe">
       <div class="p-4">
-        Type
+        自定义类型
       </div>
       <div px-4>
         <ARadioGroup v-model="groupChecked1">
-          <ARadio value="a" label="Primary" />
-          <ARadio value="b" type="success" label="Success" />
-          <ARadio value="c" type="info" label="Info" />
-          <ARadio value="d" type="warning" label="Warning" />
-          <ARadio value="e" type="danger" label="Danger" />
+          <ARadio value="a" label="主要" />
+          <ARadio value="b" type="success" label="成功" />
+          <ARadio value="c" type="info" label="信息" />
+          <ARadio value="d" type="warning" label="警告" />
+          <ARadio value="e" type="danger" label="危险" />
         </ARadioGroup>
       </div>
 
@@ -53,33 +53,33 @@ const groupChecked4 = ref<RadioGroupValue>('a')
       </div>
 
       <div class="p-4">
-        Status
+        状态
       </div>
       <div px-4>
         <ARadioGroup v-model="groupChecked3" size="small" direction="horizontal">
-          <ARadio value="a" type="success" label="Checked" />
-          <ARadio value="b" type="success" label="UnChecked" />
-          <ARadio value="c" type="success" disabled label="Disabled" />
+          <ARadio value="a" type="success" label="选中" />
+          <ARadio value="b" type="success" label="未选中" />
+          <ARadio value="c" type="success" disabled label="禁用" />
         </ARadioGroup>
       </div>
 
       <div class="p-4">
-        RadioGroup with Cell: {{ groupChecked4 }}
+        搭配单元格组件使用: {{ groupChecked4 }}
       </div>
       <ARadioGroup v-model="groupChecked4">
         <ACellGroup inset divider clickable>
-          <ACell title="Radio a" @click="groupChecked4 = 'a'">
-            <template #value>
+          <ACell title="单选框 a" @click="groupChecked4 = 'a'">
+            <template #right-icon>
               <ARadio value="a" />
             </template>
           </ACell>
-          <ACell title="Radio b" @click="groupChecked4 = 'b'">
-            <template #value>
+          <ACell title="单选框 b" @click="groupChecked4 = 'b'">
+            <template #right-icon>
               <ARadio value="b" />
             </template>
           </ACell>
-          <ACell title="Radio c" @click="groupChecked4 = 'c'">
-            <template #value>
+          <ACell title="单选框 c" @click="groupChecked4 = 'c'">
+            <template #right-icon>
               <ARadio value="c" />
             </template>
           </ACell>
