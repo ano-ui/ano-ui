@@ -8,7 +8,7 @@ const show = ref(true)
   <UBasePage>
     <div class="pb-safe">
       <div class="p-4">
-        Type
+        基础用法
       </div>
       <div px-4 flex="~ col gap2">
         <ANoticeBar>
@@ -42,7 +42,7 @@ const show = ref(true)
         </ANoticeBar>
       </div>
       <div class="p-4">
-        Custom
+        自定义
       </div>
       <div px-4>
         <ANoticeBar mt2 cc="bg-gradient-to-r from-indigo-500 to-pink-500 border-none">
@@ -58,5 +58,5 @@ const show = ref(true)
 
 <route lang="yaml">
 style:
-  navigationBarTitleText: NoticeBar 通告栏
+  navigationBarTitleText: NoticeBar 通知栏
 </route>

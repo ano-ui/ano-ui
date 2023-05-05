@@ -14,7 +14,7 @@ defineProps({
 })
 
 const curPage = getCurrentPages().at(-1) as any
-const { meta: { navigationBar: { titleText } } } = curPage.$page
+const titleText = curPage.$page?.meta?.navigationBar?.titleText || '标题'
 
 function onClickLeft() {
   const pages = getCurrentPages()

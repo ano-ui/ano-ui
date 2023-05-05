@@ -15,11 +15,11 @@ const showValue2 = ref(false)
         </div>
       </AOverlay>
       <div class="p-4">
-        Overlay
+        基础用法
       </div>
       <ACellGroup arrow divider inset>
-        <ACell arrow title="Show" @click="showValue1 = true" />
-        <ACell arrow title="Embedded Content" @click="showValue2 = true" />
+        <ACell arrow title="展示遮罩" @click="showValue1 = true" />
+        <ACell arrow title="嵌入内容" @click="showValue2 = true" />
       </ACellGroup>
     </div>
   </UBasePage>

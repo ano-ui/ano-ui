@@ -43,43 +43,47 @@ const topStyle = computed(() => {
       <ANotify ref="notify3" :cs="topStyle" ccc="bg-gradient-to-r from-indigo-500 to-pink-500 border-none" />
 
       <div class="p-4">
-        Notify
+        基础用法
       </div>
       <ACellGroup arrow divider inset>
-        <ACell title="Show" @click="showNotify({ type: 'primary', position: 'default', message: 'Notify' })" />
+        <ACell title="基础用法" @click="showNotify({ type: 'primary', position: 'default', message: '通知内容' })" />
       </ACellGroup>
 
       <div class="p-4">
-        Position
+        自定义位置
       </div>
       <ACellGroup arrow divider inset>
-        <ACell title="Default" @click="showNotify({ position: 'default', message: 'Default' })" />
-        <ACell title="Top" @click="showNotify({ position: 'top', message: 'Top' })" />
-        <ACell title="Top Left" @click="showNotify({ position: 'top-left', message: 'Top Left' })" />
-        <ACell title="Top Right" @click="showNotify({ position: 'top-right', message: 'Top Right' })" />
-        <ACell title="Bottom" @click="showNotify({ position: 'bottom', message: 'Bottom' })" />
-        <ACell title="Bottom Left" @click="showNotify({ position: 'bottom-left', message: 'Bottom Left' })" />
-        <ACell title="Bottom Right" @click="showNotify({ position: 'bottom-right', message: 'Bottom Right' })" />
+        <ACell title="默认顶部" @click="showNotify({ position: 'default', message: '通知内容' })" />
+        <ACell title="上方" @click="showNotify({ position: 'top', message: '通知内容' })" />
+        <ACell title="左上角" @click="showNotify({ position: 'top-left', message: '通知内容' })" />
+        <ACell title="右上角" @click="showNotify({ position: 'top-right', message: '通知内容' })" />
+        <ACell title="下方" @click="showNotify({ position: 'bottom', message: '通知内容' })" />
+        <ACell title="左下角" @click="showNotify({ position: 'bottom-left', message: '通知内容' })" />
+        <ACell title="右下角" @click="showNotify({ position: 'bottom-right', message: '通知内容' })" />
       </ACellGroup>
 
       <div class="p-4">
-        Type Icon
+        自定义图标
       </div>
       <ACellGroup arrow divider inset>
-        <ACell title="Primary" @click="showNotify({ type: 'primary', showIcon: true, message: 'Primary Icon' })" />
-        <ACell title="Success" @click="showNotify({ type: 'success', showIcon: true, message: 'Success Icon' })" />
-        <ACell title="Warning" @click="showNotify({ type: 'warning', showIcon: true, message: 'Warning Icon' })" />
-        <ACell title="Danger" @click="showNotify({ type: 'danger', showIcon: true, message: 'Danger Icon' })" />
+        <ACell title="主要通知" @click="showNotify({ type: 'primary', showIcon: true, message: '通知内容' })" />
+        <!-- <ACell title="信息通知" @click="showNotify({ type: 'info', showIcon: true, message: '通知内容' })" /> -->
+        <ACell title="成功通知" @click="showNotify({ type: 'success', showIcon: true, message: '通知内容' })" />
+        <ACell title="警告通知" @click="showNotify({ type: 'warning', showIcon: true, message: '通知内容' })" />
+        <ACell title="危险通知" @click="showNotify({ type: 'danger', showIcon: true, message: '通知内容' })" />
       </ACellGroup>
 
       <div class="p-4">
-        Custom
+        自定义
       </div>
       <ACellGroup arrow divider inset>
-        <ACell title="Custom Icon" @click="showNotify2({ type: 'primary', position: 'top', message: 'Custom Icon' })" />
-        <ACell title="Show Close" @click="showNotify2({ type: 'success', position: 'top', message: 'Show Close', showClose: true })" />
-        <ACell title="Slot" @click="showNotify2({ type: 'info', position: 'top' })" />
-        <ACell title="Bg Gradient" @click="showNotify3({ type: 'warning', position: 'top', message: 'Bg Gradient' })" />
+        <ACell title="图标" @click="showNotify2({ type: 'primary', position: 'top', message: '通知内容' })" />
+        <ACell
+          title="关闭按钮"
+          @click="showNotify2({ type: 'success', position: 'top', message: '通知内容', showClose: true })"
+        />
+        <ACell title="插槽" @click="showNotify2({ type: 'info', position: 'top' })" />
+        <ACell title="背景渐变" @click="showNotify3({ type: 'warning', position: 'top', message: '通知内容' })" />
       </ACellGroup>
     </div>
   </UBasePage>

@@ -102,7 +102,7 @@
       "path": "pages/display/notice-bar",
       "type": "page",
       "style": {
-        "navigationBarTitleText": "NoticeBar 通告栏"
+        "navigationBarTitleText": "NoticeBar 通知栏"
       }
     },
     {

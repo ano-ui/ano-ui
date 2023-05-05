@@ -6,7 +6,7 @@ const active = ref('home')
   <UBasePage>
     <div class="pb-safe">
       <div class="p-4">
-        Basic
+        基础用法
       </div>
       <ATabBar v-model="active">
         <ATabBarItem name="home" icon="i-tabler-home">
@@ -21,7 +21,7 @@ const active = ref('home')
       </ATabBar>
 
       <div class="p-4">
-        Custom
+        自定义
       </div>
       <ATabBar v-model="active">
         <ATabBarItem name="home">
