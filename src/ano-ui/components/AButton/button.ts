@@ -23,8 +23,6 @@ export const buttonProps = {
   type: useButtonProp,
   size: useButtonSizeProp,
   variant: useVariantProp,
-  square: Boolean,
-  round: Boolean,
   disabled: Boolean,
   icon: String,
   openType: String,

@@ -15,7 +15,7 @@ provide(cellGroupKey,
 <template>
   <div
     :class="[{ 'mx-4 rounded-lg overflow-hidden': inset },
-             { '[&_a-cell:last-child_.a-cell]:after:display-none [&>.a-cell+.a-cell:last-child]:after:display-none': divider }, cc]"
+             { '[&_a-cell:last-child_.a-cell]:after:content-none [&>.a-cell+.a-cell]:after:content-none': divider }, cc]"
     :style="cs"
   >
     <slot />

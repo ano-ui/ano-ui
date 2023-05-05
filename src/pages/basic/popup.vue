@@ -9,31 +9,45 @@ function handleShow(p: PositionType) {
   showValue.value = true
   position.value = p
 }
+
+const topStyle = computed(() => {
+  let top = '0px'
+  // #ifdef H5
+  // H5默认导航栏高度为44px
+  top = '44px'
+  // #endif
+  return {
+    top,
+  }
+})
 </script>
 
 <template>
   <UBasePage>
     <div class="pb-safe">
-      <APopup v-model:show="showValue" :position="position" :duration="300">
+      <APopup
+        v-model:show="showValue" :position="position" :duration="300"
+        :cs="[position === 'top' || position === 'left' || position === 'right' ? topStyle : '']"
+      >
         <div class="h-100px w-200px flex items-center justify-center bg-primary text-white">
-          Content
+          内容
         </div>
       </APopup>
 
       <div class="p-4">
-        Basic 基础
+        基础用法
       </div>
       <ACellGroup inset divider arrow>
-        <ACell title="Show Popup" arrow @click="handleShow('center')" />
+        <ACell title="展示弹出层" arrow @click="handleShow('center')" />
       </ACellGroup>
       <div class="p-4">
-        Position 位置
+        位置
       </div>
       <ACellGroup inset divider arrow>
-        <ACell title="From Top" @click="handleShow('top')" />
-        <ACell title="From Bottom" @click="handleShow('bottom')" />
-        <ACell title="From Left" @click="handleShow('left')" />
-        <ACell title="From Right" @click="handleShow('right')" />
+        <ACell title="顶部弹出" @click="handleShow('top')" />
+        <ACell title="底部弹出" @click="handleShow('bottom')" />
+        <ACell title="左侧弹出" @click="handleShow('left')" />
+        <ACell title="右侧弹出" @click="handleShow('right')" />
       </ACellGroup>
     </div>
   </UBasePage>

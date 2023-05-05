@@ -15,6 +15,12 @@ export const cellProps = {
   center: Boolean,
   clickable: Boolean,
   disabled: Boolean,
+  titleClass: useCustomClassProp,
+  titleStyle: useCustomStyleProp,
+  valueClass: useCustomClassProp,
+  valueStyle: useCustomStyleProp,
+  labelClass: useCustomClassProp,
+  labelStyle: useCustomStyleProp,
 }
 
 export const cellEmits = {

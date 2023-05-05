@@ -9,10 +9,11 @@ const disChecked = ref(true)
   <UBasePage>
     <div class="pb-safe">
       <div class="p-4">
-        Color
+        自定义类型
       </div>
       <div flex="~ gap2 wrap" items-center px-4>
         <ASwitch v-model="checked" />
+        <ASwitch v-model="checked" type="info" />
         <ASwitch v-model="checked" type="success" />
         <ASwitch v-model="checked" type="warning" />
         <ASwitch v-model="checked" type="danger" />
@@ -23,12 +24,13 @@ const disChecked = ref(true)
       </div>
       <div flex="~ gap2 wrap" items-center px-4>
         <ASwitch v-model="checked" type="primary" size="mini" />
-        <ASwitch v-model="checked" type="success" size="small" />
-        <ASwitch v-model="checked" type="warning" size="normal" />
-        <ASwitch v-model="checked" type="danger" size="large" />
+        <ASwitch v-model="checked" type="info" size="small" />
+        <ASwitch v-model="checked" type="success" size="normal" />
+        <ASwitch v-model="checked" type="warning" size="large" />
+        <ASwitch v-model="checked" type="danger" />
       </div>
       <div class="p-4">
-        Status
+        状态
       </div>
       <div flex="~ gap2 wrap" items-center px-4>
         <ASwitch :model-value="true" loading />
@@ -36,7 +38,7 @@ const disChecked = ref(true)
         <ASwitch v-model="disChecked" type="success" disabled />
       </div>
       <div class="p-4">
-        Custom
+        自定义
       </div>
       <div flex="~ gap2 wrap" items-center px-4>
         <ASwitch v-model="checked2" :active-value="1" active-label="1" :inactive-value="0" inactive-label="0" />

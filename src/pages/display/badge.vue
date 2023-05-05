@@ -5,7 +5,7 @@
   <UBasePage>
     <div class="pb-safe">
       <div class="p-4">
-        Basic
+        基础用法
       </div>
       <div items-center px-4 flex="~ gap6 wrap">
         <ABadge :value="16" :max="15">
@@ -16,7 +16,7 @@
         </ABadge>
       </div>
       <div class="p-4">
-        Color
+        自定义类型
       </div>
       <div items-center px-4 flex="~ gap6 wrap">
         <ABadge dot>
@@ -50,7 +50,7 @@
         </ABadge>
       </div>
       <div class="p-4">
-        Custom Value
+        自定义值
       </div>
       <div items-center px-4 flex="~ gap6 wrap">
         <ABadge value="你">

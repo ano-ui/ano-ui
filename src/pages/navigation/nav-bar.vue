@@ -29,30 +29,30 @@ function onClickRight() {
         @click-left="onClickLeft"
       />
       <div class="p-4">
-        Basic
+        基础用法
       </div>
       <ANavBar title="Title" />
       <div class="p-4">
-        Back
+        返回按钮
       </div>
       <ANavBar
-        title="Title"
-        left-text="Back"
+        title="标题"
+        left-text="返回"
         left-arrow
         @click-left="onClickLeft"
       />
       <div class="p-4">
-        Right Button
+        右边按钮
       </div>
       <ANavBar
-        title="Title"
-        right-text="Button"
+        title="标题"
+        right-text="按钮"
         left-arrow
         @click-left="onClickLeft"
         @click-right="onClickRight"
       />
       <div class="p-4">
-        Use Slot
+        插槽
       </div>
       <ANavBar
         :border="false"
@@ -71,19 +71,19 @@ function onClickRight() {
           </div>
         </template>
         <template #title>
-          Title
+          标题
         </template>
         <template #right>
           <div class="i-tabler-search a-nav-bar-icon" />
         </template>
       </ANavBar>
       <div class="p-4">
-        Use Default Slot
+        默认插槽
       </div>
       <ANavBar>
-        <AField icon="i-tabler-search" placeholder="Enter something" cc="h-full p2" class="flex-1" />
+        <AField icon="i-tabler-search" placeholder="搜索内容" cc="h-full p2" class="flex-1" />
         <AButton size="mini" mx-2 variant="light" @click="onClickRight">
-          Search
+          搜索
         </AButton>
       </ANavBar>
     </div>

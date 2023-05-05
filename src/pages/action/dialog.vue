@@ -14,11 +14,11 @@ function handleShow(options: DialogOptions) {
 }
 
 function handleConfirm() {
-  showToast({ message: 'confirm' })
+  showToast({ message: '确认' })
 }
 
 function handleCancel() {
-  showToast({ message: 'cancel' })
+  showToast({ message: '取消' })
 }
 </script>
 
@@ -29,20 +29,14 @@ function handleCancel() {
       <ADialog ref="dialogRef" @confirm="handleConfirm" @cancel="handleCancel" />
 
       <div class="p-4">
-        Dialog
+        基础用法
       </div>
       <ACellGroup arrow inset divider>
+        <ACell title="提示弹窗" @click="handleShow({ title: '标题', message: '我是内容呀' })" />
+        <ACell title="提示弹窗（无标题）" @click="handleShow({ message: '我是内容呀' })" />
         <ACell
-          title="Basic"
-          @click="handleShow({ title: 'Dialog Title', message: 'Dialog Message Dialog Message' })"
-        />
-        <ACell
-          title="Basic No Title"
-          @click="handleShow({ message: 'Dialog Message Dialog Message' })"
-        />
-        <ACell
-          title="Confirm"
-          @click="handleShow({ title: 'Dialog Title', message: 'Dialog Message Dialog Message', showCancelButton: true, showConfirmButton: true })"
+          title="确认弹窗"
+          @click="handleShow({ title: '标题', message: '我是内容呀', showCancelButton: true, showConfirmButton: true, confirmButtonText: '确认', cancelButtonText: '取消' })"
         />
       </ACellGroup>
     </div>

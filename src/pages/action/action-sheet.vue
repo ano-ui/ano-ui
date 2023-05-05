@@ -25,11 +25,11 @@ function onCancel() {
       <AActionSheet v-model:show="showValue2" :actions="actions" cancel-text="Cancel" @cancel="onCancel" />
 
       <div class="p-4">
-        Basic
+        基础用法
       </div>
       <ACellGroup arrow divider inset>
-        <ACell title="Show" @click="showValue = true" />
-        <ACell title="Show Cancel" @click="showValue2 = true" />
+        <ACell title="基础用法" @click="showValue = true" />
+        <ACell title="展示取消按钮" @click="showValue2 = true" />
       </ACellGroup>
     </div>
   </UBasePage>

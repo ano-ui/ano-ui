@@ -9,7 +9,7 @@ const { disabled, size, checked, toggle } = useRadio(props, emit)
 </script>
 
 <template>
-  <div class="flex items-center" :class="[`a-radio-${size}`, cc]" :style="cs">
+  <div class="flex items-center" :class="[`a-text-${size}`, cc]" :style="cs">
     <div
       class="relative border border-gray3 rounded-full border-solid transition-all duration-200 dark:border-op80"
       :class="[`a-radio-radio-${size}`, { 'a-radio-disabled': disabled }, ccc]"
@@ -32,22 +32,6 @@ const { disabled, size, checked, toggle } = useRadio(props, emit)
 </template>
 
 <style scoped>
-.a-radio-mini {
-  --at-apply: 'text-xs'
-}
-
-.a-radio-small {
-  --at-apply: 'text-sm'
-}
-
-.a-radio-normal {
-  --at-apply: 'text-base'
-}
-
-.a-radio-large {
-  --at-apply: 'text-lg'
-}
-
 .a-radio-disabled-label {
   --at-apply: 'text-[#C8C9CC] dark:text-[#4D4D4D]'
 }

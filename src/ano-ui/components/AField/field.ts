@@ -12,7 +12,7 @@ export const useFieldTypeProp = {
 
 export const useFieldLabelAlignProp = {
   type: String as PropType<FieldLabelAlign>,
-  validator: (value: string) => ['left', 'right', 'top'].includes(value),
+  validator: (value: string) => ['left', 'right', 'top', 'center'].includes(value),
   default: 'left',
 }
 

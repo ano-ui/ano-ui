@@ -25,7 +25,7 @@ const transformers: SourceCodeTransformer[] = []
 if (isApplet) {
   presets.push(presetApplet({ dark: 'media' }))
   presets.push(presetRemRpx())
-  transformers.push(transformerAttributify({ ignoreAttributes: ['block'] }))
+  transformers.push(transformerAttributify({ ignoreAttributes: ['block', 'fixed'] }))
   transformers.push(transformerApplet())
 }
 else {

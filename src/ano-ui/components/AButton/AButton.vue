@@ -10,14 +10,17 @@ const { disabled, clickHandler } = useButton(props, emit)
 
 <template>
   <button
-    class="a-button-wrapper-reset m-0 box-border flex items-center justify-center gap-2 text-center a-transition"
-    :class="[`a-${type}`, `a-button-${size}`, `a-${variant}`, block ? 'block' : 'inline-block',
-             round ? 'rounded-full' : square ? 'rounded-none' : 'rounded-lg', disabled ? 'op-50' : '', cc]"
-    :hover-class="disabled ? '' : '!before:op10'" :open-type="openType" :style="cs"
-    @click="clickHandler"
+    class="a-button-wrapper-reset m-0 box-border flex items-center justify-center gap-2 rounded text-center"
+    :class="[`a-${type}`, `a-button-${size}`, `a-${variant}`, block ? 'block' : 'inline-block', disabled ? 'op-50' : '', cc]"
+    :hover-class="disabled ? '' : '!before:op10'" :open-type="openType"
+    :style="cs" @click="clickHandler"
   >
     <div v-if="loading" class="i-tabler-loader animate-spin" />
-    <div v-else-if="icon" :class="[icon]" />
+    <template v-else>
+      <slot name="icon">
+        <div v-if="icon" :class="icon" />
+      </slot>
+    </template>
     <slot />
   </button>
 </template>
@@ -28,18 +31,18 @@ const { disabled, clickHandler } = useButton(props, emit)
 }
 
 .a-button-mini {
-  --at-apply: 'h-7.5 px2.5 text-xs'
+  --at-apply: 'h-6 px-1 text-xs'
 }
 
 .a-button-small {
-  --at-apply: 'h-9.5 px3.5 text-sm'
+  --at-apply: 'h-8 px-2 text-sm'
 }
 
 .a-button-normal {
-  --at-apply: 'h-11 px4.5 text-base'
+  --at-apply: 'h-11 px-5 text-base'
 }
 
 .a-button-large {
-  --at-apply: 'h-12.5 px5.5 text-lg'
+  --at-apply: 'h-12.5 px-6 text-lg'
 }
 </style>

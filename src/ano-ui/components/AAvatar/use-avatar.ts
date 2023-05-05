@@ -5,18 +5,20 @@ import type { AvatarEmits, AvatarProps } from './avatar'
 
 // @unocss-include
 
-export function useAvatar(props: AvatarProps,
-  emit: SetupContext<AvatarEmits>['emit']) {
+const sizeClasses = {
+  mini: 'w-8',
+  small: 'w-10',
+  normal: 'w-12',
+  large: 'w-14',
+}
+
+export function useAvatar(props: AvatarProps, emit: SetupContext<AvatarEmits>['emit']) {
   const classes = computed(() => {
-    return [
-      props.size === 'mini' && 'w-8 h-8 text-xs',
-      props.size === 'small' && 'w-10 h-10 text-sm',
-      props.size === 'normal' && 'w-12 h-12 text-base',
-      props.size === 'large' && 'w-14 h-14 text-lg',
-    ] as const
+    const sizeClass = sizeClasses[props.size]
+    return sizeClass ? [sizeClass] : []
   })
 
-  const clickHandler = (evt: MouseEvent) => {
+  function clickHandler(evt: MouseEvent) {
     emit(CLICK_EVENT, evt)
   }
 

@@ -12,5 +12,6 @@ export default defineUniPages({
     backgroundTextStyle: '@bgTxtStyle',
     backgroundColorTop: '@bgColorTop',
     backgroundColorBottom: '@bgColorBottom',
+    navigationStyle: 'custom',
   },
 })

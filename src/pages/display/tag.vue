@@ -8,24 +8,24 @@ const show = ref(true)
   <UBasePage>
     <div class="pb-safe">
       <div class="p-4">
-        Color
+        类型
       </div>
       <div px-4 flex="~ gap2 wrap">
-        <ATag label="Primary" />
-        <ATag label="Success" type="success" />
-        <ATag label="Info" type="info" />
-        <ATag label="Warning" type="warning" />
-        <ATag label="Danger" type="danger" />
+        <ATag label="主要" />
+        <ATag label="成功" type="success" />
+        <ATag label="信息" type="info" />
+        <ATag label="警告" type="warning" />
+        <ATag label="危险" type="danger" />
       </div>
 
       <div class="p-4">
         大小
       </div>
       <div flex="~ gap2 wrap" items-center px-4>
-        <ATag label="Mini" type="primary" size="mini" />
-        <ATag label="Small" type="success" size="small" />
-        <ATag label="Normal" type="info" size="normal" />
-        <ATag label="Large" type="warning" size="large" />
+        <ATag label="迷你" type="primary" size="mini" />
+        <ATag label="小型" type="success" size="small" />
+        <ATag label="普通" type="info" size="normal" />
+        <ATag label="大型" type="warning" size="large" />
       </div>
 
       <div class="p-4">
@@ -40,16 +40,16 @@ const show = ref(true)
       </div>
 
       <div class="p-4">
-        Status
+        状态
       </div>
       <div flex="~ gap2 wrap" items-center px-4>
         <!-- TODO: close will remain an <a-tag> but 0x0 -->
-        <ATag label="Closable" closable :show="show" @close="show = !show" />
-        <ATag label="Disabled" type="success" disabled />
+        <ATag label="可关闭" closable :show="show" @close="show = !show" />
+        <ATag label="禁用" type="success" disabled />
       </div>
 
       <div class="p-4">
-        Custom
+        自定义
       </div>
       <div flex="~ gap2 wrap" items-center px-4>
         <ATag icon="i-tabler-carrot" icon-only />
@@ -58,13 +58,13 @@ const show = ref(true)
             <div class="i-tabler-carrot" />
           </template>
         </ATag>
-        <ATag label="Rounded" type="info" variant="ghost" cc="rounded-full" />
-        <ATag label="Send" type="warning">
+        <ATag label="圆形" type="info" variant="ghost" cc="rounded-full" />
+        <ATag label="发送" type="warning">
           <template #icon>
             <div class="i-tabler-carrot" />
           </template>
         </ATag>
-        <ATag label="Bg Gradient" cc="bg-gradient-to-r from-indigo-500 to-pink-500 border-none" />
+        <ATag label="背景渐变" cc="bg-gradient-to-r from-indigo-500 to-pink-500" />
       </div>
     </div>
   </UBasePage>

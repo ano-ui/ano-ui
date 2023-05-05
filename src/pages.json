@@ -102,7 +102,7 @@
       "path": "pages/display/notice-bar",
       "type": "page",
       "style": {
-        "navigationBarTitleText": "NoticeBar 通告栏"
+        "navigationBarTitleText": "NoticeBar 通知栏"
       }
     },
     {
@@ -163,7 +163,8 @@
     "backgroundColor": "@bgColor",
     "backgroundTextStyle": "@bgTxtStyle",
     "backgroundColorTop": "@bgColorTop",
-    "backgroundColorBottom": "@bgColorBottom"
+    "backgroundColorBottom": "@bgColorBottom",
+    "navigationStyle": "custom"
   },
   "subPackages": []
 }
