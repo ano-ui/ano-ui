@@ -8,14 +8,9 @@ import {
   transformerVariantGroup,
 } from 'unocss'
 
-import {
-  presetApplet,
-  presetRemRpx,
-  transformerApplet,
-  transformerAttributify,
-} from 'unocss-applet'
+import { presetApplet, presetRemRpx, transformerApplet, transformerAttributify } from 'unocss-applet'
 
-import { presetAno } from '../ano-ui'
+import { presetAno } from 'ano-ui'
 
 const isApplet = process.env?.UNI_PLATFORM?.startsWith('mp') ?? false
 const presets: Preset[] = []
@@ -53,11 +48,7 @@ export default defineConfig({
     ...presets,
     presetAno(),
   ],
-  transformers: [
-    transformerDirectives(),
-    transformerVariantGroup(),
-    ...transformers,
-  ],
+  transformers: [transformerDirectives(), transformerVariantGroup(), ...transformers],
   theme: {
     preflightRoot: isApplet ? ['page,::before,::after'] : undefined,
   },
