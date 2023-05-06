@@ -1,4 +1,5 @@
 <script setup lang='ts'>
+import ATransition from '../ATransition/ATransition.vue'
 import { checkboxEmits, checkboxProps } from './checkbox'
 import { useCheckbox } from './use-checkbox'
 

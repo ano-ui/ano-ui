@@ -12,8 +12,7 @@ const { disabled, clickHandler } = useButton(props, emit)
   <button
     class="a-button-wrapper-reset m-0 box-border flex items-center justify-center gap-2 rounded text-center"
     :class="[`a-${type}`, `a-button-${size}`, `a-${variant}`, block ? 'block' : 'inline-block', disabled ? 'op-50' : '', cc]"
-    :hover-class="disabled ? '' : '!before:op10'" :open-type="openType"
-    :style="cs" @click="clickHandler"
+    :hover-class="disabled ? '' : '!before:op10'" :open-type="openType" :style="cs" @click="clickHandler"
   >
     <div v-if="loading" class="i-tabler-loader animate-spin" />
     <template v-else>

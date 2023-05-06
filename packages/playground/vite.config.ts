@@ -5,34 +5,37 @@ import UnoCSS from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from '@uni-helper/vite-plugin-uni-components'
 import UniPages from '@uni-helper/vite-plugin-uni-pages'
+import { AnoResolver } from 'ano-ui'
+import { AnoDevResolver } from './resolvers'
 
-// https://vitejs.dev/config/
-export default defineConfig({
-  root: process.cwd(),
-  resolve: {
-    alias: {
-      '~/': `${resolve(__dirname, 'src')}/`,
+export default defineConfig(({ command }) => {
+  return {
+    root: process.cwd(),
+    resolve: {
+      alias: {
+        '~/': `${resolve(__dirname, 'src')}/`,
+      },
     },
-  },
-  plugins: [
-    Components({
-      include: [/\.vue$/, /\.vue\?vue/],
-      dts: 'src/components.d.ts',
-      dirs: ['src/components', '../ano-ui/components'],
-    }),
-    UniPages({ routeBlockLang: 'yaml' }),
-    Uni(),
+    plugins: [
+      Components({
+        include: [/\.vue$/, /\.vue\?vue/],
+        dts: 'src/components.d.ts',
+        resolvers: [command === 'serve' ? AnoDevResolver() : AnoResolver()],
+      }),
+      UniPages({ routeBlockLang: 'yaml' }),
+      Uni(),
 
-    // https://github.com/antfu/unocss
-    // see unocss.config.ts for config
-    UnoCSS(),
+      // https://github.com/antfu/unocss
+      // see unocss.config.ts for config
+      UnoCSS(),
 
-    // https://github.com/antfu/unplugin-auto-import
-    AutoImport({
-      imports: ['vue', 'pinia', 'uni-app'],
-      dts: 'src/auto-imports.d.ts',
-      dirs: ['src/composables', 'src/stores'],
-      vueTemplate: true,
-    }),
-  ],
+      // https://github.com/antfu/unplugin-auto-import
+      AutoImport({
+        imports: ['vue', 'pinia', 'uni-app'],
+        dts: 'src/auto-imports.d.ts',
+        dirs: ['src/composables', 'src/stores'],
+        vueTemplate: true,
+      }),
+    ],
+  }
 })

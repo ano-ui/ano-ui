@@ -34,12 +34,12 @@
     "main": "./dist/index.cjs",
     "module": "./dist/index.mjs",
     "types": "./dist/index.d.ts",
-    "linkDirectory": false
+    "files": [
+      "dist",
+      "components"
+    ]
   },
-  "files": [
-    "dist",
-    "components"
-  ],
+  "files": ["src"],
   "scripts": {
     "build": "esno build/components.ts && unbuild",
     "stub": "esno build/components.ts && unbuild --stub"

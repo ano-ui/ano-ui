@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import ACellGroup from '../ACellGroup/ACellGroup.vue'
 import { aCollapseEmits, aCollapseProps } from './a-collapse'
 import { useACollapse } from './use-a-collapse'
 
