@@ -1,8 +1,8 @@
 import { camelCase, kebabCase, pascalCase } from 'scule'
 
-const anoUiDir = './src/ano-ui'
+const anoUiDir = './packages/ano-ui/src'
 const componentDir = `${anoUiDir}/components`
-const playgroundDir = './src'
+const playgroundDir = './packages/playground/src'
 
 export default function (
   /** @type {import('plop').NodePlopAPI} */

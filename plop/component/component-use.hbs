@@ -5,11 +5,10 @@ import type { {{pascalCaseName}}Emits, {{pascalCaseName}}Props } from './{{kebab
 
 // @unocss-include
 
-export function use{{pascalCaseName}}(props: {{pascalCaseName}}Props,
-  emit: SetupContext<{{pascalCaseName}}Emits>['emit']) {
+export function use{{pascalCaseName}}(props: {{pascalCaseName}}Props, emit: SetupContext<{{pascalCaseName}}Emits>['emit']) {
   const className = computed(() => [])
 
-  const clickHandler = (evt: MouseEvent) => {
+  function clickHandler(evt: MouseEvent) {
     emit(CLICK_EVENT, evt)
   }
 
