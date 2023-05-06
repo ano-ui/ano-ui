@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
     "target": "es2018",
     "module": "esnext",
     "lib": ["esnext", "dom"],
@@ -11,13 +10,6 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
-    "jsx": "preserve",
-    "paths": {
-      "~/*": ["src/*"]
-    },
-    "types": [
-      "vite/client",
-      "@dcloudio/types"
-    ]
+    "jsx": "preserve"
   }
 }

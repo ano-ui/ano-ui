@@ -1,0 +1,53 @@
+{
+  "name": "ano-ui",
+  "type": "module",
+  "version": "0.7.3",
+  "description": "",
+  "author": "Neil Lee <zguolee@foxmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/ano-ui/ano-ui#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ano-ui/ano-ui.git"
+  },
+  "bugs": "https://github.com/ano-ui/ano-ui/issues",
+  "keywords": [
+    "unocss",
+    "uni-app",
+    "atomic-css",
+    "atomic-css-engine",
+    "css",
+    "tailwind",
+    "windicss"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    },
+    "./*": "./*"
+  },
+  "main": "src/index.ts",
+  "publishConfig": {
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "files": [
+      "dist",
+      "components"
+    ]
+  },
+  "files": ["src"],
+  "scripts": {
+    "build": "esno build/components.ts && unbuild",
+    "stub": "esno build/components.ts && unbuild --stub"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.0"
+  },
+  "dependencies": {
+    "@unocss/preset-mini": "^0.51.8"
+  }
+}
