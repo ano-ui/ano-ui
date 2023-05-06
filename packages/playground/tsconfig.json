@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "target": "esnext",
+    "baseUrl": ".",
+    "isolatedModules": true,
+    "noImplicitAny": false,
+    "sourceMap": true,
+    "paths": {
+      "~/*": ["src/*"]
+    },
+    "types": [
+      "vite/client",
+      "@dcloudio/types"
+    ]
+  }
+}

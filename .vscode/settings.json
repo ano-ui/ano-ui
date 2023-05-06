@@ -1,12 +1,12 @@
 {
   "cSpell.words": [
     "antfu",
-    "Attributify",
+    "attributify",
     "dcloudio",
     "demi",
     "iconify",
     "miniprogram",
-    "Pinia",
+    "pinia",
     "postprocess",
     "tabler",
     "unocss",
@@ -15,5 +15,9 @@
     "weixin",
     "windicss"
   ],
-  "i18n-ally.localesPaths": []
+  "i18n-ally.localesPaths": [],
+  "unocss.root": [
+    "packages/ano-ui",
+    "packages/playground"
+  ]
 }

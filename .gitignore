@@ -156,8 +156,3 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
-
-components
-components-mp
-!src/components
-!src/ano-ui/components
