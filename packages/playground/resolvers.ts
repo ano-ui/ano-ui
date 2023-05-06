@@ -8,7 +8,7 @@ export function AnoDevResolver(command: 'serve' | 'build' = 'serve'): ComponentR
         if (command === 'serve')
           return { name, from: `ano-ui/src/components/${name}/${name}.vue` }
         else
-          return { name, from: `ano-ui/components/${name}/index.vue` }
+          return { name, from: `ano-ui/components/${name}/${name}.vue` }
       }
     },
   }
