@@ -22,10 +22,10 @@ const {
       <slot name="icon" />
     </template>
     <template #value>
-      <div class="flex items-center gap-1 text-right v-middle leading-inherit a-text-color">
+      <div class="flex items-center gap-1 a-text-color text-right v-middle leading-inherit">
         <slot name="prefix" />
         <input
-          v-if="type !== 'textarea'" class="m-0 min-h-auto flex-1 bg-transparent p-0 text-left leading-inherit"
+          v-if="type !== 'textarea'" class="m-0 flex-1 leading-inherit min-h-auto bg-transparent p-0 text-left"
           :type="type !== 'password' ? type : 'text'"
           :class="[`a-field-content-base-${inputAlign}`, { 'a-field-disabled': disabled }, ccc]" :style="ccs"
           :value="modelValue" :placeholder="placeholderText" :maxlength="maxlength" :focus="focus" :disabled="disabled"
@@ -33,7 +33,7 @@ const {
           @input="inputHandler" @focus="focusHandler"
         >
         <textarea
-          v-else class="m-0 h-20 w-full flex-1 bg-transparent p-0 text-left leading-inherit"
+          v-else class="m-0 w-full flex-1 bg-transparent p-0 text-left leading-inherit h-20"
           :class="[`a-field-content-base-${inputAlign}`, { 'a-field-disabled': disabled }, ccc]" :style="ccs"
           :value="modelValue" :placeholder="placeholderText" :maxlength="maxlength" :focus="focus" :disabled="disabled"
           @click="clickHandler" @blur="blurHandler" @input="inputHandler" @focus="focusHandler"

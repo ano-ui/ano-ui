@@ -9,7 +9,7 @@ const { elementGuid, animation } = useACollapseTransition(props, emit)
 </script>
 
 <template>
-  <div class="h-0 overflow-hidden" :animation="animation">
+  <div class="overflow-hidden h-0" :animation="animation">
     <div :id="elementGuid" :class="[cc]" :style="[cs]">
       <slot />
     </div>

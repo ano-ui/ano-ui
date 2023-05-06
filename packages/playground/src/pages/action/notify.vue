@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { NotifyInst, NotifyOptions } from '~/ano-ui'
+import type { NotifyInst, NotifyOptions } from 'ano-ui'
 
 const notify = ref<NotifyInst>()
 

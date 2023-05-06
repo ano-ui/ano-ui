@@ -18,7 +18,7 @@ const { checked, disabled, size, toggle } = useCheckbox(props, emit)
     >
       <ATransition cc="['absolute inset-0']" :show="!!checked" name="fade" :duration="200" />
       <div
-        class="absolute inset-0 flex animate-duration-200 items-center justify-center"
+        class="flex items-center justify-center absolute inset-0 animate-duration-200"
         :class="[checked ? 'animate-zoom-in text-white' : 'animate-zoom-out text-transparent']"
       >
         <slot name="icon" :checked="checked">

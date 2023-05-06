@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import type { PositionType } from '~/ano-ui'
+import type { PositionType } from 'ano-ui'
 
 const showValue = ref(false)
 const position = ref<PositionType>('center')

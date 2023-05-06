@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import type { ToastInst, ToastOptions } from '~/ano-ui'
+import type { ToastInst, ToastOptions } from 'ano-ui'
 
 const toast = ref<ToastInst>()
 

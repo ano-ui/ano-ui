@@ -11,12 +11,12 @@ const { disabled, size, checked, toggle } = useRadio(props, emit)
 <template>
   <div class="flex items-center" :class="[`a-text-${size}`, cc]" :style="cs">
     <div
-      class="relative border border-gray3 rounded-full border-solid transition-all duration-200 dark:border-op80"
+      class="relative border border-solid border-gray3 rounded-full transition-all duration-200 dark:border-op80"
       :class="[`a-radio-radio-${size}`, { 'a-radio-disabled': disabled }, ccc]"
       :style="ccs" @click="toggle"
     >
       <template v-if="checked">
-        <div class="absolute inset-0 flex animate-zoom-in animate-duration-200 items-center justify-center" :class="[`a-${type}`]">
+        <div class="absolute inset-0 flex animate-duration-200 items-center justify-center animate-zoom-in" :class="[`a-${type}`]">
           <div v-if="!$slots.icon" class="rounded-full bg-context" :class="[`a-radio-radio-dot-${size}`]" />
           <slot v-else name="icon" />
         </div>

@@ -15,6 +15,10 @@
     "weixin",
     "windicss"
   ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll": false,
+    "source.fixAll.eslint": true
+  },
   "i18n-ally.localesPaths": [],
   "unocss.root": [
     "packages/ano-ui",

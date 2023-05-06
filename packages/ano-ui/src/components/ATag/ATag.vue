@@ -11,7 +11,7 @@ const { disabled, clickHandler, closeHandler } = useTag(props, emit)
 <template>
   <div
     v-if="show"
-    class="relative box-border inline-flex items-center justify-center gap1 overflow-visible a-transition after:display-none"
+    class="relative box-border inline-flex items-center justify-center a-transition gap1 overflow-visible after:display-none"
     :class="[`a-${type}`, `a-tag-${size}`, { '!p-0.5 aspect-square': iconOnly }, `a-${variant}`, { 'op-50': disabled }, cc]"
     :style="cs" @click="clickHandler"
   >

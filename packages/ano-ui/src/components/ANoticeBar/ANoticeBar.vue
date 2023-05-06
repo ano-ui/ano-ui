@@ -11,7 +11,7 @@ const { handleClose } = useNoticeBar(props, emit)
 <template>
   <div
     v-if="show"
-    class="box-border min-h-10 flex items-center justify-center gap-2 rounded-lg px-3 a-transition"
+    class="box-border flex items-center justify-center gap-2 a-transition min-h-10 rounded-lg px-3"
     :class="[`a-${type}`, `a-${variant}`, cc]" :style="cs"
   >
     <template v-if="$slots.icon">
@@ -27,7 +27,7 @@ const { handleClose } = useNoticeBar(props, emit)
         <div class="text-transparent">
           blank
         </div>
-        <div class="a-notice-bar-words-loop absolute whitespace-nowrap">
+        <div class="absolute a-notice-bar-words-loop whitespace-nowrap">
           <slot />
         </div>
       </template>
