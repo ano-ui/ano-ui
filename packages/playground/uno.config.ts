@@ -10,7 +10,7 @@ import {
 
 import { presetApplet, presetRemRpx, transformerApplet, transformerAttributify } from 'unocss-applet'
 
-import { presetAno } from 'ano-ui'
+import { presetAno } from '../ano-ui'
 
 const isApplet = process.env?.UNI_PLATFORM?.startsWith('mp') ?? false
 const presets: Preset[] = []
