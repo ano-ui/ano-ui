@@ -10,12 +10,12 @@ const { disabled, checked, dotTranslateClasses, toggle } = useSwitch(props, emit
 
 <template>
   <div
-    class="relative rounded-full bg-context transition-all text-white dark:bg-op80 dark:text-op80"
+    class="relative rounded-full bg-context transition-all duration-200 text-white dark:bg-op80 dark:text-op80"
     :class="[`a-switch-${size}`, `a-text-${size}`, checked ? `a-${type}` : 'a-gray3', { 'op-50': disabled }, cc]"
     :style="cs" @click="toggle"
   >
     <div
-      class="absolute rounded-full transition-all top-0.5 bg-white text-context"
+      class="absolute rounded-full transition-all duration-200 top-0.5 bg-white text-context"
       :class="[`a-switch-dot-${size}`, checked ? dotTranslateClasses : 'left-0.5']"
     >
       <template v-if="checked">
@@ -34,7 +34,7 @@ const { disabled, checked, dotTranslateClasses, toggle } = useSwitch(props, emit
 
     <template v-if="checked">
       <div
-        class="absolute top-0.5 flex animate-zoom-in animate-duration-200 items-center justify-center a-transition left-0.5 right-auto !leading-none"
+        class="absolute top-0.5 flex animate-zoom-in animate-duration-200 items-center justify-center transition-all duration-200 left-0.5 right-auto !leading-none"
         :class="[`a-switch-dot-${size}`]"
       >
         <template v-if="activeLabel">
@@ -45,7 +45,7 @@ const { disabled, checked, dotTranslateClasses, toggle } = useSwitch(props, emit
     </template>
     <template v-else>
       <div
-        class="absolute top-0.5 flex animate-zoom-in animate-duration-200 items-center justify-center a-transition !leading-none right-0.5"
+        class="absolute top-0.5 flex animate-zoom-in animate-duration-200 items-center justify-center transition-all duration-200 !leading-none right-0.5"
         :class="[`a-switch-dot-${size}`]"
       >
         <template v-if="inactiveLabel">
@@ -59,19 +59,19 @@ const { disabled, checked, dotTranslateClasses, toggle } = useSwitch(props, emit
 
 <style scoped>
 .a-switch-mini {
-  --at-apply: 'min-w8 h5'
+  --at-apply: 'min-w9 h5'
 }
 
 .a-switch-small {
-  --at-apply: 'min-w10 h6'
+  --at-apply: 'min-w11 h6'
 }
 
 .a-switch-normal {
-  --at-apply: 'min-w12 h7'
+  --at-apply: 'min-w13 h7'
 }
 
 .a-switch-large {
-  --at-apply: 'min-w14 h8'
+  --at-apply: 'min-w15 h8'
 }
 
 .a-switch-dot-mini {

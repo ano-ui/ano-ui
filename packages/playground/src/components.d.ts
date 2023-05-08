@@ -34,6 +34,7 @@ declare module '@vue/runtime-core' {
     ASwitch: typeof import('ano-ui/src/components/ASwitch/ASwitch.vue')['default']
     ATabBar: typeof import('ano-ui/src/components/ATabBar/ATabBar.vue')['default']
     ATabBarItem: typeof import('ano-ui/src/components/ATabBarItem/ATabBarItem.vue')['default']
+    ATag: typeof import('ano-ui/src/components/ATag/ATag.vue')['default']
     AToast: typeof import('ano-ui/src/components/AToast/AToast.vue')['default']
     ATransition: typeof import('ano-ui/src/components/ATransition/ATransition.vue')['default']
     UBasePage: typeof import('./components/UBasePage.vue')['default']

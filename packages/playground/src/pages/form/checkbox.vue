@@ -21,91 +21,89 @@ function toggle(index: any) {
 
 <template>
   <UBasePage>
-    <div class="pb-safe">
-      <div class="p-4">
-        自定义类型
-      </div>
-      <div px-4 flex="~ col gap2">
-        <ACheckbox v-model="checked" label="主要" />
-        <ACheckbox v-model="checked" type="success" label="成功" />
-        <ACheckbox v-model="checked" type="info" label="信息" />
-        <ACheckbox v-model="checked" type="warning" label="警告" />
-        <ACheckbox v-model="checked" type="danger" label="危险" />
-      </div>
+    <div class="p-4">
+      自定义类型
+    </div>
+    <div px-4 flex="~ col gap2">
+      <ACheckbox v-model="checked" label="主要" />
+      <ACheckbox v-model="checked" type="success" label="成功" />
+      <ACheckbox v-model="checked" type="info" label="信息" />
+      <ACheckbox v-model="checked" type="warning" label="警告" />
+      <ACheckbox v-model="checked" type="danger" label="危险" />
+    </div>
 
-      <div class="p-4">
-        大小
-      </div>
-      <div px-4 flex="~ col gap2">
-        <ACheckbox v-model="checked" type="primary" size="mini" label="迷你" />
-        <ACheckbox v-model="checked" type="success" size="small" label="小型" />
-        <ACheckbox v-model="checked" type="info" size="normal" label="普通" />
-        <ACheckbox v-model="checked" type="warning" size="large" label="大型" />
-      </div>
-      <div class="p-4">
-        状态
-      </div>
-      <div px-4 flex="~ col gap2">
-        <ACheckbox type="success" disabled label="禁用" />
-        <ACheckbox v-model="statusChecked2" type="success" disabled label="禁用" />
-      </div>
-      <div class="p-4">
-        自定义
-      </div>
-      <div px-4 flex="~ col gap2">
-        <ACheckbox v-model="checked2" :value="1" label="值" icon="i-tabler-carrot" />
-        <ACheckbox v-model="checked3" custom-icon value="yes" label="图标插槽">
-          <template #icon="props">
-            <div :class="props.checked ? 'i-tabler-carrot' : 'i-tabler-lemon a-text-color-2'" />
-          </template>
-        </ACheckbox>
-      </div>
+    <div class="p-4">
+      大小
+    </div>
+    <div px-4 flex="~ col gap2">
+      <ACheckbox v-model="checked" type="primary" size="mini" label="迷你" />
+      <ACheckbox v-model="checked" type="success" size="small" label="小型" />
+      <ACheckbox v-model="checked" type="info" size="normal" label="普通" />
+      <ACheckbox v-model="checked" type="warning" size="large" label="大型" />
+    </div>
+    <div class="p-4">
+      状态
+    </div>
+    <div px-4 flex="~ col gap2">
+      <ACheckbox type="success" disabled label="禁用" />
+      <ACheckbox v-model="statusChecked2" type="success" disabled label="禁用" />
+    </div>
+    <div class="p-4">
+      自定义
+    </div>
+    <div px-4 flex="~ col gap2">
+      <ACheckbox v-model="checked2" :value="1" label="值" icon="i-tabler-carrot" />
+      <ACheckbox v-model="checked3" custom-icon value="yes" label="图标插槽">
+        <template #icon="props">
+          <div :class="props.checked ? 'i-tabler-carrot' : 'i-tabler-lemon a-text-color-2'" />
+        </template>
+      </ACheckbox>
+    </div>
 
-      <div class="p-4">
-        复选框组: {{ groupChecked }}
-      </div>
-      <div px-4>
-        <ACheckboxGroup v-model="groupChecked">
-          <ACheckbox value="a" label="A" />
-          <ACheckbox value="b" label="B" />
-          <ACheckbox value="c" label="C" />
-        </ACheckboxGroup>
-      </div>
-
-      <div class="p-4">
-        复选框组限制可选数量[1-2]: {{ groupChecked2 }}
-      </div>
-      <div px-4>
-        <ACheckboxGroup v-model="groupChecked2" :min="1" :max="2" direction="horizontal">
-          <ACheckbox value="a" label="A" />
-          <ACheckbox value="b" label="B" />
-          <ACheckbox value="c" label="C" />
-        </ACheckboxGroup>
-      </div>
-
-      <div class="p-4">
-        搭配单元格组件使用: {{ groupChecked }}
-      </div>
+    <div class="p-4">
+      复选框组: {{ groupChecked }}
+    </div>
+    <div px-4>
       <ACheckboxGroup v-model="groupChecked">
-        <ACellGroup inset divider clickable>
-          <ACell title="复选框 a" @click="toggle('a')">
-            <template #right-icon>
-              <ACheckbox value="a" />
-            </template>
-          </ACell>
-          <ACell title="复选框 b" @click="toggle('b')">
-            <template #right-icon>
-              <ACheckbox value="b" />
-            </template>
-          </ACell>
-          <ACell title="复选框 c" @click="toggle('c')">
-            <template #right-icon>
-              <ACheckbox value="c" />
-            </template>
-          </ACell>
-        </ACellGroup>
+        <ACheckbox value="a" label="A" />
+        <ACheckbox value="b" label="B" />
+        <ACheckbox value="c" label="C" />
       </ACheckboxGroup>
     </div>
+
+    <div class="p-4">
+      复选框组限制可选数量[1-2]: {{ groupChecked2 }}
+    </div>
+    <div px-4>
+      <ACheckboxGroup v-model="groupChecked2" :min="1" :max="2" direction="horizontal">
+        <ACheckbox value="a" label="A" />
+        <ACheckbox value="b" label="B" />
+        <ACheckbox value="c" label="C" />
+      </ACheckboxGroup>
+    </div>
+
+    <div class="p-4">
+      搭配单元格组件使用: {{ groupChecked }}
+    </div>
+    <ACheckboxGroup v-model="groupChecked">
+      <ACellGroup inset divider clickable>
+        <ACell title="复选框 a" @click="toggle('a')">
+          <template #right-icon>
+            <ACheckbox value="a" />
+          </template>
+        </ACell>
+        <ACell title="复选框 b" @click="toggle('b')">
+          <template #right-icon>
+            <ACheckbox value="b" />
+          </template>
+        </ACell>
+        <ACell title="复选框 c" @click="toggle('c')">
+          <template #right-icon>
+            <ACheckbox value="c" />
+          </template>
+        </ACell>
+      </ACellGroup>
+    </ACheckboxGroup>
   </UBasePage>
 </template>
 

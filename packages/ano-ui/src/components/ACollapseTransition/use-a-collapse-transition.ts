@@ -1,4 +1,5 @@
 import type { SetupContext } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { CLICK_EVENT } from '../constants'
 import { delay, guid } from '../utils'
 import { useQuerySelector } from '../composables'

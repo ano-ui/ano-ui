@@ -22,12 +22,12 @@ export function useSwitch(props: SwitchProps, emit: SetupContext<SwitchEmits>['e
 
   const dotTranslateClasses = computed(() => {
     if (props.size === 'mini')
-      return 'translate-x-3.5'
-    if (props.size === 'small')
       return 'translate-x-4.5'
+    if (props.size === 'small')
+      return 'translate-x-5.5'
     if (props.size === 'large')
-      return 'translate-x-6.5'
-    return 'translate-x-5.5'
+      return 'translate-x-7.5'
+    return 'translate-x-6.5'
   })
 
   return {

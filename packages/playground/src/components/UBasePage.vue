@@ -30,7 +30,7 @@ function onClickLeft() {
 </script>
 
 <template>
-  <APage cc="font-sans pb-10">
+  <APage cc="font-sans pb-10 fixed inset-0 overflow-auto">
     <ANavBar
       v-if="show" :title="title ?? titleText" :left-arrow="backArrow" placeholder fixed z-index="999"
       @click-left="onClickLeft"

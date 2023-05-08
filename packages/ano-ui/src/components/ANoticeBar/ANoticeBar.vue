@@ -18,8 +18,9 @@ const { handleClose } = useNoticeBar(props, emit)
       <slot name="icon" />
     </template>
     <div v-else-if="icon" :class="icon" />
-    <div v-else-if="type === 'primary'" class="i-tabler-info-circle-filled" />
+    <div v-else-if="type === 'primary'" class="i-tabler-bell-filled" />
     <div v-else-if="type === 'success'" class="i-tabler-circle-check-filled" />
+    <div v-else-if="type === 'info'" class="i-tabler-info-circle-filled" />
     <div v-else-if="type === 'warning'" class="i-tabler-alert-circle-filled" />
     <div v-else-if="type === 'danger'" class="i-tabler-circle-x-filled" />
     <div class="relative flex-1 overflow-hidden" :class="loop ? '' : 'truncate'">
