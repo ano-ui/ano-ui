@@ -141,9 +141,15 @@ importers:
       '@types/node':
         specifier: ^18.16.4
         version: 18.16.4
+      '@uni-helper/uni-env':
+        specifier: ^0.0.3
+        version: 0.0.3
       '@uni-helper/vite-plugin-uni-components':
         specifier: ^0.0.6
         version: 0.0.6(rollup@3.21.0)
+      '@uni-helper/vite-plugin-uni-manifest':
+        specifier: ^0.1.3
+        version: 0.1.3(typescript@5.0.4)
       '@uni-helper/vite-plugin-uni-pages':
         specifier: ^0.1.8
         version: 0.1.8(@types/lodash-es@4.17.7)(lodash-es@4.17.21)(lodash@4.17.21)
@@ -3467,6 +3473,10 @@ packages:
     resolution: {integrity: sha512-5eeGoP3Y+v77jybH2HkmjE5+SnYmFw8Hcuxnn+l6fRNyPNcF7tUuTm3xvBJc9qbtE3Bphs1dJQ6Ru+yHl/OEmw==}
     dev: true
 
+  /@uni-helper/uni-env@0.0.3:
+    resolution: {integrity: sha512-K6MEnmN7Dg+NnEkfUUhjaKc/rPVY7tcGdsVUKOlC1/z2E6H6zjSSTdJg8z+sVJtZ03Ff1G/MHz2PYDyAS6gjQQ==}
+    dev: true
+
   /@uni-helper/vite-plugin-uni-components@0.0.6(rollup@3.21.0):
     resolution: {integrity: sha512-MNlEMfiGXPtsgiGTbvwljs1dFXKxcuY5meCEOuyejPIJ47eQf35vV8d7U5nRKsdAYX9lcn7ZYL0EXfgaMnLKug==}
     dependencies:
@@ -3482,6 +3492,19 @@ packages:
     transitivePeerDependencies:
       - rollup
       - supports-color
+    dev: true
+
+  /@uni-helper/vite-plugin-uni-manifest@0.1.3(typescript@5.0.4):
+    resolution: {integrity: sha512-sG6/MR/jvojn53uRhCHAY/6cSkdiU7FhZV786CxPDjL97I9T7OUKcNoTtsTHdwSTwoihpH6jqF0DPqju0VUbJw==}
+    dependencies:
+      chokidar: 3.5.3
+      colorette: 2.0.19
+      consola: 2.15.3
+      fast-glob: 3.2.12
+      type-fest: 3.10.0(typescript@5.0.4)
+      unconfig: 0.3.7
+    transitivePeerDependencies:
+      - typescript
     dev: true
 
   /@uni-helper/vite-plugin-uni-pages@0.1.8(@types/lodash-es@4.17.7)(lodash-es@4.17.21)(lodash@4.17.21):
@@ -4819,6 +4842,10 @@ packages:
       md5-hex: 3.0.1
       semver: 7.3.8
       well-known-symbols: 2.0.0
+    dev: true
+
+  /consola@2.15.3:
+    resolution: {integrity: sha512-9vAdYbHj6x2fLKC4+oPH0kFzY/orMZyG2Aj+kNylHxKGJ/Ed4dpNyAQYwJOdqO4zdM7XpVHmyejQDcQHrnuXbw==}
     dev: true
 
   /consola@3.1.0:
@@ -9574,6 +9601,15 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
+  /type-fest@3.10.0(typescript@5.0.4):
+    resolution: {integrity: sha512-hmAPf1datm+gt3c2mvu0sJyhFy6lTkIGf0GzyaZWxRLnabQfPUqg6tF95RPg6sLxKI7nFLGdFxBcf2/7+GXI+A==}
+    engines: {node: '>=14.16'}
+    peerDependencies:
+      typescript: '>=4.7.0'
+    dependencies:
+      typescript: 5.0.4
+    dev: true
+
   /type-is@1.6.18:
     resolution: {integrity: sha512-TkRKr9sUTxEH8MdfuCSP7VizJyzRNMjj2J2do2Jr3Kym598JVdEksuzPQCnlFPW4ky9Q+iA+ma9BGm06XQBy8g==}
     engines: {node: '>= 0.6'}
@@ -10107,7 +10143,6 @@ packages:
 
   /w3c-hr-time@1.0.2:
     resolution: {integrity: sha512-z8P5DvDNjKDoFIHK7q8r8lackT6l+jo/Ye3HOle7l9nICP9lf1Ci25fy9vHd0JOWewkIFzXIEig3TdKT7JQ5fQ==}
-    deprecated: Use your platform's native performance.now() and performance.timeOrigin.
     dependencies:
       browser-process-hrtime: 1.0.0
     dev: true
