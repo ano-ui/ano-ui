@@ -38,5 +38,8 @@ declare module '@vue/runtime-core' {
     AToast: typeof import('ano-ui/src/components/AToast/AToast.vue')['default']
     ATransition: typeof import('ano-ui/src/components/ATransition/ATransition.vue')['default']
     UBasePage: typeof import('./components/UBasePage.vue')['default']
+    UGitHub: typeof import('./components/UGitHub.vue')['default']
+    UGitHubButton: typeof import('./components/UGitHubButton.vue')['default']
+    UThemeSwitcher: typeof import('./components/UThemeSwitcher.vue')['default']
   }
 }
