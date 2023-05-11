@@ -8,23 +8,25 @@ import {
   transformerVariantGroup,
 } from 'unocss'
 
+import { isH5, isMp } from '@uni-helper/uni-env'
+
 import { presetApplet, presetRemRpx, transformerApplet, transformerAttributify } from 'unocss-applet'
 
 import { presetAno } from '../ano-ui'
 
-const isApplet = process.env?.UNI_PLATFORM?.startsWith('mp') ?? false
 const presets: Preset[] = []
 
 const transformers: SourceCodeTransformer[] = []
+const darkMode = isH5 ? 'class' : 'media'
 
-if (isApplet) {
-  presets.push(presetApplet({ dark: 'media' }))
+if (isMp) {
+  presets.push(presetApplet({ dark: darkMode }))
   presets.push(presetRemRpx())
   transformers.push(transformerAttributify({ ignoreAttributes: ['block', 'fixed'] }))
   transformers.push(transformerApplet())
 }
 else {
-  presets.push(presetUno({ dark: 'media' }))
+  presets.push(presetUno({ dark: darkMode }))
   presets.push(presetAttributify())
   presets.push(presetRemRpx({ mode: 'rpx2rem' }))
 }
@@ -50,7 +52,7 @@ export default defineConfig({
   ],
   transformers: [transformerDirectives(), transformerVariantGroup(), ...transformers],
   theme: {
-    preflightRoot: isApplet ? ['page,::before,::after'] : undefined,
+    preflightRoot: isMp ? ['page,::before,::after'] : undefined,
   },
   rules: [
     [

@@ -20,6 +20,14 @@ export const useAppStore = defineStore(
         ? 0
         : menuButtonBounding.value.bottom + menuButtonBounding.value.top - statusBarHeight.value)
 
+    // #ifdef H5
+    watch(darkMode, (isDark) => {
+      isDark ? document.documentElement.classList.add('dark') : document.documentElement.classList.remove('dark')
+    }, {
+      immediate: true,
+    })
+    // #endif
+
     return {
       darkMode,
       statusBarHeight,

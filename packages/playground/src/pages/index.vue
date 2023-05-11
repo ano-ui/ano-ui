@@ -38,6 +38,12 @@ function goNavigation(path: string) {
       </div>
       <div>An UniApp UI components with UnoCSS</div>
       <div>一个使用 UnoCSS 的 UniApp 组件</div>
+      <div flex items-center justify-center>
+        <!-- #ifdef H5 -->
+        <UThemeSwitcher />
+        <!-- #endif -->
+        <UGitHubButton />
+      </div>
     </div>
     <div class="p-4">
       基础组件
