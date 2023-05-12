@@ -1,15 +1,15 @@
-export interface Promiser<T> extends Promise<T> {
+export interface Deferred<T> extends Promise<T> {
   resolve: (value?: T) => void
   reject: (value?: any) => void
 }
 
-export function createPromiser<T>(): Promiser<T> {
-  let resolve: Promiser<T>['resolve'] = noop
-  let reject: Promiser<T>['reject'] = noop
+export function createDeferred<T>(): Deferred<T> {
+  let resolve: Deferred<T>['resolve'] = noop
+  let reject: Deferred<T>['reject'] = noop
   const promise = new Promise((_resolve, _reject) => {
     resolve = _resolve
     reject = _reject
-  }) as unknown as Promiser<T>
+  }) as unknown as Deferred<T>
 
   promise.resolve = resolve
   promise.reject = reject
@@ -31,7 +31,7 @@ export function guid() {
 }
 
 export function delay(ms: number) {
-  const promise = createPromiser<void>()
+  const promise = createDeferred<void>()
   setTimeout(promise.resolve, ms)
   return promise
 }
