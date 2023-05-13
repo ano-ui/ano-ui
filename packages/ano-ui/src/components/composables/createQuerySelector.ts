@@ -1,5 +1,5 @@
 import { getCurrentInstance, onMounted } from 'vue'
-import { createPromiser, toArray } from '../utils'
+import { createDeferred, toArray } from '../utils'
 
 export type QuerySelectorType = 'boundingClientRect' | 'context' | 'fields' | 'node' | 'scrollOffset'
 export type QuerySelectorMode = 'select' | 'selectAll'
@@ -22,11 +22,11 @@ export function createQuerySelector<M extends QuerySelectorMode = 'select'>(type
 export function createQuerySelector<M extends QuerySelectorMode = 'select'>(type: 'fields', mode?: M): QuerySelectorNodeFields<M>
 export function createQuerySelector<M extends QuerySelectorMode = 'select'>(type: 'node', mode?: M): QuerySelectorNode<M>
 export function createQuerySelector(type: QuerySelectorType, mode: QuerySelectorMode = 'select'): any {
-  const ready = createPromiser()
+  const ready = createDeferred()
   const instance = getCurrentInstance()
 
   function query(selector: string, fields: UniApp.NodeField = {}) {
-    const promise = createPromiser()
+    const promise = createDeferred()
 
     function resolve(value: UniApp.NodeInfo | UniApp.NodeInfo[]) {
       const result = toArray(value)
