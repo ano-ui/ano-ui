@@ -1,7 +1,7 @@
 import type { SetupContext } from 'vue'
 import { computed, inject } from 'vue'
 import { CLICK_EVENT } from '../constants'
-import { aCollapseAccordionInjectKey, aCollapseActivesInjectKey } from '../AACollapse/a-collapse'
+import { aCollapseAccordionInjectKey, aCollapseActivesInjectKey } from '../ACollapse/a-collapse'
 import type { ACollapseItemEmits, ACollapseItemProps } from './a-collapse-item'
 
 // @unocss-include
