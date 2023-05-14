@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-import { aCollapseTransitionEmits, aCollapseTransitionProps } from './a-collapse-transition'
-import { useACollapseTransition } from './use-a-collapse-transition'
+import { collapseTransitionEmits, collapseTransitionProps } from './collapse-transition'
+import { useCollapseTransition } from './use-collapse-transition'
 
-const props = defineProps(aCollapseTransitionProps)
-const emit = defineEmits(aCollapseTransitionEmits)
+const props = defineProps(collapseTransitionProps)
+const emit = defineEmits(collapseTransitionEmits)
 
-const { elementGuid, animation } = useACollapseTransition(props, emit)
+const { elementGuid, animation } = useCollapseTransition(props, emit)
 </script>
 
 <template>
@@ -16,6 +16,5 @@ const { elementGuid, animation } = useACollapseTransition(props, emit)
   </div>
 </template>
 
-<style>
-
+<style scoped>
 </style>

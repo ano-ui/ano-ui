@@ -2,7 +2,7 @@ import type { ExtractPropTypes } from 'vue'
 import { useCustomClassProp, useCustomStyleProp } from '../composables'
 import { CLICK_EVENT } from '../constants'
 
-export const aCollapseTransitionProps = {
+export const collapseTransitionProps = {
   cc: useCustomClassProp,
   cs: useCustomStyleProp,
   show: Boolean,
@@ -12,10 +12,9 @@ export const aCollapseTransitionProps = {
   },
 }
 
-export type ACollapseTransitionProps = ExtractPropTypes<typeof aCollapseTransitionProps>
-
-export const aCollapseTransitionEmits = {
+export const collapseTransitionEmits = {
   [CLICK_EVENT]: (evt: MouseEvent) => evt instanceof Object,
 }
 
-export type ACollapseTransitionItemEmits = typeof aCollapseTransitionEmits
+export type CollapseTransitionProps = ExtractPropTypes<typeof collapseTransitionProps>
+export type CollapseTransitionEmits = typeof collapseTransitionEmits

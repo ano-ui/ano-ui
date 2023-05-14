@@ -3,10 +3,9 @@ import { computed, ref, watch } from 'vue'
 import { CLICK_EVENT } from '../constants'
 import { delay, guid } from '../utils'
 import { useQuerySelector } from '../composables'
-import type { ACollapseTransitionItemEmits, ACollapseTransitionProps } from './a-collapse-transition'
+import type { CollapseTransitionEmits, CollapseTransitionProps } from './collapse-transition'
 
-export function useACollapseTransition(props: ACollapseTransitionProps,
-  emit: SetupContext<ACollapseTransitionItemEmits>['emit']) {
+export function useCollapseTransition(props: CollapseTransitionProps, emit: SetupContext<CollapseTransitionEmits>['emit']) {
   const className = computed(() => [])
   const elementGuid = ref<string>(`tr${guid()}`)
   const animating = ref(false)
@@ -18,14 +17,16 @@ export function useACollapseTransition(props: ACollapseTransitionProps,
   }
 
   function createAnimation(height: number) {
-    return uni
-      .createAnimation({ timingFunction: 'ease-in-out' })
-      .height(height)
-      // bug: step return void
-      .step({ duration: props.duration })
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-expect-error
-      .export()
+    return (
+      uni
+        .createAnimation({ timingFunction: 'ease-in-out' })
+        .height(height)
+        // bug: step return void
+        .step({ duration: props.duration })
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-expect-error
+        .export()
+    )
   }
 
   async function renderAnimation() {

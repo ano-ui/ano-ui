@@ -9,8 +9,6 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    AACollapse: typeof import('ano-ui/src/components/AACollapse/AACollapse.vue')['default']
-    AACollapseItem: typeof import('ano-ui/src/components/AACollapseItem/AACollapseItem.vue')['default']
     AActionSheet: typeof import('ano-ui/src/components/AActionSheet/AActionSheet.vue')['default']
     AAvatar: typeof import('ano-ui/src/components/AAvatar/AAvatar.vue')['default']
     AAvatarGroup: typeof import('ano-ui/src/components/AAvatarGroup/AAvatarGroup.vue')['default']
@@ -40,7 +38,6 @@ declare module '@vue/runtime-core' {
     AToast: typeof import('ano-ui/src/components/AToast/AToast.vue')['default']
     ATransition: typeof import('ano-ui/src/components/ATransition/ATransition.vue')['default']
     UBasePage: typeof import('./components/UBasePage.vue')['default']
-    UGitHub: typeof import('./components/UGitHub.vue')['default']
     UGitHubButton: typeof import('./components/UGitHubButton.vue')['default']
     UThemeSwitcher: typeof import('./components/UThemeSwitcher.vue')['default']
   }
