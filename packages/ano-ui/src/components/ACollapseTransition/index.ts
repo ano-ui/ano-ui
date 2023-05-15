@@ -1,1 +1,1 @@
-export * from './a-collapse-transition'
+export * from './collapse-transition'

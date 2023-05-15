@@ -5,16 +5,18 @@ import { useCollapseTransition } from './use-collapse-transition'
 const props = defineProps(collapseTransitionProps)
 const emit = defineEmits(collapseTransitionEmits)
 
-const { elementGuid, animation } = useCollapseTransition(props, emit)
+const { elementGuid, height } = useCollapseTransition(props, emit)
 </script>
 
 <template>
-  <div class="overflow-hidden h-0" :animation="animation">
+  <div
+    class="overflow-hidden transition-height"
+    :style="[{ height: `${height}px` }, { 'transition-duration': `${duration}ms` }, { 'transition-timing-function': timingFunction }]"
+  >
     <div :id="elementGuid" :class="[cc]" :style="[cs]">
       <slot />
     </div>
   </div>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>

@@ -10,6 +10,10 @@ export const collapseTransitionProps = {
     type: Number,
     default: 200,
   },
+  timingFunction: {
+    type: String,
+    default: 'ease',
+  },
 }
 
 export const collapseTransitionEmits = {
