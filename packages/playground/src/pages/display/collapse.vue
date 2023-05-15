@@ -1,13 +1,13 @@
 <script setup lang="ts">
-
+const activeNames = ref(['1'])
 </script>
 
 <template>
   <UBasePage>
     <div class="p-4">
-      Basic
+      基础用法
     </div>
-    <ACollapse>
+    <ACollapse v-model="activeNames">
       <ACollapseItem title="Hi" name="1">
         今天晚饭吃什么？
       </ACollapseItem>
@@ -17,7 +17,7 @@
     </ACollapse>
 
     <div class="p-4">
-      Accordion
+      手风琴
     </div>
     <ACollapse accordion>
       <ACollapseItem title="Francis Bacon's saying" name="1">
@@ -29,7 +29,7 @@
     </ACollapse>
 
     <div class="p-4">
-      Custom
+      自定义
     </div>
     <ACollapse accordion>
       <ACollapseItem icon="i-tabler-carrot" title="Title" value="Content" label="Description" name="0">
@@ -52,7 +52,7 @@
     </ACollapse>
 
     <div class="p-4">
-      Disabled
+      禁用
     </div>
     <ACollapse accordion>
       <ACollapseItem title="青铜" name="1">

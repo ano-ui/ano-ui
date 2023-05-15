@@ -20,7 +20,6 @@ declare module '@vue/runtime-core' {
     ACheckboxGroup: typeof import('ano-ui/src/components/ACheckboxGroup/ACheckboxGroup.vue')['default']
     ACollapse: typeof import('ano-ui/src/components/ACollapse/ACollapse.vue')['default']
     ACollapseItem: typeof import('ano-ui/src/components/ACollapseItem/ACollapseItem.vue')['default']
-    ACollapseTransition: typeof import('ano-ui/src/components/ACollapseTransition/ACollapseTransition.vue')['default']
     ADialog: typeof import('ano-ui/src/components/ADialog/ADialog.vue')['default']
     AField: typeof import('ano-ui/src/components/AField/AField.vue')['default']
     ANavBar: typeof import('ano-ui/src/components/ANavBar/ANavBar.vue')['default']

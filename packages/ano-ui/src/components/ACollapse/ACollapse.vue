@@ -1,18 +1,23 @@
 <script setup lang="ts">
 import ACellGroup from '../ACellGroup/ACellGroup.vue'
-import { aCollapseEmits, aCollapseProps } from './a-collapse'
-import { useACollapse } from './use-a-collapse'
+import { collapseEmits, collapseProps } from './collapse'
+import { useCollapse } from './use-collapse'
 
-const props = defineProps(aCollapseProps)
-const emit = defineEmits(aCollapseEmits)
+const props = defineProps(collapseProps)
+const emit = defineEmits(collapseEmits)
 
-const { className, clickHandler } = useACollapse(props, emit)
+const { activeNames, setActiveNames } = useCollapse(props, emit)
+
+defineExpose({
+  /** @description active names */
+  activeNames,
+  /** @description set active names */
+  setActiveNames,
+})
 </script>
 
 <template>
-  <div :class="[className, cc]" :style="cs" @click="clickHandler">
-    <ACellGroup divider>
-      <slot />
-    </ACellGroup>
-  </div>
+  <ACellGroup divider :cc="[cc]" :cs="[cs]">
+    <slot />
+  </ACellGroup>
 </template>

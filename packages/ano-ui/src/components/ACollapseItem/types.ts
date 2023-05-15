@@ -1,1 +1,1 @@
-export type ACollapseType = ''
+export type CollapseValueType = string | number

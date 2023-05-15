@@ -1,3 +1,3 @@
-export * from './a-collapse'
-export * from './use-a-collapse'
+export * from './collapse'
+export * from './use-collapse'
 export * from './types'
