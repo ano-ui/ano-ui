@@ -10,8 +10,8 @@ const { disabled, clickHandler } = useButton(props, emit)
 
 <template>
   <button
-    class="box-border items-center justify-center rounded a-button-wrapper-reset m-0 flex gap-2 text-center"
-    :class="[`a-${type}`, `a-button-${size}`, `a-${variant}`, block ? 'block' : 'inline-block', disabled ? 'op-50' : '', cc]"
+    class="box-border items-center justify-center rounded a-button-wrapper-reset m-0 gap-2 text-center"
+    :class="[`a-${type}`, `a-button-${size}`, `a-${variant}`, block ? 'w-full flex' : 'inline-flex', disabled ? 'op-50' : '', cc]"
     :hover-class="disabled ? '' : '!before:op10'" :open-type="openType" :style="cs" @click="clickHandler"
   >
     <div v-if="loading" class="i-tabler-loader animate-spin" />

@@ -10,7 +10,7 @@ const { disabled, checked, dotTranslateClasses, toggle } = useSwitch(props, emit
 
 <template>
   <div
-    class="relative rounded-full bg-context transition-all duration-200 text-white dark:bg-op80 dark:text-op80"
+    class="relative rounded-full bg-context transition-all duration-200 text-white dark:bg-op80 dark:text-op80 inline-block"
     :class="[`a-switch-${size}`, `a-text-${size}`, checked ? `a-${type}` : 'a-gray3', { 'op-50': disabled }, cc]"
     :style="cs" @click="toggle"
   >
