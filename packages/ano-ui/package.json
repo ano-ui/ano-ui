@@ -33,14 +33,11 @@
   "publishConfig": {
     "main": "./dist/index.cjs",
     "module": "./dist/index.mjs",
-    "types": "./dist/index.d.ts",
-    "files": [
-      "dist",
-      "components"
-    ]
+    "types": "./dist/index.d.ts"
   },
   "files": [
-    "src"
+    "dist",
+    "components"
   ],
   "scripts": {
     "build": "esno build/components.ts && unbuild",
