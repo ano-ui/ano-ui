@@ -1,21 +1,22 @@
 <script lang="ts" setup>
-import { aCollapseTransitionEmits, aCollapseTransitionProps } from './a-collapse-transition'
-import { useACollapseTransition } from './use-a-collapse-transition'
+import { collapseTransitionEmits, collapseTransitionProps } from './collapse-transition'
+import { useCollapseTransition } from './use-collapse-transition'
 
-const props = defineProps(aCollapseTransitionProps)
-const emit = defineEmits(aCollapseTransitionEmits)
+const props = defineProps(collapseTransitionProps)
+const emit = defineEmits(collapseTransitionEmits)
 
-const { elementGuid, animation } = useACollapseTransition(props, emit)
+const { elementGuid, height } = useCollapseTransition(props, emit)
 </script>
 
 <template>
-  <div class="overflow-hidden h-0" :animation="animation">
+  <div
+    class="overflow-hidden transition-height"
+    :style="[{ height: `${height}px` }, { 'transition-duration': `${duration}ms` }, { 'transition-timing-function': timingFunction }]"
+  >
     <div :id="elementGuid" :class="[cc]" :style="[cs]">
       <slot />
     </div>
   </div>
 </template>
 
-<style>
-
-</style>
+<style scoped></style>

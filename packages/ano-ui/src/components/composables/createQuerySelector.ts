@@ -21,6 +21,7 @@ export function createQuerySelector<M extends QuerySelectorMode = 'select'>(type
 export function createQuerySelector<M extends QuerySelectorMode = 'select'>(type: 'scrollOffset', mode?: M): QuerySelectorNodeInfo<M>
 export function createQuerySelector<M extends QuerySelectorMode = 'select'>(type: 'fields', mode?: M): QuerySelectorNodeFields<M>
 export function createQuerySelector<M extends QuerySelectorMode = 'select'>(type: 'node', mode?: M): QuerySelectorNode<M>
+
 export function createQuerySelector(type: QuerySelectorType, mode: QuerySelectorMode = 'select'): any {
   const ready = createDeferred()
   const instance = getCurrentInstance()

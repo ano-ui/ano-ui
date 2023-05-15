@@ -9,8 +9,6 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    AACollapse: typeof import('ano-ui/src/components/AACollapse/AACollapse.vue')['default']
-    AACollapseItem: typeof import('ano-ui/src/components/AACollapseItem/AACollapseItem.vue')['default']
     AActionSheet: typeof import('ano-ui/src/components/AActionSheet/AActionSheet.vue')['default']
     AAvatar: typeof import('ano-ui/src/components/AAvatar/AAvatar.vue')['default']
     AAvatarGroup: typeof import('ano-ui/src/components/AAvatarGroup/AAvatarGroup.vue')['default']
@@ -20,7 +18,8 @@ declare module '@vue/runtime-core' {
     ACellGroup: typeof import('ano-ui/src/components/ACellGroup/ACellGroup.vue')['default']
     ACheckbox: typeof import('ano-ui/src/components/ACheckbox/ACheckbox.vue')['default']
     ACheckboxGroup: typeof import('ano-ui/src/components/ACheckboxGroup/ACheckboxGroup.vue')['default']
-    ACollapseTransition: typeof import('ano-ui/src/components/ACollapseTransition/ACollapseTransition.vue')['default']
+    ACollapse: typeof import('ano-ui/src/components/ACollapse/ACollapse.vue')['default']
+    ACollapseItem: typeof import('ano-ui/src/components/ACollapseItem/ACollapseItem.vue')['default']
     ADialog: typeof import('ano-ui/src/components/ADialog/ADialog.vue')['default']
     AField: typeof import('ano-ui/src/components/AField/AField.vue')['default']
     ANavBar: typeof import('ano-ui/src/components/ANavBar/ANavBar.vue')['default']
@@ -38,7 +37,6 @@ declare module '@vue/runtime-core' {
     AToast: typeof import('ano-ui/src/components/AToast/AToast.vue')['default']
     ATransition: typeof import('ano-ui/src/components/ATransition/ATransition.vue')['default']
     UBasePage: typeof import('./components/UBasePage.vue')['default']
-    UGitHub: typeof import('./components/UGitHub.vue')['default']
     UGitHubButton: typeof import('./components/UGitHubButton.vue')['default']
     UThemeSwitcher: typeof import('./components/UThemeSwitcher.vue')['default']
   }
