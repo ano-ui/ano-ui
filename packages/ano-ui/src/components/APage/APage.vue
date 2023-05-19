@@ -2,10 +2,7 @@
 import { useCustomClassProp, useCustomStyleProp } from '../composables'
 
 defineProps({
-  dark: {
-    type: Boolean,
-    default: false,
-  },
+  dark: Boolean,
   cc: useCustomClassProp,
   cs: useCustomStyleProp,
 })

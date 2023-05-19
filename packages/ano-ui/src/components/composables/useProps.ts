@@ -1,32 +1,6 @@
 import type { PropType, StyleValue } from 'vue'
 
-export const StringProp = {
-  type: String,
-  default: '',
-}
-
-export const NumberProp = {
-  type: Number,
-  default: 0,
-}
-
-export const BooleanProp = {
-  type: Boolean,
-  default: false,
-}
-
-export const BooleanTrueProp = {
-  type: Boolean,
-  default: true,
-}
-
-export const ArrayProp = {
-  type: Array,
-  default: () => [],
-}
-
 export type ClassType = String | Object | Array<ClassType>
-
 export const useCustomClassProp = {
   type: [String, Object, Array] as PropType<ClassType>,
   default: '',
@@ -37,43 +11,42 @@ export const useCustomStyleProp = {
   default: '',
 }
 
-export type Type = 'primary' | 'success' | 'info' | 'warning' | 'danger'
-
-export const TypeProp = {
-  type: String as PropType<Type>,
-  validator: (value: string) =>
-    ['primary', 'success', 'info', 'warning', 'danger'].includes(value),
-  default: 'primary',
-}
-
 export type VariantType = 'solid' | 'outline' | 'ghost' | 'light' | 'text'
-
 export const useVariantProp = {
   type: String as PropType<VariantType>,
   default: 'solid',
 }
 
-export type SizeType = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
-
+const sizeList = ['mini', 'small', 'normal', 'large'] as const
+export type SizeType = typeof sizeList[number]
 export const useSizeProp = {
   type: String as PropType<SizeType>,
-  validator: (value: string) => ['xs', 'sm', 'md', 'lg', 'xl'].includes(value),
-  default: 'lg',
+  validator: (value: string) => sizeList.includes(value as SizeType),
+  default: 'normal',
 }
 
-export type AlignType = 'start' | 'center' | 'end'
-
-export const AlignProp = {
-  type: String as PropType<AlignType>,
-  validator: (value: string) => ['start', 'center', 'end'].includes(value),
-  default: 'center',
+const typeList = ['primary', 'success', 'info', 'warning', 'danger'] as const
+export type Type = typeof typeList[number]
+export const useTypeProp = {
+  type: String as PropType<Type>,
+  validator: (value: string) =>
+    typeList.includes(value as Type),
+  default: 'primary',
 }
 
-export type PositionType = 'top' | 'bottom' | 'left' | 'right' | 'center'
+const directionList = ['vertical', 'horizontal'] as const
+export type Direction = typeof directionList[number]
+export const useDirectionProp = {
+  type: String as PropType<Direction>,
+  validator: (value: string) =>
+    directionList.includes(value as Direction),
+  default: 'vertical',
+}
 
+const positionList = ['top', 'bottom', 'left', 'right', 'center'] as const
+export type PositionType = typeof positionList[number]
 export const PositionProp = {
   type: String as PropType<PositionType>,
-  validator: (value: string) =>
-    ['top', 'bottom', 'left', 'right', 'center'].includes(value),
+  validator: (value: string) => positionList.includes(value as PositionType),
   default: 'center',
 }

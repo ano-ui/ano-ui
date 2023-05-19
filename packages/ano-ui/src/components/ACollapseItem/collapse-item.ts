@@ -1,13 +1,13 @@
 import type { ExtractPropTypes, PropType } from 'vue'
 import { useCustomClassProp, useCustomStyleProp } from '../composables'
+import { makeRequiredProp } from '../utils'
 
 export const collapseItemProps = {
   cc: useCustomClassProp,
   cs: useCustomStyleProp,
   title: String,
   name: {
-    type: [String, Number] as PropType<string | number>,
-    required: true,
+    ...makeRequiredProp([String, Number] as PropType<string | number>),
     default: '',
   },
   icon: String,

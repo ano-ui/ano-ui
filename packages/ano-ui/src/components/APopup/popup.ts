@@ -1,7 +1,7 @@
 import type { ExtractPropTypes } from 'vue'
 import { PositionProp, useCustomClassProp, useCustomStyleProp } from '../composables'
 import { CLOSED_EVENT, CLOSE_EVENT, OPENED_EVENT, OPEN_EVENT, UPDATE_SHOW_EVENT } from '../constants'
-import { isBoolean } from '../utils'
+import { isBoolean, makeNumberProp } from '../utils'
 
 export const popupProps = {
   cc: useCustomClassProp,
@@ -10,10 +10,7 @@ export const popupProps = {
   ccs: useCustomStyleProp,
   show: Boolean,
   position: PositionProp,
-  duration: {
-    type: Number,
-    default: 200,
-  },
+  duration: makeNumberProp(200),
 }
 
 export const popupEmits = {

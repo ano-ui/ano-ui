@@ -1,19 +1,14 @@
 import type { ExtractPropTypes } from 'vue'
 import { useCustomClassProp, useCustomStyleProp } from '../composables'
 import { CLICK_EVENT } from '../constants'
+import { makeNumberProp, makeStringProp } from '../utils'
 
 export const collapseTransitionProps = {
   cc: useCustomClassProp,
   cs: useCustomStyleProp,
   show: Boolean,
-  duration: {
-    type: Number,
-    default: 200,
-  },
-  timingFunction: {
-    type: String,
-    default: 'ease',
-  },
+  duration: makeNumberProp(200),
+  timingFunction: makeStringProp('ease'),
 }
 
 export const collapseTransitionEmits = {

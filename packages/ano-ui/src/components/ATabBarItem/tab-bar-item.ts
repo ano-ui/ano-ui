@@ -1,15 +1,12 @@
 import type { ExtractPropTypes } from 'vue'
 import { CHANGE_EVENT, CLICK_EVENT, UPDATE_MODEL_EVENT } from '../constants'
 import { useCustomClassProp, useCustomStyleProp } from '../composables'
-import { isNumber, isString } from '../utils'
+import { isNumber, isString, makeNumericProp } from '../utils'
 
 export const tabBarItemProps = {
   cc: useCustomClassProp,
   cs: useCustomStyleProp,
-  name: {
-    type: [String, Number],
-    default: '',
-  },
+  name: makeNumericProp(''),
   icon: String,
   url: String,
 }

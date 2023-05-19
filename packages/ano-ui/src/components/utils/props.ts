@@ -21,10 +21,10 @@ export function makeRequiredProp<T>(type: T) {
   }
 }
 
-export function makeArrayProp<T>() {
+export function makeArrayProp<T>(defaultVal: T[] = []) {
   return {
     type: Array as PropType<T[]>,
-    default: () => [],
+    default: () => defaultVal,
   }
 }
 

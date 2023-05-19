@@ -2,24 +2,16 @@ import type { ExtractPropTypes } from 'vue'
 
 import { useCustomClassProp, useCustomStyleProp } from '../composables'
 import { CLICK_EVENT } from '../constants'
+import { makeNumberProp, makeStringProp } from '../utils'
 
 export const transitionProps = {
   cc: useCustomClassProp,
   cs: useCustomStyleProp,
-  name: {
-    type: String,
-    default: 'fade',
-  },
+  name: makeStringProp('fade'),
   mode: String,
   show: Boolean,
-  duration: {
-    type: Number,
-    default: 200,
-  },
-  timingFunction: {
-    type: String,
-    default: 'ease',
-  },
+  duration: makeNumberProp(200),
+  timingFunction: makeStringProp('ease'),
 
   enterFromClass: String,
   enterActiveClass: String,
