@@ -44,24 +44,21 @@ jobs:
 
   build:
     runs-on: ${{ matrix.os }}
-
     timeout-minutes: 10
-
     strategy:
       matrix:
-        node_version: [18.x]
         os: [ubuntu-latest, windows-latest]
-        build_cmd: [build, 'build:h5', 'build:mp-weixin', 'build:app']
+        build_cmd: ['build:h5', 'build:mp-weixin', 'build:app']
       fail-fast: false
 
     steps:
       - uses: actions/checkout@v3
       - uses: pnpm/action-setup@v2
 
-      - name: Set node version to ${{ matrix.node_version }}
+      - name: Set node version to 18.x
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node_version }}
+          node-version: 18.x
           cache: pnpm
 
       - name: Install
