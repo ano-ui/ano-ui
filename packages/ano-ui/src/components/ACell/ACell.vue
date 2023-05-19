@@ -10,7 +10,7 @@ const { arrow, classes, clickHandler } = useCell(props, emit)
 
 <template>
   <div
-    class="relative box-border flex items-center gap-2 overflow-hidden a-cell px-4 py-3 text-base after:absolute after:left-4 after:right-4 after:top-0 after:scale-y-50% after:border-t after:a-border after:border-t-solid a-bg-2 a-text-color"
+    class="relative box-border items-center gap-2 overflow-hidden flex a-cell px-4 py-3 text-base after:absolute after:left-4 after:right-4 after:top-0 after:scale-y-50% after:border-t after:a-border after:border-t-solid a-bg-2 a-text-color"
     :class="[classes, { 'text-gray3': disabled }, cc]" :hover-class="(arrow && !disabled) ? '!a-active' : ''" :style="cs"
     @click="clickHandler"
   >

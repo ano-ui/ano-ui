@@ -13,7 +13,7 @@ provide(cellGroupKey,
 </script>
 
 <template>
-  <div v-if="title" class="p-4 a-text-color-2">
+  <div v-if="title" class="a-text-color-2 p-4">
     {{ title }}
   </div>
   <div

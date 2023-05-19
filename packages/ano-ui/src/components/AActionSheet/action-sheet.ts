@@ -1,13 +1,8 @@
-import type { ExtractPropTypes, PropType } from 'vue'
+import type { ExtractPropTypes } from 'vue'
 import { useCustomClassProp, useCustomStyleProp } from '../composables'
 import { CANCEL_EVENT, CLOSED_EVENT, CLOSE_EVENT, OPENED_EVENT, OPEN_EVENT, UPDATE_SHOW_EVENT } from '../constants'
-import { isBoolean } from '../utils'
+import { isBoolean, makeArrayProp, makeNumberProp, truthProp } from '../utils'
 import type { ActionSheetAction } from './types'
-
-export const useActionsProp = {
-  type: Array as PropType<ActionSheetAction[]>,
-  default: () => [],
-}
 
 export const actionSheetProps = {
   cc: useCustomClassProp,
@@ -15,22 +10,13 @@ export const actionSheetProps = {
   ccc: useCustomClassProp,
   ccs: useCustomStyleProp,
   show: Boolean,
-  actions: useActionsProp,
+  actions: makeArrayProp<ActionSheetAction>(),
   title: String,
   cancelText: String,
   description: String,
-  closeable: {
-    type: Boolean,
-    default: true,
-  },
-  duration: {
-    type: Number,
-    default: 300,
-  },
-  round: {
-    type: Boolean,
-    default: true,
-  },
+  closeable: truthProp,
+  duration: makeNumberProp(300),
+  round: truthProp,
 }
 
 export const actionSheetEmits = {

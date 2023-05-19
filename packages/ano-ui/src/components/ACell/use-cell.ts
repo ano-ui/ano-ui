@@ -12,7 +12,7 @@ export function useCell(props: CellProps, emit: SetupContext<CellEmits>['emit'])
   const clickable = computed(() => cellGroup?.clickable || props.clickable)
 
   const classes = computed(() => {
-    const _classes = []
+    const _classes: string[] = []
     // #ifdef H5
     if (arrow.value || clickable.value)
       _classes.push('a-active-h5')

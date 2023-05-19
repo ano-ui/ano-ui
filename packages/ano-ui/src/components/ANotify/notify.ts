@@ -1,19 +1,16 @@
 import type { ExtractPropTypes, PropType } from 'vue'
-import { useCustomClassProp, useCustomStyleProp } from '../composables'
+import { useCustomClassProp, useCustomStyleProp, useTypeProp } from '../composables'
 import { CLOSE_EVENT } from '../constants'
-import type { NotifyPositionType, NotifyType } from './types'
+import { makeNumberProp } from '../utils'
+import type { NotifyPositionType } from './types'
+import { notifyPositionList } from './types'
 
-export const useNotifyTypeProp = {
-  type: String as PropType<NotifyType>,
-  validator: (value: string) =>
-    ['primary', 'success', 'info', 'warning', 'danger'].includes(value),
-  default: 'primary',
-}
+export const useNotifyTypeProp = useTypeProp
 
 export const useNotifyPositionProp = {
   type: String as PropType<NotifyPositionType>,
   validator: (value: string) =>
-    ['default', 'top', 'top-left', 'top-right', 'bottom', 'bottom-left', 'bottom-right'].includes(value),
+    notifyPositionList.includes(value as NotifyPositionType),
   default: 'default',
 }
 
@@ -25,10 +22,7 @@ export const notifyProps = {
   type: useNotifyTypeProp,
   position: useNotifyPositionProp,
   message: String,
-  duration: {
-    type: Number,
-    default: 3000,
-  },
+  duration: makeNumberProp(300),
   showIcon: Boolean,
   customIcon: Boolean,
   showClose: Boolean,
