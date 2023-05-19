@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { nextTick, provide, reactive, toRefs } from 'vue'
 import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '../constants'
 import { tabBarKey } from '../tokens/tabbar'
 import type { TabBarProps } from './tab-bar'

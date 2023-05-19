@@ -14,13 +14,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2
-      - uses: actions/setup-node@v3
         with:
-          node-version: 18.x
-          cache: pnpm
+          fetch-depth: 0
 
-      - name: Install
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8.3.0
+
+      - name: Set node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+          cache: pnpm
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install Dependencies
         run: pnpm i
 
       - name: Lint
@@ -30,13 +39,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2
-      - uses: actions/setup-node@v3
         with:
-          node-version: 18.x
-          cache: pnpm
+          fetch-depth: 0
 
-      - name: Install
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8.3.0
+
+      - name: Set node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+          cache: pnpm
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install Dependencies
         run: pnpm i
 
       - name: TypeCheck
@@ -53,15 +71,22 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2
+        with:
+          fetch-depth: 0
 
-      - name: Set node version to 18.x
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8.3.0
+
+      - name: Set node
         uses: actions/setup-node@v3
         with:
-          node-version: 18.x
+          node-version: 16.x
           cache: pnpm
+          registry-url: 'https://registry.npmjs.org'
 
-      - name: Install
+      - name: Install Dependencies
         run: pnpm i
 
       - name: Build

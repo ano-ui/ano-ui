@@ -2,7 +2,6 @@
   "name": "@ano-ui/monorepo",
   "version": "0.7.8",
   "private": true,
-  "packageManager": "pnpm@8.5.1",
   "scripts": {
     "dev": "pnpm stub",
     "build": "rimraf --glob packages/**/dist && pnpm -r --filter=./packages/* run build && pnpm -r run build-post",
