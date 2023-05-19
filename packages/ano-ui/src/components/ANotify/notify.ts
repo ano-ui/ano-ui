@@ -2,14 +2,15 @@ import type { ExtractPropTypes, PropType } from 'vue'
 import { useCustomClassProp, useCustomStyleProp, useTypeProp } from '../composables'
 import { CLOSE_EVENT } from '../constants'
 import { makeNumberProp } from '../utils'
-import { NotifyPositionType, notifyPositionList } from './types'
+import type { NotifyPositionType } from './types'
+import { notifyPositionList } from './types'
 
 export const useNotifyTypeProp = useTypeProp
 
 export const useNotifyPositionProp = {
   type: String as PropType<NotifyPositionType>,
   validator: (value: string) =>
-  notifyPositionList.includes(value as NotifyPositionType),
+    notifyPositionList.includes(value as NotifyPositionType),
   default: 'default',
 }
 

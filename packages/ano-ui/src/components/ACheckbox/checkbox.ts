@@ -1,4 +1,4 @@
-import type { ExtractPropTypes, PropType } from 'vue'
+import type { ExtractPropTypes } from 'vue'
 import { useCustomClassProp, useCustomStyleProp, useSizeProp, useTypeProp, useVariantProp } from '../composables'
 import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '../constants'
 import { isBoolean, isNumber, isString } from '../utils'
