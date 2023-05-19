@@ -1,9 +1,10 @@
-export type NotifyPositionType = 'default' | 'top' | 'top-left' | 'top-right' | 'bottom' | 'bottom-left' | 'bottom-right'
+import type { Type } from '../composables'
 
-export type NotifyType = 'primary' | 'success' | 'info' | 'warning' | 'danger'
+export const notifyPositionList = ['default', 'top', 'top-left', 'top-right', 'bottom', 'bottom-left', 'bottom-right'] as const
+export type NotifyPositionType = typeof notifyPositionList[number]
 
 export interface NotifyOptions {
-  type?: NotifyType
+  type?: Type
   position?: NotifyPositionType
   message?: string
   duration?: number

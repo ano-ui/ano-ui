@@ -1,13 +1,8 @@
 import type { ExtractPropTypes, PropType } from 'vue'
-import { useCustomClassProp, useCustomStyleProp } from '../composables'
-import type { BadgeType } from './types'
+import { useCustomClassProp, useCustomStyleProp, useTypeProp } from '../composables'
+import { numericProp, truthProp } from '../utils'
 
-export const useBadgeProp = {
-  type: String as PropType<BadgeType>,
-  validator: (value: string) =>
-    ['primary', 'success', 'info', 'warning', 'danger'].includes(value),
-  default: 'primary',
-}
+export const useBadgeProp = useTypeProp
 
 export const useBadgeOffsetProp = {
   type: Array as unknown as PropType<[string | number, string | number]>,
@@ -20,12 +15,9 @@ export const badgeProps = {
   color: String,
   dot: Boolean,
   offset: useBadgeOffsetProp,
-  showZero: {
-    type: Boolean,
-    default: true,
-  },
+  showZero: truthProp,
   max: Number,
-  value: [String, Number],
+  value: numericProp,
   processing: Boolean,
 }
 

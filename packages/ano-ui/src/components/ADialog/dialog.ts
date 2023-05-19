@@ -1,6 +1,7 @@
 import type { ExtractPropTypes } from 'vue'
 import { useCustomClassProp, useCustomStyleProp } from '../composables'
 import { CANCEL_EVENT, CONFIRM_EVENT } from '../constants'
+import { truthProp } from '../utils'
 
 export const dialogProps = {
   cc: useCustomClassProp,
@@ -8,10 +9,7 @@ export const dialogProps = {
   show: Boolean,
   title: String,
   message: String,
-  showConfirmButton: {
-    type: Boolean,
-    default: true,
-  },
+  showConfirmButton: truthProp,
   showCancelButton: Boolean,
   confirmButtonText: String,
   cancelButtonText: String,

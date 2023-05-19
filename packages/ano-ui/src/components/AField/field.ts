@@ -1,7 +1,7 @@
 import type { ExtractPropTypes, PropType } from 'vue'
 import { useCustomClassProp, useCustomStyleProp } from '../composables'
 import { BLUR_EVENT, CHANGE_EVENT, CLEAR_EVENT, CLICK_EVENT, FOCUS_EVENT, INPUT_EVENT, UPDATE_MODEL_EVENT } from '../constants'
-import { isString } from '../utils'
+import { isString, makeNumberProp } from '../utils'
 import type { FieldLabelAlign, FieldType } from './types'
 
 export const useFieldTypeProp = {
@@ -38,10 +38,7 @@ export const fieldProps = {
   showClear: Boolean,
   placeholder: String,
   modelValue: String,
-  maxlength: {
-    type: Number,
-    default: -1,
-  },
+  maxlength: makeNumberProp(-1),
   showWordLimit: Boolean,
 }
 
