@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "pnpm stub",
-    "build": "rimraf packages/*/dist && pnpm -r --filter=./packages/* run build && pnpm -r run build-post",
+    "build": "rimraf --glob packages/**/dist && pnpm -r --filter=./packages/* run build && pnpm -r run build-post",
     "play:mp-weixin": "npm -C packages/playground run dev:mp-weixin",
     "build:mp-weixin": "pnpm build && npm -C packages/playground run build:mp-weixin",
     "play:h5": "npm -C packages/playground run dev:h5",
@@ -13,7 +13,7 @@
     "build:app": "pnpm build && npm -C packages/playground run build:app",
     "release": "bumpp package.json packages/*/package.json",
     "stub": "pnpm -r --filter=./packages/* --parallel run stub",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "vue-tsc --noEmit -p ./packages/ano-ui && vue-tsc --noEmit -p ./packages/playground",
     "lint": "eslint .",
     "lint:fix": "pnpm lint --fix",
     "new": "plop component"
