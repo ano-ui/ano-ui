@@ -1,2 +1,8 @@
+dist
+public
+node_modules
+playground/*
+example/*
+docs/*
 manifest.json
 pages.json
