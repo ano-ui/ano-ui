@@ -60,6 +60,9 @@ jobs:
       - name: Install Dependencies
         run: pnpm i
 
+      - name: PNPM build
+        run: pnpm run build
+
       - name: TypeCheck
         run: pnpm run typecheck
 
@@ -91,6 +94,9 @@ jobs:
 
       - name: Install Dependencies
         run: pnpm i
+
+      - name: PNPM build
+        run: pnpm run build
 
       - name: Build
         run: pnpm run ${{ matrix.build_cmd }}
