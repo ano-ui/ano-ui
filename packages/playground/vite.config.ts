@@ -10,6 +10,7 @@ import UniManifest from '@uni-helper/vite-plugin-uni-manifest'
 import { AnoDevResolver } from './resolvers'
 
 export default defineConfig({
+  base: '/ui/',
   root: process.cwd(),
   resolve: {
     alias: {

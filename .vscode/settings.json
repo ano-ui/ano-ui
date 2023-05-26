@@ -21,6 +21,7 @@
   },
   "i18n-ally.localesPaths": [],
   "unocss.root": [
+    "./docs",
     "packages/ano-ui",
     "packages/playground"
   ],

@@ -30,6 +30,7 @@
     "@types/node": "18.16.4",
     "@uni-helper/vite-plugin-uni-components": "^0.0.6",
     "@unocss/eslint-config": "^0.51.8",
+    "@vue/tsconfig": "^0.4.0",
     "bumpp": "^9.1.0",
     "eslint": "^8.39.0",
     "esno": "^0.16.3",

@@ -1,6 +1,6 @@
 import { defineConfig } from 'vitepress'
 import { version } from '../../package.json'
-import { components, guides } from './items'
+import { components, guides, navComponents } from './items'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -27,7 +27,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '指南', items: guides },
-      { text: '组件', items: components },
+      { text: '组件', items: navComponents },
       {
         text: `v${version}`,
         items: [
@@ -47,6 +47,10 @@ export default defineConfig({
       },
     ],
 
+    search: {
+      provider: 'local',
+    },
+
     sidebar: {
       '/guide/': [
         {
@@ -63,6 +67,11 @@ export default defineConfig({
     },
 
     socialLinks: [{ icon: 'github', link: 'https://github.com/ano-ui/ano-ui' }],
+
+    editLink: {
+      pattern: 'https://github.com/ano-ui/ano-ui/edit/main/docs/:path',
+      text: '在 GitHub 上编辑此页',
+    },
 
     footer: {
       message: 'MIT Licensed',

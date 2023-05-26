@@ -26,6 +26,9 @@ importers:
       '@unocss/eslint-config':
         specifier: ^0.51.8
         version: 0.51.8(eslint@8.39.0)(typescript@5.0.4)
+      '@vue/tsconfig':
+        specifier: ^0.4.0
+        version: 0.4.0
       bumpp:
         specifier: ^9.1.0
         version: 9.1.0
@@ -4327,6 +4330,10 @@ packages:
 
   /@vue/shared@3.3.4:
     resolution: {integrity: sha512-7OjdcV8vQ74eiz1TZLzZP4JwqM5fA94K6yntPS5Z25r9HDuGNzaGdgvwKYq6S+MxwF0TFRwe50fIR/MYnakdkQ==}
+    dev: true
+
+  /@vue/tsconfig@0.4.0:
+    resolution: {integrity: sha512-CPuIReonid9+zOG/CGTT05FXrPYATEqoDGNrEaqS4hwcw5BUNM2FguC0mOwJD4Jr16UpRVl9N0pY3P+srIbqmg==}
     dev: true
 
   /@vueuse/core@10.1.2(vue@3.3.4):
