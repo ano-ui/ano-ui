@@ -16,9 +16,9 @@
     "typecheck": "vue-tsc --noEmit -p ./packages/ano-ui && vue-tsc --noEmit -p ./packages/playground",
     "lint": "eslint . --fix",
     "new": "plop component",
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:dev": "npm -C docs run dev",
+    "docs:build": "npm -C docs run build",
+    "docs:preview": "npm -C docs run serve"
   },
   "dependencies": {
     "vue": "^3.2.47"

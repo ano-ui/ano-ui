@@ -1,4 +1,6 @@
 import { defineConfig } from 'vitepress'
+import { version } from '../../package.json'
+import { components, guides } from './items'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -14,14 +16,8 @@ export default defineConfig({
         content: '轻量级、漂亮、快速的 UnoCSS 组件库',
       },
     ],
-    [
-      'meta',
-      { property: 'og:url', content: 'https://github.com/ano-ui/ano-ui' },
-    ],
-    [
-      'meta',
-      { name: 'referrer', content: 'no-referrer' },
-    ],
+    ['meta', { property: 'og:url', content: 'https://github.com/ano-ui/ano-ui' }],
+    ['meta', { name: 'referrer', content: 'no-referrer' }],
     ['link', { rel: 'icon', href: '/logo.svg', type: 'image/svg+xml' }],
   ],
 
@@ -30,23 +26,43 @@ export default defineConfig({
 
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' },
-    ],
-
-    sidebar: [
+      { text: '指南', items: guides },
+      { text: '组件', items: components },
       {
-        text: 'Examples',
+        text: `v${version}`,
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' },
+          {
+            text: '更新日志',
+            link: 'https://github.com/ano-ui/ano-ui/releases',
+          },
+          {
+            text: '贡献',
+            link: 'https://github.com/ano-ui/ano-ui/blob/main/CONTRIBUTING.md',
+          },
+          {
+            text: '行为准则',
+            link: 'https://github.com/ano-ui/ano-ui/blob/main/CODE_OF_CONDUCT.md',
+          },
         ],
       },
     ],
 
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/ano-ui/ano-ui' },
-    ],
+    sidebar: {
+      '/guide/': [
+        {
+          text: '指南',
+          items: guides,
+        },
+      ],
+      '/components/': [
+        {
+          text: '组件',
+          items: components,
+        },
+      ],
+    },
+
+    socialLinks: [{ icon: 'github', link: 'https://github.com/ano-ui/ano-ui' }],
 
     footer: {
       message: 'MIT Licensed',

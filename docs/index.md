@@ -12,36 +12,25 @@ hero:
 
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: 快速开始
+      link: /guide/quick-start
 
 features:
   - icon: 🌈
-    title: Components Design
-    details: Ano provides neat & beautiful crafted UI components.
+    title: 组件设计
+    details: Ano 提供了简洁美观的UI组件。
     link: /guide/overview.html
-    linkText: Getting Started
+    linkText: 快速开始
   - icon: 🔥
-    title: Introduce on demand
-    details: Provide resolver to automatically import only used components.
+    title: 按需引入
+    details: 提供解析器以自动仅导入被使用的组件。
     link: /guide/install.html
-    linkText: Learn More
+    linkText: 了解更多
   - icon: 🎉
-    title: TS Supported
-    details: Support TypeScript & type checked & type inference.
-  - icon: 💎
-    title: Iconify Icons
-    details:  Use any icon from the library you love.
-    link: /components/icon.html
-    linkText: Getting Started
-  - icon: 🍬
-    title: CSS Preset
-    details: Has UnoCSS preset package to use, rendered UI easily.
+    title: TS 支持
+    details: 支持 TypeScript & 类型检查 & 类型推断。
   - icon: ⚙️
-    title: Theme Config
-    details: Use attribute mode like unocss to design. Support theme config to customize theme.
+    title: 主题配置
+    details: 使用像 UnoCSS 这样的属性模式来设计。支持主题配置自定义主题。
 ---
 

@@ -69,6 +69,12 @@ importers:
         specifier: ^1.6.4
         version: 1.6.4(typescript@5.0.4)
 
+  docs:
+    dependencies:
+      ano-ui:
+        specifier: workspace:*
+        version: link:../packages/ano-ui
+
   packages/ano-ui:
     dependencies:
       '@unocss/preset-mini':
