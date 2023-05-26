@@ -8,9 +8,9 @@
     "play:mp-weixin": "npm -C packages/playground run dev:mp-weixin",
     "build:mp-weixin": "pnpm build && npm -C packages/playground run build:mp-weixin",
     "play:h5": "npm -C packages/playground run dev:h5",
-    "build:h5": "pnpm build && npm -C packages/playground run build:h5",
+    "build:h5": "npm -C packages/playground run build:h5",
     "play:app": "npm -C packages/playground run dev:app",
-    "build:app": "pnpm build && npm -C packages/playground run build:app",
+    "build:app": "npm -C packages/playground run build:app",
     "release": "bumpp package.json packages/*/package.json",
     "stub": "pnpm -r --filter=./packages/* --parallel run stub",
     "typecheck": "vue-tsc --noEmit -p ./packages/ano-ui && vue-tsc --noEmit -p ./packages/playground",
@@ -18,7 +18,8 @@
     "new": "plop component",
     "docs:dev": "npm -C docs run dev",
     "docs:build": "npm -C docs run build",
-    "docs:preview": "npm -C docs run serve"
+    "docs:preview": "npm -C docs run serve",
+    "build:all": "pnpm build && pnpm build:h5 && pnpm docs:build && esno scripts/uni.ts"
   },
   "dependencies": {
     "vue": "^3.2.47"

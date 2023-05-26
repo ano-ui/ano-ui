@@ -12,7 +12,7 @@ const isComponentPage = computed(() => route.path.startsWith('/components'))
 const iframeUrl = computed(() => {
   const path = route.path.replace('/components', '').split('.')[0]
 
-  return import.meta.env.DEV ? `http://localhost:5173/ui/#/pages${path}` : `https://ano-ui.vercel.app/ui/#/pages${path}`
+  return import.meta.env.DEV ? `http://localhost:5173/ui/#/pages${path}` : `/ui/#${path}`
 })
 </script>
 
