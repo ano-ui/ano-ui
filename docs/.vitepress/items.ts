@@ -35,18 +35,18 @@ export const components = [
     text: '展示组件',
     collapsed: false,
     items: [
+      { text: 'Badge 徽标', link: '/components/display/badge' },
       { text: 'Collapse 折叠面板', link: '/components/display/collapse' },
-      { text: 'NoticeBar 消息栏', link: '/components/display/notice-bar' },
+      { text: 'NoticeBar 通知栏', link: '/components/display/notice-bar' },
       { text: 'Tag 标签', link: '/components/display/tag' },
-      { text: 'Badge 标记', link: '/components/display/badge' },
     ],
   },
   {
     text: '导航组件',
     collapsed: false,
     items: [
-      { text: 'TabBar 标签栏', link: '/components/navigation/tab-bar' },
       { text: 'NavBar 导航栏', link: '/components/navigation/nav-bar' },
+      { text: 'TabBar 标签栏', link: '/components/navigation/tab-bar' },
     ],
   },
 ]

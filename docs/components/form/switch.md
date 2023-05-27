@@ -1,9 +1,9 @@
 ---
-title: Template 模板
+title: Switch 开关
 aside: false
 ---
 
-# 模板
+# 复选框
 
 ## 基础用法
 
@@ -17,13 +17,11 @@ aside: false
 
 | 参数 | 说明 | 类型 | 默认值 |
 | --- | --- | --- | --- |
-| size | 可选值为 `mini` `small` `normal'` `large` | `string` | `normal` |
 
 ### Events
 
 | 事件名 | 说明 | 回调参数 |
 | --- | --- | --- |
-| click | 点击时触发 | `event: MouseEvent`|
 
 ### Slots
 

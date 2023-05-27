@@ -1,9 +1,9 @@
 ---
-title: Template 模板
+title: Cell 单元格
 aside: false
 ---
 
-# 模板
+# 单元格
 
 ## 基础用法
 
@@ -17,7 +17,6 @@ aside: false
 
 | 参数 | 说明 | 类型 | 默认值 |
 | --- | --- | --- | --- |
-| size | 可选值为 `mini` `small` `normal'` `large` | `string` | `normal` |
 
 ### Events
 
