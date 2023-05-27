@@ -63,9 +63,9 @@ Commit messages 请遵循[conventional-changelog 标准](https://www.conventiona
 
 1. `ano-ui`: 组件库入口
 2. `docs`: 组件库文档站
-3. `ano-ui`: 组件库
-4. `playground`: 调试组件库的示例
-<!-- 8. `playground`: 组件库演练场 -->
+3. `@ano-ui/preset`: 组件库 UnoCSS 预设
+4. `example`: 调试组件库的示例
+<!-- 5. `playground`: 组件库演练场 -->
 
 ## License
 
