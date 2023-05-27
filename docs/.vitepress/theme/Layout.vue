@@ -12,7 +12,7 @@ const iframeUrl = computed(() => {
 
   return import.meta.env.DEV
     ? `http://localhost:5173/ui/#/pages${path}`
-    : `/ui/index.html#${path}`
+    : `/ui/#/pages${path}`
 })
 </script>
 
