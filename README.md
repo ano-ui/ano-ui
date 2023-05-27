@@ -1,23 +1,23 @@
 <p align="center">
 <img src="https://github.com/ano-ui/ano-ui/raw/main/public/logo.svg" style="width:100px;" />
-<h1 align="center">Ano-UI (WIP)</h1>
-<p align="center">An UniApp UI components with UnoCSS.</p>
-</p>
+<h1 align="center">Ano-UI</h1>
+<p align="center">轻量级、漂亮、快速的 UnoCSS 组件库</p>
 <p align="center">
 <a href="https://www.npmjs.com/package/ano-ui"><img src="https://img.shields.io/npm/v/ano-ui?color=c95f8b&amp;label=" alt="NPM version"></a></p>
 
-## Installation
+## 安装
 
 ```bash
 pnpm add ano-ui
 pnpm add -D unocss @iconify-json/tabler unocss-applet
 ```
 
-## Usage
+## 使用
 
-Custom UnoCSS config(`unocss.config.ts`):
+配置 UnoCSS：
 
 ```ts
+// uno.config.ts
 import { defineConfig, presetIcons } from 'unocss'
 
 // unocss-applet https://github.com/unocss-applet/unocss-applet
@@ -43,7 +43,7 @@ export default defineConfig({
 })
 ```
 
-Update `pages.json` file like below:
+像下面这样更新 `pages.json` 文件：
 
 ```json
 {
@@ -56,9 +56,10 @@ Update `pages.json` file like below:
 }
 ```
 
-Or use [@uni-helper/vite-plugin-uni-components](https://github.com/uni-helper/vite-plugin-uni-components) to scan components automatically.
+或者使用 [@uni-helper/vite-plugin-uni-components](https://github.com/uni-helper/vite-plugin-uni-components) 自动导入组件。
 
 ```ts
+// vite.config.ts
 import { defineConfig } from 'vite'
 
 import Components from '@uni-helper/vite-plugin-uni-components'
@@ -78,7 +79,9 @@ export default defineConfig({
 })
 ```
 
-And then enjoy it. Just use a button component like this:
+And then enjoy it.
+
+只需使用这样的按钮组件：
 
 ```html
 <template>
@@ -86,13 +89,13 @@ And then enjoy it. Just use a button component like this:
 </template>
 ```
 
-## Acknowledgement
+## 感谢
 
-### Tools
+### 工具
 
 - [UnoCSS](https://github.com/unocss/unocss)
 
-### UI Frameworks
+### UI 框架
 
 - [Anu](https://github.com/jd-solanki/anu)
 - [Element Plus](https://github.com/element-plus/element-plus)
