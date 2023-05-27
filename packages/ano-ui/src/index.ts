@@ -1,3 +1,3 @@
-export * from './components'
-export * from './preset'
+export * from '../components'
+export * from '@ano-ui/preset'
 export * from './resolver'

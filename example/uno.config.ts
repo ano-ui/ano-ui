@@ -1,4 +1,5 @@
 import type { Preset, SourceCodeTransformer } from 'unocss'
+
 import {
   defineConfig,
   presetAttributify,
@@ -11,8 +12,7 @@ import {
 import { isH5, isMp } from '@uni-helper/uni-env'
 
 import { presetApplet, presetRemRpx, transformerApplet, transformerAttributify } from 'unocss-applet'
-
-import { presetAno } from '../ano-ui'
+import { presetAno } from 'ano-ui'
 
 const presets: Preset[] = []
 

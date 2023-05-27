@@ -7,11 +7,11 @@ import Components from '@uni-helper/vite-plugin-uni-components'
 import UniPages from '@uni-helper/vite-plugin-uni-pages'
 import UniManifest from '@uni-helper/vite-plugin-uni-manifest'
 
-import { AnoDevResolver } from './resolvers'
+import { AnoResolver } from 'ano-ui'
 
 export default defineConfig({
-  base: '/ui/',
   root: process.cwd(),
+  base: '/ui/',
   resolve: {
     alias: {
       '~/': `${resolve(__dirname, 'src')}/`,
@@ -21,7 +21,7 @@ export default defineConfig({
     Components({
       include: [/\.vue$/, /\.vue\?vue/],
       dts: 'src/components.d.ts',
-      resolvers: [AnoDevResolver(process.env.NODE_ENV === 'development' ? 'serve' : 'build')],
+      resolvers: [AnoResolver()],
     }),
     UniPages({
       routeBlockLang: 'yaml',
