@@ -5,9 +5,6 @@
   "compilerOptions": {
     "baseUrl": ".",
     "declaration": false,
-    "composite": false,
-    "types": [
-      "@dcloudio/types"
-    ]
+    "composite": false
   }
 }

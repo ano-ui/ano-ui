@@ -1,14 +1,15 @@
 {
-  "name": "ano-ui",
+  "name": "@ano-ui/preset",
   "type": "module",
   "version": "0.7.8",
   "description": "",
   "author": "Neil Lee <zguolee@foxmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/ano-ui/ano-ui#readme",
+  "homepage": "https://github.com/ano-ui/ano-ui/tree/main/packages/preset#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ano-ui/ano-ui.git"
+    "url": "git+https://github.com/ano-ui/ano-ui.git",
+    "directory": "packages/preset"
   },
   "bugs": "https://github.com/ano-ui/ano-ui/issues",
   "keywords": [
@@ -36,17 +37,13 @@
     "types": "./dist/index.d.ts"
   },
   "files": [
-    "dist",
-    "components"
+    "dist"
   ],
   "scripts": {
     "build": "unbuild",
     "stub": "unbuild --stub"
   },
-  "peerDependencies": {
-    "vue": "^3.2.0"
-  },
   "dependencies": {
-    "@ano-ui/preset": "workspace:*"
+    "@unocss/preset-mini": "^0.51.8"
   }
 }
