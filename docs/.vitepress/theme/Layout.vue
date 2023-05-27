@@ -4,15 +4,15 @@ import { computed } from 'vue'
 import { useRoute } from 'vitepress'
 
 const { Layout } = DefaultTheme
-
 const route = useRoute()
-
 const isComponentPage = computed(() => route.path.startsWith('/components'))
 
 const iframeUrl = computed(() => {
   const path = route.path.replace('/components', '').split('.')[0]
 
-  return import.meta.env.DEV ? `http://localhost:5173/ui/#/pages${path}` : `/ui/#${path}`
+  return import.meta.env.DEV
+    ? `http://localhost:5173/ui/#/pages${path}`
+    : `/ui/index.html#${path}`
 })
 </script>
 
