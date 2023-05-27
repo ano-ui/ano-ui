@@ -86,7 +86,7 @@ export default {
 import 'virtual:uno.css'
 ```
 
-在项目的根目录下创建 UnoCSS 配置文件 `uno.config.ts`，内容如下:
+在项目的根目录下创建 UnoCSS 配置文件 `uno.config.ts`，内容如下：
 
 ```ts
 // uno.config.ts
