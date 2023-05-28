@@ -7,7 +7,7 @@ import 'uno.css'
 export default {
   ...Theme,
   Layout,
-  enhanceApp({ app, router, siteData }) {
-    // ...
-  },
+  // enhanceApp({ app, router, siteData }) {
+  //   // ...
+  // },
 }

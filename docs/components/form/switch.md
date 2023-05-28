@@ -75,6 +75,6 @@ title: Switch 开关
 
 | 名称 | 说明 |
 | --- | --- |
-| icon | 自定义图标 |
+| icon | 自定义图标类名 | `string` | - |
 | active | 自定义打开时的内容 |
 | inactive | 自定义关闭时的内容 |

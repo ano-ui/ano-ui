@@ -23,7 +23,7 @@ function log(msg: string) {
       @after-leave="log('after-leave')"
     >
       <div
-        class="h-full w-full flex items-center justify-center text-white"
+        class="h-full flex items-center justify-center text-white w-full"
         @click="showValue = false"
       >
         内容

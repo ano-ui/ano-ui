@@ -8,14 +8,14 @@ title: Dialog 弹出框
 
 ```html
 <script setup lang="ts">
-  import { ref } from 'vue'
-  import { DialogInst, DialogOptions } from 'ano-ui'
+import { ref } from 'vue'
+import { DialogInst, DialogOptions } from 'ano-ui'
 
-  const dialog = ref<DialogInst>()
+const dialog = ref<DialogInst>()
 
-  function showDialog(options: DialogOptions) {
-    dialog.value?.show(options)
-  }
+function showDialog(options: DialogOptions) {
+  dialog.value?.show(options)
+}
 </script>
 
 <template>
@@ -32,14 +32,14 @@ title: Dialog 弹出框
 
 ```html
 <script setup lang="ts">
-  import { ref } from 'vue'
-  import { DialogInst, DialogOptions } from 'ano-ui'
+import { ref } from 'vue'
+import { DialogInst, DialogOptions } from 'ano-ui'
 
-  const dialog = ref<DialogInst>()
+const dialog = ref<DialogInst>()
 
-  function showDialog(options: DialogOptions) {
-    dialog.value?.show(options)
-  }
+function showDialog(options: DialogOptions) {
+  dialog.value?.show(options)
+}
 </script>
 
 <template>

@@ -8,14 +8,14 @@ title: Toast 轻提示
 
 ```html
 <script setup lang="ts">
-  import { ref } from 'vue'
-  import type { ToastInst, ToastOptions } from 'ano-ui'
+import { ref } from 'vue'
+import type { ToastInst, ToastOptions } from 'ano-ui'
 
-  const toast = ref<ToastInst>()
+const toast = ref<ToastInst>()
 
-  function showToast(options: ToastOptions) {
-    toast.value?.show(options)
-  }
+function showToast(options: ToastOptions) {
+  toast.value?.show(options)
+}
 </script>
 
 <template>
@@ -32,14 +32,14 @@ Toast 默认渲染在屏幕正中位置，通过 `position` 属性可以控制 T
 
 ```html
 <script setup lang="ts">
-  import { ref } from 'vue'
-  import type { ToastInst, ToastOptions } from 'ano-ui'
+import { ref } from 'vue'
+import type { ToastInst, ToastOptions } from 'ano-ui'
 
-  const toast = ref<ToastInst>()
+const toast = ref<ToastInst>()
 
-  function showToast(options: ToastOptions) {
-    toast.value?.show(options)
-  }
+function showToast(options: ToastOptions) {
+  toast.value?.show(options)
+}
 </script>
 
 <template>
@@ -93,4 +93,4 @@ Toast 默认无图标，通过 `type` 属性可以设置图标。
 | 名称 | 说明 |
 | --- | --- |
 | default | 自定义内容 |
-| icon | 自定义图标 |
+| icon | 自定义图标类名 | `string` | - |

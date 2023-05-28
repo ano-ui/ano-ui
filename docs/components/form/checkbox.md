@@ -57,8 +57,8 @@ title: Checkbox 复选框
 
 ```html
 <script setup lang="ts">
-  import { ref } from 'vue'
-  const checkedList = ref(['a'])
+import { ref } from 'vue'
+const checkedList = ref(['a'])
 </script>
 
 <template>
@@ -76,8 +76,8 @@ title: Checkbox 复选框
 
 ```html
 <script setup lang="ts">
-  import { ref } from 'vue'
-  const checkedList = ref(['a'])
+import { ref } from 'vue'
+const checkedList = ref(['a'])
 </script>
 
 <template>
@@ -126,4 +126,4 @@ title: Checkbox 复选框
 | 名称 | 说明 |
 | --- | --- |
 | label | 自定义复选框的内容 |
-| icon | 自定义复选框的图标 |
+| icon | 自定义图标类名 | `string` | - |

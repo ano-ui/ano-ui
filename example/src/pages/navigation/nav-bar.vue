@@ -24,7 +24,7 @@ function onClickRight() {
     <div class="p-4">
       基础用法
     </div>
-    <ANavBar title="Title" />
+    <ANavBar title="标题" />
     <div class="p-4">
       返回按钮
     </div>

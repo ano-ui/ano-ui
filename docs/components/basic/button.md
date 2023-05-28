@@ -89,7 +89,7 @@ title: Button 按钮
 | type | 按钮类型，可选值为 `primary` `success` `info` `warning` `danger` |  `string` | `primary` |
 | size | 按钮大小，可选值为 `mini` `small` `normal'` `large` | `string` | `normal` |
 | variant | 按钮变体，可选值为 `solid` `outline` `ghost` `light` `text` | `string` | `solid` |
-| icon | 左侧图标名称或图片链接 | `string` | `-` |
+| icon | 自定义图标类名 | `string` | - |
 | disabled | 是否禁用按钮 | `boolean` | `false` |
 | loading | 是否显示为加载状态 | `boolean` | `false` |
 | block | 是否为块级元素 | `boolean` | `false` |
@@ -106,4 +106,4 @@ title: Button 按钮
 | 名称 | 说明 |
 | --- | --- |
 | default | 按钮内容 |
-| icon | 自定义图标 |
+| icon | 自定义图标类名 | `string` | - |

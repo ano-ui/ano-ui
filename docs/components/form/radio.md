@@ -57,8 +57,8 @@ title: Radio 单选框
 
 ```html
 <script setup lang="ts">
-  import { ref } from 'vue'
-  const checked = ref('1')
+import { ref } from 'vue'
+const checked = ref('1')
 </script>
 
 <template>
@@ -106,4 +106,4 @@ title: Radio 单选框
 | 名称 | 说明 |
 | --- | --- |
 | label | 自定义复选框的内容 |
-| icon | 自定义复选框的图标 |
+| icon | 自定义图标类名 | `string` | - |

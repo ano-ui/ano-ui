@@ -10,8 +10,8 @@ title: Popup 弹出层
 
 ```html
 <script setup lang="ts">
-  import { ref } from 'vue'
-  const showValue = ref(false)
+import { ref } from 'vue'
+const showValue = ref(false)
 </script>
 
 <template>

@@ -15,7 +15,7 @@ defineExpose({ showDialog })
 <template>
   <APopup v-model:show="showValue" position="center" :cc="['rounded-xl min-w-80% text-center', cc]" :cs="cs">
     <div class="p-6">
-      <div v-if="dialogStatus?.title" class="pb2 text-xl">
+      <div v-if="dialogStatus?.title" class="text-xl pb2">
         {{ dialogStatus.title }}
       </div>
       <div v-if="dialogStatus?.message" class="text-darkText">

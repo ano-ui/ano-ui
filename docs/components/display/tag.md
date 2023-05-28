@@ -69,4 +69,4 @@ title: Tag 标签
 | 名称 | 说明 |
 | --- | --- |
 | default | 自定义内容 |
-| icon | 自定义图标 |
+| icon | 自定义图标类名 | `string` | - |

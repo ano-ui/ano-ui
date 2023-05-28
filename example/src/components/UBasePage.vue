@@ -42,7 +42,7 @@ function onClickLeft() {
 <template>
   <APage cc="font-sans pb-10 fixed inset-0 overflow-auto">
     <ANavBar
-      v-if="show" :title="title ?? titleText" :left-arrow="backArrow" placeholder fixed z-index="999"
+      v-if="show" :title="title ?? titleText" :left-arrow="backArrow" fixed placeholder z-index="999"
       @click-left="onClickLeft"
     />
     <slot />

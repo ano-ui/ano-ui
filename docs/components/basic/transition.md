@@ -10,8 +10,8 @@ title: Transition 过渡动画
 
 ```html
 <script setup lang="ts">
-  import { ref } from 'vue'
-  const showValue = ref(false)
+import { ref } from 'vue'
+const showValue = ref(false)
 </script>
 
 <template>

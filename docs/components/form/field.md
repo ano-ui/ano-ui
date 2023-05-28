@@ -10,8 +10,8 @@ title: Field 输入框
 
 ```html
 <script setup lang="ts">
-  import { ref } from 'vue'
-  const value = ref('')
+import { ref } from 'vue'
+const value = ref('')
 </script>
 
 <template>
@@ -27,8 +27,8 @@ title: Field 输入框
 
 ```html
 <script setup lang="ts">
-  import { ref } from 'vue'
-  const pwd = ref('')
+import { ref } from 'vue'
+const pwd = ref('')
 </script>
 
 <template>
@@ -48,8 +48,8 @@ title: Field 输入框
 
 ```html
 <script setup lang="ts">
-  import { ref } from 'vue'
-  const value = ref('')
+import { ref } from 'vue'
+const value = ref('')
 </script>
 
 <template>
@@ -65,8 +65,8 @@ title: Field 输入框
 
 ```html
 <script setup lang="ts">
-  import { ref } from 'vue'
-  const value = ref('')
+import { ref } from 'vue'
+const value = ref('')
 </script>
 
 <template>
@@ -82,8 +82,8 @@ title: Field 输入框
 
 ```html
 <script setup lang="ts">
-  import { ref } from 'vue'
-  const value = ref('')
+import { ref } from 'vue'
+const value = ref('')
 </script>
 
 <template>
@@ -101,8 +101,8 @@ title: Field 输入框
 
 ```html
 <script setup lang="ts">
-  import { ref } from 'vue'
-  const value = ref('')
+import { ref } from 'vue'
+const value = ref('')
 </script>
 
 <template>
@@ -149,4 +149,4 @@ title: Field 输入框
 | 名称 | 说明 |
 | --- | --- |
 | default | 自定义内容 |
-| icon | 自定义输入框图标 |
+| icon | 自定义图标类名 | `string` | - |

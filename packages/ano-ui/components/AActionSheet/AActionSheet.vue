@@ -19,13 +19,13 @@ const { showValue, cancelHandler } = useActionSheet(props, emit)
       :style="cs" @click.stop
     >
       <template v-for="action, _idx of actions" :key="_idx">
-        <AButton variant="text" square block :cc="['color-inherit', action.className]">
+        <AButton variant="text" block square :cc="['color-inherit', action.className]">
           {{ action.name }}
         </AButton>
       </template>
       <slot />
       <template v-if="cancelText">
-        <div class="h-2 w-full bg-gray-200/20" />
+        <div class="w-full h-2 bg-gray-200/20" />
         <AButton v-if="cancelText" variant="text" block :cc="['color-inherit rounded-none']" @click="cancelHandler">
           {{ cancelText }}
         </AButton>

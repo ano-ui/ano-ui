@@ -66,7 +66,7 @@ title: Cell 单元格
 | title | 左侧标题 | `string` | `-` |
 | value | 右侧内容 | `string` | `-` |
 | label | 标题下方的描述信息 | `string` | `-` |
-| icon | 左侧图标名称 | `string` | `-` |
+| icon | 自定义图标类名 | `string` | - |
 | arrow | 是否显示右侧箭头并开启点击反馈 | `boolean` | `false` |
 | center | 是否使内容垂直居中 | `boolean` | `false` |
 | titleClass | 左侧标题额外类名 | `string \| Array \| object` | `-` |
@@ -90,7 +90,7 @@ title: Cell 单元格
 | 名称 | 说明 |
 | --- | --- |
 | default | 默认插槽 |
-| icon | 自定义左侧图标 |
+| icon | 自定义图标类名 | `string` | - |
 | title | 自定义左侧标题 |
 | value | 自定义右侧内容 |
 | label | 自定义描述信息 |

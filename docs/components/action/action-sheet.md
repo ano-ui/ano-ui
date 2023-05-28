@@ -10,15 +10,15 @@ title: ActionSheet 动作面板
 
 ```html
 <script setup lang="ts">
-  import { ref } from 'vue'
-  import { ActionSheetAction } from 'ano-ui'
+import { ref } from 'vue'
+import { ActionSheetAction } from 'ano-ui'
 
-  const show = ref(false)
-  const actions = ref<ActionSheetAction[]>([
-    { name: '选项一' },
-    { name: '选项二' },
-    { name: '选项三' },
-  ])
+const show = ref(false)
+const actions = ref<ActionSheetAction[]>([
+  { name: '选项一' },
+  { name: '选项二' },
+  { name: '选项三' },
+])
 </script>
 
 <template>

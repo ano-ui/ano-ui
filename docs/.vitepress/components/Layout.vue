@@ -47,11 +47,11 @@ window.addEventListener('message', (e) => {
     :class="[showPreview ? 'w-345px' : 'w-0']"
   >
     <div
-      class="rounded-full absolute cursor-pointer shadow dark:bg-black flex items-center h-8 w-10 justify-start pl-1 -left-6 bg-gray-1 top-337px"
+      class="flex rounded-full absolute cursor-pointer shadow dark:bg-black items-center h-8 w-10 justify-start pl-1 -left-6 bg-gray-1 top-337px"
       @click="showPreview = !showPreview"
     >
       <div :class="[showPreview ? 'i-tabler-chevron-right' : 'i-tabler-chevron-left']" />
     </div>
-    <iframe class="border-none absolute top-0 h-675px w-345px shadow rounded-xl" :src="iframeUrl" />
+    <iframe class="absolute shadow border-none top-0 h-675px w-345px rounded-xl" :src="iframeUrl" />
   </div>
 </template>

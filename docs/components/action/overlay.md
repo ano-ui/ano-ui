@@ -8,8 +8,8 @@ title: Overlay 遮罩层
 
 ```html
 <script setup lang="ts">
-  import { ref } from 'vue'
-  const show = ref(false)
+import { ref } from 'vue'
+const show = ref(false)
 </script>
 
 <template>
