@@ -18,6 +18,15 @@ onLaunch(() => {
   statusBarHeight.value = 0
   menuButtonBounding.value = { width: 87, height: 32, left: 281, top: 4, right: 368, bottom: 36 }
   // #endif
+
+  // #ifdef H5
+  if (window.parent !== window.self) {
+    window.addEventListener('message', (e) => {
+      if (e.data.type === 'theme')
+        darkMode.value = e.data.data === 'dark'
+    })
+  }
+  // #endif
 })
 onShow(() => {
 })

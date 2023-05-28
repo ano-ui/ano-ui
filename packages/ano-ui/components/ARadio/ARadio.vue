@@ -11,7 +11,7 @@ const { disabled, size, checked, toggle } = useRadio(props, emit)
 <template>
   <div class="flex items-center" :class="[`a-text-${size}`, cc]" :style="cs">
     <div
-      class="relative border border-solid inline-block border-gray3 rounded-full transition-all duration-200 dark:border-op80"
+      class="relative border border-solid inline-block rounded-full transition-all border-gray3 duration-200 dark:border-op80"
       :class="[`a-radio-radio-${size}`, { 'a-radio-disabled': disabled }, ccc]"
       :style="ccs" @click="toggle"
     >

@@ -14,6 +14,16 @@ defineProps({
 })
 
 const curPage = getCurrentPages().at(-1) as any
+
+// #ifdef H5
+if (window.parent !== window.self) {
+  window.parent.postMessage({
+    type: 'route',
+    data: curPage.route,
+  }, '*')
+}
+// #endif
+
 const titleText = curPage.$page?.meta?.navigationBar?.titleText || '标题'
 
 function onClickLeft() {
@@ -32,7 +42,7 @@ function onClickLeft() {
 <template>
   <APage cc="font-sans pb-10 fixed inset-0 overflow-auto">
     <ANavBar
-      v-if="show" :title="title ?? titleText" :left-arrow="backArrow" placeholder fixed z-index="999"
+      v-if="show" :title="title ?? titleText" :left-arrow="backArrow" fixed placeholder z-index="999"
       @click-left="onClickLeft"
     />
     <slot />
