@@ -14,6 +14,16 @@ defineProps({
 })
 
 const curPage = getCurrentPages().at(-1) as any
+
+// #ifdef H5
+if (window.parent !== window.self) {
+  window.parent.postMessage({
+    type: 'route',
+    data: curPage.route,
+  }, '*')
+}
+// #endif
+
 const titleText = curPage.$page?.meta?.navigationBar?.titleText || '标题'
 
 function onClickLeft() {
