@@ -1,6 +1,5 @@
 ---
 title: Switch 开关
-aside: false
 ---
 
 # 复选框

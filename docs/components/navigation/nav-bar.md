@@ -1,6 +1,5 @@
 ---
 title: NavBar 导航栏
-aside: false
 ---
 
 # 导航栏

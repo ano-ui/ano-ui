@@ -78,4 +78,11 @@ export default defineConfig({
       copyright: '版权所有 © 2023 年-至今 Neil & Ano UI 贡献者',
     },
   },
+
+  markdown: {
+    theme: {
+      light: 'vitesse-light',
+      dark: 'vitesse-dark',
+    },
+  },
 })

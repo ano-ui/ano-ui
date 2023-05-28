@@ -17,12 +17,6 @@ Ano UI 一个基于 Vue.js 的 [UnoCSS](https://github.com/unocss/unocss) UI 库
 - 🎉 **TS 支持** - 支持 TypeScript & 类型检查 & 类型推断。
 - ⚙️ **主题配置** - 使用像 UnoCSS 这样的属性模式来设计。支持主题配置自定义主题。
 
-## 最新版本
-
-[![npm version](https://img.shields.io/github/package-json/v/ano-ui/ano-ui)](https://www.npmjs.com/package/ano-ui)
-
-您可以订阅此提要以获取新版本通知：[更新日志](https://github.com/ano-ui/ano-ui/releases)
-
 ## 贡献
 
 有兴趣贡献的开发人员应该阅读[行为准则](https://github.com/ano-ui/ano-ui/blob/main/CODE_OF_CONDUCT.md)和[贡献指南](https://github.com/ano-ui/ano-ui/blob/main/CONTRIBUTING.md)。

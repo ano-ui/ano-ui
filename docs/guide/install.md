@@ -23,7 +23,9 @@
 
 ## 配置 UnoCSS Applet
 
-由于小程序不支持一些 CSS 语法，所以需要使用 [unocss-applet](https://github.com/unocss-applet/unocss-applet) 插件来转换。
+参考 UnoCSS 的 [安装](https://unocss.dev/integrations/vite) 文档，配置 `uno.config.ts` 文件。
+
+由于小程序不支持一些 CSS 语法，需要使用 [unocss-applet](https://github.com/unocss-applet/unocss-applet) 插件来转换。
 
 ::: details
 
@@ -65,28 +67,9 @@ export default defineConfig({
 
 :::
 
-## 配置 UnoCSS
+## 配置 Ano UI
 
-将 UnoCSS 添加到 `vite.config.ts` 文件中：
-
-```ts
-import UnoCSS from 'unocss/vite'
-
-export default {
-  plugins: [
-    UnoCSS(),
-  ],
-}
-```
-
-更新 `main.ts` 入口文件：
-
-```ts
-// main.ts
-import 'virtual:uno.css'
-```
-
-在项目的根目录下创建 UnoCSS 配置文件 `uno.config.ts`，内容如下：
+更新配置文件 `uno.config.ts`，内容如下：
 
 ```ts
 // uno.config.ts
@@ -130,7 +113,6 @@ export default defineConfig({
 ```ts
 // vite.config.ts
 import { defineConfig } from 'vite'
-
 import Components from '@uni-helper/vite-plugin-uni-components'
 import { AnoResolver } from 'ano-ui'
 
@@ -140,8 +122,6 @@ export default defineConfig({
   plugins: [
     // ...
     Components({
-      include: [/\.vue$/, /\.vue\?vue/],
-      dts: 'src/components.d.ts',
       resolvers: [AnoResolver()],
     }),
   ],

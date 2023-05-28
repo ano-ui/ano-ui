@@ -1,6 +1,5 @@
 ---
 title: ActionSheet 动作面板
-aside: false
 ---
 
 # 动作面板

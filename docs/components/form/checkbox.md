@@ -1,6 +1,5 @@
 ---
 title: Toast 复选框
-aside: false
 ---
 
 # 复选框

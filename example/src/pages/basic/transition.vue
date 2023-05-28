@@ -6,9 +6,6 @@ const transitionName = ref('')
 function show(name: string) {
   transitionName.value = name
   showValue.value = true
-  // setTimeout(() => {
-  //   showValue.value = false
-  // }, 2000)
 }
 
 function log(msg: string) {

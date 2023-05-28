@@ -1,6 +1,5 @@
 ---
 title: Radio 单选框
-aside: false
 ---
 
 # 单选框

@@ -1,9 +1,8 @@
 ---
 title: Button 按钮
-aside: false
 ---
 
-# 模板
+# Button 按钮
 
 ## 按钮类型
 

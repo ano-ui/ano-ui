@@ -1,6 +1,5 @@
 ---
 title: Template 模板
-aside: false
 ---
 
 # 模板

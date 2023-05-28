@@ -1,6 +1,5 @@
 ---
 title: NoticeBar 通知栏
-aside: false
 ---
 
 # 通知栏
