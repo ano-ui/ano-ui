@@ -34,7 +34,7 @@ title: Transition 过渡动画
 
 | 参数 | 说明 | 类型 | 默认值 |
 | --- | --- | --- | --- |
-| :show | 是否展示过渡动画 | `boolean` | `false` |
+| show | 是否展示过渡动画 | `boolean` | `false` |
 | name | 内置动画名称，可选值为 `fade` `fade-up` `fade-down` `fade-left` `fade-right` `slide-up` `slide-down` `slide-left` `slide-right` `zoom` | `string` | `fade` |
 | duration | 动画时长，单位为毫秒 | `number` | `200` |
 | timing-function | 动画函数 | `string` | `ease` |
