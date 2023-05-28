@@ -7,7 +7,7 @@ export interface DialogOptions {
   cancelButtonText?: string
 }
 
-export interface DialogRef {
+export interface DialogInst {
   showDialog: (options: DialogOptions) => void
   confirm: () => void
   cancel: () => void

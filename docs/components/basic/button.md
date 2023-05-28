@@ -9,11 +9,13 @@ title: Button 按钮
 按钮支持 `primary`、`success`、`info`、`warning`、`danger` 五种类型，默认为 `primary`。
 
 ```html
-<AButton>主要按钮</AButton>
-<AButton type="success">成功按钮</AButton>
-<AButton type="info">信息按钮</AButton>
-<AButton type="warning">警告按钮</AButton>
-<AButton type="danger">危险按钮</AButton>
+<template>
+  <AButton>主要按钮</AButton>
+  <AButton type="success">成功按钮</AButton>
+  <AButton type="info">信息按钮</AButton>
+  <AButton type="warning">警告按钮</AButton>
+  <AButton type="danger">危险按钮</AButton>
+</template>
 ```
 
 ## 按钮大小
@@ -21,10 +23,12 @@ title: Button 按钮
 按钮支持 `mini`、`small`、`normal`、`large` 四种大小，默认为 `normal`。
 
 ```html
-<AButton type="primary" size="mini">迷你按钮</AButton>
-<AButton type="success" size="small">小型按钮</AButton>
-<AButton type="info" size="normal">普通按钮</AButton>
-<AButton type="warning" size="large">大型按钮</AButton>
+<template>
+  <AButton type="primary" size="mini">迷你按钮</AButton>
+  <AButton type="success" size="small">小型按钮</AButton>
+  <AButton type="info" size="normal">普通按钮</AButton>
+  <AButton type="warning" size="large">大型按钮</AButton>
+</template>
 ```
 
 ## 按钮变体
@@ -32,42 +36,48 @@ title: Button 按钮
 按钮支持 `solid`、`outline`、`ghost`、`light`、`text` 五种变体，默认为 `solid`。
 
 ```html
-<AButton variant="solid">实心按钮</AButton>
-<AButton type="success" variant="outline">空心按钮</AButton>
-<AButton type="info" variant="ghost">虚线按钮</AButton>
-<AButton type="warning" variant="light">次要按钮</AButton>
-<AButton type="danger" variant="text">文字按钮</AButton>
+<template>
+  <AButton variant="solid">实心按钮</AButton>
+  <AButton type="success" variant="outline">空心按钮</AButton>
+  <AButton type="info" variant="ghost">虚线按钮</AButton>
+  <AButton type="warning" variant="light">次要按钮</AButton>
+  <AButton type="danger" variant="text">文字按钮</AButton>
+</template>
 ```
 
 ## 按钮状态
 
 ```html
-<AButton loading>加载中</AButton>
-<AButton type="success" disabled>禁用状态</AButton>
+<template>
+  <AButton loading>加载中</AButton>
+  <AButton type="success" disabled>禁用状态</AButton>
+</template>
 ```
 
 ## 自定义
 
 ```html
-<AButton icon="i-tabler-carrot" />
-<AButton type="success" cc="rounded-none aspect-square">
-  方
-</AButton>
-<AButton type="info" cc="rounded-full aspect-square">
-  圆
-</AButton>
-<AButton type="warning">
-  <template #icon>
-    <i class="i-tabler-send" /> 插槽
-  </template>
-</AButton>
-<AButton cc="bg-teal border-teal" open-type="getUserInfo" @click="getInfo">
-  OpenType
-</AButton>
-<AButton :cc="['bg-gradient-to-r', 'from-indigo-500', 'to-pink-500']">
-  背景渐变
-</AButton>
-<AButton type="danger" block>块级元素</AButton>
+<template>
+  <AButton icon="i-tabler-carrot" />
+  <AButton type="success" cc="rounded-none aspect-square">
+    方
+  </AButton>
+  <AButton type="info" cc="rounded-full aspect-square">
+    圆
+  </AButton>
+  <AButton type="warning">
+    <template #icon>
+      <i class="i-tabler-send" /> 插槽
+    </template>
+  </AButton>
+  <AButton cc="bg-teal border-teal" open-type="getUserInfo" @click="getInfo">
+    OpenType
+  </AButton>
+  <AButton :cc="['bg-gradient-to-r', 'from-indigo-500', 'to-pink-500']">
+    背景渐变
+  </AButton>
+  <AButton type="danger" block>块级元素</AButton>
+</template>
 ```
 
 ## API

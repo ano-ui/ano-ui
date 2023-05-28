@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import type { DialogOptions, DialogRef, ToastInst, ToastOptions } from 'ano-ui'
+import type { DialogInst, DialogOptions, ToastInst, ToastOptions } from 'ano-ui'
 
 const toast = ref<ToastInst>()
 
@@ -8,7 +8,7 @@ function showToast(options: ToastOptions) {
   toast.value?.show(options)
 }
 
-const dialogRef = ref<DialogRef>()
+const dialogRef = ref<DialogInst>()
 function handleShow(options: DialogOptions) {
   dialogRef.value?.showDialog(options)
 }

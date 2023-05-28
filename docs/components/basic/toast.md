@@ -79,7 +79,7 @@ Toast 默认无图标，通过 `type` 属性可以设置图标。
 
 ## API
 
-### ToastOptions 属性
+### ToastOptions 数据结构
 
 | 参数 | 说明 | 类型 | 默认值 |
 | --- | --- | --- | --- |

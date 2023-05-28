@@ -37,5 +37,4 @@ defineExpose({ showDialog })
   </APopup>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>
