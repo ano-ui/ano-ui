@@ -30,17 +30,19 @@ const showValue = ref(false)
 通过 `position` 属性设置弹窗的弹出位置，默认为居中弹出，可以设置为 `top`、`bottom`、`left`、`right`。
 
 ```html
-<!-- 顶部弹出 -->
-<APopup v-model:show="showValue" position="top"></APopup>
+<template>
+  <!-- 顶部弹出 -->
+  <APopup v-model:show="showValue" position="top"></APopup>
 
-<!-- 底部弹出 -->
-<APopup v-model:show="showValue" position="bottom"></APopup>
+  <!-- 底部弹出 -->
+  <APopup v-model:show="showValue" position="bottom"></APopup>
 
-<!-- 左侧弹出 -->
-<APopup v-model:show="showValue" position="left"></APopup>
+  <!-- 左侧弹出 -->
+  <APopup v-model:show="showValue" position="left"></APopup>
 
-<!-- 右侧弹出 -->
-<APopup v-model:show="showValue" position="right"></APopup>
+  <!-- 右侧弹出 -->
+  <APopup v-model:show="showValue" position="right"></APopup>
+</template>
 ```
 
 ## API

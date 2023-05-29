@@ -10,10 +10,11 @@ aside: false
 `Cell` 可以单独使用，也可以与 `CellGroup` 搭配使用，`CellGroup` 可以为 `Cell` 提供上下外边框。
 
 ```html
-
-<ACell title="单元格" value="内容" />
-<ACell value="无标题内容" />
-<ACell icon="i-tabler-carrot" title="单元格" value="内容" label="描述信息" />
+<template>
+  <ACell title="单元格" value="内容" />
+  <ACell value="无标题内容" />
+  <ACell icon="i-tabler-carrot" title="单元格" value="内容" label="描述信息" />
+</template>
 ```
 
 ### 卡片风格
@@ -21,33 +22,37 @@ aside: false
 通过 `CellGroup` 的 `inset` 属性，可以将单元格转换为圆角卡片风格。
 
 ```html
-<ACellGroup inset arrow divider>
-  <ACell title="单元格" value="内容" />
-  <ACell title="单元格" value="内容" />
-  <ACell title="单元格" value="内容" />
-</ACellGroup>
+<template>
+  <ACellGroup inset arrow divider>
+    <ACell title="单元格" value="内容" />
+    <ACell title="单元格" value="内容" />
+    <ACell title="单元格" value="内容" />
+  </ACellGroup>
+</template>
 ```
 
 ## 自定义
 
 ```html
-<ACellGroup divider title="分组标题">
-  <ACell icon="i-tabler-carrot" title="单元格" value="内容" label="描述信息" arrow />
-  <ACell title="单元格">
-    <template #icon>
-      <i class="i-tabler-carrot" />
-    </template>
-    <template #value>
-      <div>内容插槽</div>
-    </template>
-    <template #label>
-      <div>描述信息插槽</div>
-    </template>
-    <template #right-icon>
-      <i class="i-tabler-search" />
-    </template>
-  </ACell>
-</ACellGroup>
+<template>
+  <ACellGroup divider title="分组标题">
+    <ACell icon="i-tabler-carrot" title="单元格" value="内容" label="描述信息" arrow />
+    <ACell title="单元格">
+      <template #icon>
+        <i class="i-tabler-carrot" />
+      </template>
+      <template #value>
+        <div>内容插槽</div>
+      </template>
+      <template #label>
+        <div>描述信息插槽</div>
+      </template>
+      <template #right-icon>
+        <i class="i-tabler-search" />
+      </template>
+    </ACell>
+  </ACellGroup>
+</template>
 ```
 
 ## API

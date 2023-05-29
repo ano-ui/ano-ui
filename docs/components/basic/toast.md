@@ -63,19 +63,20 @@ function showToast(options: ToastOptions) {
 Toast 默认无图标，通过 `type` 属性可以设置图标。
 
 ```html
-
-<AButton @click="showToast({ type: 'loading', message: '加载中' })">
-  加载中
-</AButton>
-<AButton @click="showToast({ type: 'success', message: '成功' })">
-  成功
-</AButton>
-<AButton @click="showToast({ type: 'danger', message: '危险' })">
-  危险
-</AButton>
-<AButton @click="showToast({ type: 'warning', message: '警告' })">
-  警告
-</AButton>
+<template>
+  <AButton @click="showToast({ type: 'loading', message: '加载中' })">
+    加载中
+  </AButton>
+  <AButton @click="showToast({ type: 'success', message: '成功' })">
+    成功
+  </AButton>
+  <AButton @click="showToast({ type: 'danger', message: '危险' })">
+    危险
+  </AButton>
+  <AButton @click="showToast({ type: 'warning', message: '警告' })">
+    警告
+  </AButton>
+</template>
 ```
 
 ## API

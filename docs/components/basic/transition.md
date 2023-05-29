@@ -26,7 +26,9 @@ const showValue = ref(false)
 通过 `name` 属性设置内置动画，目前支持 `fade` `fade-up` `fade-down` `fade-left` `fade-right` `slide-up` `slide-down` `slide-left` `slide-right` `zoom`。
 
 ```html
-<ATransition :show="showValue" name="fade"></ATransition>
+<template>
+  <ATransition :show="showValue" name="fade"></ATransition>
+</template>
 ```
 
 ## API
