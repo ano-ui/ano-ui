@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import DefaultTheme from 'vitepress/theme'
-import { computed, ref, watch } from 'vue'
+import { computed, watch } from 'vue'
 import { useData, useRouter } from 'vitepress'
 
 const { Layout } = DefaultTheme
@@ -15,8 +15,6 @@ const iframeUrl = computed(() => {
     ? `http://localhost:5173/ui/#/pages${path}`
     : `/ui/#/pages${path}`
 })
-
-const showPreview = ref(false)
 
 watch(isDark, (val) => {
   const iframe = document.querySelector('iframe')
@@ -41,17 +39,11 @@ window.addEventListener('message', (e) => {
 </script>
 
 <template>
-  <Layout />
+  <Layout :class="[{ 'xl:[&>.VPContent]:!pr-100': isComponentPage }]" />
   <div
-    v-if="isComponentPage" class="fixed bottom-0 top-80px flex right-0 flex transition-all rounded-l-xl"
-    :class="[showPreview ? 'w-345px' : 'w-0']"
+    v-if="isComponentPage"
+    class="fixed bottom-0 top-80px flex right-0 flex transition-all rounded-l-xl xl:w-375px w-0 xl:right-10"
   >
-    <div
-      class="flex rounded-full absolute cursor-pointer shadow dark:bg-black items-center h-8 w-10 justify-start pl-1 -left-6 bg-gray-1 top-337px"
-      @click="showPreview = !showPreview"
-    >
-      <div :class="[showPreview ? 'i-tabler-chevron-right' : 'i-tabler-chevron-left']" />
-    </div>
-    <iframe class="absolute shadow border-none top-0 h-675px w-345px rounded-xl" :src="iframeUrl" />
+    <iframe class="border-none rounded-xl block w-375px h-675px" :src="iframeUrl" />
   </div>
 </template>

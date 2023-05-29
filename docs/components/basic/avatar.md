@@ -1,5 +1,6 @@
 ---
 title: Avatar 头像
+aside: false
 ---
 
 # Avatar 头像

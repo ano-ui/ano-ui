@@ -1,5 +1,6 @@
 ---
 title: TabBar 标签栏
+aside: false
 ---
 
 # TabBar 标签栏

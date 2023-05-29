@@ -1,5 +1,6 @@
 ---
 title: Switch 开关
+aside: false
 ---
 
 # Switch 开关

@@ -20,7 +20,7 @@ features:
     title: 组件设计
     details: Ano 提供了简洁美观的 UI 组件。
     # link: /guide/overview.html
-    linkText: 快速开始
+    # linkText: 快速开始
   - icon: 🔥
     title: 按需引入
     details: 提供解析器以自动仅导入被使用的组件。

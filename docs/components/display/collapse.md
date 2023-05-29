@@ -1,5 +1,6 @@
 ---
 title: Collapse 折叠面板
+aside: false
 ---
 
 # Collapse 折叠面板

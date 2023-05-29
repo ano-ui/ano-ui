@@ -1,5 +1,6 @@
 ---
 title: Transition 过渡动画
+aside: false
 ---
 
 # Transition 过渡动画

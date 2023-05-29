@@ -1,5 +1,6 @@
 ---
 title: Badge 徽标
+aside: false
 ---
 
 # Badge 徽标

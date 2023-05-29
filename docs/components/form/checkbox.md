@@ -1,5 +1,6 @@
 ---
 title: Checkbox 复选框
+aside: false
 ---
 
 # Checkbox 复选框

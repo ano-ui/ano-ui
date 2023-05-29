@@ -1,5 +1,6 @@
 ---
 title: Icon 图标
+aside: false
 ---
 
 # 图标

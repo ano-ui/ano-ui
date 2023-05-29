@@ -1,5 +1,6 @@
 ---
 title: Dialog 弹出框
+aside: false
 ---
 
 # Dialog 弹出框
