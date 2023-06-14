@@ -25,13 +25,13 @@ export const useSizeProp = {
   default: 'normal',
 }
 
-const typeList = ['primary', 'success', 'info', 'warning', 'danger'] as const
+const typeList = ['default', 'primary', 'success', 'info', 'warning', 'danger'] as const
 export type Type = typeof typeList[number]
 export const useTypeProp = {
   type: String as PropType<Type>,
   validator: (value: string) =>
     typeList.includes(value as Type),
-  default: 'primary',
+  default: 'default',
 }
 
 const directionList = ['vertical', 'horizontal'] as const

@@ -13,8 +13,18 @@ export function useButton(props: ButtonProps, emit: SetupContext<ButtonEmits>['e
     emit(CLICK_EVENT, evt)
   }
 
+  const classes = computed(() => [
+    `a-${props.type}`,
+    props.type === 'default' && 'a-type-default',
+    `a-button-${props.size}`,
+    `a-${props.variant}`,
+    props.block ? 'w-full flex' : 'inline-flex',
+    disabled.value ? 'op-50' : '',
+  ])
+
   return {
     disabled,
+    classes,
 
     clickHandler,
   }

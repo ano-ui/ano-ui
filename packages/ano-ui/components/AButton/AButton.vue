@@ -5,14 +5,14 @@ import { useButton } from './use-button'
 const props = defineProps(buttonProps)
 const emit = defineEmits(buttonEmits)
 
-const { disabled, clickHandler } = useButton(props, emit)
+const { disabled, classes, clickHandler } = useButton(props, emit)
 </script>
 
 <template>
   <button
-    class="box-border items-center justify-center rounded text-center a-button-wrapper-reset m-0 gap-2"
-    :class="[`a-${type}`, `a-button-${size}`, `a-${variant}`, block ? 'w-full flex' : 'inline-flex', disabled ? 'op-50' : '', cc]"
-    :hover-class="disabled ? '' : '!before:op10'" :open-type="openType" :style="cs" @click="clickHandler"
+    class="box-border items-center justify-center rounded text-center a-button-wrapper-reset m-0 gap-2 inline-flex"
+    :class="[classes, cc]" :hover-class="disabled ? '' : '!before:op10'" :open-type="openType" :style="cs"
+    @click="clickHandler"
   >
     <div v-if="loading" class="i-tabler-loader animate-spin" />
     <template v-else>

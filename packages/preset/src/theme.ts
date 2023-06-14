@@ -3,6 +3,7 @@ import type { Theme } from 'unocss/preset-mini'
 export const theme: Theme = {
   colors: {
     context: 'rgb(var(--ano-c-context))',
+    default: '#FFFFFF',
     primary: '#A855F7',
     success: '#3AC569',
     info: '#0080FF',
