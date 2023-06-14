@@ -19,5 +19,5 @@ function open() {
 </script>
 
 <template>
-  <AButton icon="i-tabler-brand-github" variant="text" cc="color-inherit" @click="open" />
+  <AButton type="primary" icon="i-tabler-brand-github" variant="text" cc="color-inherit" @click="open" />
 </template>
