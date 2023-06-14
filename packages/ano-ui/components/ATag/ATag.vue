@@ -5,14 +5,14 @@ import { useTag } from './use-tag'
 const props = defineProps(tagProps)
 const emit = defineEmits(tagEmits)
 
-const { disabled, clickHandler, closeHandler } = useTag(props, emit)
+const { disabled, classes, clickHandler, closeHandler } = useTag(props, emit)
 </script>
 
 <template>
   <div
     v-if="show"
     class="relative box-border inline-flex items-center justify-center a-transition gap1 overflow-visible after:display-none"
-    :class="[`a-${type}`, `a-tag-${size}`, { '!p-0.5 aspect-square': iconOnly }, `a-${variant}`, { 'op-50': disabled }, cc]"
+    :class="[classes, cc]"
     :style="cs" @click="clickHandler"
   >
     <div v-if="icon" :class="icon" />

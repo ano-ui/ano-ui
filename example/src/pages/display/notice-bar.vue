@@ -10,7 +10,7 @@ const show = ref(true)
       基础用法
     </div>
     <div px-4 flex="~ col gap2">
-      <ANoticeBar>
+      <ANoticeBar type="primary">
         This is a notice bar.
       </ANoticeBar>
       <ANoticeBar type="success" loop>
@@ -30,7 +30,7 @@ const show = ref(true)
       变体
     </div>
     <div px-4 flex="~ col gap2">
-      <ANoticeBar variant="solid">
+      <ANoticeBar type="primary" variant="solid">
         Solid
       </ANoticeBar>
       <ANoticeBar type="success" variant="outline">
