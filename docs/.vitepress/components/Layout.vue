@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import DefaultTheme from 'vitepress/theme'
-import { computed, watch } from 'vue'
+import { computed, onMounted, watch } from 'vue'
 import { useData, useRouter } from 'vitepress'
 
 const { Layout } = DefaultTheme
@@ -16,25 +16,27 @@ const iframeUrl = computed(() => {
     : `/ui/#/pages${path}`
 })
 
-watch(isDark, (val) => {
-  const iframe = document.querySelector('iframe')
-  if (iframe) {
-    iframe.contentWindow?.postMessage(
-      {
-        type: 'theme',
-        data: val ? 'dark' : 'light',
-      },
-      '*',
-    )
-  }
-})
+onMounted(() => {
+  watch(isDark, (val) => {
+    const iframe = document.querySelector('iframe')
+    if (iframe) {
+      iframe.contentWindow?.postMessage(
+        {
+          type: 'theme',
+          data: val ? 'dark' : 'light',
+        },
+        '*',
+      )
+    }
+  })
 
-window.addEventListener('message', (e) => {
-  if (e.data.type === 'route') {
-    const path = e.data.data.split('/').slice(1).join('/')
-    if (path !== 'index')
-      go(`/components/${path}.html`)
-  }
+  window.addEventListener('message', (e) => {
+    if (e.data.type === 'route') {
+      const path = e.data.data.split('/').slice(1).join('/')
+      if (path !== 'index')
+        go(`/components/${path}.html`)
+    }
+  })
 })
 </script>
 
