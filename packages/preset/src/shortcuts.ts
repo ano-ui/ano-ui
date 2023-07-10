@@ -18,11 +18,13 @@ export const shortcuts: UserShortcuts<Theme> = {
 
   'a-transition': 'transition-all duration-200',
 
-  'a-solid': 'bg-context text-white dark:bg-op80 dark:text-op80',
-  'a-outline': 'bg-transparent border border-solid border-context text-context dark:border-op80 dark:text-op80',
-  'a-ghost': 'bg-transparent border border-dashed border-context text-context dark:border-op80 dark:text-op80',
-  'a-light': 'bg-context text-context bg-op20 dark:text-op80',
-  'a-text': 'bg-transparent text-context dark:text-op80',
+  'a-solid': 'bg-context text-white',
+  'a-outline': 'bg-transparent border border-solid border-context text-context',
+  'a-ghost': 'bg-transparent border border-dashed border-context text-context',
+  'a-light': 'bg-context text-context bg-op20',
+  'a-text': 'bg-transparent text-context',
+
+  'a-type-default': '!a-text-color border border-solid dark:!bg-transparent border-[#DCDEE0]',
 
   'a-hairline': 'relative after:content-[\'_\'] after:pointer-events-none after:absolute after:box-border after:top--50% after:right--50% after:bottom--50% after:left--50% after:a-border after:border-solid after:border-0 after:scale-50',
   'a-hairline-bottom': 'a-hairline after:border-b-1px',

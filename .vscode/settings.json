@@ -23,7 +23,7 @@
   "unocss.root": [
     "./docs",
     "packages/ano-ui",
-    "packages/playground"
+    "example"
   ],
   "github-actions.workflows.pinned.workflows": [
     ".github/workflows/check.yml"

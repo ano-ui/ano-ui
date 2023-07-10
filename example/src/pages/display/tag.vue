@@ -10,7 +10,8 @@ const show = ref(true)
       类型
     </div>
     <div px-4 flex="~ gap2 wrap">
-      <ATag label="主要" />
+      <ATag label="默认" />
+      <ATag label="主要" type="primary" />
       <ATag label="成功" type="success" />
       <ATag label="信息" type="info" />
       <ATag label="警告" type="warning" />
@@ -31,7 +32,7 @@ const show = ref(true)
       变体
     </div>
     <div flex="~ gap2 wrap" items-center px-4>
-      <ATag label="Solid" variant="solid" />
+      <ATag label="Solid" type="primary" variant="solid" />
       <ATag label="Outline" type="success" variant="outline" />
       <ATag label="Ghost" type="info" variant="ghost" />
       <ATag label="Light" type="warning" variant="light" />
@@ -43,7 +44,7 @@ const show = ref(true)
     </div>
     <div flex="~ gap2 wrap" items-center px-4>
       <!-- TODO: close will remain an <a-tag> but 0x0 -->
-      <ATag label="可关闭" closable :show="show" @close="show = !show" />
+      <ATag label="可关闭" type="primary" closable :show="show" @close="show = !show" />
       <ATag label="禁用" type="success" disabled />
     </div>
 
@@ -51,7 +52,7 @@ const show = ref(true)
       自定义
     </div>
     <div flex="~ gap2 wrap" items-center px-4>
-      <ATag icon="i-tabler-carrot" icon-only />
+      <ATag type="primary" icon="i-tabler-carrot" icon-only />
       <ATag type="success" icon-only cc="rounded-full">
         <template #icon>
           <div class="i-tabler-carrot" />
@@ -63,7 +64,7 @@ const show = ref(true)
           <div class="i-tabler-carrot" />
         </template>
       </ATag>
-      <ATag label="背景渐变" cc="bg-gradient-to-r from-indigo-500 to-pink-500" />
+      <ATag type="primary" label="背景渐变" cc="bg-gradient-to-r from-indigo-500 to-pink-500" />
     </div>
   </UBasePage>
 </template>

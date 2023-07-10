@@ -4,7 +4,7 @@ const { darkMode } = storeToRefs(useAppStore())
 
 <template>
   <AButton
-    :icon="darkMode ? 'i-tabler-sun' : 'i-tabler-moon'" variant="text" cc="color-inherit"
+    type="primary" :icon="darkMode ? 'i-tabler-sun' : 'i-tabler-moon'" variant="text" cc="color-inherit"
     @click="darkMode = !darkMode"
   />
 </template>

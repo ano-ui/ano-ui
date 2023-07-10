@@ -16,6 +16,9 @@ function getInfo() {
     </div>
     <div flex="~ gap2 wrap" items-center px-4>
       <AButton>
+        默认按钮
+      </AButton>
+      <AButton type="primary">
         主要按钮
       </AButton>
       <AButton type="success">
@@ -52,7 +55,7 @@ function getInfo() {
       按钮变体
     </div>
     <div flex="~ gap2 wrap" items-center px-4>
-      <AButton variant="solid">
+      <AButton type="primary" variant="solid">
         实心按钮
       </AButton>
       <AButton type="success" variant="outline">
@@ -72,7 +75,7 @@ function getInfo() {
       按钮状态
     </div>
     <div flex="~ gap2 wrap" items-center px-4>
-      <AButton loading>
+      <AButton type="primary" loading>
         加载中
       </AButton>
       <AButton type="success" disabled>
@@ -83,7 +86,7 @@ function getInfo() {
       自定义
     </div>
     <div flex="~ gap2 wrap" items-center px-4>
-      <AButton icon="i-tabler-carrot" />
+      <AButton type="primary" icon="i-tabler-carrot" />
       <AButton type="success" cc="rounded-none aspect-square">
         方
       </AButton>
@@ -95,10 +98,10 @@ function getInfo() {
           <i class="i-tabler-send" /> 插槽
         </template>
       </AButton>
-      <AButton cc="bg-teal border-teal" open-type="getUserInfo" @click="getInfo">
+      <AButton type="primary" cc="bg-teal border-teal" open-type="getUserInfo" @click="getInfo">
         OpenType
       </AButton>
-      <AButton :cc="['bg-gradient-to-r', 'from-indigo-500', 'to-pink-500']">
+      <AButton type="primary" :cc="['bg-gradient-to-r', 'from-indigo-500', 'to-pink-500']">
         背景渐变
       </AButton>
     </div>

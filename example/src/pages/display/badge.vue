@@ -7,10 +7,10 @@
       基础用法
     </div>
     <div items-center px-4 flex="~ gap6 wrap">
-      <ABadge :value="16" :max="15">
+      <ABadge type="primary" :value="16" :max="15">
         <div class="rounded-lg h-12 w-12 bg-gray3" />
       </ABadge>
-      <ABadge dot>
+      <ABadge type="primary" dot>
         <div class="h-12 w-12 rounded-lg bg-gray3" />
       </ABadge>
     </div>
@@ -18,7 +18,7 @@
       自定义类型
     </div>
     <div items-center px-4 flex="~ gap6 wrap">
-      <ABadge dot>
+      <ABadge type="primary" dot>
         <div class="h-12 w-12 rounded-lg bg-gray3" />
       </ABadge>
       <ABadge type="danger" dot>
@@ -38,10 +38,10 @@
       Processing
     </div>
     <div items-center px-4 flex="~ gap6 wrap">
-      <ABadge dot processing>
+      <ABadge type="primary" dot processing>
         <div class="h-12 w-12 rounded-lg bg-gray3" />
       </ABadge>
-      <ABadge :value="20" processing>
+      <ABadge type="primary" :value="20" processing>
         <div class="h-12 w-12 rounded-lg bg-gray3" />
       </ABadge>
       <ABadge dot type="info" processing>
@@ -52,10 +52,10 @@
       自定义值
     </div>
     <div items-center px-4 flex="~ gap6 wrap">
-      <ABadge value="你">
+      <ABadge type="primary" value="你">
         <div class="h-12 w-12 rounded-lg bg-gray3" />
       </ABadge>
-      <ABadge value="在">
+      <ABadge type="primary" value="在">
         <div class="h-12 w-12 rounded-lg bg-gray3" />
       </ABadge>
       <ABadge type="info" processing>

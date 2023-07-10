@@ -29,7 +29,7 @@ defineExpose({ showDialog })
         </AButton>
       </template>
       <template v-if="dialogStatus?.showConfirmButton">
-        <AButton class="flex-1" variant="text" square block @click.stop="onConfirm">
+        <AButton type="primary" class="flex-1" variant="text" square block @click.stop="onConfirm">
           {{ dialogStatus.confirmButtonText || 'Confirm' }}
         </AButton>
       </template>

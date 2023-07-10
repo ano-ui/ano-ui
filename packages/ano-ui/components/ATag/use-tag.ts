@@ -7,22 +7,32 @@ export function useTag(props: TagProps,
   emit: SetupContext<TagEmits>['emit']) {
   const disabled = computed(() => props.disabled)
 
-  const clickHandler = (evt: MouseEvent) => {
+  function clickHandler(evt: MouseEvent) {
     if (disabled.value)
       return
 
     emit(CLICK_EVENT, evt)
   }
 
-  const closeHandler = (evt: MouseEvent) => {
+  function closeHandler(evt: MouseEvent) {
     if (props.disabled)
       return
 
     emit(CLOSE_EVENT, evt)
   }
 
+  const classes = computed(() => [
+    `a-${props.type}`,
+    props.type === 'default' && 'a-type-default',
+    `a-tag-${props.size}`,
+    `a-${props.variant}`,
+    { '!p-0.5 aspect-square': props.iconOnly },
+    { 'op-50': disabled.value },
+  ])
+
   return {
     disabled,
+    classes,
 
     clickHandler,
     closeHandler,

@@ -25,7 +25,7 @@ function toggle(index: any) {
       自定义类型
     </div>
     <div px-4 flex="~ col gap2">
-      <ACheckbox v-model="checked" label="主要" />
+      <ACheckbox v-model="checked" type="primary" label="主要" />
       <ACheckbox v-model="checked" type="success" label="成功" />
       <ACheckbox v-model="checked" type="info" label="信息" />
       <ACheckbox v-model="checked" type="warning" label="警告" />
@@ -52,8 +52,8 @@ function toggle(index: any) {
       自定义
     </div>
     <div px-4 flex="~ col gap2">
-      <ACheckbox v-model="checked2" :value="1" label="值" icon="i-tabler-carrot" />
-      <ACheckbox v-model="checked3" custom-icon value="yes" label="图标插槽">
+      <ACheckbox v-model="checked2" type="primary" :value="1" label="值" icon="i-tabler-carrot" />
+      <ACheckbox v-model="checked3" type="primary" custom-icon value="yes" label="图标插槽">
         <template #icon="props">
           <div :class="props.checked ? 'i-tabler-carrot' : 'i-tabler-lemon a-text-color-2'" />
         </template>
@@ -65,9 +65,9 @@ function toggle(index: any) {
     </div>
     <div px-4>
       <ACheckboxGroup v-model="groupChecked">
-        <ACheckbox value="a" label="A" />
-        <ACheckbox value="b" label="B" />
-        <ACheckbox value="c" label="C" />
+        <ACheckbox type="primary" value="a" label="A" />
+        <ACheckbox type="primary" value="b" label="B" />
+        <ACheckbox type="primary" value="c" label="C" />
       </ACheckboxGroup>
     </div>
 
@@ -76,9 +76,9 @@ function toggle(index: any) {
     </div>
     <div px-4>
       <ACheckboxGroup v-model="groupChecked2" :min="1" :max="2" direction="horizontal">
-        <ACheckbox value="a" label="A" />
-        <ACheckbox value="b" label="B" />
-        <ACheckbox value="c" label="C" />
+        <ACheckbox type="primary" value="a" label="A" />
+        <ACheckbox type="primary" value="b" label="B" />
+        <ACheckbox type="primary" value="c" label="C" />
       </ACheckboxGroup>
     </div>
 
@@ -89,17 +89,17 @@ function toggle(index: any) {
       <ACellGroup inset divider clickable>
         <ACell title="复选框 a" @click="toggle('a')">
           <template #right-icon>
-            <ACheckbox value="a" />
+            <ACheckbox type="primary" value="a" />
           </template>
         </ACell>
         <ACell title="复选框 b" @click="toggle('b')">
           <template #right-icon>
-            <ACheckbox value="b" />
+            <ACheckbox type="primary" value="b" />
           </template>
         </ACell>
         <ACell title="复选框 c" @click="toggle('c')">
           <template #right-icon>
-            <ACheckbox value="c" />
+            <ACheckbox type="primary" value="c" />
           </template>
         </ACell>
       </ACellGroup>
