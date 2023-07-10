@@ -21,7 +21,7 @@ export function useNotify(props: NotifyProps, emit: SetupContext<NotifyEmits>['e
 
   function show(options: NotifyOptions = {}) {
     state.value = {
-      type: options.type ?? props.type,
+      type: options.type ?? 'primary',
       position: options.position ?? props.position,
       message: options.message ?? props.message,
       duration: options.duration ?? props.duration,

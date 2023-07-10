@@ -5,7 +5,7 @@ import { useTag } from './use-tag'
 const props = defineProps(tagProps)
 const emit = defineEmits(tagEmits)
 
-const { disabled, classes, clickHandler, closeHandler } = useTag(props, emit)
+const { classes, clickHandler, closeHandler } = useTag(props, emit)
 </script>
 
 <template>

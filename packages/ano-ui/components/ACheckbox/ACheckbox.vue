@@ -12,8 +12,8 @@ const { checked, disabled, size, toggle } = useCheckbox(props, emit)
 <template>
   <div class="flex items-center" :class="[`a-checkbox-${size}`, cc]" :style="cs">
     <div
-      class="relative box-border inline-block border border-[#C8C9CC] rounded-sm border-solid bg-clip-padding a-transition"
-      :class="[`a-checkbox-checkbox-${size}`, checked ? `a-${type} a-${variant}` : '', { 'a-checkbox-disabled': disabled }, ccc]"
+      class="box-border relative inline-block border border-[#C8C9CC] rounded-sm border-solid bg-clip-padding a-transition"
+      :class="[`a-checkbox-checkbox-${size}`, checked ? `a-${type} a-${variant}` : '', { 'op-50': disabled }, ccc]"
       :style="ccs" @click="toggle"
     >
       <ATransition cc="['absolute inset-0']" :show="!!checked" name="fade" :duration="200" />
@@ -49,10 +49,6 @@ const { checked, disabled, size, toggle } = useCheckbox(props, emit)
 
 .a-checkbox-large {
   --at-apply: 'text-lg'
-}
-
-.a-checkbox-disabled {
-  --at-apply: 'bg-[#EBEDF0] border-[#C8C9CC] dark:bg-[#3A3A3C] text-[#C8C9CC] dark:text-[#4D4D4D]'
 }
 
 .a-checkbox-checkbox-base {
