@@ -1,6 +1,6 @@
 {
   "name": "example",
-  "version": "0.7.8",
+  "version": "0.8.1",
   "private": true,
   "scripts": {
     "dev:app": "uni -p app",
