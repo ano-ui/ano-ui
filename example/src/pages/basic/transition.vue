@@ -3,9 +3,13 @@ import { ref } from 'vue'
 
 const showValue = ref(false)
 const transitionName = ref('')
-function show(name: string) {
+async function show(name: string) {
+  showValue.value = false
   transitionName.value = name
-  showValue.value = true
+
+  setTimeout(() => {
+    showValue.value = true
+  })
 }
 
 function log(msg: string) {
@@ -18,14 +22,11 @@ function log(msg: string) {
   <UBasePage>
     <ATransition
       :show="showValue" :name="transitionName" :duration="200" timing-function="ease-in"
-      cc="fixed top-50 bottom-50 left-20 right-20 h-50 z-200 bg-primary rounded-lg flex items-center justify-center" @before-enter="log('before-enter')"
-      @enter="log('enter')" @after-enter="log('after-enter')" @before-leave="log('before-leave')" @leave="log('leave')"
-      @after-leave="log('after-leave')"
+      cc="fixed top-50 bottom-50 left-20 right-20 h-50 z-200 bg-primary rounded-lg flex items-center justify-center"
+      @before-enter="log('before-enter')" @enter="log('enter')" @after-enter="log('after-enter')"
+      @before-leave="log('before-leave')" @leave="log('leave')" @after-leave="log('after-leave')"
     >
-      <div
-        class="h-full flex items-center justify-center text-white w-full"
-        @click="showValue = false"
-      >
+      <div class="h-full flex items-center justify-center text-white w-full" @click="showValue = false">
         内容
       </div>
     </ATransition>
