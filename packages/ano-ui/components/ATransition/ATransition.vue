@@ -4,14 +4,14 @@ import { useTransition } from './use-transition'
 
 const props = defineProps(transitionProps)
 const emit = defineEmits(transitionEmits)
-const { display, classes, clickHandler } = useTransition(props, emit)
+const { display, classes, clickHandler, animationendHandler } = useTransition(props, emit)
 </script>
 
 <template>
   <div
     v-if="display" class="transition-all" :class="[classes, cc]"
-    :style="[{ 'animation-duration': `${duration}ms` }, { 'animation-timing-function': timingFunction }, cs]"
-    @click="clickHandler"
+    :style="[{ 'animation-duration': `${duration}ms` }, { 'animation-timing-function': timingFunction }, { 'animation-fill-mode': 'forwards' }, cs]"
+    @click="clickHandler" @animationend="animationendHandler"
   >
     <slot />
   </div>
