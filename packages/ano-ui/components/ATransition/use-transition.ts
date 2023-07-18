@@ -53,36 +53,26 @@ export const animations: AnoAnimations = {
 export function useTransition(props: TransitionProps, emit: SetupContext<TransitionEmits>['emit']) {
   const display = ref(false)
   const name = computed(() => props.name || 'fade')
-  const duration = computed(() => props.duration || 200)
 
   const classes = ref('')
   async function enter() {
-    if (display.value)
-      return
     emit('beforeEnter')
     display.value = true
     classes.value = animations[name.value].enter
     await nextTick()
     emit('enter')
-
-    setTimeout(() => {
-      emit('afterEnter')
-    }, duration.value)
   }
 
   async function leave() {
-    if (!display.value)
-      return
     emit('beforeLeave')
     classes.value = animations[name.value].leave
     await nextTick()
     emit('leave')
+  }
 
-    setTimeout(() => {
-      if (!props.show && display.value)
-        display.value = false
-      emit('afterLeave')
-    }, duration.value)
+  function animationendHandler() {
+    props.show ? emit('afterEnter') : emit('afterLeave')
+    display.value = props.show
   }
 
   watch(
@@ -101,7 +91,7 @@ export function useTransition(props: TransitionProps, emit: SetupContext<Transit
   return {
     display,
     classes,
-
+    animationendHandler,
     clickHandler,
   }
 }
