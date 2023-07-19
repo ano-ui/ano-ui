@@ -42,6 +42,13 @@ function toggle(index: any) {
       <ACheckbox v-model="checked" type="warning" size="large" label="大型" />
     </div>
     <div class="p-4">
+      文字位置
+    </div>
+    <div px-4 flex="~ col gap2">
+      <ACheckbox v-model="checked" type="primary" label="右" />
+      <ACheckbox v-model="checked" type="primary" label="左" cc="flex-row-reverse justify-end space-x-0!" ccc="ml-2" />
+    </div>
+    <div class="p-4">
       状态
     </div>
     <div px-4 flex="~ col gap2">

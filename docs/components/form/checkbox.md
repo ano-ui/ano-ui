@@ -28,6 +28,17 @@ aside: false
 </template>
 ```
 
+## 自定义文字位置
+
+使用 `flex-direction: row-reverse` 可以轻松实现
+
+```html
+<template>
+  <ACheckbox v-model="checked" type="primary" label="右" />
+  <ACheckbox v-model="checked" type="primary" label="左" cc="flex-row-reverse justify-end space-x-0!" ccc="ml-2" />
+</template>
+```
+
 ## 禁用文本点击
 
 设置 `label-disabled` 属性后，点击图标以外的内容不会触发复选框切换。

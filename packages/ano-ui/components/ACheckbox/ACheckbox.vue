@@ -11,7 +11,7 @@ const {
 </script>
 
 <template>
-  <div class="flex items-center" :class="[`a-checkbox-${size}`, cc]" :style="cs">
+  <div class="flex items-center space-x-2" :class="[`a-checkbox-${size}`, cc]" :style="cs">
     <div
       class="box-border relative inline-block border border-[#C8C9CC] rounded-sm border-solid bg-clip-padding a-transition"
       :class="[`a-checkbox-checkbox-${size}`, checked ? `a-${type} a-${variant}` : '', { 'op-50': disabled }, ccc]"
@@ -26,7 +26,7 @@ const {
         </slot>
       </div>
     </div>
-    <div class="ml2" :class="{ 'text-[#C8C9CC] dark:text-[#4D4D4D]': disabled }" @click="labelClickHandler">
+    <div :class="{ 'text-[#C8C9CC] dark:text-[#4D4D4D]': disabled }" @click="labelClickHandler">
       <slot name="label">
         {{ label }}
       </slot>
