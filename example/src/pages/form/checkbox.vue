@@ -45,6 +45,7 @@ function toggle(index: any) {
       状态
     </div>
     <div px-4 flex="~ col gap2">
+      <ACheckbox v-model="checked" type="success" label-disabled label="禁用文本点击" />
       <ACheckbox type="success" disabled label="禁用" />
       <ACheckbox v-model="statusChecked2" type="success" disabled label="禁用" />
     </div>
@@ -52,7 +53,8 @@ function toggle(index: any) {
       自定义
     </div>
     <div px-4 flex="~ col gap2">
-      <ACheckbox v-model="checked2" type="primary" :value="1" label="值" icon="i-tabler-carrot" />
+      <ACheckbox v-model="checked2" type="primary" :value="1" label="圆形" ccc="rounded-full!" />
+      <ACheckbox v-model="checked2" type="primary" :value="1" label="图标" icon="i-tabler-carrot" />
       <ACheckbox v-model="checked3" type="primary" custom-icon value="yes" label="图标插槽">
         <template #icon="props">
           <div :class="props.checked ? 'i-tabler-carrot' : 'i-tabler-lemon a-text-color-2'" />
