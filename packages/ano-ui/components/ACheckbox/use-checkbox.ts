@@ -31,6 +31,7 @@ export function useCheckbox(props: CheckboxProps,
 
     return false
   })
+  const labelDisabled = computed(() => props.labelDisabled || (checkboxGroup?.labelDisabled ?? false))
 
   const checked = computed(() => {
     if (isGroup.value) {
@@ -46,8 +47,6 @@ export function useCheckbox(props: CheckboxProps,
 
   const toggle = (e: MouseEvent) => {
     e.stopPropagation()
-    if (disabled.value)
-      return
 
     if (isGroup.value && isArray(modelValue.value)) {
       const newValue = [...modelValue.value]
@@ -64,6 +63,17 @@ export function useCheckbox(props: CheckboxProps,
     emit && emit(CHANGE_EVENT, !props.modelValue)
   }
 
+  const iconClickHandler = (e: MouseEvent) => {
+    if (disabled.value)
+      return
+    toggle(e)
+  }
+  const labelClickHandler = (e: MouseEvent) => {
+    if (labelDisabled.value || disabled.value)
+      return
+    toggle(e)
+  }
+
   return {
     checkboxGroup,
     isGroup,
@@ -73,7 +83,8 @@ export function useCheckbox(props: CheckboxProps,
     disabled,
     modelValue,
     checked,
-
+    iconClickHandler,
+    labelClickHandler,
     toggle,
   }
 }

@@ -1,12 +1,13 @@
 <script setup lang='ts'>
-import ATransition from '../ATransition/ATransition.vue'
 import { checkboxEmits, checkboxProps } from './checkbox'
 import { useCheckbox } from './use-checkbox'
 
 const props = defineProps(checkboxProps)
 const emit = defineEmits(checkboxEmits)
 
-const { checked, disabled, size, toggle } = useCheckbox(props, emit)
+const {
+  checked, disabled, size, iconClickHandler, labelClickHandler,
+} = useCheckbox(props, emit)
 </script>
 
 <template>
@@ -14,23 +15,22 @@ const { checked, disabled, size, toggle } = useCheckbox(props, emit)
     <div
       class="box-border relative inline-block border border-[#C8C9CC] rounded-sm border-solid bg-clip-padding a-transition"
       :class="[`a-checkbox-checkbox-${size}`, checked ? `a-${type} a-${variant}` : '', { 'op-50': disabled }, ccc]"
-      :style="ccs" @click="toggle"
+      :style="ccs" @click="iconClickHandler"
     >
-      <ATransition cc="['absolute inset-0']" :show="!!checked" name="fade" :duration="200" />
       <div
         class="flex items-center justify-center absolute inset-0 animate-duration-200"
         :class="[checked ? 'animate-zoom-in text-white' : 'animate-zoom-out text-transparent']"
       >
         <slot name="icon" :checked="checked">
-          <div class="i-tabler-check" :class="[icon]" />
+          <div :class=" icon ? icon : 'i-tabler-check'" />
         </slot>
       </div>
     </div>
-    <slot name="label">
-      <div class="ml2" :class="{ 'text-[#C8C9CC] dark:text-[#4D4D4D]': disabled }">
+    <div class="ml2" :class="{ 'text-[#C8C9CC] dark:text-[#4D4D4D]': disabled }" @click="labelClickHandler">
+      <slot name="label">
         {{ label }}
-      </div>
-    </slot>
+      </slot>
+    </div>
   </div>
 </template>
 

@@ -16,6 +16,7 @@ export const checkboxGroupProps = {
   min: makeNumberProp(-1),
   max: makeNumberProp(-1),
   disabled: Boolean,
+  labelDisabled: Boolean,
 }
 
 export type CheckboxGroupProps = ExtractPropTypes<typeof checkboxGroupProps>
