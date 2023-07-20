@@ -29,6 +29,7 @@ export const checkboxProps = {
   label: String,
   icon: String,
   customIcon: Boolean,
+  labelDisabled: Boolean,
 }
 
 export const checkboxEmits = {

@@ -42,9 +42,17 @@ function toggle(index: any) {
       <ACheckbox v-model="checked" type="warning" size="large" label="大型" />
     </div>
     <div class="p-4">
+      文字位置
+    </div>
+    <div px-4 flex="~ col gap2">
+      <ACheckbox v-model="checked" type="primary" label="右" />
+      <ACheckbox v-model="checked" type="primary" label="左" cc="flex-row-reverse justify-end space-x-0!" ccc="ml-2" />
+    </div>
+    <div class="p-4">
       状态
     </div>
     <div px-4 flex="~ col gap2">
+      <ACheckbox v-model="checked" type="success" label-disabled label="禁用文本点击" />
       <ACheckbox type="success" disabled label="禁用" />
       <ACheckbox v-model="statusChecked2" type="success" disabled label="禁用" />
     </div>
@@ -52,7 +60,8 @@ function toggle(index: any) {
       自定义
     </div>
     <div px-4 flex="~ col gap2">
-      <ACheckbox v-model="checked2" type="primary" :value="1" label="值" icon="i-tabler-carrot" />
+      <ACheckbox v-model="checked2" type="primary" :value="1" label="圆形" ccc="rounded-full!" />
+      <ACheckbox v-model="checked2" type="primary" :value="1" label="图标" icon="i-tabler-carrot" />
       <ACheckbox v-model="checked3" type="primary" custom-icon value="yes" label="图标插槽">
         <template #icon="props">
           <div :class="props.checked ? 'i-tabler-carrot' : 'i-tabler-lemon a-text-color-2'" />

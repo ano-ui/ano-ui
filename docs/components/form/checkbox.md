@@ -28,6 +28,27 @@ aside: false
 </template>
 ```
 
+## 自定义文字位置
+
+使用 `flex-direction: row-reverse` 可以轻松实现
+
+```html
+<template>
+  <ACheckbox v-model="checked" type="primary" label="右" />
+  <ACheckbox v-model="checked" type="primary" label="左" cc="flex-row-reverse justify-end space-x-0!" ccc="ml-2" />
+</template>
+```
+
+## 禁用文本点击
+
+设置 `label-disabled` 属性后，点击图标以外的内容不会触发复选框切换。
+
+```html
+<template>
+  <ACheckbox v-model="checked" type="success" label-disabled label="禁用文本点击" />
+</template>
+```
+
 ## 禁用状态
 
 通过 `disabled` 属性禁用复选框。
@@ -99,6 +120,10 @@ const checkedList = ref(['a'])
 | v-model | 绑定值 | `Array` | `-` |
 | min | 最小可选数，`0` 表示不限制 | `number` | `-1` |
 | max | 最大可选数，`0` 表示不限制 | `number` | `-1` |
+| disabled | 是否禁用 | `boolean` | `false` |
+| label-disabled | 是否禁用文本点击 | `boolean` | `false` |
+| size | 大小，可选值为 `mini`、`small`、`normal`、`large` | `string` | `normal` |
+| direction | 排列方向，可选值为 horizontal | `string` | `vertical` |
 
 ### Checkbox Props
 
@@ -107,6 +132,7 @@ const checkedList = ref(['a'])
 | v-model | 绑定值 | `string \| Array \| object` | `-` |
 | label | 选项的标签值 | `string \| number \| boolean \| object` | `-` |
 | disabled | 是否禁用 | `boolean` | `false` |
+| label-disabled | 是否禁用文本点击 | `boolean` | `false` |
 | size | 大小，可选值为 `mini`、`small`、`normal`、`large` | `string` | `normal` |
 | type | 选项类型，可选值为 `primary`、`success`、`info`、`warning`、`danger` | `string` | `primary` |
 
