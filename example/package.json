@@ -46,8 +46,8 @@
     "@dcloudio/uni-mp-weixin": "3.0.0-alpha-3090320231019001",
     "@dcloudio/uni-quickapp-webview": "3.0.0-alpha-3090320231019001",
     "ano-ui": "workspace:*",
-    "pinia": "^2.1.7",
-    "vue": "^3.3.6",
+    "pinia": "2.0.36",
+    "vue": "3.2.47",
     "vue-demi": "^0.14.6",
     "vue-i18n": "^9.5.0"
   },
