@@ -22,7 +22,7 @@ const {
 
 <template>
   <ACell
-    :title="label" :cc="[{ 'flex-wrap': labelAlign === 'top' || type === 'textarea' }, cc]" :cs="[cs]" :icon="icon"
+    :title="label" :custom-class="[{ 'flex-wrap': labelAlign === 'top' || type === 'textarea' }, customClass]" :custom-style="[customStyle]" :icon="icon"
     :title-class="['!flex-1/3', { '[&>.flex]:justify-end': labelAlign === 'right' }, { '[&>.flex]:justify-center': labelAlign === 'center' }]"
     :value-class="['!flex-2/3']"
   >

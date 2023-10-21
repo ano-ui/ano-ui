@@ -15,14 +15,14 @@ defineExpose({ show, close })
 <template>
   <ATransition
     :show="visible" name="fade" :duration="300"
-    :cc="['fixed z-500 flex justify-center items-center min-w-20 max-w-70% px-4 py-2 rounded-lg bg-black/70 text-white text-base text-center',
-          classes, cc]" :cs="cs"
+    :custom-class="['fixed z-500 flex justify-center items-center min-w-20 max-w-70% px-4 py-2 rounded-lg bg-black/70 text-white text-base text-center',
+                    classes, customClass]" :custom-style="customStyle"
   >
     <slot name="icon">
       <div v-if="state?.type === 'success'" class="i-tabler-circle-check-filled mr-2" />
-      <div v-else-if="state?.type === 'warning'" class="i-tabler-alert-circle-filled mr-2" />
-      <div v-else-if="state?.type === 'danger'" class="i-tabler-circle-x-filled mr-2" />
-      <div v-else-if="state?.type === 'loading'" class="i-tabler-loader mr-1 mr-2 animate-spin" />
+      <div v-else-if="state?.type === 'warning'" class="mr-2 i-tabler-alert-circle-filled" />
+      <div v-else-if="state?.type === 'danger'" class="mr-2 i-tabler-circle-x-filled" />
+      <div v-else-if="state?.type === 'loading'" class="i-tabler-loader mr-2 animate-spin mr-1" />
     </slot>
     <template v-if="state?.message">
       {{ state.message }}
@@ -31,5 +31,4 @@ defineExpose({ show, close })
   </ATransition>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>

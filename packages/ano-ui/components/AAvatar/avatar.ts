@@ -6,8 +6,8 @@ import { makeStringProp } from '../utils'
 export const useAvatarSizeProp = useSizeProp
 
 export const avatarProps = {
-  cc: useCustomClassProp,
-  cs: useCustomStyleProp,
+  customClass: useCustomClassProp,
+  customStyle: useCustomStyleProp,
   size: useAvatarSizeProp,
   src: String,
   fit: makeStringProp<'fill' | 'contain' | 'cover'>('cover'),

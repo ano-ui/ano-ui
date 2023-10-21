@@ -10,8 +10,8 @@ export const useSwitchSizeProp = useSizeProp
 export type SwitchValueType = string | number | boolean
 
 export const switchProps = {
-  cc: useCustomClassProp,
-  cs: useCustomStyleProp,
+  customClass: useCustomClassProp,
+  customStyle: useCustomStyleProp,
   type: useSwitchTypeProp,
   size: useSwitchSizeProp,
   variant: useVariantProp,

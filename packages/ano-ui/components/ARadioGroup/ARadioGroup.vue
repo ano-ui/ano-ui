@@ -22,8 +22,8 @@ provide(radioGroupKey, reactive({
 <template>
   <div
     class="flex flex-wrap gap-2"
-    :class="[direction === 'horizontal' ? '' : 'flex-col', cc]"
-    :style="cs"
+    :class="[direction === 'horizontal' ? '' : 'flex-col', customClass]"
+    :style="customStyle"
   >
     <slot />
   </div>

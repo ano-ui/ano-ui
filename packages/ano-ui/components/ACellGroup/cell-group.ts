@@ -2,8 +2,8 @@ import type { ExtractPropTypes } from 'vue'
 import { useCustomClassProp, useCustomStyleProp } from '../composables'
 
 export const cellGroupProps = {
-  cc: useCustomClassProp,
-  cs: useCustomStyleProp,
+  customClass: useCustomClassProp,
+  customStyle: useCustomStyleProp,
   divider: Boolean,
   inset: Boolean,
   arrow: Boolean,

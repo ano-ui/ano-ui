@@ -15,18 +15,18 @@ const { showValue, cancelHandler } = useActionSheet(props, emit)
     <AOverlay :show="showValue" :duration="duration" @click="showValue = false" />
     <ATransition
       :show="showValue" name="slide-up" :duration="duration"
-      :cc="['a-bg-2 fixed z-200 overflow-hidden bottom-0 left-0 right-0 w-full pb-safe', { 'rounded-t-2xl': round }, cc]"
-      :style="cs" @click.stop
+      :custom-class="['a-bg-2 fixed z-200 overflow-hidden bottom-0 left-0 right-0 w-full pb-safe', { 'rounded-t-2xl': round }, customClass]"
+      :custom-style="customStyle" @click.stop
     >
       <template v-for="action, _idx of actions" :key="_idx">
-        <AButton variant="text" block square :cc="['color-inherit border-none', action.className]">
+        <AButton variant="text" block square :custom-class="['color-inherit border-none', action.className]">
           {{ action.name }}
         </AButton>
       </template>
       <slot />
       <template v-if="cancelText">
         <div class="w-full h-2 bg-gray-200/20" />
-        <AButton v-if="cancelText" variant="text" block :cc="['color-inherit border-none']" @click="cancelHandler">
+        <AButton v-if="cancelText" variant="text" block custom-class="['color-inherit border-none']" @click="cancelHandler">
           {{ cancelText }}
         </AButton>
       </template>

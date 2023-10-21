@@ -5,8 +5,8 @@ import { makeNumberProp } from '../utils'
 
 export const useRadioGroupDirectionProp = useDirectionProp
 export const radioGroupProps = {
-  cc: useCustomClassProp,
-  cs: useCustomStyleProp,
+  customClass: useCustomClassProp,
+  customStyle: useCustomStyleProp,
   modelValue: {
     type: [String, Number, Boolean],
     default: '',

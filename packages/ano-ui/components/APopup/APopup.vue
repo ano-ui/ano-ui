@@ -21,7 +21,7 @@ const animationName = {
   <AOverlay :show="showValue" :duration="duration" @click="showValue = false" />
   <ATransition
     :show="showValue" :name="animationName[position]" :duration="duration"
-    :cc="['a-bg-2 fixed z-200', classes, cc]" :style="cs" @click.stop
+    :custom-class="['a-bg-2 fixed z-200', classes, customClass]" :custom-style="customStyle" @click.stop
   >
     <slot />
   </ATransition>

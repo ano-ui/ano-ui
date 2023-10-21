@@ -23,9 +23,9 @@ export const useFieldInputAlignProp = {
 }
 
 export const fieldProps = {
-  cc: useCustomClassProp,
+  customClass: useCustomClassProp,
   ccc: useCustomClassProp,
-  cs: useCustomStyleProp,
+  customStyle: useCustomStyleProp,
   ccs: useCustomStyleProp,
   type: useFieldTypeProp,
   label: String,

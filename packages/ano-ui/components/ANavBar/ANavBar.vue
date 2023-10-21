@@ -26,14 +26,14 @@ const {
 </script>
 
 <template>
-  <div ref="navBarRef" class="a-nav-bar-base" :class="[className, cc]" :style="[zIndexStyle, navBarStyle, cs]">
+  <div ref="navBarRef" class="a-nav-bar-base" :class="[className, customClass]" :style="[zIndexStyle, navBarStyle, customStyle]">
     <div class="a-nav-bar-content-base" :style="navBarContentStyle">
       <slot v-if="$slots.default" />
       <template v-else>
         <div v-if="hasLeft" class="a-nav-bar-left" :class="clickableClassName" :hover-class="clickable ? 'a-nav-bar-clickable-hover' : ''" @click="clickLeftHandler">
           <slot v-if="$slots.left" name="left" />
           <template v-else>
-            <div v-if="leftArrow" class="a-nav-bar-icon mr-1 i-tabler-chevron-left" />
+            <div v-if="leftArrow" class="mr-1 a-nav-bar-icon i-tabler-chevron-left" />
             <span v-if="leftText" class="a-nav-bar-text">{{ leftText }}</span>
           </template>
         </div>

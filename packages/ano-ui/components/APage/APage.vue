@@ -3,13 +3,13 @@ import { useCustomClassProp, useCustomStyleProp } from '../composables'
 
 defineProps({
   dark: Boolean,
-  cc: useCustomClassProp,
-  cs: useCustomStyleProp,
+  customClass: useCustomClassProp,
+  customStyle: useCustomStyleProp,
 })
 </script>
 
 <template>
-  <div class="a-text-color a-bg" :class="[{ dark }, cc]" :style="cs">
+  <div class="a-text-color a-bg" :class="[{ dark }, customClass]" :style="customStyle">
     <slot />
   </div>
 </template>

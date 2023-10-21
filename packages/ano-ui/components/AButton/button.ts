@@ -7,8 +7,8 @@ export const useButtonTypeProp = useTypeProp
 export const useButtonSizeProp = useSizeProp
 
 export const buttonProps = {
-  cc: useCustomClassProp,
-  cs: useCustomStyleProp,
+  customClass: useCustomClassProp,
+  customStyle: useCustomStyleProp,
   type: useButtonTypeProp,
   size: useButtonSizeProp,
   variant: useVariantProp,

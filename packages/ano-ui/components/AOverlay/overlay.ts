@@ -4,8 +4,8 @@ import { CLICK_EVENT } from '../constants'
 import { makeNumberProp } from '../utils'
 
 export const overlayProps = {
-  cc: useCustomClassProp,
-  cs: useCustomStyleProp,
+  customClass: useCustomClassProp,
+  customStyle: useCustomStyleProp,
   show: Boolean,
   duration: makeNumberProp(200),
 }

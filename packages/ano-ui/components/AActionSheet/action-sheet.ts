@@ -5,8 +5,8 @@ import { isBoolean, makeArrayProp, makeNumberProp, truthProp } from '../utils'
 import type { ActionSheetAction } from './types'
 
 export const actionSheetProps = {
-  cc: useCustomClassProp,
-  cs: useCustomStyleProp,
+  customClass: useCustomClassProp,
+  customStyle: useCustomStyleProp,
   ccc: useCustomClassProp,
   ccs: useCustomStyleProp,
   show: Boolean,

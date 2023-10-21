@@ -15,9 +15,9 @@ export const useNotifyPositionProp = {
 }
 
 export const notifyProps = {
-  cc: useCustomClassProp,
+  customClass: useCustomClassProp,
   ccc: useCustomClassProp,
-  cs: useCustomStyleProp,
+  customStyle: useCustomStyleProp,
   ccs: useCustomStyleProp,
   type: useNotifyTypeProp,
   position: useNotifyPositionProp,

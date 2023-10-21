@@ -3,8 +3,8 @@ import { useCustomClassProp, useCustomStyleProp } from '../composables'
 import { numericProp, truthProp } from '../utils'
 
 export const navBarProps = {
-  cc: useCustomClassProp,
-  cs: useCustomStyleProp,
+  customClass: useCustomClassProp,
+  customStyle: useCustomStyleProp,
   title: String,
   height: numericProp,
   fixed: Boolean,

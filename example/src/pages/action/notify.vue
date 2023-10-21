@@ -33,14 +33,14 @@ const topStyle = computed(() => {
 <template>
   <UBasePage>
     <div class="pb-safe">
-      <ANotify ref="notify" :cs="topStyle" />
-      <ANotify ref="notify2" :cs="topStyle">
+      <ANotify ref="notify" :custom-style="topStyle" />
+      <ANotify ref="notify2" :custom-style="topStyle">
         <template #icon>
           <div class="i-tabler-carrot" />
         </template>
         Slot
       </ANotify>
-      <ANotify ref="notify3" :cs="topStyle" ccc="bg-gradient-to-r from-indigo-500 to-pink-500 border-none" />
+      <ANotify ref="notify3" :custom-style="topStyle" ccc="bg-gradient-to-r from-indigo-500 to-pink-500 border-none" />
 
       <div class="p-4">
         基础用法

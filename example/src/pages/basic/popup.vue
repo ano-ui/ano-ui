@@ -26,7 +26,7 @@ const topStyle = computed(() => {
   <UBasePage>
     <APopup
       v-model:show="showValue" :position="position" :duration="300"
-      :cs="[position === 'top' || position === 'left' || position === 'right' ? topStyle : '']"
+      :custom-style="[position === 'top' || position === 'left' || position === 'right' ? topStyle : '']"
     >
       <div class="flex items-center justify-center text-white h-100px w-200px bg-primary">
         内容

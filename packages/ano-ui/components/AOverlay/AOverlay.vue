@@ -11,9 +11,8 @@ const { showValue, clickHandler } = useOverlay(props, emit)
 
 <template>
   <ATransition
-    :show="showValue" name="fade"
-    :cc="['z-100 fixed inset-0 bg-black bg-op-70', cc]" :cs="cs" :duration="duration"
-    @touchmove="$event.stopPropagation()" @click="clickHandler"
+    :show="showValue" name="fade" :custom-class="['z-100 fixed inset-0 bg-black bg-op-70', customClass]"
+    :custom-style="customStyle" :duration="duration" @touchmove="$event.stopPropagation()" @click="clickHandler"
   >
     <slot />
   </ATransition>

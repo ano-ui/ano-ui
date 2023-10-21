@@ -3,8 +3,8 @@ import { useCustomClassProp, useCustomStyleProp } from '../composables'
 import { makeRequiredProp } from '../utils'
 
 export const collapseItemProps = {
-  cc: useCustomClassProp,
-  cs: useCustomStyleProp,
+  customClass: useCustomClassProp,
+  customStyle: useCustomStyleProp,
   title: String,
   name: {
     ...makeRequiredProp([String, Number] as PropType<string | number>),

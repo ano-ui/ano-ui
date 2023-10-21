@@ -4,8 +4,8 @@ import { CANCEL_EVENT, CONFIRM_EVENT } from '../constants'
 import { truthProp } from '../utils'
 
 export const dialogProps = {
-  cc: useCustomClassProp,
-  cs: useCustomStyleProp,
+  customClass: useCustomClassProp,
+  customStyle: useCustomStyleProp,
   show: Boolean,
   title: String,
   message: String,

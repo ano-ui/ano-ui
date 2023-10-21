@@ -8,8 +8,8 @@ export const useTagTypeProp = useTypeProp
 export const useTagSizeProp = useSizeProp
 
 export const tagProps = {
-  cc: useCustomClassProp,
-  cs: useCustomStyleProp,
+  customClass: useCustomClassProp,
+  customStyle: useCustomStyleProp,
   type: useTagTypeProp,
   size: useTagSizeProp,
   variant: useVariantProp,
