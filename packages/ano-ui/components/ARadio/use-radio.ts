@@ -4,8 +4,7 @@ import { radioGroupKey } from '../tokens'
 import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '../constants'
 import type { RadioEmits, RadioProps } from './radio'
 
-export function useRadio(props: RadioProps,
-  emit?: SetupContext<RadioEmits>['emit']) {
+export function useRadio(props: RadioProps, emit?: SetupContext<RadioEmits>['emit']) {
   const radioGroup = inject(radioGroupKey, undefined)
   const isGroup = computed(() => !!radioGroup)
   const size = computed(() => radioGroup?.size ?? props.size)

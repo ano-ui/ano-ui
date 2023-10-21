@@ -3,8 +3,7 @@ import { computed, ref } from 'vue'
 import { BLUR_EVENT, CHANGE_EVENT, CLEAR_EVENT, FOCUS_EVENT, INPUT_EVENT, UPDATE_MODEL_EVENT } from '../constants'
 import type { FieldEmits, FieldProps } from './field'
 
-export function useField(props: FieldProps,
-  emit: SetupContext<FieldEmits>['emit']) {
+export function useField(props: FieldProps, emit: SetupContext<FieldEmits>['emit']) {
   const disabled = computed(() => props.disabled ?? false)
   const modelValue = computed(() => props.modelValue || '')
   const placeholderText = computed(() => props.placeholder || '')

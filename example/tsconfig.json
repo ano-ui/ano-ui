@@ -2,15 +2,15 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "baseUrl": ".",
-    "isolatedModules": true,
-    "noImplicitAny": false,
-    "sourceMap": true,
     "paths": {
       "~/*": ["src/*"]
     },
     "types": [
       "vite/client",
       "@dcloudio/types"
-    ]
+    ],
+    "noImplicitAny": false,
+    "sourceMap": true,
+    "isolatedModules": true
   }
 }

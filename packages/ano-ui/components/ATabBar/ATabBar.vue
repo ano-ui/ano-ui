@@ -13,12 +13,10 @@ function changeEvent(value: TabBarProps['modelValue']) {
   nextTick(() => emit(CHANGE_EVENT, value))
 }
 
-provide(tabBarKey,
-  reactive({
-    ...toRefs(props),
-    changeEvent,
-  }),
-)
+provide(tabBarKey, reactive({
+  ...toRefs(props),
+  changeEvent,
+}))
 </script>
 
 <template>

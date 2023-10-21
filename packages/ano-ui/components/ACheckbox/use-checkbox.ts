@@ -5,8 +5,7 @@ import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '../constants'
 import { isArray } from '../utils'
 import type { CheckboxEmits, CheckboxProps } from './checkbox'
 
-export function useCheckbox(props: CheckboxProps,
-  emit?: SetupContext<CheckboxEmits>['emit']) {
+export function useCheckbox(props: CheckboxProps, emit?: SetupContext<CheckboxEmits>['emit']) {
   const checkboxGroup = inject(checkboxGroupKey, undefined)
   const isGroup = computed(() => !!checkboxGroup)
   const size = computed(() => checkboxGroup?.size ?? props.size)

@@ -16,6 +16,6 @@ export type ToastProps = ExtractPropTypes<typeof toastProps>
 export type ToastEmits = typeof toastEmits
 
 export interface ToastInst {
-  show: (options?: ToastOptions) => {}
-  close: () => {}
+  show: (options?: ToastOptions) => void
+  close: () => void
 }

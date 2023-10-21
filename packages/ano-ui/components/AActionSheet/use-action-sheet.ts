@@ -3,8 +3,7 @@ import { computed, ref } from 'vue'
 import { CANCEL_EVENT, CLOSE_EVENT, OPEN_EVENT, UPDATE_SHOW_EVENT } from '../constants'
 import type { ActionSheetEmits, ActionSheetProps } from './action-sheet'
 
-export function useActionSheet(props: ActionSheetProps,
-  emit: SetupContext<ActionSheetEmits>['emit']) {
+export function useActionSheet(props: ActionSheetProps, emit: SetupContext<ActionSheetEmits>['emit']) {
   const show = ref(props.show || false)
   const showValue = computed<ActionSheetProps['show']>({
     get: () => props.show || show.value,

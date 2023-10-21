@@ -5,11 +5,9 @@ import { cellGroupProps } from './cell-group'
 
 const props = defineProps(cellGroupProps)
 
-provide(cellGroupKey,
-  reactive({
-    ...toRefs(props),
-  }),
-)
+provide(cellGroupKey, reactive({
+  ...toRefs(props),
+}))
 </script>
 
 <template>

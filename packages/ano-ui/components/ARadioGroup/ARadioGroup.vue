@@ -13,12 +13,10 @@ function changeEvent(value: RadioGroupProps['modelValue']) {
   nextTick(() => emit(CHANGE_EVENT, value))
 }
 
-provide(radioGroupKey,
-  reactive({
-    ...toRefs(props),
-    changeEvent,
-  }),
-)
+provide(radioGroupKey, reactive({
+  ...toRefs(props),
+  changeEvent,
+}))
 </script>
 
 <template>

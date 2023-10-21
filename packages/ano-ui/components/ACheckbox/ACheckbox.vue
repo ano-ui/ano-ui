@@ -6,7 +6,11 @@ const props = defineProps(checkboxProps)
 const emit = defineEmits(checkboxEmits)
 
 const {
-  checked, disabled, size, iconClickHandler, labelClickHandler,
+  checked,
+  disabled,
+  size,
+  iconClickHandler,
+  labelClickHandler,
 } = useCheckbox(props, emit)
 </script>
 

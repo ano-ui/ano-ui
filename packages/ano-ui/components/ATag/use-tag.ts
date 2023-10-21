@@ -3,8 +3,7 @@ import { computed } from 'vue'
 import { CLICK_EVENT, CLOSE_EVENT } from '../constants'
 import type { TagEmits, TagProps } from './tag'
 
-export function useTag(props: TagProps,
-  emit: SetupContext<TagEmits>['emit']) {
+export function useTag(props: TagProps, emit: SetupContext<TagEmits>['emit']) {
   const disabled = computed(() => props.disabled)
 
   function clickHandler(evt: MouseEvent) {

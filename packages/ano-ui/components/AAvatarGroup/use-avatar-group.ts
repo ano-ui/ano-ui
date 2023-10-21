@@ -5,8 +5,7 @@ import type { AvatarGroupEmits, AvatarGroupProps } from './avatar-group'
 
 // @unocss-include
 
-export function useAvatarGroup(props: AvatarGroupProps,
-  emit: SetupContext<AvatarGroupEmits>['emit']) {
+export function useAvatarGroup(props: AvatarGroupProps, emit: SetupContext<AvatarGroupEmits>['emit']) {
   const className = computed(() => [])
 
   const clickHandler = (evt: MouseEvent) => {

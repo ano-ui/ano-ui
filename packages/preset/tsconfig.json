@@ -1,10 +1,10 @@
 {
   "extends": "../../tsconfig.json",
-  "exclude": ["**/dist/**"],
-  "include": ["**/*.ts", "**/*.d.ts", "**/*.vue", "**/*.tsx"],
   "compilerOptions": {
+    "composite": false,
     "baseUrl": ".",
-    "declaration": false,
-    "composite": false
-  }
+    "declaration": false
+  },
+  "include": ["**/*.ts", "**/*.d.ts", "**/*.vue", "**/*.tsx"],
+  "exclude": ["**/dist/**"]
 }

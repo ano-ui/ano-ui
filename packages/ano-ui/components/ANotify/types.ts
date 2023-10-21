@@ -14,6 +14,6 @@ export interface NotifyOptions {
 }
 
 export interface NotifyInst {
-  show: (options?: NotifyOptions) => {}
-  close: () => {}
+  show: (options?: NotifyOptions) => void
+  close: () => void
 }

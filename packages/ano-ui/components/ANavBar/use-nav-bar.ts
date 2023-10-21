@@ -4,8 +4,7 @@ import type { NavBarEmits, NavBarProps } from './nav-bar'
 
 // @unocss-include
 
-export function useNavBar(props: NavBarProps,
-  emit: SetupContext<NavBarEmits>['emit']) {
+export function useNavBar(props: NavBarProps, emit: SetupContext<NavBarEmits>['emit']) {
   const systemInfo = uni.getSystemInfoSync()
   const navBarRef = ref<HTMLElement>()
 

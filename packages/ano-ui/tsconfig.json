@@ -1,13 +1,13 @@
 {
   "extends": "../../tsconfig.json",
-  "exclude": ["**/dist/**"],
-  "include": ["**/*.ts", "**/*.d.ts", "**/*.vue", "**/*.tsx"],
   "compilerOptions": {
-    "baseUrl": ".",
-    "declaration": false,
     "composite": false,
+    "baseUrl": ".",
     "types": [
       "@dcloudio/types"
-    ]
-  }
+    ],
+    "declaration": false
+  },
+  "include": ["**/*.ts", "**/*.d.ts", "**/*.vue", "**/*.tsx"],
+  "exclude": ["**/dist/**"]
 }

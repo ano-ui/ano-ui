@@ -1,6 +1,6 @@
 import type { PropType, StyleValue } from 'vue'
 
-export type ClassType = String | Object | Array<ClassType>
+export type ClassType = string | object | Array<ClassType>
 export const useCustomClassProp = {
   type: [String, Object, Array] as PropType<ClassType>,
   default: '',

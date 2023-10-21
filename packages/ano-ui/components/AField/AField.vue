@@ -7,8 +7,16 @@ const props = defineProps(fieldProps)
 const emit = defineEmits(fieldEmits)
 
 const {
-  disabled, modelValue, placeholderText, showPasswordText, focus,
-  focusHandler, clickHandler, blurHandler, inputHandler, clearHandler,
+  disabled,
+  modelValue,
+  placeholderText,
+  showPasswordText,
+  focus,
+  focusHandler,
+  clickHandler,
+  blurHandler,
+  inputHandler,
+  clearHandler,
 } = useField(props, emit)
 </script>
 

@@ -79,7 +79,7 @@ function togglePreview() {
   <Layout class="of-x-hidden" :class="[{ 'xl:[&>.VPContent]:!pr-100': isComponentPage }, show ? 'of-hidden' : '']" />
   <template v-if="isComponentPage">
     <div
-      class="fixed bottom-0 top-80px flex right-0 flex rounded-l-xl xl:w-375px w-0 xl:right-10 xl:transition-all"
+      class="fixed right-0 bottom-0 top-80px flex flex rounded-l-xl xl:w-375px w-0 xl:right-10 xl:transition-all"
       :class="show ? ' w-100vw h-100vh top-0! z-999 left-0' : ''"
     >
       <iframe

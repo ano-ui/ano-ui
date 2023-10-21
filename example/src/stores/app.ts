@@ -18,7 +18,8 @@ export const useAppStore = defineStore(
     const customBarHeight = computed(
       () => !menuButtonBounding.value
         ? 0
-        : menuButtonBounding.value.bottom + menuButtonBounding.value.top - statusBarHeight.value)
+        : menuButtonBounding.value.bottom + menuButtonBounding.value.top - statusBarHeight.value,
+    )
 
     // #ifdef H5
     watch(darkMode, (isDark) => {
@@ -34,7 +35,8 @@ export const useAppStore = defineStore(
       customBarHeight,
       menuButtonBounding,
     }
-  })
+  },
+)
 
 // Need to be used outside the setup
 export function useAppStoreWidthOut() {

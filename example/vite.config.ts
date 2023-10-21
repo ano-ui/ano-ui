@@ -1,4 +1,5 @@
 import { resolve } from 'node:path'
+import process from 'node:process'
 import { defineConfig } from 'vite'
 import Uni from '@dcloudio/vite-plugin-uni'
 import UnoCSS from 'unocss/vite'

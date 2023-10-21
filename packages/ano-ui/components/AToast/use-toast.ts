@@ -6,8 +6,7 @@ import type { ToastEmits, ToastProps } from './toast'
 
 // @unocss-include
 
-export function useToast(props: ToastProps,
-  emit: SetupContext<ToastEmits>['emit']) {
+export function useToast(props: ToastProps, emit: SetupContext<ToastEmits>['emit']) {
   let timer: NodeJS.Timeout
   const visible = ref(false)
 
