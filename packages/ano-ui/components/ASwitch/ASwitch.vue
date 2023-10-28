@@ -15,7 +15,7 @@ const { disabled, checked, dotTranslateClasses, toggle } = useSwitch(props, emit
     :style="customStyle" @click="toggle"
   >
     <div
-      class="absolute rounded-full transition-all duration-200 text-context bg-white top-0.5"
+      class="absolute rounded-full transition-all duration-200 bg-white text-context top-0.5"
       :class="[`a-switch-dot-${size}`, checked ? dotTranslateClasses : 'left-0.5']"
     >
       <template v-if="checked">

@@ -11,9 +11,7 @@ export type RadioValueType = string | number | boolean
 
 export const radioProps = {
   customClass: useCustomClassProp,
-  ccc: useCustomClassProp,
   customStyle: useCustomStyleProp,
-  ccs: useCustomStyleProp,
   type: useRadioTypeProp,
   size: useRadioSizeProp,
   variant: useVariantProp,

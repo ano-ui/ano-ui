@@ -60,10 +60,10 @@ aside: false
 ```html
 <template>
   <AButton icon="i-tabler-carrot" />
-  <AButton type="success" cc="rounded-none aspect-square">
+  <AButton type="success" custom-class="rounded-none aspect-square">
     方
   </AButton>
-  <AButton type="info" cc="rounded-full aspect-square">
+  <AButton type="info" custom-class="rounded-full aspect-square">
     圆
   </AButton>
   <AButton type="warning">
@@ -71,10 +71,10 @@ aside: false
       <i class="i-tabler-send" /> 插槽
     </template>
   </AButton>
-  <AButton cc="bg-teal border-teal" open-type="getUserInfo" @click="getInfo">
+  <AButton custom-class="bg-teal border-teal" open-type="getUserInfo" @click="getInfo">
     OpenType
   </AButton>
-  <AButton :cc="['bg-gradient-to-r', 'from-indigo-500', 'to-pink-500']">
+  <AButton :custom-class="['bg-gradient-to-r', 'from-indigo-500', 'to-pink-500']">
     背景渐变
   </AButton>
   <AButton type="danger" block>块级元素</AButton>

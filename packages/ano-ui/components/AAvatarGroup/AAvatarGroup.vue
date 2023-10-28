@@ -16,11 +16,11 @@ const { className, clickHandler, spliceOptions, reset, lt } = useAvatarGroup(pro
   >
     <template v-for="(option, index) of spliceOptions" :key="index">
       <slot name="avatar" :option="option">
-        <AAvatar cc="rounded-full" :src="option.src" />
+        <AAvatar custom-class="rounded-full" :src="option.src" />
       </slot>
     </template>
     <slot v-if="lt" name="reset" :reset="reset" :options="options">
-      <AAvatar cc="z-1 rounded-full bg-primary text-white">
+      <AAvatar custom-class="z-1 rounded-full bg-primary text-white">
         +{{ reset }}
       </AAvatar>
     </slot>

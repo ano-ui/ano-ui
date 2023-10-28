@@ -87,10 +87,10 @@ function getInfo() {
     </div>
     <div flex="~ gap2 wrap" items-center px-4>
       <AButton type="primary" icon="i-tabler-carrot" />
-      <AButton type="success" cc="rounded-none aspect-square">
+      <AButton type="success" custom-class="rounded-none aspect-square">
         方
       </AButton>
-      <AButton type="info" cc="rounded-full aspect-square">
+      <AButton type="info" custom-class="rounded-full aspect-square">
         圆
       </AButton>
       <AButton type="warning">
@@ -98,7 +98,7 @@ function getInfo() {
           <i class="i-tabler-send" /> 插槽
         </template>
       </AButton>
-      <AButton type="primary" cc="bg-teal border-teal" open-type="getUserInfo" @click="getInfo">
+      <AButton type="primary" custom-class="bg-teal border-teal" open-type="getUserInfo" @click="getInfo">
         OpenType
       </AButton>
       <AButton type="primary" custom-class="['bg-gradient-to-r', 'from-indigo-500', 'to-pink-500']">

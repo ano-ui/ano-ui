@@ -35,7 +35,7 @@ aside: false
 ```html
 <template>
   <ACheckbox v-model="checked" type="primary" label="右" />
-  <ACheckbox v-model="checked" type="primary" label="左" cc="flex-row-reverse justify-end space-x-0!" ccc="ml-2" />
+  <ACheckbox v-model="checked" type="primary" label="左" custom-class="flex-row-reverse justify-end space-x-0!" ccc="ml-2" />
 </template>
 ```
 

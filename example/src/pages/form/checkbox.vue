@@ -46,7 +46,7 @@ function toggle(index: any) {
     </div>
     <div px-4 flex="~ col gap2">
       <ACheckbox v-model="checked" type="primary" label="右" />
-      <ACheckbox v-model="checked" type="primary" label="左" cc="flex-row-reverse justify-end space-x-0!" ccc="ml-2" />
+      <ACheckbox v-model="checked" type="primary" label="左" custom-class="flex-row-reverse justify-end space-x-0!" ccc="ml-2" />
     </div>
     <div class="p-4">
       状态
@@ -60,7 +60,7 @@ function toggle(index: any) {
       自定义
     </div>
     <div px-4 flex="~ col gap2">
-      <ACheckbox v-model="checked2" type="primary" :value="1" label="圆形" ccc="rounded-full!" />
+      <ACheckbox v-model="checked2" type="primary" :value="1" label="圆形" custom-class="rounded-full!" />
       <ACheckbox v-model="checked2" type="primary" :value="1" label="图标" icon="i-tabler-carrot" />
       <ACheckbox v-model="checked3" type="primary" custom-icon value="yes" label="图标插槽">
         <template #icon="props">

@@ -33,16 +33,16 @@ const {
       <div class="flex items-center gap-1 a-text-color text-right v-middle leading-inherit">
         <slot name="prefix" />
         <input
-          v-if="type !== 'textarea'" class="m-0 flex-1 leading-inherit min-h-auto bg-transparent p-0 text-left"
+          v-if="type !== 'textarea'" class="m-0 leading-inherit flex-1 min-h-auto bg-transparent p-0 text-left"
           :type="type !== 'password' ? type : 'text'"
-          :class="[`a-field-content-base-${inputAlign}`, { 'a-field-disabled': disabled }, ccc]" :style="ccs"
+          :class="[`a-field-content-base-${inputAlign}`, { 'a-field-disabled': disabled }]"
           :value="modelValue" :placeholder="placeholderText" :maxlength="maxlength" :focus="focus" :disabled="disabled"
           :password="type === 'password' ? !showPasswordText : false" @click="clickHandler" @blur="blurHandler"
           @input="inputHandler" @focus="focusHandler"
         >
         <textarea
-          v-else class="m-0 w-full flex-1 bg-transparent p-0 text-left leading-inherit h-20"
-          :class="[`a-field-content-base-${inputAlign}`, { 'a-field-disabled': disabled }, ccc]" :style="ccs"
+          v-else class="m-0 flex-1 bg-transparent p-0 text-left leading-inherit w-full h-20"
+          :class="[`a-field-content-base-${inputAlign}`, { 'a-field-disabled': disabled }]"
           :value="modelValue" :placeholder="placeholderText" :maxlength="maxlength" :focus="focus" :disabled="disabled"
           @click="clickHandler" @blur="blurHandler" @input="inputHandler" @focus="focusHandler"
         />

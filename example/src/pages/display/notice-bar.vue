@@ -47,7 +47,7 @@ const show = ref(true)
       自定义
     </div>
     <div px-4>
-      <ANoticeBar mt2 cc="bg-gradient-to-r from-indigo-500 to-pink-500 border-none">
+      <ANoticeBar mt2 custom-class="bg-gradient-to-r from-indigo-500 to-pink-500 border-none">
         <template #icon>
           <div class="i-tabler-carrot" />
         </template>

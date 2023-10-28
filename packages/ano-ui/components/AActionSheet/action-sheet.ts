@@ -7,8 +7,6 @@ import type { ActionSheetAction } from './types'
 export const actionSheetProps = {
   customClass: useCustomClassProp,
   customStyle: useCustomStyleProp,
-  ccc: useCustomClassProp,
-  ccs: useCustomStyleProp,
   show: Boolean,
   actions: makeArrayProp<ActionSheetAction>(),
   title: String,

@@ -6,8 +6,6 @@ import { isBoolean, makeNumberProp } from '../utils'
 export const popupProps = {
   customClass: useCustomClassProp,
   customStyle: useCustomStyleProp,
-  ccc: useCustomClassProp,
-  ccs: useCustomStyleProp,
   show: Boolean,
   position: PositionProp,
   duration: makeNumberProp(200),

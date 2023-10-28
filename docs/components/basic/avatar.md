@@ -18,7 +18,7 @@ const image = 'https://pic2.imgdb.cn/item/644bf4470d2dde5777abf840.webp'
   <AAvatar :src="image" size="small" />
   <AAvatar src="https://pic2.imgdb.cn/item/644bf3c40d2dde5777ab58cb.png" size="normal" />
   <AAvatar :src="image" size="large" />
-  <AAvatar :src="image" cc="h-16 w-16" />
+  <AAvatar :src="image" custom-class="h-16 w-16" />
 </template>
 ```
 
@@ -26,10 +26,10 @@ const image = 'https://pic2.imgdb.cn/item/644bf4470d2dde5777abf840.webp'
 
 ```html
 <template>
-  <AAvatar :src="image" cc="rounded-full" size="mini" />
-  <AAvatar :src="image" cc="rounded-full" size="small" />
-  <AAvatar :src="image" cc="rounded-full" size="normal" />
-  <AAvatar :src="image" cc="rounded-full" size="large" />
+  <AAvatar :src="image" custom-class="rounded-full" size="mini" />
+  <AAvatar :src="image" custom-class="rounded-full" size="small" />
+  <AAvatar :src="image" custom-class="rounded-full" size="normal" />
+  <AAvatar :src="image" custom-class="rounded-full" size="large" />
 </template>
 ```
 
@@ -37,10 +37,10 @@ const image = 'https://pic2.imgdb.cn/item/644bf4470d2dde5777abf840.webp'
 
 ```html
 <template>
-  <AAvatar cc="rounded-full bg-primary text-white">
+  <AAvatar custom-class="rounded-full bg-primary text-white">
     T
   </AAvatar>
-  <AAvatar cc="rounded-full bg-primary text-white">
+  <AAvatar custom-class="rounded-full bg-primary text-white">
     <div class="i-tabler-loader" />
   </AAvatar>
 </template>
@@ -65,10 +65,10 @@ const options = ref([
   <AAvatarGroup :max="3" :options="options" />
   <AAvatarGroup :max="3" :options="options">
     <template #avatar="{ option: { src } }">
-      <AAvatar cc="rounded-full" :src="src" />
+      <AAvatar custom-class="rounded-full" :src="src" />
     </template>
     <template #reset="{ reset }">
-      <AAvatar cc="z-1 rounded-full bg-primary text-white">
+      <AAvatar custom-class="z-1 rounded-full bg-primary text-white">
         +{{ reset }}
       </AAvatar>
     </template>

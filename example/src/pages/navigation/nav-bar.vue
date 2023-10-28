@@ -54,7 +54,7 @@ function onClickRight() {
       默认插槽
     </div>
     <ANavBar>
-      <AField icon="i-tabler-search" placeholder="搜索内容" cc="h-full p2" class="flex-1" />
+      <AField icon="i-tabler-search" placeholder="搜索内容" custom-class="h-full p2" class="flex-1" />
       <AButton size="mini" mx-2 variant="light" @click="onClickRight">
         搜索
       </AButton>

@@ -51,7 +51,7 @@ const active = ref('home')
     <div class="p-4">
       Fixed
     </div>
-    <ATabBar v-model="active" cc="fixed bottom-0 pb-safe left-0 right-0">
+    <ATabBar v-model="active" custom-class="fixed bottom-0 pb-safe left-0 right-0">
       <ATabBarItem name="home" icon="i-tabler-home">
         首页
       </ATabBarItem>
