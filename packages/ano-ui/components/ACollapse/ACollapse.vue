@@ -17,7 +17,7 @@ defineExpose({
 </script>
 
 <template>
-  <ACellGroup divider :cc="[cc]" :cs="[cs]">
+  <ACellGroup divider :custom-class="[customClass]" :custom-style="[customStyle]">
     <slot />
   </ACellGroup>
 </template>

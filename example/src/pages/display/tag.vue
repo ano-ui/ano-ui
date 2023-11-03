@@ -53,18 +53,18 @@ const show = ref(true)
     </div>
     <div flex="~ gap2 wrap" items-center px-4>
       <ATag type="primary" icon="i-tabler-carrot" icon-only />
-      <ATag type="success" icon-only cc="rounded-full">
+      <ATag type="success" icon-only custom-class="rounded-full">
         <template #icon>
           <div class="i-tabler-carrot" />
         </template>
       </ATag>
-      <ATag label="圆形" type="info" variant="ghost" cc="rounded-full" />
+      <ATag label="圆形" type="info" variant="ghost" custom-class="rounded-full" />
       <ATag label="发送" type="warning">
         <template #icon>
           <div class="i-tabler-carrot" />
         </template>
       </ATag>
-      <ATag type="primary" label="背景渐变" cc="bg-gradient-to-r from-indigo-500 to-pink-500" />
+      <ATag type="primary" label="背景渐变" custom-class="bg-gradient-to-r from-indigo-500 to-pink-500" />
     </div>
   </UBasePage>
 </template>

@@ -9,8 +9,8 @@ const { display, classes, clickHandler, animationendHandler } = useTransition(pr
 
 <template>
   <div
-    v-if="display" class="transition-all" :class="[classes, cc]"
-    :style="[{ 'animation-duration': `${duration}ms` }, { 'animation-timing-function': timingFunction }, { 'animation-fill-mode': 'forwards' }, cs]"
+    v-if="display" class="transition-all" :class="[classes, customClass]"
+    :style="[{ 'animation-duration': `${duration}ms` }, { 'animation-timing-function': timingFunction }, { 'animation-fill-mode': 'forwards' }, customStyle]"
     @click="clickHandler" @animationend="animationendHandler"
   >
     <slot />

@@ -4,8 +4,8 @@ import { CLICK_EVENT } from '../constants'
 import { makeNumberProp, makeStringProp } from '../utils'
 
 export const collapseTransitionProps = {
-  cc: useCustomClassProp,
-  cs: useCustomStyleProp,
+  customClass: useCustomClassProp,
+  customStyle: useCustomStyleProp,
   show: Boolean,
   duration: makeNumberProp(200),
   timingFunction: makeStringProp('ease'),

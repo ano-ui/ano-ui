@@ -20,7 +20,7 @@ provide(tabBarKey, reactive({
 </script>
 
 <template>
-  <div class="flex a-bg-2 a-text-color h-100rpx [&>.a-tab-bar-item]:flex-1 [&>a-tab-bar-item]:flex-1" :class="[cc]" :style="cs">
+  <div class="flex a-bg-2 a-text-color h-100rpx [&>.a-tab-bar-item]:flex-1 [&>a-tab-bar-item]:flex-1" :class="[customClass]" :style="customStyle">
     <slot />
   </div>
 </template>

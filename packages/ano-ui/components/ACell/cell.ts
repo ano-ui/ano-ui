@@ -3,8 +3,8 @@ import { useCustomClassProp, useCustomStyleProp } from '../composables'
 import { CLICK_EVENT } from '../constants'
 
 export const cellProps = {
-  cc: useCustomClassProp,
-  cs: useCustomStyleProp,
+  customClass: useCustomClassProp,
+  customStyle: useCustomStyleProp,
   title: String,
   value: String,
   label: String,

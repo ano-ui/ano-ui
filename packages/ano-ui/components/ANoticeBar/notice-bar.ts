@@ -4,8 +4,8 @@ import { CLOSE_EVENT } from '../constants'
 import { truthProp } from '../utils'
 
 export const noticeBarProps = {
-  cc: useCustomClassProp,
-  cs: useCustomStyleProp,
+  customClass: useCustomClassProp,
+  customStyle: useCustomStyleProp,
   type: useTypeProp,
   variant: useVariantProp,
   show: truthProp,

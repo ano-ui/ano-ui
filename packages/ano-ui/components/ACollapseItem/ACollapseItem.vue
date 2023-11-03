@@ -10,7 +10,7 @@ const { isActive, handleHeaderClick, arrow } = useCollapseItem(props)
 </script>
 
 <template>
-  <div :class="[cc]" :style="cs">
+  <div :class="[customClass]" :style="customStyle">
     <ACell :disabled="disabled" :arrow="arrow" @click="handleHeaderClick">
       <template #title>
         <div class="flex items-center gap-1">

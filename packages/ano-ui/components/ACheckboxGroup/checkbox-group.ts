@@ -8,8 +8,8 @@ import { isArray, makeArrayProp, makeNumberProp } from '../utils'
 export const useCheckboxGroupDirectionProp = useDirectionProp
 
 export const checkboxGroupProps = {
-  cc: useCustomClassProp,
-  cs: useCustomStyleProp,
+  customClass: useCustomClassProp,
+  customStyle: useCustomStyleProp,
   modelValue: makeArrayProp<CheckboxValueType>(),
   size: useCheckboxSizeProp,
   direction: useCheckboxGroupDirectionProp,

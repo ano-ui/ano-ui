@@ -4,8 +4,8 @@ import { CLOSE_EVENT } from '../constants'
 import type { ToastOptions } from './types'
 
 export const toastProps = {
-  cc: useCustomClassProp,
-  cs: useCustomStyleProp,
+  customClass: useCustomClassProp,
+  customStyle: useCustomStyleProp,
 }
 
 export const toastEmits = {

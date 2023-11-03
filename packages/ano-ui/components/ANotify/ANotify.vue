@@ -25,12 +25,12 @@ const animationName = {
 <template>
   <ATransition
     :show="visible" :name="animationName[state?.position || 'default']" :duration="300"
-    :cc="['fixed z-500', classes, cc]" :cs="cs"
+    :custom-class="['fixed z-500', classes]"
   >
     <div
-      class="box-border min-h-10 flex items-center justify-center gap-2 px-3 text-base a-solid"
-      :class="[`a-${state.type}`, state.position === 'default' ? 'rounded-none' : 'rounded-lg', { 'justify-start': state.showIcon }, ccc]"
-      :style="ccs"
+      class="box-border flex items-center justify-center gap-2 min-h-10 px-3 text-base a-solid"
+      :class="[`a-${state.type}`, state.position === 'default' ? 'rounded-none' : 'rounded-lg', { 'justify-start': state.showIcon }, customClass]"
+      :style="customStyle"
     >
       <slot name="icon">
         <template v-if="state.showIcon">

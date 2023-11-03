@@ -4,8 +4,8 @@ import { tabBarItemEmits } from '../ATabBarItem'
 import { makeNumericProp } from '../utils'
 
 export const tabBarProps = {
-  cc: useCustomClassProp,
-  cs: useCustomStyleProp,
+  customClass: useCustomClassProp,
+  customStyle: useCustomStyleProp,
   modelValue: makeNumericProp(''),
 }
 

@@ -15,10 +15,8 @@ export const useNotifyPositionProp = {
 }
 
 export const notifyProps = {
-  cc: useCustomClassProp,
-  ccc: useCustomClassProp,
-  cs: useCustomStyleProp,
-  ccs: useCustomStyleProp,
+  customClass: useCustomClassProp,
+  customStyle: useCustomStyleProp,
   type: useNotifyTypeProp,
   position: useNotifyPositionProp,
   message: String,

@@ -5,8 +5,8 @@ import { CLICK_EVENT } from '../constants'
 import { makeNumberProp, makeStringProp } from '../utils'
 
 export const transitionProps = {
-  cc: useCustomClassProp,
-  cs: useCustomStyleProp,
+  customClass: useCustomClassProp,
+  customStyle: useCustomStyleProp,
   name: makeStringProp('fade'),
   mode: String,
   show: Boolean,

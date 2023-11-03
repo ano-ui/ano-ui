@@ -10,10 +10,8 @@ export const useCheckboxSizeProp = useSizeProp
 export type CheckboxValueType = string | number | boolean
 
 export const checkboxProps = {
-  cc: useCustomClassProp,
-  ccc: useCustomClassProp,
-  cs: useCustomStyleProp,
-  ccs: useCustomStyleProp,
+  customClass: useCustomClassProp,
+  customStyle: useCustomStyleProp,
   type: useCheckboxTypeProp,
   size: useCheckboxSizeProp,
   variant: useVariantProp,

@@ -13,7 +13,7 @@ const { elementGuid, height } = useCollapseTransition(props, emit)
     class="overflow-hidden transition-height"
     :style="[{ height: `${height}px` }, { 'transition-duration': `${duration}ms` }, { 'transition-timing-function': timingFunction }]"
   >
-    <div :id="elementGuid" :class="[cc]" :style="[cs]">
+    <div :id="elementGuid" :class="[customClass]" :style="[customStyle]">
       <slot />
     </div>
   </div>

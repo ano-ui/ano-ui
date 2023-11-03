@@ -5,8 +5,8 @@ import { isArray, isNumber, isString } from '../utils/is'
 import type { CollapseModelValue } from './types'
 
 export const collapseProps = {
-  cc: useCustomClassProp,
-  cs: useCustomStyleProp,
+  customClass: useCustomClassProp,
+  customStyle: useCustomStyleProp,
   modelValue: {
     type: [String, Number, Array] as PropType<string | number | Array<string | number>>,
   },

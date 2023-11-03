@@ -11,7 +11,7 @@ const { disabled, classes, clickHandler } = useButton(props, emit)
 <template>
   <button
     class="box-border items-center justify-center rounded text-center inline-flex gap-2 a-button-wrapper-reset m-0"
-    :class="[classes, cc]" :hover-class="disabled ? '' : '!before:op10'" :open-type="openType" :style="cs"
+    :class="[classes, customClass]" :hover-class="disabled ? '' : '!before:op10'" :open-type="openType" :style="customStyle"
     @click="clickHandler"
   >
     <div v-if="loading" class="i-tabler-loader animate-spin" />

@@ -4,10 +4,8 @@ import { CLOSED_EVENT, CLOSE_EVENT, OPENED_EVENT, OPEN_EVENT, UPDATE_SHOW_EVENT 
 import { isBoolean, makeNumberProp } from '../utils'
 
 export const popupProps = {
-  cc: useCustomClassProp,
-  cs: useCustomStyleProp,
-  ccc: useCustomClassProp,
-  ccs: useCustomStyleProp,
+  customClass: useCustomClassProp,
+  customStyle: useCustomStyleProp,
   show: Boolean,
   position: PositionProp,
   duration: makeNumberProp(200),

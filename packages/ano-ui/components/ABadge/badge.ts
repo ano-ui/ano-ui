@@ -9,8 +9,8 @@ export const useBadgeOffsetProp = {
 }
 
 export const badgeProps = {
-  cc: useCustomClassProp,
-  cs: useCustomStyleProp,
+  customClass: useCustomClassProp,
+  customStyle: useCustomStyleProp,
   type: useBadgeProp,
   color: String,
   dot: Boolean,

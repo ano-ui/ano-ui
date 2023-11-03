@@ -4,8 +4,8 @@ import { useCustomClassProp, useCustomStyleProp } from '../composables'
 import { isNumber, isString, makeNumericProp } from '../utils'
 
 export const tabBarItemProps = {
-  cc: useCustomClassProp,
-  cs: useCustomStyleProp,
+  customClass: useCustomClassProp,
+  customStyle: useCustomStyleProp,
   name: makeNumericProp(''),
   icon: String,
   url: String,

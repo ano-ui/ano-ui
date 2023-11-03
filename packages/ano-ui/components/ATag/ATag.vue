@@ -12,8 +12,8 @@ const { classes, clickHandler, closeHandler } = useTag(props, emit)
   <div
     v-if="show"
     class="relative box-border inline-flex items-center justify-center a-transition gap1 overflow-visible after:display-none"
-    :class="[classes, cc]"
-    :style="cs" @click="clickHandler"
+    :class="[classes, customClass]"
+    :style="customStyle" @click="clickHandler"
   >
     <div v-if="icon" :class="icon" />
     <slot v-else name="icon" />

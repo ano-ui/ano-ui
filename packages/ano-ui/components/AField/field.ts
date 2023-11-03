@@ -23,10 +23,8 @@ export const useFieldInputAlignProp = {
 }
 
 export const fieldProps = {
-  cc: useCustomClassProp,
-  ccc: useCustomClassProp,
-  cs: useCustomStyleProp,
-  ccs: useCustomStyleProp,
+  customClass: useCustomClassProp,
+  customStyle: useCustomStyleProp,
   type: useFieldTypeProp,
   label: String,
   labelAlign: useFieldLabelAlignProp,

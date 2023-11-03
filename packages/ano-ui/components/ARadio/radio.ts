@@ -10,10 +10,8 @@ export const useRadioSizeProp = useSizeProp
 export type RadioValueType = string | number | boolean
 
 export const radioProps = {
-  cc: useCustomClassProp,
-  ccc: useCustomClassProp,
-  cs: useCustomStyleProp,
-  ccs: useCustomStyleProp,
+  customClass: useCustomClassProp,
+  customStyle: useCustomStyleProp,
   type: useRadioTypeProp,
   size: useRadioSizeProp,
   variant: useVariantProp,

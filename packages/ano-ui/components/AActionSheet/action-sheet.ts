@@ -5,10 +5,8 @@ import { isBoolean, makeArrayProp, makeNumberProp, truthProp } from '../utils'
 import type { ActionSheetAction } from './types'
 
 export const actionSheetProps = {
-  cc: useCustomClassProp,
-  cs: useCustomStyleProp,
-  ccc: useCustomClassProp,
-  ccs: useCustomStyleProp,
+  customClass: useCustomClassProp,
+  customStyle: useCustomStyleProp,
   show: Boolean,
   actions: makeArrayProp<ActionSheetAction>(),
   title: String,

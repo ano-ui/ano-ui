@@ -5,8 +5,8 @@ import { makeArrayProp } from '../utils'
 import type { AvatarOption } from './types'
 
 export const avatarGroupProps = {
-  cc: useCustomClassProp,
-  cs: useCustomStyleProp,
+  customClass: useCustomClassProp,
+  customStyle: useCustomStyleProp,
   max: Number,
   options: makeArrayProp<AvatarOption>(),
 }

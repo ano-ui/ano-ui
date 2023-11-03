@@ -16,8 +16,8 @@ provide(cellGroupKey, reactive({
   </div>
   <div
     :class="[{ 'mx-4 rounded-lg overflow-hidden': inset },
-             { '[&_a-cell:last-child_.a-cell]:after:content-none [&>.a-cell+.a-cell]:after:content-none': divider }, cc]"
-    :style="cs"
+             { '[&_a-cell:last-child_.a-cell]:after:content-none [&>.a-cell+.a-cell]:after:content-none': divider }, customClass]"
+    :style="customStyle"
   >
     <slot />
   </div>
