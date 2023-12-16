@@ -3,5 +3,5 @@
 import { defineConfig } from 'unocss'
 
 export default defineConfig({
-  configFile: './packages/playground/uno.config.ts',
+  configFile: './example/uno.config.ts',
 })
