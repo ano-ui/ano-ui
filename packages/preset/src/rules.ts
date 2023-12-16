@@ -7,7 +7,7 @@ export const rules = [
     const color = parseColor(body, theme)
     if (color?.cssColor?.type === 'rgb' && color.cssColor.components) {
       return {
-        '--ano-c-context': `${color.cssColor.components.join(',')}`,
+        '--ano-c-context': `${color.cssColor.components.join(' ')}`,
       }
     }
   }],
