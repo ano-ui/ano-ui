@@ -1,7 +1,7 @@
 {
   "name": "@ano-ui/monorepo",
   "type": "module",
-  "version": "0.8.1",
+  "version": "0.9.1",
   "private": true,
   "packageManager": "pnpm@8.12.1",
   "scripts": {
