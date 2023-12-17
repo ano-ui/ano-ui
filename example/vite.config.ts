@@ -12,14 +12,11 @@ import { AnoResolver } from 'ano-ui'
 
 export default defineConfig({
   root: process.cwd(),
+  base: '/ui/',
   resolve: {
     alias: {
       '~/': `${resolve(__dirname, 'src')}/`,
     },
-  },
-  build: {
-    outDir: '../docs/dist/ui',
-    emptyOutDir: true,
   },
   plugins: [
     Components({

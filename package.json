@@ -21,7 +21,7 @@
     "docs:dev": "npm -C docs run dev",
     "docs:build": "npm -C docs run build",
     "docs:preview": "npm -C docs run serve",
-    "build:all": "pnpm build && pnpm build:h5 && pnpm docs:build && esno scripts/uni.ts"
+    "build:all": "pnpm build && pnpm docs:build && pnpm build:h5"
   },
   "devDependencies": {
     "@antfu/eslint-config": "1.0.0-beta.27",
@@ -32,6 +32,7 @@
     "@unocss/eslint-config": "^0.58.0",
     "@vue/tsconfig": "^0.4.0",
     "bumpp": "^9.2.1",
+    "cross-env": "^7.0.3",
     "eslint": "^8.55.0",
     "esno": "^4.0.0",
     "fs-extra": "^11.2.0",
