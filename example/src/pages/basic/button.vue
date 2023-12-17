@@ -101,7 +101,7 @@ function getInfo() {
       <AButton type="primary" custom-class="bg-teal border-teal" open-type="getUserInfo" @click="getInfo">
         OpenType
       </AButton>
-      <AButton type="primary" custom-class="['bg-gradient-to-r', 'from-indigo-500', 'to-pink-500']">
+      <AButton type="primary" :custom-class="['bg-gradient-to-r', 'from-indigo-500', 'to-pink-500']">
         背景渐变
       </AButton>
     </div>

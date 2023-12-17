@@ -22,7 +22,7 @@ defineExpose({ showDialog })
         {{ dialogStatus.message }}
       </div>
     </div>
-    <div class="flex items-center justify-center border-t border-t-gray-400/25 border-t-solid">
+    <div class="items-center justify-center flex border-t border-t-gray-400/25 border-t-solid">
       <template v-if="dialogStatus?.showCancelButton">
         <AButton class="flex-1" type="danger" variant="text" square block @click.stop="onCancel">
           {{ dialogStatus.cancelButtonText || 'Cancel' }}

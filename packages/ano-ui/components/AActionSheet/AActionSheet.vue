@@ -26,7 +26,7 @@ const { showValue, cancelHandler } = useActionSheet(props, emit)
       <slot />
       <template v-if="cancelText">
         <div class="w-full h-2 bg-gray-200/20" />
-        <AButton v-if="cancelText" variant="text" block custom-class="['color-inherit border-none']" @click="cancelHandler">
+        <AButton v-if="cancelText" variant="text" block :custom-class="['color-inherit border-none']" @click="cancelHandler">
           {{ cancelText }}
         </AButton>
       </template>
